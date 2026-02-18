@@ -1,0 +1,288 @@
+/* ============================= */
+/* 1. RESET E BASE */
+/* ============================= */
+
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 16px;
+    scroll-behavior: smooth;
+}
+
+
+img {
+    max-width: 700px;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ============================= */
+/* 2. VARIÁVEIS (DESIGN SYSTEM) */
+/* ============================= */
+
+:root {
+    --primary-color: #c4171d;
+    --primary-hover: #a01318;
+    --text-light: #d9d9d9;
+    --bg-dark: #0f0f14;
+    --bg-overlay: rgba(0, 0, 0, 0.6);
+    --max-width: 1200px;
+    --border-radius: 8px;
+}
+
+/* ============================= */
+/* 3. CONTAINER PADRÃO */
+/* ============================= */
+
+.container {
+    width: 90%;
+    max-width: var(--max-width);
+    margin: 0 auto;
+}
+
+/* ============================= */
+/* 4. HEADER */
+/* ============================= */
+
+header {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+    padding: 1.5rem 0;
+}
+
+header .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.brand img {
+    height: 80px;
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem;
+}
+
+nav a {
+    font-size: 0.95rem;
+    color: var(--text-light);
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #ffffff;
+}
+
+/* ============================= */
+/* 5. HERO SECTION */
+/* ============================= */
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background:
+        radial-gradient(
+            circle at 90% 40%,
+            rgba(201, 185, 39, 0.15) 0%,
+            rgba(201, 185, 39, 0.05) 20%,
+            rgba(25, 7, 9, 0.6) 45%,
+            #190709 70%
+        ),
+        linear-gradient(
+            to right,
+            #2a0508 0%,
+            #190709 60%,
+            #120406 100%
+        );
+    color: #ffffff;
+    line-height: 1.6;
+    overflow: hidden;
+}
+
+
+
+
+/* HERO */
+#hero {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#hero .container-hero {
+    width: 90%;
+    max-width: 1000px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 3rem;
+}
+
+/* IMAGEM */
+.hero-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+
+    -webkit-mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+
+    mask-image: linear-gradient(
+        to right,
+        transparent 0%,
+        black 15%,
+        black 85%,
+        transparent 100%
+    );
+}
+
+/* TEXTO */
+.hero-content {
+    max-width: 700px;
+}
+
+.hero-content h1 {
+    font-size: 3.4rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+    margin-bottom: 0.8rem;
+}
+
+.tagline {
+    font-style: italic;
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #e8e8e8;
+    margin-bottom: 0.8rem;
+    max-width: 500px;
+}
+
+.subtitle {
+    font-size: 1.3rem;
+    color: #ffffff;
+    margin-bottom: 2rem;
+}
+
+.btn-cta {
+    display: inline-block;
+    background-color: #d41c22;
+    padding: 0.9rem 2rem;
+    border-radius: 8px;
+    font-weight: 600;
+    transition: 0.3s;
+    margin-bottom: 1.5rem;
+}
+
+.btn-cta:hover {
+    background-color: #a31318;
+    transform: translateY(-2px);
+}
+
+.location {
+    font-size: 0.9rem;
+    color: #b5b5b5;
+}
+
+.end {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+    
+    padding: 14px 28px;
+    border-radius: 10px;
+    
+    background-color: #c4171d;
+    color: #eeeeee;
+    
+    font-family: 'Poppins', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    
+    text-decoration: none;
+    transition: all 0.3s ease;
+    
+    border: none;
+    cursor: pointer;
+}
+.end:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 35px rgb(49, 24, 1);
+    
+    background-color: #780000;
+}
+.end:active {
+    transform: translateY(0);
+    box-shadow: 0 5px 15px rgba(201, 185, 39, 0.2);
+}
+
+/* ============================= */
+/* 6. RESPONSIVIDADE */
+/* ============================= */
+
+@media (max-width: 992px) {
+
+    #hero .container-hero {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .hero-image img {
+        max-width: 400px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    body {
+        overflow: auto;
+        /* permite scroll no mobile */
+    }
+}
+
+
+@media (max-width: 768px) {
+    header .container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    nav ul {
+        gap: 1.2rem;
+    }
+
+    #hero {
+        text-align: center;
+        padding: 6rem 0;
+    }
+
+    .hero-content {
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2rem;
+    }
+}
