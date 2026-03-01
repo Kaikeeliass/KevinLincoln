@@ -155,11 +155,10 @@ header {
 }
 
 .hero-buttons {
-    margin-top: 30px;
     display: flex;
-    justify-content: center;
-    /* Centraliza os botões abaixo do texto */
-    gap: 16px;
+    justify-content: center; /* Mantém os botões centralizados no desktop */
+    margin-bottom: 80px;
+    gap: 16px; /* Espaço horizontal de 16px entre os botões */
 }
 
 .nav-desk ul {
@@ -660,6 +659,27 @@ footer h4 {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+/* Estilos para o Botão Hambúrguer */
+.menu-mobile-btn {
+    display: none; /* Escondido no Desktop */
+    background: none;
+    border: none;
+    color: var(--text-white);
+    font-size: 2rem;
+    cursor: pointer;
+}
+
+.close-menu {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    color: var(--text-white);
+    font-size: 2.5rem;
+}
+
 @keyframes float-animation {
     0% {
         transform: translateY(0px);
@@ -673,5 +693,199 @@ footer h4 {
     100% {
         transform: translateY(0px);
         /* Volta para a posição original */
+    }
+}
+
+/* --- RESPONSIVIDADE TOTAL --- */
+
+/* 1. Telas Grandes (Desktop/Ultrawide) */
+@media (min-width: 1400px) {
+    .container {
+        max-width: 1200px;
+    }
+    .text-h1 {
+        font-size: 60px;
+        line-height: 70px;
+    }
+}
+
+/* 2. Tablets e Laptops Pequenos (Até 992px) */
+@media (max-width: 992px) {
+    .hero-wrapper {
+        flex-direction: column; /* Empilha Título e Foto */
+        text-align: center;
+        gap: 30px;
+    }
+
+    .hero-text {
+        flex: 0 0 100%;
+        text-align: center;
+    }
+
+    .text-h1 {
+        font-size: 42px;
+        line-height: 50px;
+        margin: 0 auto;
+    }
+
+    .fundo-grid {
+        grid-template-columns: 1fr; /* Sobre mim vira uma coluna */
+        gap: 40px;
+        text-align: center;
+    }
+
+    .section-label {
+        justify-content: center;
+    }
+
+    .fundo-img {
+        height: 400px;
+        max-width: 500px;
+        margin: 0 auto;
+    }
+}
+
+/* 3. Smartphones (Até 768px) */
+@media (max-width: 768px) {
+    header {
+        padding: 15px 0;
+        background: rgba(18, 18, 18, 0.98); /* Garante leitura sobre o conteúdo */
+        backdrop-filter: blur(10px);
+    }
+
+    .menu-mobile-btn { display: block; }
+    .hide-mobile { display: none; }
+
+    /* Transforma a nav em uma caixa lateral fixa */
+    .nav-desk {
+        display: block !important; /* Sobrescreve o display:none anterior */
+        position: fixed;
+        top: 0;
+        right: -100%; /* Começa fora da tela */
+        width: 80%;
+        height: 100vh;
+        background-color: var(--bg-card);
+        z-index: 2000;
+        transition: 0.4s ease-in-out;
+        padding: 80px 40px;
+        box-shadow: -10px 0 30px rgba(0,0,0,0.5);
+    }
+
+    /* Quando a classe 'active' for adicionada via JS */
+    .nav-desk.active {
+        right: 0;
+    }
+
+    .nav-desk ul {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .nav-desk a {
+        font-size: 1.5rem;
+        color: var(--text-white);
+    }
+
+    .close-menu { display: block; }
+
+    .header-flex {
+        justify-content: center; /* Centraliza o logo no mobile se não houver menu */
+    }
+
+    .hero {
+        padding: 120px 0 60px; /* Padding maior para o header fixo não cobrir o badge */
+        text-align: center;
+    }
+
+    .text-h1 {
+        font-size: 30px; /* Reduzi levemente para evitar quebras estranhas */
+        line-height: 1.3;
+        max-width: 100%;
+        padding: 0 15px;
+    }
+
+    .logo-foto img {
+        max-width: 260px;
+        margin: 20px auto; /* Espaçamento equilibrado */
+        border-radius: 15px;
+    }
+
+    .paragrafo {
+        font-size: 1rem;
+        padding: 0 20px;
+        margin-top: 30px;
+    }
+
+    /* Consolidando a classe de botões */
+    .hero-buttons, .buttons {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        max-width: 320px;
+        margin: 30px auto 0;
+        gap: 12px;
+    }
+
+    .btn {
+        width: 100%; /* Botões ocupam a largura total do container no toque */
+    }
+
+    .cards-grid {
+        grid-template-columns: 1fr;
+        padding: 0 20px;
+        gap: 20px;
+    }
+
+    .card {
+        padding: 30px 20px; /* Cards mais compactos no celular */
+    }
+
+    .section-padding {
+        padding: 60px 0;
+    }
+
+    .faq-header {
+        padding: 18px;
+        font-size: 0.9rem;
+    }
+
+    .footer-flex {
+        flex-direction: column;
+        text-align: center;
+        align-items: center;
+        gap: 30px;
+    }
+}
+/* 4. Celulares Pequenos (Até 480px) */
+@media (max-width: 480px) {
+    .text-h1 {
+        font-size: 28px;
+    }
+
+    .logo-foto img {
+        max-width: 250px;
+    }
+
+    .badge {
+        font-size: 0.75rem;
+        padding: 6px 16px;
+    }
+}
+
+@media (max-width: 900px) {
+    .hero-buttons {
+        /* Muda a direção do flexbox para vertical */
+        flex-direction: column; 
+        
+        /* Centraliza os botões horizontalmente no mobile */
+        align-items: center; 
+        
+        /* REMOVE o espaçamento horizontal do desktop */
+        gap: 0; 
+    }
+
+    /* Adiciona margem entre os botões empilhados */
+    .hero-buttons .btn + .btn {
+        margin-top: 15px; /* Define o espaço vertical entre os botões no celular */
     }
 }

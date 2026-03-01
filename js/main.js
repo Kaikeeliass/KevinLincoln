@@ -65,3 +65,24 @@ function initFaqAccordion() {
         });
     });
 }
+const btnOpen = document.getElementById('openMenu');
+const btnClose = document.getElementById('closeMenu');
+const menu = document.getElementById('navMenu');
+const links = document.querySelectorAll('.nav-desk a');
+
+// Abrir menu
+btnOpen.addEventListener('click', () => {
+    menu.classList.add('active');
+});
+
+// Fechar menu
+btnClose.addEventListener('click', () => {
+    menu.classList.remove('active');
+});
+
+// Fechar ao clicar em um link (para navegar até a seção)
+links.forEach(link => {
+    link.addEventListener('click', () => {
+        menu.classList.remove('active');
+    });
+});
