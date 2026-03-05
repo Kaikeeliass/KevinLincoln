@@ -86,3 +86,33 @@ links.forEach(link => {
         menu.classList.remove('active');
     });
 });
+
+function toggleCard(card) {
+    // Desktop: Clique alterna e fecha os outros
+    if (window.innerWidth > 768) {
+        const allCards = document.querySelectorAll('.card');
+        
+        if (card.classList.contains('is-flipped')) {
+            card.classList.remove('is-flipped');
+        } else {
+            allCards.forEach(c => c.classList.remove('is-flipped'));
+            card.classList.add('is-flipped');
+        }
+    }
+}
+
+// Mobile: Virar ao scroll automaticamente
+const observer = new IntersectionObserver((entries) => {
+    if (window.innerWidth <= 768) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('is-flipped');
+            } else {
+                entry.target.classList.remove('is-flipped');
+            }
+        });
+    }
+}, { threshold: 0.5 });
+
+document.querySelectorAll('.card').forEach(card => observer.observe(card));
+
