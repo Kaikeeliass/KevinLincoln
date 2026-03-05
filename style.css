@@ -72,7 +72,7 @@ img {
     color: var(--primary);
 }
 
-.highlight2{
+.highlight2 {
     color: #d92424;
 }
 
@@ -344,6 +344,25 @@ ul {
     box-shadow: 0 8px 25px rgba(131, 168, 148, 0.4);
 }
 
+/* .btn-topo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #ff000070;
+    color: white;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 10px;
+    text-decoration: none;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+}
+
+.btn-topo:hover {
+    background-color: #5f0b00;
+    box-shadow: 0 4px 6px rgb(0, 0, 0);
+} */
+
 .fundo {
     background-color: var(--bg-section-alt);
 }
@@ -366,6 +385,7 @@ ul {
 .fundo-text p {
     margin-bottom: 20px;
     font-size: 1.05rem;
+    text-align: justify;
 }
 
 .section-padding {
@@ -472,20 +492,90 @@ ul {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
     gap: 30px;
+    perspective: 1500px;
 }
 
+/* 1. O Container Pai */
 .card {
-    background-color: var(--bg-card);
-    padding: 40px;
-    border-radius: 20px;
-    border: 1px solid rgba(242, 239, 239, 0.279);
-    transition: all 0.5s cubic-bezier(0.23, 1, 0.32, 1);
+    background-color: transparent !important;
+    padding: 0 !important;
+    border: none !important;
+    height: 520px;
+    cursor: pointer;
+    position: relative;
+    /* CORREÇÃO: Transição aplicada APENAS para a elevação, sem conflitar com o giro */
+    transition: transform 0.4s ease;
 }
 
 .card:hover {
-    border-color: var(--secondary);
     transform: translateY(-10px);
+    /* Agora ele sobe suavemente */
+}
+
+/* 2. O Motor do Giro */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-style: preserve-3d;
+}
+
+.card.is-flipped .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+/* 3. As Faces do Card */
+.flip-card-front,
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border-radius: 20px;
+    background-color: var(--bg-card);
+    padding: 40px;
+    border: 1px solid rgba(242, 239, 239, 0.15);
+    /* Suavizei a borda padrão */
+    display: flex;
+    flex-direction: column;
+    /* CORREÇÃO: As sombras e bordas evoluem suavemente aqui */
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.flip-card-front {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    z-index: 2;
+}
+
+.flip-card-back {
+    transform: rotateY(180deg);
+    justify-content: flex-start;
+    text-align: left;
+}
+
+/* Efeito de Hover nas Faces (Borda e Sombra) */
+.card:hover .flip-card-front,
+.card:hover .flip-card-back {
     box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+
+.card:hover .flip-card-front,
+.card.is-flipped .flip-card-back {
+    border-color: var(--secondary);
+}
+
+/* 4. Elementos Internos */
+.click-hint {
+    margin-top: 20px;
+    font-size: 0.75rem;
+    color: var(--secondary);
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    font-weight: 700;
 }
 
 .card-icon {
@@ -502,15 +592,15 @@ ul {
     transition: 0.5s ease;
 }
 
-.card:hover .card-icon {
+.card:hover .flip-card-front .card-icon {
     background: var(--secondary);
     color: var(--bg-card);
 }
 
 .card h3 {
     font-size: 1.4rem;
-    margin-bottom: 25px;
-    text-align: left;
+    text-align: center;
+    margin-bottom: 10px;
 }
 
 .card-detail {
@@ -544,7 +634,19 @@ ul {
     line-height: 1.5;
 }
 
-.h1_duv{
+/* 5. Mobile */
+@media (max-width: 768px) {
+    .card {
+        height: 500px;
+        margin-bottom: 20px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
+    }
+}
+
+.h1_duv {
     text-align: center;
 }
 
@@ -610,6 +712,8 @@ ul {
     padding: 0 25px 25px;
     /* Devolve o padding de baixo ao abrir */
 }
+
+
 
 /* --- FOOTER ESTILIZADO --- */
 footer {
@@ -783,10 +887,11 @@ footer h4 {
     }
 
     .fundo-img {
-        height: 400px;
+        height: 600px;
         max-width: 500px;
         margin: 0 auto;
     }
+
 }
 
 /* 3. Smartphones (Até 768px) */
@@ -941,7 +1046,8 @@ footer h4 {
     }
 
     .test {
-        line-height: 55px;
+        line-height: 45px;
+
     }
 
     .h1_duv {
@@ -957,6 +1063,12 @@ footer h4 {
         padding: 60px 0;
     }
 
+    .section-header h2 {
+        font-size: 1.6rem;
+        margin-bottom: 15px;
+        line-height: 35px;
+    }
+
     .faq-header {
         padding: 18px;
         font-size: 0.9rem;
@@ -968,7 +1080,8 @@ footer h4 {
         align-items: center;
         gap: 30px;
     }
-    .quemsoueu{
+
+    .quemsoueu {
         font-size: 100px;
     }
 

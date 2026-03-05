@@ -14,10 +14,17 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 
+
 </head>
 
 <body>
-
+    <!-- <a href="#inicio" class="btn-topo">
+        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-up-circle"
+            viewBox="0 0 16 16">
+            <path fill-rule="evenodd"
+                d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8m15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0m-7.5 3.5a.5.5 0 0 1-1 0V5.707L5.354 7.854a.5.5 0 1 1-.708-.708l3-3a.5.5 0 0 1 .708 0l3 3a.5.5 0 0 1-.708.708L8.5 5.707z" />
+        </svg> -->
+    <!-- </a> -->
     <header id="header">
         <div class="container header-flex">
             <div class="logo">Kevin <span>Lincoln</span></div>
@@ -81,10 +88,13 @@
                     Ao longo da minha trajetória, percebi que a maioria das pessoas não falha por falta de força de
                     vontade, falha por falta de estrutura.
 
-                    Foi por isso que desenvolvi o Método <strong> Atlas</strong>: para transformar consistência em resultado, respeitando
+                    Foi por isso que desenvolvi o Método <strong> Atlas</strong>: para transformar consistência em
+                    resultado, respeitando
                     a individualidade de cada pessoa.
                     <br>
-                    Meu compromisso não é apenas entregar um plano, mas acompanhar cada etapa da sua <strong>evolução</strong>.</p>
+                    Meu compromisso não é apenas entregar um plano, mas acompanhar cada etapa da sua
+                    <strong>evolução</strong>.
+                </p>
             </div>
             <div class="fundo-img-wrapper delay-2">
                 <img src="kevin.png" alt="Nutricionista" class="fundo-img">
@@ -102,61 +112,80 @@
             </div>
 
             <div class="cards-grid">
-                <div class="card ">
-                    <div class="card-icon">⚡</div>
-                    <h3>Emagrecimento Estratégico</h3>
-                    <div class="card-detail">
-                        <p> Comer menos não resolve. <span class="highlight2"> <br> Comer certo transforma.</span></p>
-                    </div>
-
-                    <div class="card-detail">
-                        <div class="detail-title" style="font-style: normal" ;>O que fazemos:</div>
-                        <p>Ajustamos sua alimentação para ativar o metabolismo sem radicalismos.</p>
-                    </div>
-
-                    <div class="card-detail">
-                        <div class="detail-title" style="font-style: normal;"> O que você constrói:</div>
-                        <p>✅Perda de gordura consistente, energia estável e controle real sobre o peso.</p>
+                <div class="card flip-card" onclick="toggleCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">⚡</div>
+                            <h3>Emagrecimento Estratégico</h3>
+                            <p class="click-hint">Clique para saber mais</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-icon">⚡</div>
+                            <h3>Emagrecimento Estratégico</h3>
+                            <div class="card-detail">
+                                <p>Comer menos não resolve. <span class="highlight2"><br>Comer certo transforma.</span>
+                                </p>
+                            </div>
+                            <div class="card-detail">
+                                <div class="detail-title">O que fazemos:</div>
+                                <p>Ajustamos sua alimentação para ativar o metabolismo sem radicalismos.</p>
+                            </div>
+                            <div class="card-detail">
+                                <div class="detail-title">O que você constrói:</div>
+                                <p>✅Perda de gordura consistente e energia estável.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
 
-                <div class="card delay-1">
-                    <div class="card-icon">🛡️</div>
-                    <h3>Saúde de Alta Performance</h3>
-
-                    <div class="card-detail">
-                        <p> Seu corpo precisa funcionar bem hoje <br> e continuar funcionando <span
-                                class="highlight2">daqui a 20 anos.</span></p>
+                <div class="card flip-card delay-1" onclick="toggleCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">🛡️</div>
+                            <h3>Saúde de Alta Performance</h3>
+                            <p class="click-hint">Clique para saber mais</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-icon">🛡️</div>
+                            <h3>Saúde de Alta Performance</h3>
+                            <div class="card-detail">
+                                <p>Seu corpo precisa funcionar bem hoje e <span class="highlight2">daqui a 20
+                                        anos.</span></p>
+                            </div>
+                            <div class="card-detail">
+                                <div class="detail-title">O que fazemos:</div>
+                                <p>Prevenção de doenças e controle de exames (colesterol, glicemia).</p>
+                            </div>
+                            <div class="card-detail">
+                                <div class="detail-title">O que você constrói:</div>
+                                <p>✅Envelhecimento saudável e vitalidade.</p>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="card-detail">
-                        <div class="detail-title" style="font-style: normal;"> O que fazemos:</div>
-                        <p>Prevenção de doenças, controle de exames (colesterol, glicemia) e imunidade.</p>
-                    </div>
-
-                    <div class="card-detail">
-                        <div class="detail-title" style="font-style: normal;">O que você constrói:</div>
-                        <p>✅Envelhecimento saudável, vitalidade e proteção contra doenças crônicas.</p>
-                    </div>
-
                 </div>
 
-                <div class="card delay-2">
-                    <div class="card-icon">💪</div>
-                    <h3>Performance e Construção Física </h3>
-
-                    <div class="card-detail">
-                        <p> Resultado não é sorte. <br> <span class="highlight2">É estratégia aplicada.</span></p>
-                    </div>
-
-                    <div class="card-detail">
-                        <div class="detail-title" style="font-style: normal;">O que fazemos:</div>
-                        <p>Ajuste fino de macronutrientes e suplementação para praticantes de atividade física.</p>
-                    </div>
-
-                    <div class="card-detail">
-                        <div class="detail-title" style="font-style: normal;">O que você constrói:</div>
-                        <p>✅Ganho de massa magra, força e recuperação muscular acelerada.</p>
+                <div class="card flip-card delay-2" onclick="toggleCard(this)">
+                    <div class="flip-card-inner">
+                        <div class="flip-card-front">
+                            <div class="card-icon">💪</div>
+                            <h3>Performance e Construção Física</h3>
+                            <p class="click-hint">Clique para saber mais</p>
+                        </div>
+                        <div class="flip-card-back">
+                            <div class="card-icon">💪</div>
+                            <h3>Performance e Construção Física</h3>
+                            <div class="card-detail">
+                                <p>Resultado não é sorte. <span class="highlight2"><br>É estratégia aplicada.</span></p>
+                            </div>
+                            <div class="card-detail">
+                                <div class="detail-title">O que fazemos:</div>
+                                <p>Ajuste fino de macronutrientes e suplementação específica.</p>
+                            </div>
+                            <div class="card-detail">
+                                <div class="detail-title">O que você constrói:</div>
+                                <p>✅Ganho de massa magra e recuperação acelerada.</p>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -260,7 +289,6 @@
             </div>
         </div>
     </footer>
-
     <script src="js/main.js"></script>
 </body>
 
