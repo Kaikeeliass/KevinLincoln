@@ -908,7 +908,7 @@ footer h4 {
     .menu-mobile-btn {
         display: block;
         margin-left: auto;
-        margin-right: 10px;
+        margin-right: 20px;
     }
 
     .hide-mobile {
@@ -943,7 +943,7 @@ footer h4 {
         /* Sobrescreve o display:none anterior */
         position: fixed;
         top: 0;
-        right: -100%;
+        left: -100%;
         /* Começa fora da tela */
         width: 80%;
         height: 100vh;
@@ -956,7 +956,7 @@ footer h4 {
 
     /* Quando a classe 'active' for adicionada via JS */
     .nav-desk.active {
-        right: 0;
+        left: 0;
     }
 
     .nav-desk ul {

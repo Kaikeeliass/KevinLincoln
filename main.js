@@ -116,3 +116,6 @@ const observer = new IntersectionObserver((entries) => {
 
 document.querySelectorAll('.card').forEach(card => observer.observe(card));
 
+// Atualiza o ano do copyright automaticamente no footer
+document.getElementById('ano-atual').textContent = new Date().getFullYear();
+
