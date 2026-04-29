@@ -119,3 +119,25 @@ document.querySelectorAll('.card').forEach(card => observer.observe(card));
 // Atualiza o ano do copyright automaticamente no footer
 document.getElementById('ano-atual').textContent = new Date().getFullYear();
 
+const CACHE_NAME = 'v1-app-cache';
+const ASSETS_TO_CACHE = [
+  '/',
+  '/css/style.css',
+  '/js/main.js'
+];
+
+// Instala e faz o cache inicial
+self.addEventListener('install', event => {
+  event.waitUntil(
+    caches.open(CACHE_NAME).then(cache => cache.addAll(ASSETS_TO_CACHE))
+  );
+});
+
+// Intercepta as requisições: se tem no cache, serve; se não, busca na rede
+self.addEventListener('fetch', event => {
+  event.respondWith(
+    caches.match(event.request).then(response => {
+      return response || fetch(event.request);
+    })
+  );
+});
