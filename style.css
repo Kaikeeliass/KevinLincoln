@@ -895,6 +895,7 @@ header {
     font-size: 0.7rem;
     font-weight: 700;
 }
+
 .feat-check2 {
     display: inline-flex;
     align-items: center;
@@ -902,10 +903,10 @@ header {
     width: 20px;
     height: 20px;
     min-width: 20px;
-    background: #53316d57 ;
-    border: 1px solid #6205c0 ;
+    background: #53316d57;
+    border: 1px solid #6205c0;
     border-radius: 6px;
-    color: #7c00e1 ;
+    color: #7c00e1;
     font-size: 0.7rem;
     font-weight: 700;
 }
@@ -1012,6 +1013,7 @@ header {
     color: #fff;
     box-shadow: 0 8px 30px rgba(100, 80, 200, 0.35);
 }
+
 /* ==========================================================================
    ATENDIMENTO ONLINE
    ========================================================================== */
@@ -1170,6 +1172,115 @@ header {
 }
 
 /* ==========================================================================
+   SEÇÃO HISTÓRIA / CTA
+   ========================================================================== */
+.historia-section {
+    background-color: var(--bg-body);
+}
+
+.historia-card {
+    display: flex;
+    align-items: center;
+    gap: 0;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    background: linear-gradient(135deg, #1a1a1a 0%, #161616 100%);
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
+    transition: border-color 0.4s ease, box-shadow 0.4s ease;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.historia-card:hover {
+    border-color: rgba(214, 90, 90, 0.3);
+    box-shadow: 0 24px 70px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(214, 90, 90, 0.08);
+}
+
+.historia-img-side {
+    flex: 0 0 38%;
+    position: relative;
+    overflow: hidden;
+    min-height: 340px;
+}
+
+.historia-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    display: block;
+    filter: grayscale(20%) sepia(8%);
+    transition: transform 0.6s ease, filter 0.6s ease;
+}
+
+.historia-card:hover .historia-img {
+    transform: scale(1.04);
+    filter: grayscale(0%) sepia(0%);
+}
+
+/* Gradiente de fade lateral */
+.historia-img-side::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 80px;
+    height: 100%;
+    background: linear-gradient(to right, transparent, #1a1a1a);
+    pointer-events: none;
+}
+
+.historia-content {
+    flex: 1;
+    padding: 50px 48px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 16px;
+}
+
+.historia-title {
+    font-size: 1.9rem;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+    color: var(--text-white);
+    margin: 0;
+}
+
+.historia-desc {
+    font-size: 0.92rem;
+    color: var(--text-gray);
+    line-height: 1.75;
+    margin: 0;
+}
+
+.btn-historia {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-top: 10px;
+    padding: 12px 26px;
+    border-radius: 50px;
+    border: 2px solid var(--primary);
+    color: var(--primary);
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.82rem;
+    letter-spacing: 0.4px;
+    text-transform: uppercase;
+    transition: all 0.35s ease;
+    background: transparent;
+}
+
+.btn-historia:hover {
+    background: var(--primary);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 25px rgba(214, 90, 90, 0.4);
+}
+
+/* ==========================================================================
    11. RODAPÉ (FOOTER)
    ========================================================================== */
 footer {
@@ -1253,6 +1364,10 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
+.copy a{
+    color: #ed0909c1;
+}
+
 /* ==========================================================================
    12. ANIMAÇÕES (KEYFRAMES)
    ========================================================================== */
@@ -1270,21 +1385,6 @@ footer {
     }
 }
 
-/* ==========================================================================
-   13. MEDIA QUERIES (RESPONSIVIDADE)
-   ========================================================================== */
-@media (max-width: 1100px) {
-    .online-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-}
-
-@media (max-width: 768px) {
-    .online-grid {
-        grid-template-columns: 1fr;
-        gap: 16px;
-    }
-}
 /* Telas Grandes */
 @media (min-width: 1400px) {
     .container {
@@ -1300,6 +1400,10 @@ footer {
 /* Tablets e Laptops Pequenos */
 @media (max-width: 1100px) {
     .cards-grid-planos {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .online-grid {
         grid-template-columns: repeat(2, 1fr);
     }
 }
@@ -1537,6 +1641,38 @@ footer {
 
     .card h3 {
         font-size: 1.2rem;
+    }
+
+    .historia-card {
+        flex-direction: column;
+    }
+
+    .historia-img-side {
+        flex: 0 0 auto;
+        width: 100%;
+        min-height: 240px;
+    }
+
+    .historia-img-side::after {
+        top: auto;
+        bottom: 0;
+        right: 0;
+        width: 100%;
+        height: 60px;
+        background: linear-gradient(to bottom, transparent, #1a1a1a);
+    }
+
+    .historia-content {
+        padding: 32px 28px 40px;
+    }
+
+    .historia-title {
+        font-size: 1.5rem;
+    }
+
+    .online-grid {
+        grid-template-columns: 1fr;
+        gap: 16px;
     }
 }
 
