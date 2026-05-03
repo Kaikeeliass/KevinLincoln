@@ -15,7 +15,7 @@
 
 /* ==========================================================================
    02. RESET E ESTILOS BÁSICOS
-   v========================================================================== */
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -143,12 +143,10 @@ h4 {
     margin-bottom: 15px;
 }
 
-/* Subtítulo cinza dentro de section-header (antes era style inline) */
 .section-header__sub {
     color: var(--text-gray);
 }
 
-/* FAQ header alinhado à esquerda */
 .faq-section-header {
     text-align: left;
     margin-bottom: 40px;
@@ -173,7 +171,6 @@ h4 {
     background: var(--primary);
 }
 
-/* Modificador para centralizar o section-label (antes era style="justify-content: center") */
 .section-label--center {
     justify-content: center;
 }
@@ -352,8 +349,6 @@ header {
 /* ==========================================================================
    07. SEÇÕES DA PÁGINA (HERO, SOBRE, SERVICES)
    ========================================================================== */
-
-/* Hero Section */
 .hero {
     padding: 100px 0 100px;
     background: radial-gradient(circle at top center, #2a1a1a 0%, var(--bg-body) 60%);
@@ -399,7 +394,6 @@ header {
     animation: float-animation 3s ease-in-out infinite;
 }
 
-/* Fundo / Sobre */
 .fundo {
     background-color: var(--bg-section-alt);
 }
@@ -452,7 +446,6 @@ header {
     object-position: top left;
 }
 
-/* Services */
 .services {
     background-color: var(--bg-body);
 }
@@ -483,7 +476,6 @@ header {
     transition: transform 0.35s ease, border-color 0.35s ease, box-shadow 0.35s ease;
 }
 
-/* Aspas decorativas */
 .testimonial-card::before {
     content: '\201C';
     position: absolute;
@@ -499,7 +491,6 @@ header {
     transition: opacity 0.35s ease;
 }
 
-/* Barra de cor no topo */
 .testimonial-card::after {
     content: '';
     position: absolute;
@@ -537,7 +528,6 @@ header {
     z-index: 1;
 }
 
-/* Divisor sutil antes das infos do paciente */
 .patient-info {
     display: flex;
     flex-direction: column;
@@ -551,7 +541,6 @@ header {
     text-align: center;
 }
 
-/* Avatar com gradiente de borda */
 .patient-avatar-placeholder {
     width: 46px;
     height: 46px;
@@ -563,7 +552,6 @@ header {
     overflow: hidden;
 }
 
-/* Silhueta de pessoa dentro do avatar */
 .patient-avatar-placeholder::after {
     content: '';
     position: absolute;
@@ -610,7 +598,6 @@ header {
     padding: 2px 10px;
 }
 
-/* Flip Cards */
 .card {
     background-color: transparent !important;
     padding: 0 !important;
@@ -742,7 +729,7 @@ header {
 }
 
 /* ==========================================================================
-   09. CARDS DE PLANOS / INVESTIMENTO (REDESENHADOS)
+   09. CARDS DE PLANOS / INVESTIMENTO
    ========================================================================== */
 .planos-bg {
     background-color: #0e0e0e;
@@ -750,7 +737,6 @@ header {
     overflow: hidden;
 }
 
-/* Detalhe decorativo de fundo */
 .planos-bg::before {
     content: '';
     position: absolute;
@@ -770,7 +756,6 @@ header {
     align-items: stretch;
 }
 
-/* Card base */
 .plan-card {
     background: linear-gradient(160deg, #1e1e1e 0%, #181818 100%);
     border: 1px solid rgba(255, 255, 255, 0.07);
@@ -799,7 +784,6 @@ header {
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(214, 90, 90, 0.1);
 }
 
-/* Duração — número grande no topo */
 .plan-duration-tag {
     font-family: 'Montserrat', sans-serif;
     font-size: 0.7rem;
@@ -810,7 +794,6 @@ header {
     margin-bottom: 20px;
 }
 
-/* Ícone */
 .plan-icon-wrap {
     width: 56px;
     height: 56px;
@@ -834,7 +817,6 @@ header {
     line-height: 1;
 }
 
-/* Label do plano */
 .plan-label {
     font-family: 'Montserrat', sans-serif;
     font-size: 1.5rem;
@@ -844,7 +826,6 @@ header {
     letter-spacing: -0.5px;
 }
 
-/* Descrição */
 .plan-desc {
     font-size: 0.85rem;
     color: var(--text-gray);
@@ -853,15 +834,6 @@ header {
     flex-grow: 0;
 }
 
-/* Divisor */
-.plan-divider-line {
-    width: 100%;
-    height: 1px;
-    background: rgba(255, 255, 255, 0.06);
-    margin-bottom: 22px;
-}
-
-/* Features */
 .plan-features {
     list-style: none;
     width: 100%;
@@ -911,7 +883,6 @@ header {
     font-weight: 700;
 }
 
-/* CTA */
 .btn-plan {
     display: block;
     width: 100%;
@@ -936,11 +907,11 @@ header {
     transform: translateY(-2px);
 }
 
-/* ---- Card POPULAR (Trimestral) ---- */
+/* ---- Card POPULAR (Trimestral) — igual aos demais ---- */
 .plan-card--popular {
-    background: linear-gradient(160deg, #251515 0%, #1a0d0d 100%);
-    border-color: rgba(214, 90, 90, 0.4);
-    box-shadow: 0 8px 30px rgba(214, 90, 90, 0.1);
+    background: linear-gradient(160deg, #1e1e1e 0%, #181818 100%);
+    border-color: rgba(255, 255, 255, 0.07);
+    box-shadow: none;
 }
 
 .plan-card--popular .plan-label {
@@ -948,21 +919,22 @@ header {
 }
 
 .plan-card--popular .plan-features li {
-    color: #c8c8c8;
+    color: var(--text-gray);
 }
 
 .plan-card--popular:hover {
-    border-color: rgba(214, 90, 90, 0.7);
-    box-shadow: 0 20px 50px rgba(214, 90, 90, 0.2);
+    border-color: rgba(214, 90, 90, 0.35);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 
-/* Badge "Mais Escolhido" */
+/* Badge roxo "O melhor custo benefício" */
 .plan-popular-badge {
     position: absolute;
     top: 18px;
     right: 18px;
-    background: var(--primary);
-    color: #fff;
+    background: rgba(130, 100, 220, 0.2);
+    border: 1px solid rgba(130, 100, 220, 0.5);
+    color: #c4b0f8;
     font-size: 0.65rem;
     font-weight: 700;
     text-transform: uppercase;
@@ -971,18 +943,19 @@ header {
     border-radius: 20px;
 }
 
-/* CTA do card popular */
+/* CTA do card popular — igual aos demais */
 .btn-plan--highlight {
-    background: var(--primary);
-    border-color: var(--primary);
-    color: #fff;
-    box-shadow: 0 4px 20px rgba(214, 90, 90, 0.35);
+    background: rgba(255, 255, 255, 0.05);
+    border-color: rgba(255, 255, 255, 0.1);
+    color: var(--text-white);
+    box-shadow: none;
 }
 
 .btn-plan--highlight:hover {
-    background: var(--primary-dark);
-    border-color: var(--primary-dark);
-    box-shadow: 0 8px 30px rgba(214, 90, 90, 0.5);
+    background: rgba(214, 90, 90, 0.2);
+    border-color: rgba(214, 90, 90, 0.5);
+    color: #fff;
+    box-shadow: none;
 }
 
 /* ---- Card PREMIUM (Anual) ---- */
@@ -1106,6 +1079,39 @@ header {
     line-height: 1.7;
 }
 
+.online-cta {
+    display: flex;
+    justify-content: center;
+    margin-top: 48px;
+}
+
+.btn-online-whats {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    padding: 16px 36px;
+    background: transparent;
+    color: #25D366;
+    border: 2px solid #25D366;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 0.95rem;
+    letter-spacing: 1px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.btn-online-whats:hover {
+    background: #25D366;
+    color: #fff;
+    box-shadow: 0 0 24px rgba(37, 211, 102, 0.35);
+    transform: translateY(-2px);
+}
+
+.btn-online-whats:active {
+    transform: translateY(0);
+}
 
 /* ==========================================================================
    10. DÚVIDAS FREQUENTES (FAQ)
@@ -1175,7 +1181,7 @@ header {
    SEÇÃO HISTÓRIA / CTA
    ========================================================================== */
 .historia-section {
-    background-color: var(--bg-body);
+    background-color: #2525256d;
 }
 
 .historia-card {
@@ -1219,7 +1225,6 @@ header {
     filter: grayscale(0%) sepia(0%);
 }
 
-/* Gradiente de fade lateral */
 .historia-img-side::after {
     content: '';
     position: absolute;
@@ -1315,7 +1320,6 @@ footer {
     color: #888;
 }
 
-/* Título do footer (antes era style inline margin-bottom: 20px) */
 .footer-title {
     font-size: 1.1rem;
     margin-bottom: 20px;
@@ -1364,7 +1368,7 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
-.copy a{
+.copy a {
     color: #ed0909c1;
 }
 
@@ -1384,6 +1388,10 @@ footer {
         transform: translateY(0px);
     }
 }
+
+/* ==========================================================================
+   13. RESPONSIVIDADE
+   ========================================================================== */
 
 /* Telas Grandes */
 @media (min-width: 1400px) {
