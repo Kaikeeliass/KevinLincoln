@@ -141,3 +141,21 @@ self.addEventListener('fetch', event => {
     })
   );
 });
+
+const lazyVideos = document.querySelectorAll('video[data-src]');
+    const videoObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                const video = entry.target;
+                video.querySelectorAll('source[data-src]').forEach(source => {
+                    source.src = source.dataset.src;
+                });
+                video.src = video.dataset.src;
+                video.load();
+                video.play();
+                videoObserver.unobserve(video);
+            }
+        });
+    }, { rootMargin: '200px' });
+
+    lazyVideos.forEach(v => videoObserver.observe(v));
