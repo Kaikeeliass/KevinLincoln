@@ -385,7 +385,6 @@ section {
     object-fit: cover;
     object-position: top center;
     display: block;
-    filter: grayscale(40%) brightness(0.82);
     transition: filter 0.5s ease, transform 0.5s ease;
 }
 
@@ -650,7 +649,7 @@ section {
     color: var(--gray);
     line-height: 1.8;
     font-size: 22px;
-    max-width: 620px;
+    max-width: 820px;
     font-weight: 400;
     text-align: justify;
 }
@@ -728,10 +727,10 @@ section {
 }
 
 .footer-crn {
-    font-size: 0.72rem;
+    font-size: 0.80rem;
     letter-spacing: 2px;
     text-transform: uppercase;
-    color: var(--gray-2);
+    color: var(--white);
 }
 
 /* ─── SCROLL REVEAL ─── */
