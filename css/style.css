@@ -1711,7 +1711,7 @@ header {
     align-items: center;
     gap: 12px;
     padding: clamp(14px, 2vw, 18px) clamp(24px, 3vw, 40px);
-    background: var(--red);
+    background: var(--primary);
     color: #fff;
     font-family: 'DM Sans', sans-serif;
     font-weight: 600;
@@ -1724,7 +1724,7 @@ header {
 }
 
 .btn-cta:hover {
-    background: var(--red-dark);
+    background: var(--primary-dark);
     transform: translateY(-3px);
 }
 
