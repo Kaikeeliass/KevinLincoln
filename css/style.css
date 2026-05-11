@@ -95,30 +95,6 @@ h4 {
     color: #eb1010;
 }
 
-.delay-1 {
-    transition-delay: 0.1s;
-}
-
-.delay-2 {
-    transition-delay: 0.2s;
-}
-
-.delay-3 {
-    transition-delay: 0.3s;
-}
-
-.js-scroll-fade-up {
-    opacity: 0;
-    transform: translateY(40px);
-    transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94),
-        transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-}
-
-.js-scroll-fade-in {
-    opacity: 0;
-    transition: opacity 1s ease;
-}
-
 .img {
     width: 60px;
     border-radius: 100%;
@@ -229,6 +205,7 @@ h4 {
     box-shadow: 0 8px 25px rgba(131, 168, 148, 0.4);
 }
 
+/* Botão WhatsApp no header */
 .btn-tercery {
     display: inline-flex;
     align-items: center;
@@ -240,8 +217,6 @@ h4 {
     letter-spacing: 0.5px;
     gap: 10px;
     transition: all 0.4s ease;
-    position: relative;
-    overflow: hidden;
     z-index: 1;
     background-color: transparent;
     color: var(--secondary);
@@ -284,23 +259,6 @@ header {
 .logo span {
     color: #e95577d7;
     font-weight: 700 !important;
-}
-
-.logo-foto {
-    flex: 0 0 40%;
-    display: flex;
-    justify-content: center;
-    position: relative;
-    width: auto;
-    height: auto;
-    top: auto;
-    right: auto;
-}
-
-.logo-foto img {
-    width: 100%;
-    max-width: 300px;
-    border-radius: 20px;
 }
 
 .nav-desk ul {
@@ -443,6 +401,18 @@ header {
     animation: float-animation 3s ease-in-out infinite;
 }
 
+.logo-foto {
+    flex: 0 0 40%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo-foto img {
+    width: 100%;
+    max-width: 300px;
+    border-radius: 20px;
+}
+
 .fundo {
     background-color: var(--bg-section-alt);
 }
@@ -554,7 +524,6 @@ header {
     transition: opacity 0.35s ease;
 }
 
-/* Destaque do card ativo no carrossel */
 .testimonial-card.tc-active {
     border-color: rgba(214, 90, 90, 0.3) !important;
     box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4), 0 0 0 1px rgba(214, 90, 90, 0.08) !important;
@@ -568,7 +537,6 @@ header {
     opacity: 1;
 }
 
-/* Cards não-ativos ficam levemente apagados */
 .tc-slide:not(.tc-active) .testimonial-card,
 .testimonial-card.tc-slide:not(.tc-active) {
     opacity: 0.6;
@@ -661,16 +629,8 @@ header {
 .carousel-outer {
     overflow: hidden;
     position: relative;
-    mask-image: linear-gradient(to right,
-            transparent 0%,
-            #000 6%,
-            #000 94%,
-            transparent 100%);
-    -webkit-mask-image: linear-gradient(to right,
-            transparent 0%,
-            #000 6%,
-            #000 94%,
-            transparent 100%);
+    mask-image: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
+    -webkit-mask-image: linear-gradient(to right, transparent 0%, #000 6%, #000 94%, transparent 100%);
 }
 
 .carousel-track {
@@ -679,7 +639,6 @@ header {
     will-change: transform;
 }
 
-/* Cada slide */
 .tc-slide {
     flex: 0 0 calc(33.333% - 20px);
     margin: 0 10px;
@@ -839,6 +798,7 @@ header {
     border-color: rgba(104, 11, 11, 0.441);
 }
 
+/* Ícone do plano anual (roxo) */
 .plan-icon-wrap1 {
     width: 56px;
     height: 56px;
@@ -945,7 +905,8 @@ header {
     margin-top: auto;
 }
 
-.btn-plan:hover {
+.btn-plan:hover,
+.btn-plan--highlight:hover {
     background: rgba(214, 90, 90, 0.2);
     border-color: rgba(214, 90, 90, 0.5);
     color: #fff;
@@ -993,13 +954,6 @@ header {
     box-shadow: none;
 }
 
-.btn-plan--highlight:hover {
-    background: rgba(214, 90, 90, 0.2);
-    border-color: rgba(214, 90, 90, 0.5);
-    color: #fff;
-    box-shadow: none;
-}
-
 .plan-card--premium {
     background: linear-gradient(160deg, #1a1a22 0%, #131318 100%);
     border-color: rgba(130, 100, 220, 0.25);
@@ -1008,11 +962,6 @@ header {
 .plan-card--premium:hover {
     border-color: rgba(130, 100, 220, 0.5);
     box-shadow: 0 20px 50px rgba(80, 60, 160, 0.2);
-}
-
-.plan-card--premium .plan-icon-wrap {
-    background-color: #32094c8f;
-    border-color: rgba(130, 100, 220, 0.2);
 }
 
 .btn-plan--premium {
@@ -1026,6 +975,7 @@ header {
     border-color: rgba(130, 100, 220, 0.7);
     color: #fff;
     box-shadow: 0 8px 30px rgba(100, 80, 200, 0.35);
+    transform: translateY(-2px);
 }
 
 /* ==========================================================================
@@ -1137,7 +1087,6 @@ header {
     font-family: 'Montserrat', sans-serif;
     font-weight: 700;
     font-size: 0.95rem;
-    text-align: center;
     letter-spacing: 1px;
     border-radius: 25px;
     text-decoration: none;
@@ -1229,14 +1178,13 @@ header {
 .historia-card {
     display: flex;
     align-items: center;
-    gap: 0;
     border-radius: 24px;
     overflow: hidden;
     border: 1px solid rgba(255, 255, 255, 0.08);
     background: linear-gradient(135deg, #1a1a1a 0%, #161616 100%);
     box-shadow: 0 20px 60px rgba(0, 0, 0, 0.4);
     transition: border-color 0.4s ease, box-shadow 0.4s ease;
-    max-width: 900px;
+    max-width: 1000px;
     margin: 0 auto;
 }
 
@@ -1478,9 +1426,8 @@ header {
 }
 
 /* ==========================================================================
-   13. FORMULÁRIO
+   12. FORMULÁRIO / MODAL
    ========================================================================== */
-/* ─── MODAL ─── */
 .modal-overlay {
     position: fixed;
     inset: 0;
@@ -1706,6 +1653,12 @@ header {
     transform: scale(0.99);
 }
 
+.btn-form-enviar:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    transform: none !important;
+}
+
 .btn-cta {
     display: inline-flex;
     align-items: center;
@@ -1730,6 +1683,19 @@ header {
 
 .btn-cta:active {
     transform: translateY(0);
+}
+
+.form-error {
+    display: block;
+    color: var(--primary);
+    font-size: 0.72rem;
+    margin-top: 4px;
+    letter-spacing: 0.3px;
+    font-weight: 400;
+}
+
+.input-error {
+    border-color: var(--primary) !important;
 }
 
 .modal-sucesso {
@@ -1770,7 +1736,7 @@ header {
 }
 
 /* ==========================================================================
-   12. RODAPÉ (FOOTER)
+   13. RODAPÉ (FOOTER)
    ========================================================================== */
 footer {
     background-color: #0A0A0A;
@@ -1857,7 +1823,7 @@ footer {
 }
 
 /* ==========================================================================
-   13. ANIMAÇÕES (KEYFRAMES)
+   14. ANIMAÇÕES (KEYFRAMES)
    ========================================================================== */
 @keyframes float-animation {
     0% {
@@ -1874,7 +1840,7 @@ footer {
 }
 
 /* ==========================================================================
-   14. RESPONSIVIDADE
+   15. RESPONSIVIDADE
    ========================================================================== */
 
 /* Telas Grandes */
@@ -1946,8 +1912,6 @@ footer {
 @media (max-width: 768px) {
     header {
         padding: 15px 0;
-        background: linear-gradient(180deg, rgba(37, 3, 3, 0.98) 0%, rgba(55, 8, 8, 0.98) 10%, rgba(20, 2, 2, 1) 100%);
-        backdrop-filter: blur(10px);
     }
 
     .menu-mobile-btn {
@@ -1956,29 +1920,8 @@ footer {
         margin-right: 20px;
     }
 
-    .hide-mobile {
-        display: none;
-    }
-
-    .buttons {
-        display: inline-flex;
-        align-items: center;
-        justify-content: center;
-        width: 230px !important;
-        padding: 10px 1px;
-        border-radius: 30px;
-        font-size: 0.8rem;
-        font-weight: 600;
-        letter-spacing: 0.3px;
-        gap: 6px;
-        position: relative;
-        overflow: hidden;
-        z-index: 1;
-        transition: all 0.4s ease;
-    }
-
     .nav-desk {
-        display: block !important;
+        display: flex !important;
         position: fixed;
         top: 0;
         left: -100%;
@@ -1990,13 +1933,11 @@ footer {
         -webkit-backdrop-filter: blur(14px);
         z-index: 2000;
         transition: left 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-        padding: 0;
         box-shadow: -20px 0 60px rgba(0, 0, 0, 0.8), inset 1px 0 1px rgba(255, 255, 255, 0.06);
         overflow-y: auto;
         overflow-x: hidden;
         scrollbar-width: thin;
         scrollbar-color: rgba(214, 90, 90, 0.4) transparent;
-        display: flex;
         flex-direction: column;
     }
 
@@ -2011,7 +1952,6 @@ footer {
     .nav-desk::-webkit-scrollbar-thumb {
         background: rgba(214, 90, 90, 0.3);
         border-radius: 4px;
-        transition: background 0.3s ease;
     }
 
     .nav-desk::-webkit-scrollbar-thumb:hover {
@@ -2048,13 +1988,11 @@ footer {
         font-size: 1.15rem;
         color: var(--text-gray);
         font-weight: 500;
-        letter-spacing: 0.3px;
         position: relative;
         display: flex;
         align-items: center;
         transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
         padding: 16px 32px;
-        text-decoration: none;
     }
 
     .nav-desk a::before {
@@ -2096,7 +2034,6 @@ footer {
         border: 2px solid rgba(214, 90, 90, 0.3);
         padding: 8px;
         background: rgba(214, 90, 90, 0.08);
-        transition: all 0.3s ease;
         display: block;
         object-fit: contain;
     }
@@ -2133,8 +2070,7 @@ footer {
         margin-top: 30px;
     }
 
-    .hero-buttons,
-    .buttons {
+    .hero-buttons {
         flex-direction: column;
         align-items: center;
         width: 100%;
@@ -2172,6 +2108,12 @@ footer {
 
     .card {
         padding: 30px 20px;
+        height: 500px;
+        margin-bottom: 20px;
+    }
+
+    .card h3 {
+        font-size: 1.2rem;
     }
 
     .section-padding {
@@ -2197,25 +2139,9 @@ footer {
     }
 
     .fundo-img-wrapper::after {
-        content: '';
-        position: absolute;
         top: 20px;
         left: 10px;
         bottom: 5px;
-        width: 100%;
-        height: 100%;
-        border: 2px solid var(--secondary);
-        opacity: 0.3;
-        border-radius: 16px;
-    }
-
-    .card {
-        height: 500px;
-        margin-bottom: 20px;
-    }
-
-    .card h3 {
-        font-size: 1.2rem;
     }
 
     .historia-card {
@@ -2306,15 +2232,19 @@ footer {
     }
 }
 
-/* Controle da logo no menu mobile */
-@media (max-width: 767px) {
-    .img_log {
-        display: block;
-    }
-}
-
+/* Logo no menu mobile */
 @media (min-width: 768px) {
     .img_log {
         display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+
+    .modal-box {
+        padding: 28px 20px;
     }
 }
