@@ -87,7 +87,8 @@ nav {
 }
 
 .nav-logo span {
-    color: var(--green);
+    color: #e95577d7;
+    font-weight: 700 !important;
 }
 
 .nav-back {
@@ -723,7 +724,8 @@ section {
 }
 
 .footer-logo span {
-    color: var(--green);
+    color: #e95577d7;
+    font-weight: 700 !important;
 }
 
 .footer-crn {
