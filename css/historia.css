@@ -1069,7 +1069,7 @@ section {
 
     .cta-text h2,
     .cta-text p {
-        text-align: center;
+        text-align: justify;
     }
 
     .quote-inner {
@@ -1162,7 +1162,7 @@ section {
     }
 
     .cta-text h2 {
-        text-align: center;
+        text-align: justify;
     }
 
     .cta-text p {
