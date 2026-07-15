@@ -4,7 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Lincoln | Nutrição de Precisão</title>
+    <title>Kevin Lincoln | Nutricionista — Nutrição de Precisão em São José do Rio Preto</title>
+    <meta name="description" content="Emagrecimento definitivo com o Método Atlas. Protocolos nutricionais baseados em evidência para perda de gordura, saúde metabólica e performance. Atendimento online para todo o Brasil.">
+    <meta name="keywords" content="nutricionista, Kevin Lincoln, emagrecimento, método Atlas, nutrição online, São José do Rio Preto, perda de peso, dieta">
+    <meta name="author" content="Kevin Lincoln">
+    <meta property="og:title" content="Kevin Lincoln | Nutricionista — Emagrecimento Definitivo">
+    <meta property="og:description" content="Protocolos nutricionais baseados em evidência para emagrecimento definitivo, saúde metabólica e performance.">
+    <meta property="og:type" content="website">
     <link rel="icon" href="img/Prancheta 4@4x.png" class="icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,26 +22,30 @@
 </head>
 
 <body>
+
+    <!-- BARRA DE PROGRESSO DE LEITURA -->
+    <div id="read-progress" class="read-progress"></div>
+
     <header id="header">
         <div class="container header-flex">
             <div class="logo">Nutri<span>.Kevin</span></div>
-            <button class="menu-mobile-btn" id="openMenu">
+            <button class="menu-mobile-btn" id="openMenu" aria-label="Abrir menu">
                 <i>&#9776;</i>
             </button>
             <nav class="nav-desk" id="navMenu">
                 <button class="close-menu" id="closeMenu">&times;</button>
-                <img class="img_log" src="img/Prancheta 4@4x.png" alt="">
+                <img class="img_log" src="img/Prancheta 4@4x.png" alt="Logo Kevin Lincoln">
                 <ul>
-                    <li><a href="#inicio">Início</a></li>
-                    <li><a href="#sobre">Sobre</a></li>
-                    <li><a href="#metodo">Atlas</a></li>
-                    <li><a href="#plano">Planos</a></li>
-                    <li><a href="#pacientes">Pacientes</a></li>
-                    <li><a href="#historia">História</a></li>
-                    <li><a href="#faq">Dúvidas</a></li>
+                    <li><a href="#inicio" data-section="inicio">Início</a></li>
+                    <li><a href="#sobre" data-section="sobre">Sobre</a></li>
+                    <li><a href="#metodo" data-section="metodo">Atlas</a></li>
+                    <li><a href="#plano" data-section="plano">Planos</a></li>
+                    <li><a href="#pacientes" data-section="pacientes">Pacientes</a></li>
+                    <li><a href="#historia" data-section="historia">História</a></li>
+                    <li><a href="#faq" data-section="faq">Dúvidas</a></li>
                 </ul>
             </nav>
-            <a href="https://wa.me/5517981114500" target="_blank" class="btn-tercery">
+            <a href="https://wa.me/5517981114500" target="_blank" class="btn-tercery" aria-label="WhatsApp">
                 <svg xmlns="http://www.w3.org/2000/svg" width="20px" height="25px" fill="currentColor"
                     viewBox="0 0 16 16">
                     <path
@@ -47,24 +57,50 @@
 
     <!-- INÍCIO -->
     <section class="hero" id="inicio">
+        <!-- Canvas de partículas -->
+        <canvas id="hero-canvas"></canvas>
+
         <div class="container">
             <div class="hero-wrapper">
                 <div class="hero-text">
                     <span class="badge">Nutrição de Alta Precisão</span>
-                    <h1 class="text-h1 delay-1">Emagrecimento <span class="highlight">não é</span> <br> sobre restrição.
+                    <h1 class="text-h1 delay-1">Emagrecimento <span class="highlight">não é</span> <br>sobre restrição.
                         <br>É sobre consistência.<span class="highlight"> <br> Eu te mostro como <br> chegar lá. </span>
                     </h1>
                 </div>
-                <div class="logo-foto">
-                    <img src="img/kevin-logo.png" alt="Kevin Lincoln">
+                <div class="logo-foto js-scroll-fade-in">
+                    <img src="img/kevin-logo.png" alt="Kevin Lincoln — Nutricionista">
                 </div>
             </div>
             <p class="paragrafo delay-2">Protocolos nutricionais baseados em evidência para <strong>emagrecimento
                     definitivo</strong>, saúde metabólica e performance, sem <strong>radicalismos</strong>.</p>
             <div class="buttons delay-3">
-                <a class="btn btn-primary" onclick="abrirFormulario()">Agendar Avaliação
+                <a class="btn btn-primary btn-pulse" id="btn-hero-cta" onclick="abrirFormulario()">Agendar Avaliação
                     &rarr;</a>
                 <a href="#metodo" class="btn btn-secondary">Conhecer Atlas</a>
+            </div>
+
+            <!-- STATS / CONTADORES -->
+            <div class="stats-row js-scroll-fade-up">
+                <div class="stat-item">
+                    <span class="stat-number" data-target="150" data-suffix="+">0</span>
+                    <span class="stat-label">Vidas Transformadas</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="3" data-suffix="+ anos">0</span>
+                    <span class="stat-label">de Experiência</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="100" data-suffix="%">0</span>
+                    <span class="stat-label">Atendimento Online</span>
+                </div>
+                <div class="stat-divider"></div>
+                <div class="stat-item">
+                    <span class="stat-number" data-target="98" data-suffix="%">0</span>
+                    <span class="stat-label">de Satisfação</span>
+                </div>
             </div>
         </div>
     </section>
@@ -72,7 +108,7 @@
     <!-- SOBRE -->
     <section class="section-padding fundo" id="sobre">
         <div class="container fundo-grid">
-            <div class="fundo-text">
+            <div class="fundo-text js-scroll-fade-up">
                 <span class="section-label section-label--center">Quem Sou Eu</span>
                 <h2>Mais do que um método. Uma missão.</h2>
                 <p>Meu nome é Kevin Lincoln, e eu acredito que emagrecimento não deve ser sinônimo de sofrimento. Ao
@@ -82,9 +118,24 @@
                     compromisso não é apenas entregar um plano, mas acompanhar cada etapa da sua
                     <strong>evolução</strong>.
                 </p>
+                <!-- Badges de credencial -->
+                <div class="credential-badges">
+                    <div class="cred-badge">
+                        <span class="cred-icon">🎓</span>
+                        <span>Nutricionista Formado</span>
+                    </div>
+                    <div class="cred-badge">
+                        <span class="cred-icon">📋</span>
+                        <span>CRN: 83678P</span>
+                    </div>
+                    <div class="cred-badge">
+                        <span class="cred-icon">🌐</span>
+                        <span>Atend. Online</span>
+                    </div>
+                </div>
             </div>
-            <div class="fundo-img-wrapper delay-2">
-                <img src="img/kevin.png" alt="Nutricionista" class="fundo-img">
+            <div class="fundo-img-wrapper js-scroll-fade-in delay-2">
+                <img src="img/kevin.png" alt="Kevin Lincoln — Nutricionista" class="fundo-img">
             </div>
         </div>
     </section>
@@ -92,13 +143,13 @@
     <!-- MÉTODO -->
     <section class="section-padding services" id="metodo">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header js-scroll-fade-up">
                 <span class="section-label section-label--center">Atlas</span>
                 <h2 class="test">Um método estruturado para quem quer emagrecer sem viver em restrição.</h2>
                 <p class="section-header__sub">Sem fórmulas prontas. Um processo ajustado ao que funciona para você.</p>
             </div>
             <div class="cards-grid">
-                <div class="card flip-card" onclick="toggleCard(this)">
+                <div class="card flip-card js-scroll-fade-up" onclick="toggleCard(this)">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="card-icon">⚡</div>
@@ -123,7 +174,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card flip-card delay-1" onclick="toggleCard(this)">
+                <div class="card flip-card delay-1 js-scroll-fade-up" onclick="toggleCard(this)">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="card-icon">🛡️</div>
@@ -148,7 +199,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="card flip-card delay-2" onclick="toggleCard(this)">
+                <div class="card flip-card delay-2 js-scroll-fade-up" onclick="toggleCard(this)">
                     <div class="flip-card-inner">
                         <div class="flip-card-front">
                             <div class="card-icon">💪</div>
@@ -179,12 +230,12 @@
     <!-- PLANOS -->
     <section class="section-padding planos-bg" id="plano">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header js-scroll-fade-up">
                 <span class="section-label section-label--center">Investimento</span>
                 <h2>Escolha o tempo do seu acompanhamento</h2>
             </div>
             <div class="cards-grid-planos">
-                <div class="plan-card">
+                <div class="plan-card js-scroll-fade-up">
                     <div class="plan-duration-tag">1 Mês</div>
                     <div class="plan-icon-wrap"><span class="plan-emoji">⚡</span></div>
                     <div class="plan-label">Mensal</div>
@@ -196,7 +247,7 @@
                     </ul>
                     <a href="https://wa.me/5517981114500" target="_blank" class="btn-plan">Começar Agora</a>
                 </div>
-                <div class="plan-card plan-card--popular">
+                <div class="plan-card plan-card--popular js-scroll-fade-up delay-1">
                     <div class="plan-duration-tag">3 Meses</div>
                     <div class="plan-icon-wrap"><span class="plan-emoji">🔥</span></div>
                     <div class="plan-label">Trimestral</div>
@@ -207,10 +258,11 @@
                         <li><span class="feat-check">✓</span> Guia de Suplementação</li>
                         <li><span class="feat-check">✓</span> Suporte 24h via WhatsApp</li>
                     </ul>
-                    <a href="https://wa.me/5517981114500" target="_blank" class="btn-plan btn-plan--highlight">Começar
+                    <a href="https://wa.me/5517981114500" target="_blank"
+                        class="btn-plan btn-plan--highlight">Começar
                         Agora</a>
                 </div>
-                <div class="plan-card">
+                <div class="plan-card js-scroll-fade-up delay-2">
                     <div class="plan-duration-tag">6 Meses</div>
                     <div class="plan-icon-wrap"><span class="plan-emoji">🏆</span></div>
                     <div class="plan-label">Semestral</div>
@@ -219,11 +271,10 @@
                         <li><span class="feat-check">✓</span> Tudo do plano trimestral</li>
                         <li><span class="feat-check">✓</span> Análise de Exames</li>
                         <li><span class="feat-check">✓</span> Suporte 24h via WhatsApp</li>
-                        <!-- <li><span class="feat-check">✓</span> Bônus: 1 retorno gratuito</li> -->
                     </ul>
                     <a href="https://wa.me/5517981114500" target="_blank" class="btn-plan">Começar Agora</a>
                 </div>
-                <div class="plan-card plan-card--premium">
+                <div class="plan-card plan-card--premium js-scroll-fade-up delay-3">
                     <div class="plan-popular-badge">O melhor custo <br> benefício</div>
                     <div class="plan-duration-tag">1 Ano</div>
                     <div class="plan-icon-wrap1"><span class="plan-emoji">💎</span></div>
@@ -237,7 +288,8 @@
                         <li><span class="feat-check">✓</span> Bônus: 1 retorno gratuito</li>
                         <li><span class="feat-check">✓</span> 50$ de cashback + brinde</li>
                     </ul>
-                    <a href="https://wa.me/5517981114500" target="_blank" class="btn-plan btn-plan--premium">Começar
+                    <a href="https://wa.me/5517981114500" target="_blank"
+                        class="btn-plan btn-plan--premium">Começar
                         Agora</a>
                 </div>
             </div>
@@ -247,30 +299,30 @@
     <!-- ATENDIMENTO ONLINE -->
     <section class="section-padding online-section" id="online">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header js-scroll-fade-up">
                 <span class="section-label section-label--center">Opção 100% Online</span>
                 <h2>Acompanhamento profissional onde você estiver</h2>
                 <p class="section-header__sub">Sem deslocamento, sem horário fixo. Resultado real com toda a praticidade
                     do digital.</p>
             </div>
             <div class="online-grid">
-                <div class="online-benefit">
+                <div class="online-benefit js-scroll-fade-up">
                     <div class="online-icon">📍</div>
                     <h4>Atende qualquer Região ou País</h4>
                     <p>Não importa onde você mora. O acompanhamento acontece 100% pelo WhatsApp e plataformas digitais.
                     </p>
                 </div>
-                <div class="online-benefit">
+                <div class="online-benefit js-scroll-fade-up delay-1">
                     <div class="online-icon">⏱️</div>
                     <h4>Sem perder tempo</h4>
                     <p>Chega de se deslocar para consultas. Você recebe tudo no seu celular, no momento certo.</p>
                 </div>
-                <div class="online-benefit">
+                <div class="online-benefit js-scroll-fade-up delay-2">
                     <div class="online-icon">🔄</div>
                     <h4>Ajustes contínuos</h4>
                     <p>O plano evolui com você. Sempre que precisar de um ajuste, o suporte está disponível.</p>
                 </div>
-                <div class="online-benefit">
+                <div class="online-benefit js-scroll-fade-up delay-3">
                     <div class="online-icon">📋</div>
                     <h4>Plano personalizado</h4>
                     <p>Cada protocolo é montado individualmente, com base na sua rotina, preferências e exames.</p>
@@ -290,10 +342,10 @@
         </div>
     </section>
 
-    <!-- FEEDBACK -->
+    <!-- FEEDBACK / DEPOIMENTOS -->
     <section class="section-padding" id="pacientes">
         <div class="container">
-            <div class="section-header">
+            <div class="section-header js-scroll-fade-up">
                 <span class="section-label section-label--center">Resultados</span>
                 <h2>O que dizem os pacientes</h2>
                 <p class="section-header__sub">Histórias reais de quem transformou a saúde com o Método Atlas.</p>
@@ -301,48 +353,53 @@
             <div class="carousel-outer">
                 <div class="carousel-track" id="carouselTrack">
                     <div class="card testimonial-card tc-slide">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
                         <p class="testimonial-text">"Pra mim está ótimo o atendimento Kevin, tudo o que preciso você
                             sempre prepara prestativo, não vejo algo que esteja deixando a desejar, pra mim está tudo
                             ok!!"</p>
                         <div class="patient-info">
-                            <div class="patient-avatar-placeholder"></div>
+                            <div class="patient-avatar-placeholder patient-avatar-R"></div>
                             <div><strong class="patient-name">Rubia Nascimento</strong><small
                                     class="patient-meta">Paciente satisfeita</small></div>
                         </div>
                     </div>
                     <div class="card testimonial-card tc-slide">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
                         <p class="testimonial-text">"O que me ajuda é o fato de vc ajustar de acordo com a minha
                             necessidade. Obg por acreditar em mim até quando eu mesmo duvido."</p>
                         <div class="patient-info">
-                            <div class="patient-avatar-placeholder"></div>
+                            <div class="patient-avatar-placeholder patient-avatar-A"></div>
                             <div><strong class="patient-name">Ale</strong><small class="patient-meta">Adaptação
                                     personalizada</small></div>
                         </div>
                     </div>
                     <div class="card testimonial-card tc-slide">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
                         <p class="testimonial-text">"Curti demais irmão. Muito profissional e sem rodeios. Entendeu
                             demais meu real objetivo. 100% animado com o progresso até aqui e com o plano daqui pra
                             frente."</p>
                         <div class="patient-info">
-                            <div class="patient-avatar-placeholder"></div>
+                            <div class="patient-avatar-placeholder patient-avatar-F"></div>
                             <div><strong class="patient-name">Afonso</strong><small class="patient-meta">Performance &
                                     Objetivos</small></div>
                         </div>
                     </div>
                     <div class="card testimonial-card tc-slide">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
                         <p class="testimonial-text">"Fiz exatamente o que me orientou. Já estou descostumando comer por
                             compulsão. Acabou a fome, vontade. O segredo é comer devagar."</p>
                         <div class="patient-info">
-                            <div class="patient-avatar-placeholder"></div>
+                            <div class="patient-avatar-placeholder patient-avatar-W"></div>
                             <div><strong class="patient-name">Welington Moraes</strong><small
                                     class="patient-meta">Mudança de hábitos</small></div>
                         </div>
                     </div>
                     <div class="card testimonial-card tc-slide">
+                        <div class="testimonial-stars">⭐⭐⭐⭐⭐</div>
                         <p class="testimonial-text">"A consulta está sendo boa, bem explicativa e detalhada. O
                             embasamento técnico da explicação me agrada bastante também."</p>
                         <div class="patient-info">
-                            <div class="patient-avatar-placeholder"></div>
+                            <div class="patient-avatar-placeholder patient-avatar-X"></div>
                             <div><strong class="patient-name">Alex Mendonça</strong><small
                                     class="patient-meta">Embasamento técnico</small></div>
                         </div>
@@ -350,16 +407,17 @@
                 </div>
             </div>
             <div class="carousel-controls">
-                <button class="carousel-btn" id="carouselPrev">&#8592;</button>
+                <button class="carousel-btn" id="carouselPrev" aria-label="Anterior">&#8592;</button>
                 <div class="carousel-dots" id="carouselDots"></div>
-                <button class="carousel-btn" id="carouselNext">&#8594;</button>
+                <button class="carousel-btn" id="carouselNext" aria-label="Próximo">&#8594;</button>
             </div>
         </div>
     </section>
 
+    <!-- HISTÓRIA -->
     <section class="section-padding historia-section" id="historia">
         <div class="container">
-            <div class="historia-card">
+            <div class="historia-card js-scroll-fade-up">
                 <div class="historia-img-side">
                     <img src="img/kevin_2.png" alt="Kevin Lincoln" class="historia-img">
                     <div class="historia-img-glow"></div>
@@ -379,11 +437,11 @@
     <!-- FAQ -->
     <section class="section-padding faq" id="faq">
         <div class="container faq-container">
-            <div class="section-header faq-section-header">
+            <div class="section-header faq-section-header js-scroll-fade-up">
                 <span class="section-label section-label--center">Dúvidas</span>
                 <h2 class="h1_duv">Perguntas Frequentes</h2>
             </div>
-            <div class="faq-item">
+            <div class="faq-item js-scroll-fade-up">
                 <div class="faq-header">O método Atlas funciona para qualquer pessoa?<span class="faq-icon">+</span>
                 </div>
                 <div class="faq-body">
@@ -391,21 +449,21 @@
                         prontos, ajustamos estratégia conforme sua resposta fisiológica e evolução.</p>
                 </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item js-scroll-fade-up delay-1">
                 <div class="faq-header">Preciso cortar alimentos que gosto?<span class="faq-icon">+</span></div>
                 <div class="faq-body">
                     <p>Não trabalhamos com restrições radicais. O foco é organização estratégica, equilíbrio e
                         consistência para gerar resultado sustentável.</p>
                 </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item js-scroll-fade-up delay-2">
                 <div class="faq-header">Em quanto tempo começo a ver resultados?<span class="faq-icon">+</span></div>
                 <div class="faq-body">
                     <p>Os primeiros ajustes no corpo e na energia já aparecem nas primeiras semanas. O ritmo depende do
                         seu ponto de partida e do seu nível de consistência.</p>
                 </div>
             </div>
-            <div class="faq-item">
+            <div class="faq-item js-scroll-fade-up delay-3">
                 <div class="faq-header">E se eu já tentei de tudo e não consegui manter?<span class="faq-icon">+</span>
                 </div>
                 <div class="faq-body">
@@ -439,14 +497,14 @@
                 <div>
                     <h4 class="footer-title">Redes Sociais</h4>
                     <div class="socials">
-                        <a href="https://www.instagram.com/nutri.kevinlincoln/" target="_blank">
+                        <a href="https://www.instagram.com/nutri.kevinlincoln/" target="_blank" aria-label="Instagram">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 viewBox="0 0 16 16">
                                 <path
                                     d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
                             </svg>
                         </a>
-                        <a href="https://wa.me/5517981114500" target="_blank">
+                        <a href="https://wa.me/5517981114500" target="_blank" aria-label="WhatsApp">
                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
                                 viewBox="0 0 16 16">
                                 <path
@@ -604,6 +662,16 @@
         </div>
     </div>
 
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a href="https://wa.me/5517981114500?text=Olá%20Kevin%2C%20tenho%20interesse%20no%20acompanhamento%20nutricional!"
+        target="_blank" class="floating-wa" id="floatingWa" aria-label="Falar no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="currentColor" viewBox="0 0 16 16">
+            <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+        </svg>
+        <span class="floating-wa-tooltip">Falar com Kevin</span>
+    </a>
+
     <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
@@ -742,7 +810,6 @@
         // ── Envio ──
         async function enviarFormulario() {
             if (!validarFormulario()) {
-                // Rola até o primeiro erro
                 document.querySelector('.form-error')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 return;
             }
@@ -770,23 +837,17 @@
             try {
                 await emailjs.send('service_6w1t7v2', 'template_doox4c8', params);
                 document.getElementById('modal-form').style.display = 'none';
-                document.getElementById('modal-sucesso').style.display = 'flex';
-            } catch (erro) {
-                console.error('EmailJS erro:', erro);
+                const sucesso = document.getElementById('modal-sucesso');
+                sucesso.style.display = 'flex';
+            } catch (err) {
+                console.error('Erro ao enviar:', err);
                 btn.disabled = false;
                 btn.textContent = 'ENVIAR →';
-                // Mostra mensagem de erro amigável
-                let msgErro = document.getElementById('envio-erro');
-                if (!msgErro) {
-                    msgErro = document.createElement('p');
-                    msgErro.id = 'envio-erro';
-                    msgErro.style.cssText = 'color:#D65A5A;font-size:0.82rem;text-align:center;margin-top:12px;';
-                    btn.parentNode.insertBefore(msgErro, btn.nextSibling);
-                }
-                msgErro.textContent = 'Erro ao enviar. Verifique sua conexão e tente novamente.';
+                alert('Ocorreu um erro. Tente novamente ou entre em contato pelo WhatsApp.');
             }
         }
     </script>
+
     <script src="js/main.js"></script>
 </body>
 
