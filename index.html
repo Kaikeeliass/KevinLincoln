@@ -533,7 +533,7 @@
                 <div class="form-row">
                     <div class="form-group">
                         <label for="f-nome">Nome completo</label>
-                        <input type="text" id="f-nome" placeholder="Seu nome">
+                        <input type="text" id="f-nome" placeholder="Seu nome completo" maxlength="80" autocomplete="name">
                     </div>
                     <div class="form-group">
                         <label for="f-idade">Idade</label>
@@ -545,7 +545,7 @@
                     </div>
                     <div class="form-group">
                         <label for="f-whats">WhatsApp</label>
-                        <input type="tel" id="f-whats" placeholder="(17) 99999-9999">
+                        <input type="tel" id="f-whats" placeholder="(17) 99999-9999" maxlength="15" autocomplete="tel" inputmode="numeric">
                     </div>
                 </div>
 
@@ -674,6 +674,102 @@
         // ── Inicializa EmailJS ──
         emailjs.init('uikqMZyeHWmzNWxR6');
 
+        // ══════════════════════════════════
+        //  MÁSCARA DE TELEFONE BRASILEIRO
+        // ══════════════════════════════════
+        function mascaraTelefone(input) {
+            input.addEventListener('input', function (e) {
+                // Guarda posição do cursor para não travar
+                let digits = this.value.replace(/\D/g, '').slice(0, 11);
+                let formatted = '';
+
+                if (digits.length === 0) {
+                    formatted = '';
+                } else if (digits.length <= 2) {
+                    formatted = '(' + digits;
+                } else if (digits.length <= 6) {
+                    // Fixo: (XX) XXXX
+                    formatted = '(' + digits.slice(0, 2) + ') ' + digits.slice(2);
+                } else if (digits.length <= 10) {
+                    // Fixo: (XX) XXXX-XXXX
+                    formatted = '(' + digits.slice(0, 2) + ') ' + digits.slice(2, 6) + '-' + digits.slice(6);
+                } else {
+                    // Celular: (XX) 9XXXX-XXXX
+                    formatted = '(' + digits.slice(0, 2) + ') ' + digits.slice(2, 7) + '-' + digits.slice(7);
+                }
+
+                this.value = formatted;
+            });
+
+            // Bloqueia teclas não numéricas (permite: backspace, delete, tab, setas, ctrl+A/C/V/X)
+            input.addEventListener('keydown', function (e) {
+                const allowed = [
+                    'Backspace', 'Delete', 'Tab', 'Escape', 'Enter',
+                    'ArrowLeft', 'ArrowRight', 'ArrowUp', 'ArrowDown',
+                    'Home', 'End'
+                ];
+                if (allowed.includes(e.key)) return;
+                if ((e.ctrlKey || e.metaKey) && ['a', 'c', 'v', 'x', 'z'].includes(e.key.toLowerCase())) return;
+                // Bloqueia se não for dígito
+                if (!/^\d$/.test(e.key)) e.preventDefault();
+            });
+
+            // Garante que colar também seja filtrado
+            input.addEventListener('paste', function (e) {
+                e.preventDefault();
+                const pasted = (e.clipboardData || window.clipboardData).getData('text');
+                const digits = pasted.replace(/\D/g, '').slice(0, 11);
+                // Dispara o input event artificialmente com os dígitos
+                const nativeInputValueSetter = Object.getOwnPropertyDescriptor(window.HTMLInputElement.prototype, 'value').set;
+                nativeInputValueSetter.call(this, digits);
+                this.dispatchEvent(new Event('input', { bubbles: true }));
+            });
+        }
+
+        // ══════════════════════════════════
+        //  BLOQUEAR NÚMEROS NO NOME
+        // ══════════════════════════════════
+        function bloquearNumerosNome(input) {
+            input.addEventListener('keydown', function (e) {
+                if (/^\d$/.test(e.key)) e.preventDefault();
+            });
+            input.addEventListener('input', function () {
+                // Remove dígitos caso colado
+                const pos = this.selectionStart;
+                const newVal = this.value.replace(/\d/g, '');
+                if (this.value !== newVal) {
+                    this.value = newVal;
+                    this.setSelectionRange(pos - 1, pos - 1);
+                }
+            });
+        }
+
+        // ══════════════════════════════════
+        //  FEEDBACK EM TEMPO REAL (limpa erro ao corrigir)
+        // ══════════════════════════════════
+        function feedbackTempoReal(inputId) {
+            const el = document.getElementById(inputId);
+            if (!el) return;
+            el.addEventListener('input', function () {
+                if (this.value.trim()) {
+                    this.classList.remove('input-error');
+                    const err = this.parentNode.querySelector('.form-error');
+                    if (err) err.remove();
+                }
+            });
+        }
+
+        // ══════════════════════════════════
+        //  INICIALIZA INPUTS QUANDO MODAL ABRE
+        // ══════════════════════════════════
+        (function () {
+            const whatsInput = document.getElementById('f-whats');
+            const nomeInput = document.getElementById('f-nome');
+            if (whatsInput) mascaraTelefone(whatsInput);
+            if (nomeInput) bloquearNumerosNome(nomeInput);
+            ['f-nome', 'f-idade', 'f-email', 'f-whats', 'f-peso', 'f-altura'].forEach(feedbackTempoReal);
+        })();
+
         // ── Modal ──
         function abrirFormulario() {
             document.getElementById('modal-overlay').classList.add('active');
@@ -683,7 +779,6 @@
         function fecharFormulario() {
             document.getElementById('modal-overlay').classList.remove('active');
             document.body.style.overflow = '';
-            // Reseta estado de erro após fechar
             document.querySelectorAll('.form-error').forEach(el => el.remove());
             document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
         }
@@ -709,6 +804,8 @@
         function mostrarErro(id, msg) {
             const campo = document.getElementById(id);
             if (!campo) return;
+            // Evita duplicar erro
+            if (campo.parentNode.querySelector('.form-error')) return;
             campo.classList.add('input-error');
             const erro = document.createElement('span');
             erro.className = 'form-error';
@@ -719,6 +816,7 @@
         function mostrarErroChip(name, msg) {
             const grupo = document.querySelector(`input[name="${name}"]`)?.closest('.form-group');
             if (!grupo) return;
+            if (grupo.querySelector('.form-error')) return;
             const erro = document.createElement('span');
             erro.className = 'form-error';
             erro.textContent = msg;
@@ -735,7 +833,9 @@
         }
 
         function validarTelefone(tel) {
-            return tel.replace(/\D/g, '').length >= 10;
+            // Valida somente os dígitos (min 10 = fixo, max 11 = celular)
+            const digits = tel.replace(/\D/g, '');
+            return digits.length >= 10 && digits.length <= 11;
         }
 
         // ── Validação ──
@@ -744,14 +844,15 @@
             let valido = true;
 
             const nome = getVal('f-nome');
-            if (nome.length < 3) {
-                mostrarErro('f-nome', 'Informe seu nome completo.');
+            // Verifica mínimo de 3 chars e presença de ao menos um espaço (nome + sobrenome)
+            if (nome.length < 3 || !nome.includes(' ')) {
+                mostrarErro('f-nome', 'Informe seu nome e sobrenome.');
                 valido = false;
             }
 
-            const idade = getVal('f-idade');
-            if (!idade || idade < 10 || idade > 100) {
-                mostrarErro('f-idade', 'Informe uma idade válida.');
+            const idade = parseInt(getVal('f-idade'), 10);
+            if (isNaN(idade) || idade < 10 || idade > 100) {
+                mostrarErro('f-idade', 'Informe uma idade entre 10 e 100 anos.');
                 valido = false;
             }
 
@@ -763,19 +864,19 @@
 
             const whats = getVal('f-whats');
             if (!validarTelefone(whats)) {
-                mostrarErro('f-whats', 'Informe um WhatsApp válido.');
+                mostrarErro('f-whats', 'Informe um número válido: (XX) 9XXXX-XXXX.');
                 valido = false;
             }
 
-            const peso = getVal('f-peso');
-            if (!peso || peso < 20 || peso > 300) {
-                mostrarErro('f-peso', 'Informe um peso válido.');
+            const peso = parseFloat(getVal('f-peso'));
+            if (isNaN(peso) || peso < 20 || peso > 300) {
+                mostrarErro('f-peso', 'Informe um peso entre 20 e 300 kg.');
                 valido = false;
             }
 
-            const altura = getVal('f-altura');
-            if (!altura || altura < 100 || altura > 250) {
-                mostrarErro('f-altura', 'Informe uma altura válida.');
+            const altura = parseInt(getVal('f-altura'), 10);
+            if (isNaN(altura) || altura < 100 || altura > 250) {
+                mostrarErro('f-altura', 'Informe uma altura entre 100 e 250 cm.');
                 valido = false;
             }
 
@@ -838,7 +939,14 @@
                 console.error('Erro ao enviar:', err);
                 btn.disabled = false;
                 btn.textContent = 'ENVIAR →';
-                alert('Ocorreu um erro. Tente novamente ou entre em contato pelo WhatsApp.');
+                let msgErro = document.getElementById('envio-erro');
+                if (!msgErro) {
+                    msgErro = document.createElement('p');
+                    msgErro.id = 'envio-erro';
+                    msgErro.style.cssText = 'color:#D65A5A;font-size:0.82rem;text-align:center;margin-top:12px;';
+                    btn.parentNode.insertBefore(msgErro, btn.nextSibling);
+                }
+                msgErro.textContent = 'Erro ao enviar. Verifique sua conexão e tente novamente.';
             }
         }
     </script>
