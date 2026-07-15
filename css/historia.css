@@ -162,7 +162,6 @@ nav.scrolled {
     display: flex;
     flex-direction: column;
     margin-top: 15%;
-    left: 5%;
     padding: calc(var(--nav-h) + 40px) var(--section-px) clamp(60px, 8vw, 100px);
     position: relative;
     z-index: 2;
@@ -1574,7 +1573,8 @@ section {
     .hero-left {
         padding-top: 0;
         padding-bottom: 80px;
-        margin-top: -60px;
+        margin-top: 50px;
+        margin-right: 100px;
         position: relative;
         z-index: 2;
     }
