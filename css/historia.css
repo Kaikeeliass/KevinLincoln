@@ -1573,8 +1573,8 @@ section {
     .hero-left {
         padding-top: 0;
         padding-bottom: 80px;
-        margin-top: 50px;
-        margin-right: 100px;
+        margin-top: -60px;
+        margin-right: 0;
         position: relative;
         z-index: 2;
     }
