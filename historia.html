@@ -4,51 +4,80 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Lincoln | A História</title>
-    <link rel="icon" href="img/Prancheta 4@4x.png" class="icon">
+    <title>Kevin Lincoln | A História — Nutricionista & Atleta</title>
+    <meta name="description" content="Conheça a jornada de Kevin Lincoln: de uma transformação pessoal ao Método Atlas que já transformou centenas de vidas. Nutricionista CRN 83678P.">
+    <meta name="keywords" content="Kevin Lincoln, historia nutricionista, método atlas, transformação, emagrecimento">
+    <meta property="og:title" content="Kevin Lincoln | A História por trás do Método Atlas">
+    <meta property="og:description" content="Uma missão de vida. Conheça a jornada que transformou Kevin Lincoln no nutricionista que é hoje.">
+    <meta property="og:type" content="website">
+    <link rel="icon" href="img/Prancheta 4@4x.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Serif+Display:ital@0;1&display=swap"
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,wght@0,300;0,400;0,500;1,300;1,400&family=DM+Serif+Display:ital@0;1&display=swap"
         rel="stylesheet">
     <link rel="stylesheet" href="css/historia.css">
-    <meta property="og:site_name" content="Kevin Lincoln" />
-    <meta property="og:title" content="Kevin Lincoln | Nutrição de Precisão" />
 </head>
 
 <body>
 
+    <!-- BARRA DE PROGRESSO -->
+    <div id="hist-progress" class="hist-progress"></div>
+
     <!-- NAV -->
-    <nav>
+    <nav id="hist-nav">
         <a href="#inicio" class="nav-logo">Nutri<span>.Kevin</span></a>
         <a href="index.html" class="nav-back">Voltar ao site</a>
     </nav>
 
     <!-- ─── HERO ─── -->
     <div id="inicio" class="hero">
+        <canvas id="hist-canvas"></canvas>
         <div class="hero-vline"></div>
         <span class="hero-number">KL</span>
 
         <div class="hero-left">
             <div class="hero-label">A história por trás do método</div>
-            <h1 class="hero-title">
+            <h1 class="hero-title hero-anim-title">
                 Uma <em>missão</em><br>
                 de vida.
             </h1>
-            <p class="hero-desc text-side">
+            <p class="hero-desc text-side hero-anim-desc">
                 Antes de transformar a vida de tantas pessoas, eu precisei transformar a minha. Foi nessa jornada, cheia
                 de <strong>desafios</strong>, <strong>aprendizados</strong> e <strong>evolução</strong>, que nasceu a
                 minha vontade de ajudar e de mostrar que uma dieta não precisa ser restritiva, mas sim
                 <strong>consistente</strong>. Assim também nasceu o <strong>Método Atlas</strong>.
             </p>
+            <!-- Mini stats hero -->
+            <div class="hero-stats">
+                <div class="hero-stat">
+                    <span class="hs-num" data-target="150" data-suffix="+">0</span>
+                    <span class="hs-label">Pacientes</span>
+                </div>
+                <div class="hero-stat-div"></div>
+                <div class="hero-stat">
+                    <span class="hs-num" data-target="3" data-suffix="+ anos">0</span>
+                    <span class="hs-label">Experiência</span>
+                </div>
+                <div class="hero-stat-div"></div>
+                <div class="hero-stat">
+                    <span class="hs-num" data-target="98" data-suffix="%">0</span>
+                    <span class="hs-label">Satisfação</span>
+                </div>
+            </div>
+            <div class="hero-cta-row hero-anim-cta">
+                <button class="btn-cta btn-cta-pulse" onclick="abrirFormulario()">Quero meu plano →</button>
+                <a href="https://wa.me/5517981114500" target="_blank" class="btn-cta btn-cta-wa">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                    </svg>
+                    WhatsApp
+                </a>
+            </div>
         </div>
 
         <div class="hero-right">
             <div class="hero-photo-placeholder">
-                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1">
-                </svg>
                 <img src="img/kevin_3.png" alt="Kevin Lincoln" class="hero-photo">
-                <span style="font-size:0.6rem; opacity:0.5"></span>
             </div>
         </div>
 
@@ -72,31 +101,32 @@
                 <p>Quando vivi isso na prática, entendi que a nutrição vai muito além da estética. <strong>Ela muda
                         vidas.</strong> Foi aí que decidi ajudar outras pessoas a conquistarem resultado de forma leve,
                     inteligente e sustentável.</p>
+
+                <!-- CTA inline -->
+                <div class="inline-cta reveal">
+                    <button class="btn-inline" onclick="abrirFormulario()">Quero essa transformação também →</button>
+                </div>
             </div>
 
             <div class="photo-grid reveal reveal-delay-2">
-
-                <div class="photo-card">
-                    <img src="img/img_hist/kevin_02.PNG" alt="Antes">
+                <div class="photo-card photo-card--before">
+                    <img src="img/img_hist/kevin_02.PNG" alt="Kevin Lincoln — Antes">
                     <span class="photo-label">Antes</span>
                 </div>
-
-                <div class="photo-card">
-                    <img src="img/img_hist/IMG_6056.jpg" alt="Depois">
+                <div class="photo-card photo-card--after">
+                    <img src="img/img_hist/IMG_6056.jpg" alt="Kevin Lincoln — Depois">
                     <span class="photo-label">Depois</span>
                 </div>
-
-                <div class="photo-card">
-                    <img src="img/img_hist/IMG_6045.JPG.jpeg" alt="Antes">
+                <div class="photo-card photo-card--before">
+                    <img src="img/img_hist/IMG_6045.JPG.jpeg" alt="Kevin Lincoln — Antes">
                     <span class="photo-label">Antes</span>
                 </div>
-
-                <div class="photo-card">
-                    <img src="img/img_hist/IMG_6061.jpg" alt="Depois">
+                <div class="photo-card photo-card--after">
+                    <img src="img/img_hist/IMG_6061.jpg" alt="Kevin Lincoln — Depois">
                     <span class="photo-label">Depois</span>
                 </div>
-
             </div>
+        </div>
     </section>
 
     <div class="section-divider">
@@ -111,28 +141,27 @@
             <div class="video-grid reveal">
                 <div class="video-grid-item">
                     <video autoplay muted loop playsinline>
-                        <source src="https://res.cloudinary.com/dyf2lckp4/video/upload/v1777834871/terra_vzfo95.mp4"
-                            type="video/mp4">
+                        <source src="https://res.cloudinary.com/dyf2lckp4/video/upload/v1777834871/terra_vzfo95.mp4" type="video/mp4">
                     </video>
+                    <div class="video-overlay"></div>
                 </div>
                 <div class="video-grid-item">
                     <video autoplay muted loop playsinline>
-                        <source
-                            src="https://res.cloudinary.com/dyf2lckp4/video/upload/v1777834873/agachamento_d6ziun.mp4"
-                            type="video/mp4">
+                        <source src="https://res.cloudinary.com/dyf2lckp4/video/upload/v1777834873/agachamento_d6ziun.mp4" type="video/mp4">
                     </video>
+                    <div class="video-overlay"></div>
                 </div>
                 <div class="video-grid-item">
                     <video autoplay muted loop playsinline>
-                        <source src="https://res.cloudinary.com/dyf2lckp4/video/upload/v1777834885/terra_1_rfdbcm.mp4"
-                            type="video/mp4">
+                        <source src="https://res.cloudinary.com/dyf2lckp4/video/upload/v1777834885/terra_1_rfdbcm.mp4" type="video/mp4">
                     </video>
+                    <div class="video-overlay"></div>
                 </div>
                 <div class="video-grid-item">
                     <video autoplay muted loop playsinline>
-                        <source src="https://res.cloudinary.com/dyf2lckp4/video/upload/v1777834888/biceps_cqppmn.mp4"
-                            type="video/mp4">
+                        <source src="https://res.cloudinary.com/dyf2lckp4/video/upload/v1777834888/biceps_cqppmn.mp4" type="video/mp4">
                     </video>
+                    <div class="video-overlay"></div>
                 </div>
             </div>
 
@@ -142,33 +171,36 @@
                     <span class="chapter-line"></span>
                     <span class="chapter-title">O Atleta</span>
                 </div>
-                <h2
-                    style="font-family:'Bebas Neue',sans-serif;font-size:clamp(48px,5vw,72px);line-height:0.95;letter-spacing:2px;margin-bottom:32px;color:var(--white)">
-                    Por que entrei no <em
-                        style="font-family:'DM Serif Display',serif;font-style:italic;color:var(--red)">fisiculturismo?</em>
+                <h2 class="h2-bodybuilding">
+                    Por que entrei no <em class="em-red">fisiculturismo?</em>
                 </h2>
-                <p style="font-size:1rem;line-height:1.9;color:var(--gray);font-weight:300;margin-bottom:20px">
+                <p class="p-body">
                     Sempre fui competitivo e movido por desafios. No fisiculturismo, encontrei um esporte que exige o
                     máximo de você todos os dias.
                 </p>
-                <p style="font-size:1rem;line-height:1.9;color:var(--gray);font-weight:300;margin-bottom:20px">
-                    Não é só treinar. É ter <strong style="color:var(--white);font-weight:500">disciplina nas
+                <p class="p-body">
+                    Não é só treinar. É ter <strong class="strong-white">disciplina nas
                         refeições</strong>, constância na rotina e foco 24 horas por dia.
                 </p>
-                <p style="font-size:1rem;line-height:1.9;color:var(--gray);font-weight:300">
-                    Entrei nesse meio para testar meus limites e <strong
-                        style="color:var(--white);font-weight:500">evoluir como atleta e como pessoa.</strong>
+                <p class="p-body">
+                    Entrei nesse meio para testar meus limites e <strong class="strong-white">evoluir como atleta e como pessoa.</strong>
                 </p>
-                <!-- <div class="stats-row">
-                    <div class="stat">
-                        <span class="stat-number">100<span>+</span></span>
-                        <span class="stat-label">Pacientes atendidos</span>
+
+                <!-- Credenciais badges -->
+                <div class="cred-row reveal reveal-delay-2">
+                    <div class="cred-item">
+                        <span class="cred-ico">🏆</span>
+                        <span>Fisiculturista</span>
                     </div>
-                    <div class="stat">
-                        <span class="stat-number">24<span>/7</span></span>
-                        <span class="stat-label">Foco e disciplina</span>
+                    <div class="cred-item">
+                        <span class="cred-ico">🎓</span>
+                        <span>Nutricionista CRN 83678P</span>
                     </div>
-                </div> -->
+                    <div class="cred-item">
+                        <span class="cred-ico">💪</span>
+                        <span>3+ anos de experiência</span>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -182,12 +214,61 @@
                     Resultado não vem de cortar tudo que você gosta. Vem de uma <em>estratégia que você consegue
                         seguir</em> todos os dias.
                 </blockquote>
-                <cite>Kevin Lincoln — Nutricionista & Atleta</cite>
+                <cite>Kevin Lincoln — Nutricionista &amp; Atleta</cite>
+                <!-- CTA abaixo da quote -->
+                <div class="quote-cta">
+                    <button class="btn-cta btn-cta-pulse" onclick="abrirFormulario()">Quero essa estratégia →</button>
+                </div>
             </div>
         </div>
     </div>
 
-    <!-- ─── CTA ─── -->
+    <!-- ─── PROVA SOCIAL RÁPIDA ─── -->
+    <div class="section-social-proof full-bleed">
+        <div class="social-proof-inner">
+            <div class="sp-header reveal">
+                <span class="sp-label">O que dizem os pacientes</span>
+                <h2 class="sp-title">Histórias reais. <em>Resultados reais.</em></h2>
+            </div>
+            <div class="sp-grid">
+                <div class="sp-card reveal">
+                    <div class="sp-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Pra mim está ótimo o atendimento Kevin, tudo o que preciso você sempre prepara prestativo, não vejo algo que esteja deixando a desejar!"</p>
+                    <div class="sp-author">
+                        <div class="sp-avatar sp-avatar-R"></div>
+                        <div>
+                            <strong>Rubia Nascimento</strong>
+                            <small>Paciente satisfeita</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="sp-card reveal reveal-delay-1">
+                    <div class="sp-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"Curti demais irmão. Muito profissional e sem rodeios. Entendeu meu real objetivo. 100% animado com o progresso!"</p>
+                    <div class="sp-author">
+                        <div class="sp-avatar sp-avatar-A"></div>
+                        <div>
+                            <strong>Afonso</strong>
+                            <small>Performance &amp; Objetivos</small>
+                        </div>
+                    </div>
+                </div>
+                <div class="sp-card reveal reveal-delay-2">
+                    <div class="sp-stars">⭐⭐⭐⭐⭐</div>
+                    <p>"O que me ajuda é o fato de vc ajustar de acordo com a minha necessidade. Obg por acreditar em mim até quando eu mesmo duvido."</p>
+                    <div class="sp-author">
+                        <div class="sp-avatar sp-avatar-W"></div>
+                        <div>
+                            <strong>Ale</strong>
+                            <small>Adaptação personalizada</small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- ─── CTA FINAL ─── -->
     <div class="section-cta full-bleed">
         <div class="cta-inner">
             <div class="cta-text reveal">
@@ -198,10 +279,13 @@
                 </p>
             </div>
             <div class="cta-action reveal reveal-delay-2">
-                <button class="btn-cta" onclick="abrirFormulario()">
+                <button class="btn-cta btn-cta-pulse" onclick="abrirFormulario()">
                     Quero Começar →
                 </button>
-                <a href="https://wa.me/5517981114500" target="_blank" class="btn-cta btn-cta-ghost">
+                <a href="https://wa.me/5517981114500" target="_blank" class="btn-cta btn-cta-ghost btn-cta-wa-ghost">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+                    </svg>
                     Falar no WhatsApp
                 </a>
                 <a href="index.html" class="btn-cta btn-cta-ghost">
@@ -217,6 +301,15 @@
         <div class="footer-crn">CRN 83678P</div>
     </section>
 
+    <!-- FLOATING WHATSAPP -->
+    <a href="https://wa.me/5517981114500?text=Olá%20Kevin%2C%20vi%20sua%20história%20e%20quero%20saber%20mais!"
+        target="_blank" class="floating-wa" id="floatingWa" aria-label="Falar no WhatsApp">
+        <svg xmlns="http://www.w3.org/2000/svg" width="26" height="26" fill="currentColor" viewBox="0 0 16 16">
+            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"/>
+        </svg>
+        <span class="floating-wa-tooltip">Falar com Kevin</span>
+    </a>
+
     <!-- ─── MODAL FORMULÁRIO ─── -->
     <div id="modal-overlay" class="modal-overlay" onclick="fecharSeClicarFora(event)">
         <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
@@ -225,12 +318,10 @@
             <div class="modal-header">
                 <div class="modal-tag">Kevin Lincoln · Nutricionista</div>
                 <h2 id="modal-titulo" class="modal-title">Quer <em>começar</em><br>a sua evolução ?</h2>
-                <p class="modal-sub">Preencha os dados abaixo para que eu possa entender o seu perfil antes da consulta.
-                </p>
+                <p class="modal-sub">Preencha os dados abaixo para que eu possa entender o seu perfil antes da consulta.</p>
             </div>
 
             <div id="modal-form">
-
                 <div class="form-section-label">Dados pessoais</div>
                 <div class="form-row">
                     <div class="form-group">
@@ -267,14 +358,10 @@
                 <div class="form-group">
                     <label>Objetivo principal</label>
                     <div class="form-chips">
-                        <div class="form-chip"><input type="radio" name="f-obj" id="fo1"><label
-                                for="fo1">Emagrecimento</label></div>
-                        <div class="form-chip"><input type="radio" name="f-obj" id="fo2"><label for="fo2">Ganho de
-                                massa</label></div>
-                        <div class="form-chip"><input type="radio" name="f-obj" id="fo3"><label for="fo3">Saúde
-                                geral</label></div>
-                        <div class="form-chip"><input type="radio" name="f-obj" id="fo4"><label for="fo4">Performance /
-                                atletismo</label></div>
+                        <div class="form-chip"><input type="radio" name="f-obj" id="fo1"><label for="fo1">Emagrecimento</label></div>
+                        <div class="form-chip"><input type="radio" name="f-obj" id="fo2"><label for="fo2">Ganho de massa</label></div>
+                        <div class="form-chip"><input type="radio" name="f-obj" id="fo3"><label for="fo3">Saúde geral</label></div>
+                        <div class="form-chip"><input type="radio" name="f-obj" id="fo4"><label for="fo4">Performance / atletismo</label></div>
                     </div>
                 </div>
 
@@ -284,28 +371,20 @@
                 <div class="form-group">
                     <label>Treinos por semana</label>
                     <div class="form-chips">
-                        <div class="form-chip"><input type="radio" name="f-treino" id="ft0"><label for="ft0">Não
-                                treino</label></div>
-                        <div class="form-chip"><input type="radio" name="f-treino" id="ft1"><label
-                                for="ft1">1–2x</label></div>
-                        <div class="form-chip"><input type="radio" name="f-treino" id="ft2"><label
-                                for="ft2">3–4x</label></div>
-                        <div class="form-chip"><input type="radio" name="f-treino" id="ft3"><label for="ft3">5x ou
-                                mais</label></div>
+                        <div class="form-chip"><input type="radio" name="f-treino" id="ft0"><label for="ft0">Não treino</label></div>
+                        <div class="form-chip"><input type="radio" name="f-treino" id="ft1"><label for="ft1">1–2x</label></div>
+                        <div class="form-chip"><input type="radio" name="f-treino" id="ft2"><label for="ft2">3–4x</label></div>
+                        <div class="form-chip"><input type="radio" name="f-treino" id="ft3"><label for="ft3">5x ou mais</label></div>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label>Como está sua alimentação hoje?</label>
                     <div class="form-chips">
-                        <div class="form-chip"><input type="radio" name="f-alim" id="fa1"><label for="fa1">Muito
-                                irregular</label></div>
-                        <div class="form-chip"><input type="radio" name="f-alim" id="fa2"><label
-                                for="fa2">Razoável</label></div>
-                        <div class="form-chip"><input type="radio" name="f-alim" id="fa3"><label for="fa3">Boa, mas com
-                                ajustes</label></div>
-                        <div class="form-chip"><input type="radio" name="f-alim" id="fa4"><label for="fa4">Já sigo
-                                dieta</label></div>
+                        <div class="form-chip"><input type="radio" name="f-alim" id="fa1"><label for="fa1">Muito irregular</label></div>
+                        <div class="form-chip"><input type="radio" name="f-alim" id="fa2"><label for="fa2">Razoável</label></div>
+                        <div class="form-chip"><input type="radio" name="f-alim" id="fa3"><label for="fa3">Boa, mas com ajustes</label></div>
+                        <div class="form-chip"><input type="radio" name="f-alim" id="fa4"><label for="fa4">Já sigo dieta</label></div>
                     </div>
                 </div>
 
@@ -324,27 +403,19 @@
                 <div class="form-section-label">Motivação</div>
 
                 <div class="form-group">
-                    <label>Nível de comprometimento <span
-                            style="color:var(--gray-2);font-size:0.7rem;letter-spacing:0">(1 = baixo · 5 =
-                            total)</span></label>
+                    <label>Nível de comprometimento <span style="color:var(--gray-2);font-size:0.7rem;letter-spacing:0">(1 = baixo · 5 = total)</span></label>
                     <div class="form-chips">
-                        <div class="form-chip form-chip-num"><input type="radio" name="f-comp" id="fc1"><label
-                                for="fc1">1</label></div>
-                        <div class="form-chip form-chip-num"><input type="radio" name="f-comp" id="fc2"><label
-                                for="fc2">2</label></div>
-                        <div class="form-chip form-chip-num"><input type="radio" name="f-comp" id="fc3"><label
-                                for="fc3">3</label></div>
-                        <div class="form-chip form-chip-num"><input type="radio" name="f-comp" id="fc4"><label
-                                for="fc4">4</label></div>
-                        <div class="form-chip form-chip-num"><input type="radio" name="f-comp" id="fc5"><label
-                                for="fc5">5</label></div>
+                        <div class="form-chip form-chip-num"><input type="radio" name="f-comp" id="fc1"><label for="fc1">1</label></div>
+                        <div class="form-chip form-chip-num"><input type="radio" name="f-comp" id="fc2"><label for="fc2">2</label></div>
+                        <div class="form-chip form-chip-num"><input type="radio" name="f-comp" id="fc3"><label for="fc3">3</label></div>
+                        <div class="form-chip form-chip-num"><input type="radio" name="f-comp" id="fc4"><label for="fc4">4</label></div>
+                        <div class="form-chip form-chip-num"><input type="radio" name="f-comp" id="fc5"><label for="fc5">5</label></div>
                     </div>
                 </div>
 
                 <div class="form-group">
                     <label for="f-msg">O que te motivou a buscar acompanhamento agora?</label>
-                    <textarea id="f-msg"
-                        placeholder="Conte um pouco sobre sua situação atual e o que espera alcançar..."></textarea>
+                    <textarea id="f-msg" placeholder="Conte um pouco sobre sua situação atual e o que espera alcançar..."></textarea>
                 </div>
 
                 <button class="btn-form-enviar" onclick="enviarFormulario()">ENVIAR →</button>
@@ -363,10 +434,8 @@
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
 
     <script>
-        // ── Inicializa EmailJS ──
         emailjs.init('uikqMZyeHWmzNWxR6');
 
-        // ── Modal ──
         function abrirFormulario() {
             document.getElementById('modal-overlay').classList.add('active');
             document.body.style.overflow = 'hidden';
@@ -375,7 +444,6 @@
         function fecharFormulario() {
             document.getElementById('modal-overlay').classList.remove('active');
             document.body.style.overflow = '';
-            // Reseta estado de erro após fechar
             document.querySelectorAll('.form-error').forEach(el => el.remove());
             document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
         }
@@ -384,20 +452,13 @@
             if (e.target === document.getElementById('modal-overlay')) fecharFormulario();
         }
 
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') fecharFormulario();
-        });
+        document.addEventListener('keydown', (e) => { if (e.key === 'Escape') fecharFormulario(); });
 
-        // ── Helpers ──
-        function getVal(id) {
-            return (document.getElementById(id)?.value || '').trim();
-        }
-
+        function getVal(id) { return (document.getElementById(id)?.value || '').trim(); }
         function getChecked(name) {
             const el = document.querySelector(`input[name="${name}"]:checked`);
             return el ? el.nextElementSibling.textContent.trim() : '';
         }
-
         function mostrarErro(id, msg) {
             const campo = document.getElementById(id);
             if (!campo) return;
@@ -407,7 +468,6 @@
             erro.textContent = msg;
             campo.parentNode.appendChild(erro);
         }
-
         function mostrarErroChip(name, msg) {
             const grupo = document.querySelector(`input[name="${name}"]`)?.closest('.form-group');
             if (!grupo) return;
@@ -416,149 +476,186 @@
             erro.textContent = msg;
             grupo.appendChild(erro);
         }
-
         function limparErros() {
             document.querySelectorAll('.form-error').forEach(el => el.remove());
             document.querySelectorAll('.input-error').forEach(el => el.classList.remove('input-error'));
         }
+        function validarEmail(email) { return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email); }
+        function validarTelefone(tel) { return tel.replace(/\D/g, '').length >= 10; }
 
-        function validarEmail(email) {
-            return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-        }
-
-        function validarTelefone(tel) {
-            return tel.replace(/\D/g, '').length >= 10;
-        }
-
-        // ── Validação ──
         function validarFormulario() {
             limparErros();
             let valido = true;
-
             const nome = getVal('f-nome');
-            if (nome.length < 3) {
-                mostrarErro('f-nome', 'Informe seu nome completo.');
-                valido = false;
-            }
-
+            if (nome.length < 3) { mostrarErro('f-nome', 'Informe seu nome completo.'); valido = false; }
             const idade = getVal('f-idade');
-            if (!idade || idade < 10 || idade > 100) {
-                mostrarErro('f-idade', 'Informe uma idade válida.');
-                valido = false;
-            }
-
+            if (!idade || idade < 10 || idade > 100) { mostrarErro('f-idade', 'Informe uma idade válida.'); valido = false; }
             const email = getVal('f-email');
-            if (!validarEmail(email)) {
-                mostrarErro('f-email', 'Informe um e-mail válido.');
-                valido = false;
-            }
-
+            if (!validarEmail(email)) { mostrarErro('f-email', 'Informe um e-mail válido.'); valido = false; }
             const whats = getVal('f-whats');
-            if (!validarTelefone(whats)) {
-                mostrarErro('f-whats', 'Informe um WhatsApp válido.');
-                valido = false;
-            }
-
+            if (!validarTelefone(whats)) { mostrarErro('f-whats', 'Informe um WhatsApp válido.'); valido = false; }
             const peso = getVal('f-peso');
-            if (!peso || peso < 20 || peso > 300) {
-                mostrarErro('f-peso', 'Informe um peso válido.');
-                valido = false;
-            }
-
+            if (!peso || peso < 20 || peso > 300) { mostrarErro('f-peso', 'Informe um peso válido.'); valido = false; }
             const altura = getVal('f-altura');
-            if (!altura || altura < 100 || altura > 250) {
-                mostrarErro('f-altura', 'Informe uma altura válida.');
-                valido = false;
-            }
-
-            if (!getChecked('f-obj')) {
-                mostrarErroChip('f-obj', 'Selecione seu objetivo.');
-                valido = false;
-            }
-
-            if (!getChecked('f-treino')) {
-                mostrarErroChip('f-treino', 'Selecione a frequência de treinos.');
-                valido = false;
-            }
-
-            if (!getChecked('f-alim')) {
-                mostrarErroChip('f-alim', 'Descreva sua alimentação atual.');
-                valido = false;
-            }
-
-            if (!getChecked('f-comp')) {
-                mostrarErroChip('f-comp', 'Indique seu nível de comprometimento.');
-                valido = false;
-            }
-
+            if (!altura || altura < 100 || altura > 250) { mostrarErro('f-altura', 'Informe uma altura válida.'); valido = false; }
+            if (!getChecked('f-obj')) { mostrarErroChip('f-obj', 'Selecione seu objetivo.'); valido = false; }
+            if (!getChecked('f-treino')) { mostrarErroChip('f-treino', 'Selecione a frequência de treinos.'); valido = false; }
+            if (!getChecked('f-alim')) { mostrarErroChip('f-alim', 'Descreva sua alimentação atual.'); valido = false; }
+            if (!getChecked('f-comp')) { mostrarErroChip('f-comp', 'Indique seu nível de comprometimento.'); valido = false; }
             return valido;
         }
 
-        // ── Envio ──
         async function enviarFormulario() {
             if (!validarFormulario()) {
-                // Rola até o primeiro erro
                 document.querySelector('.form-error')?.scrollIntoView({ behavior: 'smooth', block: 'center' });
                 return;
             }
-
             const btn = document.querySelector('.btn-form-enviar');
             btn.disabled = true;
             btn.textContent = 'ENVIANDO...';
-
             const params = {
-                nome: getVal('f-nome'),
-                idade: getVal('f-idade'),
-                email_paciente: getVal('f-email'),
-                whats: getVal('f-whats'),
-                peso: getVal('f-peso'),
-                altura: getVal('f-altura'),
-                objetivo: getChecked('f-obj'),
-                treino: getChecked('f-treino'),
-                alimentacao: getChecked('f-alim'),
-                restricoes: getVal('f-restr') || 'Nenhuma',
-                condicoes: getVal('f-cond') || 'Nenhuma',
-                comprometimento: getChecked('f-comp'),
-                mensagem: getVal('f-msg') || 'Não informado',
+                nome: getVal('f-nome'), idade: getVal('f-idade'), email_paciente: getVal('f-email'),
+                whats: getVal('f-whats'), peso: getVal('f-peso'), altura: getVal('f-altura'),
+                objetivo: getChecked('f-obj'), treino: getChecked('f-treino'), alimentacao: getChecked('f-alim'),
+                restricoes: getVal('f-restr') || 'Nenhuma', condicoes: getVal('f-cond') || 'Nenhuma',
+                comprometimento: getChecked('f-comp'), mensagem: getVal('f-msg') || 'Não informado',
             };
-
             try {
                 await emailjs.send('service_6w1t7v2', 'template_doox4c8', params);
                 document.getElementById('modal-form').style.display = 'none';
                 document.getElementById('modal-sucesso').style.display = 'flex';
-            } catch (erro) {
-                console.error('EmailJS erro:', erro);
+            } catch (err) {
                 btn.disabled = false;
                 btn.textContent = 'ENVIAR →';
-                // Mostra mensagem de erro amigável
-                let msgErro = document.getElementById('envio-erro');
-                if (!msgErro) {
-                    msgErro = document.createElement('p');
-                    msgErro.id = 'envio-erro';
-                    msgErro.style.cssText = 'color:#D65A5A;font-size:0.82rem;text-align:center;margin-top:12px;';
-                    btn.parentNode.insertBefore(msgErro, btn.nextSibling);
-                }
-                msgErro.textContent = 'Erro ao enviar. Verifique sua conexão e tente novamente.';
+                alert('Erro ao enviar. Tente novamente ou entre em contato pelo WhatsApp.');
             }
         }
     </script>
 
     <script>
-        // Scroll reveal
+        // ── Barra de progresso ──
+        const histBar = document.getElementById('hist-progress');
+        window.addEventListener('scroll', () => {
+            const docH = document.documentElement.scrollHeight - window.innerHeight;
+            histBar.style.width = (docH > 0 ? (window.scrollY / docH) * 100 : 0) + '%';
+        }, { passive: true });
+
+        // ── Nav glassmorphism ao scroll ──
+        const histNav = document.getElementById('hist-nav');
+        window.addEventListener('scroll', () => {
+            histNav.classList.toggle('scrolled', window.scrollY > 60);
+        }, { passive: true });
+
+        // ── Scroll reveal ──
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach(el => { if (el.isIntersecting) el.target.classList.add('visible'); });
+        }, { threshold: 0.12 });
+        document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+
+        // ── Count-up hero stats ──
+        const countObserver = new IntersectionObserver((entries, obs) => {
+            entries.forEach(entry => {
+                if (!entry.isIntersecting) return;
+                const el = entry.target;
+                const target = parseInt(el.dataset.target, 10);
+                const suffix = el.dataset.suffix || '';
+                const dur = 1800, start = performance.now();
+                function tick(now) {
+                    const p = Math.min((now - start) / dur, 1);
+                    const ease = 1 - Math.pow(1 - p, 3);
+                    el.textContent = Math.floor(target * ease) + suffix;
+                    if (p < 1) requestAnimationFrame(tick);
+                    else el.textContent = target + suffix;
+                }
+                requestAnimationFrame(tick);
+                obs.unobserve(el);
+            });
+        }, { threshold: 0.5 });
+        document.querySelectorAll('.hs-num[data-target]').forEach(el => countObserver.observe(el));
+
+        // ── Floating WA show on scroll ──
+        const floatWa = document.getElementById('floatingWa');
+        if (floatWa) {
+            floatWa.style.cssText = 'opacity:0;transform:scale(0.8) translateY(20px);transition:opacity 0.4s,transform 0.4s;';
+            window.addEventListener('scroll', () => {
+                const show = window.scrollY > 300;
+                floatWa.style.opacity = show ? '1' : '0';
+                floatWa.style.transform = show ? 'scale(1) translateY(0)' : 'scale(0.8) translateY(20px)';
+            }, { passive: true });
+        }
+
+        // ── Hero canvas particles ──
         (function () {
-            const revealObserver = new IntersectionObserver((entries) => {
-                entries.forEach(el => {
-                    if (el.isIntersecting) {
-                        el.target.classList.add('visible');
+            const canvas = document.getElementById('hist-canvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let particles = [], animId;
+
+            function resize() {
+                canvas.width = canvas.offsetWidth;
+                canvas.height = canvas.offsetHeight;
+            }
+
+            function spawn() {
+                particles = [];
+                const n = Math.floor((canvas.width * canvas.height) / 16000);
+                for (let i = 0; i < n; i++) {
+                    particles.push({
+                        x: Math.random() * canvas.width,
+                        y: Math.random() * canvas.height,
+                        r: Math.random() * 1.5 + 0.3,
+                        vx: (Math.random() - 0.5) * 0.3,
+                        vy: (Math.random() - 0.5) * 0.3,
+                        a: Math.random() * 0.4 + 0.1,
+                        c: Math.random() > 0.5 ? '214,90,90' : '14,181,92'
+                    });
+                }
+            }
+
+            function draw() {
+                ctx.clearRect(0, 0, canvas.width, canvas.height);
+                for (let i = 0; i < particles.length; i++) {
+                    for (let j = i + 1; j < particles.length; j++) {
+                        const dx = particles[i].x - particles[j].x;
+                        const dy = particles[i].y - particles[j].y;
+                        const d = Math.sqrt(dx * dx + dy * dy);
+                        if (d < 100) {
+                            ctx.beginPath();
+                            ctx.moveTo(particles[i].x, particles[i].y);
+                            ctx.lineTo(particles[j].x, particles[j].y);
+                            ctx.strokeStyle = `rgba(214,90,90,${(1 - d / 100) * 0.12})`;
+                            ctx.lineWidth = 0.5;
+                            ctx.stroke();
+                        }
                     }
+                }
+                particles.forEach(p => {
+                    ctx.beginPath();
+                    ctx.arc(p.x, p.y, p.r, 0, Math.PI * 2);
+                    ctx.fillStyle = `rgba(${p.c},${p.a})`;
+                    ctx.fill();
+                    p.x += p.vx; p.y += p.vy;
+                    if (p.x < 0 || p.x > canvas.width) p.vx *= -1;
+                    if (p.y < 0 || p.y > canvas.height) p.vy *= -1;
                 });
-            }, { threshold: 0.12 });
+                animId = requestAnimationFrame(draw);
+            }
 
-            document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
+            resize(); spawn(); draw();
+            let rt;
+            window.addEventListener('resize', () => {
+                clearTimeout(rt);
+                rt = setTimeout(() => { cancelAnimationFrame(animId); resize(); spawn(); draw(); }, 200);
+            });
         })();
-    </script>
 
-    <script src="js/main.js"></script>
+        // ── Hero entrance animations ──
+        window.addEventListener('load', () => {
+            document.querySelector('.hero-anim-title')?.classList.add('anim-in');
+            setTimeout(() => document.querySelector('.hero-anim-desc')?.classList.add('anim-in'), 200);
+            setTimeout(() => document.querySelector('.hero-anim-cta')?.classList.add('anim-in'), 400);
+        });
+    </script>
 </body>
 
 </html>
