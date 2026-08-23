@@ -1,0 +1,388 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Atlas | Kevin Lincoln — Nutrição Baseada em Evidência</title>
+    <meta name="description"
+        content="Conheça o Método Atlas do nutricionista Kevin Lincoln: metodologia clínica estruturada em 3 pilares para emagrecimento estratégico, saúde metabólica e performance sem radicalismos.">
+    <meta name="keywords"
+        content="método atlas, kevin lincoln atlas, emagrecimento estratégico, nutrição clínica evidência, nutricionista são josé do rio preto">
+    <meta name="author" content="Kevin Lincoln">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kevin-lincoln.vercel.app/metodo-atlas.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Método Atlas | Kevin Lincoln — Nutrição Baseada em Evidência">
+    <meta property="og:description"
+        content="Sem fórmulas prontas. Uma metodologia que transforma consistência em resultados sustentáveis.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kevin-lincoln.vercel.app/metodo-atlas.html">
+    <meta property="og:image" content="img/kevin-logo.png">
+
+    <!-- Favicon & Fonts -->
+    <link rel="icon" href="img/Prancheta 4@4x.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- BARRA DE PROGRESSO DE LEITURA -->
+    <div id="read-progress" class="read-progress"></div>
+
+    <!-- HEADER / NAVEGAÇÃO -->
+    <header id="header">
+        <div class="container header-flex">
+            <a href="index.html" class="brand-logo" aria-label="Kevin Lincoln Nutricionista">
+                <img src="img/Prancheta 4@4x.png" alt="Logo Kevin Lincoln" class="logo-mark">
+                Nutri<span>.Kevin</span>
+            </a>
+
+            <nav class="nav-desk" aria-label="Menu Principal">
+                <ul>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="acompanhamentos.html" class="nav-link">
+                            Acompanhamentos
+                            <svg class="dropdown-caret" viewBox="0 0 10 6">
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" fill="none" />
+                            </svg>
+                        </a>
+                        <div class="nav-dropdown">
+                            <a href="acompanhamentos.html" class="dropdown-link">
+                                <strong>Visão Geral</strong>
+                                <small>Compare os formatos disponíveis</small>
+                            </a>
+                            <a href="projeto-24-dias.html" class="dropdown-link">
+                                <strong>Projeto 24 Dias</strong>
+                                <small>Sprint focado em consistência</small>
+                            </a>
+                            <a href="acompanhamento-premium.html" class="dropdown-link">
+                                <strong>Acompanhamento Premium</strong>
+                                <small>Planos Mensal, Trimestral, Semestral e Anual</small>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="metodo-atlas.html" class="nav-link active">Método Atlas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resultados.html" class="nav-link">Resultados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link">Sobre o Kevin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="duvidas.html" class="nav-link">Dúvidas</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="acompanhamentos.html" class="btn btn-primary btn-sm">Escolher Acompanhamento</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- DRAWER MOBILE -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menu Mobile">
+        <div>
+            <div class="mobile-drawer-header">
+                <a href="index.html" class="brand-logo">
+                    <img src="img/Prancheta 4@4x.png" alt="Logo" class="logo-mark">
+                    Nutri<span>.Kevin</span>
+                </a>
+                <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Fechar menu">✕</button>
+            </div>
+
+            <nav class="mobile-nav-list">
+                <a href="index.html" class="mobile-nav-link">Início</a>
+                <a href="acompanhamentos.html" class="mobile-nav-link">Acompanhamentos</a>
+                <div class="mobile-subnav">
+                    <a href="projeto-24-dias.html" class="mobile-sublink">· Projeto 24 Dias</a>
+                    <a href="acompanhamento-premium.html" class="mobile-sublink">· Acompanhamento Premium</a>
+                </div>
+                <a href="metodo-atlas.html" class="mobile-nav-link active">Método Atlas</a>
+                <a href="resultados.html" class="mobile-nav-link">Resultados & Provas Sociais</a>
+                <a href="sobre.html" class="mobile-nav-link">Sobre o Kevin</a>
+                <a href="duvidas.html" class="mobile-nav-link">Dúvidas Frequentes</a>
+                <a href="contato.html" class="mobile-nav-link">Contato & Avaliação</a>
+            </nav>
+        </div>
+
+        <div class="mobile-drawer-footer">
+            <button class="btn btn-primary btn-full" onclick="abrirFormulario()">Iniciar Avaliação</button>
+            <a href="https://wa.me/5517981114500" target="_blank" class="btn btn-whatsapp btn-full">
+                <svg viewBox="0 0 16 16">
+                    <path
+                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                </svg>
+                Falar no WhatsApp
+            </a>
+        </div>
+    </aside>
+
+    <!-- ── 01. HERO DO MÉTODO ATLAS ── -->
+    <section class="section-padding-sm" style="padding-top: 130px;">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Metodologia Exclusiva</span>
+                <h1>O Método Atlas: Ciência, Estrutura e Sustentabilidade.</h1>
+                <p>Um método estruturado para quem deseja emagrecer, melhorar exames e construir um físico forte sem viver em restrição constante.</p>
+            </div>
+
+            <div class="about-hero-grid js-fade-up" style="margin-bottom: 56px;">
+                <div>
+                    <h2>Por que dietas prontas falham?</h2>
+                    <p style="margin-bottom: 16px;">A maioria dos planos alimentares tradicionais peca pelo excesso de radicalismo. Eles impõem regras rígidas que desconsideram sua vida social, seu nível de estresse, sua rotina de trabalho e a bioquímica do seu organismo.</p>
+                    <p style="margin-bottom: 24px;">O <strong>Método Atlas</strong> foi desenvolvido exatamente para romper esse ciclo de "começar e parar". Em vez de forçar você a se encaixar em uma dieta, nós construímos uma estratégia nutricional que se encaixa na sua vida.</p>
+                    <a href="acompanhamentos.html" class="btn btn-primary">Escolher meu Acompanhamento &rarr;</a>
+                </div>
+                <div class="about-img-frame">
+                    <img src="img/kevin_3.png" alt="Kevin Lincoln — Método Atlas">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 02. OS 3 PILARES DO MÉTODO ── -->
+    <section class="section-padding comparison-section">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Fundamentos Clínicos</span>
+                <h2>Os 3 Pilares do Método Atlas</h2>
+                <p>O equilíbrio entre estética, metabolismo e rendimento diário.</p>
+            </div>
+
+            <div class="atlas-pillars-grid js-fade-up">
+                <!-- Pilar 1 -->
+                <div class="pillar-card">
+                    <div>
+                        <div class="pillar-icon-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </div>
+                        <h3>1. Emagrecimento Estratégico</h3>
+                        <p>Comer menos sem critério diminui sua taxa metabólica basal e faz você perder massa magra. No Método Atlas, calculamos o déficit exato para oxidar gordura preservando o tônus muscular e a saciedade.</p>
+                    </div>
+                    <div class="pillar-points">
+                        <div class="pillar-point-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Déficit calórico sem queda de energia</span>
+                        </div>
+                        <div class="pillar-point-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Alimentos saciantes e densos em nutrientes</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pilar 2 -->
+                <div class="pillar-card">
+                    <div>
+                        <div class="pillar-icon-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none"/></svg>
+                        </div>
+                        <h3>2. Saúde & Longevidade Metabólica</h3>
+                        <p>O seu corpo precisa funcionar com excelência hoje e pelas próximas décadas. Monitoramos marcadores inflamatórios, sensibilidade à insulina, perfil lipídico e saúde intestinal para garantir longevidade ativa.</p>
+                    </div>
+                    <div class="pillar-points">
+                        <div class="pillar-point-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Prevenção e controle de exames laboratoriais</span>
+                        </div>
+                        <div class="pillar-point-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Disposição constante e clareza mental</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pilar 3 -->
+                <div class="pillar-card">
+                    <div>
+                        <div class="pillar-icon-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M6 18h12M6 6h12M9 12h6M4 21h16a1 1 0 001-1V4a1 1 0 00-1-1H4a1 1 0 00-1 1v16a1 1 0 001 1z" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
+                        </div>
+                        <h3>3. Performance & Construção Física</h3>
+                        <p>Seja para quem treina musculação, corrida ou esportes de alta demanda, estruturamos a ingestão de carboidratos e proteínas no momento ideal do dia para acelerar a síntese proteica e o ganho de massa magra.</p>
+                    </div>
+                    <div class="pillar-points">
+                        <div class="pillar-point-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Timing de nutrientes pré e pós-treino</span>
+                        </div>
+                        <div class="pillar-point-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Suplementação pontual e justificada</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 03. DIETA DE GAVETA VS. MÉTODO ATLAS ── -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Diferença Prática</span>
+                <h2>Dieta Genérica vs. Acompanhamento Método Atlas</h2>
+                <p>Por que um protocolo individualizado gera resultados que duram anos.</p>
+            </div>
+
+            <div class="target-audience-grid js-fade-up">
+                <div class="target-audience-card target-audience-card--negative">
+                    <h3>
+                        <svg viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
+                        Dieta Pronta / Genérica:
+                    </h3>
+                    <div class="target-audience-list">
+                        <div class="target-item">
+                            <svg viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
+                            <span>Mesmo cardápio entregue para pessoas com rotinas e pesos diferentes.</span>
+                        </div>
+                        <div class="target-item">
+                            <svg viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
+                            <span>Cortes radicais de grupos inteiros de alimentos que geram compulsão rebote.</span>
+                        </div>
+                        <div class="target-item">
+                            <svg viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
+                            <span>Nenhum acompanhamento após a consulta; abandono de rotina ao primeiro imprevisto.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="target-audience-card target-audience-card--positive">
+                    <h3>
+                        <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                        Método Atlas de Nutrição:
+                    </h3>
+                    <div class="target-audience-list">
+                        <div class="target-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Cardápio planejado para os seus horários de trabalho, treinos e paladar real.</span>
+                        </div>
+                        <div class="target-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Equilíbrio flexível de nutrientes para que você conviva socialmente e mantenha o plano.</span>
+                        </div>
+                        <div class="target-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Suporte próximo via WhatsApp para ajustes em tempo real e adaptação constante.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 04. CTA FINAL ── -->
+    <section class="section-padding comparison-section">
+        <div class="container">
+            <div class="conversion-cta-banner js-fade-up">
+                <span class="section-badge">Aplicação do Método</span>
+                <h2>Experimente o Método Atlas no seu dia a dia</h2>
+                <p>Escolha o formato de acompanhamento ideal e tenha um planejamento desenhado para o seu momento.</p>
+                <div class="conversion-cta-actions">
+                    <a href="acompanhamentos.html" class="btn btn-primary btn-lg">Conhecer os Acompanhamentos</a>
+                    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Gostaria%20de%20saber%20mais%20sobre%20como%20o%20M%C3%A9todo%20Atlas%20pode%20ser%20aplicado%20no%20meu%20caso." target="_blank" class="btn btn-whatsapp btn-lg">
+                        <svg viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                        </svg>
+                        Falar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER GLOBAL ── -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="brand-logo">
+                        <img src="img/Prancheta 4@4x.png" alt="Logo" class="logo-mark">
+                        Nutri<span>.Kevin</span>
+                    </a>
+                    <span class="footer-crn">CRN: 83678P</span>
+                    <p>Nutrição baseada em evidência para emagrecimento, saúde metabólica e performance.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <nav class="footer-nav">
+                        <a href="index.html">Início</a>
+                        <a href="acompanhamentos.html">Acompanhamentos</a>
+                        <a href="projeto-24-dias.html">Projeto 24 Dias</a>
+                        <a href="acompanhamento-premium.html">Acompanhamento Premium</a>
+                        <a href="metodo-atlas.html">Método Atlas</a>
+                    </nav>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <nav class="footer-nav">
+                        <a href="resultados.html">Resultados</a>
+                        <a href="sobre.html">Sobre o Kevin</a>
+                        <a href="duvidas.html">Dúvidas Frequentes</a>
+                        <a href="contato.html">Avaliação & Contato</a>
+                    </nav>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Atendimento</h4>
+                    <div class="footer-contact-list">
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.06a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+                            <span>(17) 98111-4500</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.547z"/></svg>
+                            <span>Kevinlincoln09@icloud.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                            <span>São José do Rio Preto - SP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; <span id="ano-atual"></span> Kevin Lincoln. Todos os direitos reservados.</div>
+                <div>Desenvolvido com foco em alta conversão e experiência clínica.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ── FLOATING WHATSAPP BUTTON ── -->
+    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Gostaria%20de%20saber%20mais%20sobre%20o%20M%C3%A9todo%20Atlas."
+        target="_blank" class="floating-wa" id="floatingWa" aria-label="Falar com Kevin no WhatsApp">
+        <svg viewBox="0 0 16 16">
+            <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+        </svg>
+        <span class="floating-wa-tooltip">Falar com Kevin</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

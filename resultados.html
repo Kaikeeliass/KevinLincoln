@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultados & Depoimentos | Kevin Lincoln — Provas Sociais Reais</title>
+    <meta name="description"
+        content="Confira os depoimentos e resultados reais de pacientes do nutricionista Kevin Lincoln. Histórias de emagrecimento, mudança de hábitos, hipertrofia e saúde com o Método Atlas.">
+    <meta name="keywords"
+        content="depoimentos nutricionista, resultados kevin lincoln, transformação emagrecimento, provas sociais nutrição, são josé do rio preto">
+    <meta name="author" content="Kevin Lincoln">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kevin-lincoln.vercel.app/resultados.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Resultados & Depoimentos | Kevin Lincoln — Provas Sociais Reais">
+    <meta property="og:description"
+        content="Histórias e relatos de quem transformou a saúde e o corpo com acompanhamento nutricional personalizado.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kevin-lincoln.vercel.app/resultados.html">
+    <meta property="og:image" content="img/kevin-logo.png">
+
+    <!-- Favicon & Fonts -->
+    <link rel="icon" href="img/Prancheta 4@4x.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- BARRA DE PROGRESSO DE LEITURA -->
+    <div id="read-progress" class="read-progress"></div>
+
+    <!-- HEADER / NAVEGAÇÃO -->
+    <header id="header">
+        <div class="container header-flex">
+            <a href="index.html" class="brand-logo" aria-label="Kevin Lincoln Nutricionista">
+                <img src="img/Prancheta 4@4x.png" alt="Logo Kevin Lincoln" class="logo-mark">
+                Nutri<span>.Kevin</span>
+            </a>
+
+            <nav class="nav-desk" aria-label="Menu Principal">
+                <ul>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="acompanhamentos.html" class="nav-link">
+                            Acompanhamentos
+                            <svg class="dropdown-caret" viewBox="0 0 10 6">
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" fill="none" />
+                            </svg>
+                        </a>
+                        <div class="nav-dropdown">
+                            <a href="acompanhamentos.html" class="dropdown-link">
+                                <strong>Visão Geral</strong>
+                                <small>Compare os formatos disponíveis</small>
+                            </a>
+                            <a href="projeto-24-dias.html" class="dropdown-link">
+                                <strong>Projeto 24 Dias</strong>
+                                <small>Sprint focado em consistência</small>
+                            </a>
+                            <a href="acompanhamento-premium.html" class="dropdown-link">
+                                <strong>Acompanhamento Premium</strong>
+                                <small>Planos Mensal, Trimestral, Semestral e Anual</small>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="metodo-atlas.html" class="nav-link">Método Atlas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resultados.html" class="nav-link active">Resultados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link">Sobre o Kevin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="duvidas.html" class="nav-link">Dúvidas</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-primary btn-sm" onclick="abrirFormulario()">Iniciar Avaliação</button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- DRAWER MOBILE -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menu Mobile">
+        <div>
+            <div class="mobile-drawer-header">
+                <a href="index.html" class="brand-logo">
+                    <img src="img/Prancheta 4@4x.png" alt="Logo" class="logo-mark">
+                    Nutri<span>.Kevin</span>
+                </a>
+                <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Fechar menu">✕</button>
+            </div>
+
+            <nav class="mobile-nav-list">
+                <a href="index.html" class="mobile-nav-link">Início</a>
+                <a href="acompanhamentos.html" class="mobile-nav-link">Acompanhamentos</a>
+                <div class="mobile-subnav">
+                    <a href="projeto-24-dias.html" class="mobile-sublink">· Projeto 24 Dias</a>
+                    <a href="acompanhamento-premium.html" class="mobile-sublink">· Acompanhamento Premium</a>
+                </div>
+                <a href="metodo-atlas.html" class="mobile-nav-link">Método Atlas</a>
+                <a href="resultados.html" class="mobile-nav-link active">Resultados & Provas Sociais</a>
+                <a href="sobre.html" class="mobile-nav-link">Sobre o Kevin</a>
+                <a href="duvidas.html" class="mobile-nav-link">Dúvidas Frequentes</a>
+                <a href="contato.html" class="mobile-nav-link">Contato & Avaliação</a>
+            </nav>
+        </div>
+
+        <div class="mobile-drawer-footer">
+            <button class="btn btn-primary btn-full" onclick="abrirFormulario()">Iniciar Avaliação</button>
+            <a href="https://wa.me/5517981114500" target="_blank" class="btn btn-whatsapp btn-full">
+                <svg viewBox="0 0 16 16">
+                    <path
+                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                </svg>
+                Falar no WhatsApp
+            </a>
+        </div>
+    </aside>
+
+    <!-- ── 01. HERO DE RESULTADOS ── -->
+    <section class="section-padding-sm" style="padding-top: 130px;">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Provas Sociais Reais</span>
+                <h1>Histórias de quem transformou a saúde e o corpo.</h1>
+                <p>Veja relatos espontâneos e avaliações de pacientes que alcançaram consistência com o Método Atlas.</p>
+            </div>
+
+            <!-- FILTROS POR CATEGORIA -->
+            <div class="filter-tabs js-fade-up">
+                <button class="filter-tab active" data-filter="all">Todos os Depoimentos</button>
+                <button class="filter-tab" data-filter="emagrecimento">Emagrecimento</button>
+                <button class="filter-tab" data-filter="habitos">Mudança de Hábitos</button>
+                <button class="filter-tab" data-filter="performance">Performance & Treino</button>
+                <button class="filter-tab" data-filter="saude">Saúde & Adaptação</button>
+            </div>
+
+            <!-- GRADE DE DEPOIMENTOS -->
+            <div class="testimonials-grid js-fade-up">
+                <!-- Depoimento 1: Rubia -->
+                <div class="testimonial-card-pro" data-category="emagrecimento">
+                    <div>
+                        <div class="testimonial-stars-svg">
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        </div>
+                        <p class="testimonial-quote">"Pra mim está ótimo o atendimento Kevin, tudo o que preciso você sempre prepara prestativo, não vejo algo que esteja deixando a desejar, pra mim está tudo ok!!"</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">RN</div>
+                        <div class="testimonial-meta">
+                            <strong>Rubia Nascimento</strong>
+                            <span>Paciente satisfeita · Emagrecimento</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 2: Ale -->
+                <div class="testimonial-card-pro" data-category="saude">
+                    <div>
+                        <div class="testimonial-stars-svg">
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        </div>
+                        <p class="testimonial-quote">"O que me ajuda é o fato de vc ajustar de acordo com a minha necessidade. Obg por acreditar em mim até quando eu mesmo duvido."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AL</div>
+                        <div class="testimonial-meta">
+                            <strong>Ale</strong>
+                            <span>Adaptação personalizada · Rotina real</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 3: Afonso -->
+                <div class="testimonial-card-pro" data-category="performance">
+                    <div>
+                        <div class="testimonial-stars-svg">
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        </div>
+                        <p class="testimonial-quote">"Curti demais irmão. Muito profissional e sem rodeios. Entendeu demais meu real objetivo. 100% animado com o progresso até aqui e com o plano daqui pra frente."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AF</div>
+                        <div class="testimonial-meta">
+                            <strong>Afonso</strong>
+                            <span>Performance & Objetivos Esportivos</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 4: Welington -->
+                <div class="testimonial-card-pro" data-category="habitos">
+                    <div>
+                        <div class="testimonial-stars-svg">
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        </div>
+                        <p class="testimonial-quote">"Fiz exatamente o que me orientou. Já estou descostumando comer por compulsão. Acabou a fome, vontade. O segredo é comer devagar."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">WM</div>
+                        <div class="testimonial-meta">
+                            <strong>Welington Moraes</strong>
+                            <span>Mudança de hábitos & Controle alimentar</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Depoimento 5: Alex -->
+                <div class="testimonial-card-pro" data-category="saude">
+                    <div>
+                        <div class="testimonial-stars-svg">
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                        </div>
+                        <p class="testimonial-quote">"A consulta está sendo boa, bem explicativa e detalhada. O embasamento técnico da explicação me agrada bastante também."</p>
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="testimonial-avatar">AM</div>
+                        <div class="testimonial-meta">
+                            <strong>Alex Mendonça</strong>
+                            <span>Embasamento técnico & Segurança clínica</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 02. TRANSFORMAÇÃO PESSOAL & EXEMPLO REAL ── -->
+    <section class="section-padding comparison-section">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Transformação na Prática</span>
+                <h2>Vivenciado na pele antes de ser ensinado</h2>
+                <p>O Método Atlas nasceu de uma transformação real de disciplina, alimentação e treino.</p>
+            </div>
+
+            <div class="photo-gallery-grid js-fade-up">
+                <div class="gallery-photo-card">
+                    <img src="img/img_hist/kevin_02.PNG" alt="Kevin Lincoln — Antes">
+                    <span class="gallery-photo-label">Fase Inicial</span>
+                </div>
+                <div class="gallery-photo-card">
+                    <img src="img/img_hist/IMG_6056.jpg" alt="Kevin Lincoln — Evolução">
+                    <span class="gallery-photo-label">Evolução Metabólica</span>
+                </div>
+                <div class="gallery-photo-card">
+                    <img src="img/img_hist/IMG_6045.JPG.jpeg" alt="Kevin Lincoln — Trajetória">
+                    <span class="gallery-photo-label">Construção Física</span>
+                </div>
+                <div class="gallery-photo-card">
+                    <img src="img/img_hist/IMG_6061.jpg" alt="Kevin Lincoln — Atleta">
+                    <span class="gallery-photo-label">Alta Performance</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 03. CTA FINAL DE RESULTADOS ── -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="conversion-cta-banner js-fade-up">
+                <span class="section-badge">Sua Vez</span>
+                <h2>Quer ser a próxima história de evolução?</h2>
+                <p>Inicie seu acompanhamento agora com uma metodologia individualizada e sem dietas restritivas.</p>
+                <div class="conversion-cta-actions">
+                    <button class="btn btn-primary btn-lg" onclick="abrirFormulario()">Iniciar Avaliação de Perfil</button>
+                    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Vi%20os%20resultados%20no%20site%20e%20gostaria%20de%20iniciar%20minha%20transforma%C3%A7%C3%A3o." target="_blank" class="btn btn-whatsapp btn-lg">
+                        <svg viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                        </svg>
+                        Falar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER GLOBAL ── -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="brand-logo">
+                        <img src="img/Prancheta 4@4x.png" alt="Logo" class="logo-mark">
+                        Nutri<span>.Kevin</span>
+                    </a>
+                    <span class="footer-crn">CRN: 83678P</span>
+                    <p>Nutrição baseada em evidência para emagrecimento, saúde metabólica e performance.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <nav class="footer-nav">
+                        <a href="index.html">Início</a>
+                        <a href="acompanhamentos.html">Acompanhamentos</a>
+                        <a href="projeto-24-dias.html">Projeto 24 Dias</a>
+                        <a href="acompanhamento-premium.html">Acompanhamento Premium</a>
+                        <a href="metodo-atlas.html">Método Atlas</a>
+                    </nav>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <nav class="footer-nav">
+                        <a href="resultados.html">Resultados</a>
+                        <a href="sobre.html">Sobre o Kevin</a>
+                        <a href="duvidas.html">Dúvidas Frequentes</a>
+                        <a href="contato.html">Avaliação & Contato</a>
+                    </nav>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Atendimento</h4>
+                    <div class="footer-contact-list">
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.06a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+                            <span>(17) 98111-4500</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.547z"/></svg>
+                            <span>Kevinlincoln09@icloud.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                            <span>São José do Rio Preto - SP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; <span id="ano-atual"></span> Kevin Lincoln. Todos os direitos reservados.</div>
+                <div>Desenvolvido com foco em alta conversão e experiência clínica.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ── FLOATING WHATSAPP BUTTON ── -->
+    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Vi%20os%20depoimentos%20e%20gostaria%20de%20iniciar%20meu%20acompanhamento."
+        target="_blank" class="floating-wa" id="floatingWa" aria-label="Falar com Kevin no WhatsApp">
+        <svg viewBox="0 0 16 16">
+            <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+        </svg>
+        <span class="floating-wa-tooltip">Falar com Kevin</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,473 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- NOME DO PROJETO EDITÁVEL -->
+    <title>Projeto 24 Dias | Kevin Lincoln — Nutricionista</title>
+    <meta name="description"
+        content="Conheça o Projeto 24 Dias com Kevin Lincoln: um sprint nutricional estruturado com começo, meio e fim para destravar seus resultados, organizar a alimentação e criar consistência.">
+    <meta name="keywords"
+        content="projeto 24 dias, sprint nutricional, emagrecimento rápido sustentável, nutricionista kevin lincoln, são josé do rio preto, nutrição online">
+    <meta name="author" content="Kevin Lincoln">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kevin-lincoln.vercel.app/projeto-24-dias.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Projeto 24 Dias | Kevin Lincoln — Nutricionista">
+    <meta property="og:description"
+        content="Uma experiência de 24 dias para organizar a alimentação, quebrar a inércia e criar ritmo sustentável.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kevin-lincoln.vercel.app/projeto-24-dias.html">
+    <meta property="og:image" content="img/kevin-logo.png">
+
+    <!-- Favicon & Fonts -->
+    <link rel="icon" href="img/Prancheta 4@4x.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- BARRA DE PROGRESSO DE LEITURA -->
+    <div id="read-progress" class="read-progress"></div>
+
+    <!-- HEADER / NAVEGAÇÃO -->
+    <header id="header">
+        <div class="container header-flex">
+            <a href="index.html" class="brand-logo" aria-label="Kevin Lincoln Nutricionista">
+                <img src="img/Prancheta 4@4x.png" alt="Logo Kevin Lincoln" class="logo-mark">
+                Nutri<span>.Kevin</span>
+            </a>
+
+            <nav class="nav-desk" aria-label="Menu Principal">
+                <ul>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="acompanhamentos.html" class="nav-link active">
+                            Acompanhamentos
+                            <svg class="dropdown-caret" viewBox="0 0 10 6">
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" fill="none" />
+                            </svg>
+                        </a>
+                        <div class="nav-dropdown">
+                            <a href="acompanhamentos.html" class="dropdown-link">
+                                <strong>Visão Geral</strong>
+                                <small>Compare os formatos disponíveis</small>
+                            </a>
+                            <a href="projeto-24-dias.html" class="dropdown-link">
+                                <strong>Projeto 24 Dias</strong>
+                                <small>Sprint focado em consistência</small>
+                            </a>
+                            <a href="acompanhamento-premium.html" class="dropdown-link">
+                                <strong>Acompanhamento Premium</strong>
+                                <small>Planos Mensal, Trimestral, Semestral e Anual</small>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="metodo-atlas.html" class="nav-link">Método Atlas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resultados.html" class="nav-link">Resultados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link">Sobre o Kevin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="duvidas.html" class="nav-link">Dúvidas</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button class="btn btn-primary btn-sm" onclick="abrirFormulario('Projeto 24 Dias')">Garantir Vaga</button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- DRAWER MOBILE -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menu Mobile">
+        <div>
+            <div class="mobile-drawer-header">
+                <a href="index.html" class="brand-logo">
+                    <img src="img/Prancheta 4@4x.png" alt="Logo" class="logo-mark">
+                    Nutri<span>.Kevin</span>
+                </a>
+                <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Fechar menu">✕</button>
+            </div>
+
+            <nav class="mobile-nav-list">
+                <a href="index.html" class="mobile-nav-link">Início</a>
+                <a href="acompanhamentos.html" class="mobile-nav-link active">Acompanhamentos</a>
+                <div class="mobile-subnav">
+                    <a href="projeto-24-dias.html" class="mobile-sublink active">· Projeto 24 Dias</a>
+                    <a href="acompanhamento-premium.html" class="mobile-sublink">· Acompanhamento Premium</a>
+                </div>
+                <a href="metodo-atlas.html" class="mobile-nav-link">Método Atlas</a>
+                <a href="resultados.html" class="mobile-nav-link">Resultados & Provas Sociais</a>
+                <a href="sobre.html" class="mobile-nav-link">Sobre o Kevin</a>
+                <a href="duvidas.html" class="mobile-nav-link">Dúvidas Frequentes</a>
+                <a href="contato.html" class="mobile-nav-link">Contato & Avaliação</a>
+            </nav>
+        </div>
+
+        <div class="mobile-drawer-footer">
+            <button class="btn btn-primary btn-full" onclick="abrirFormulario('Projeto 24 Dias')">Inscrever-se no Projeto</button>
+            <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Gostaria%20de%20saber%20mais%20detalhes%20sobre%20o%20Projeto%2024%20Dias." target="_blank" class="btn btn-whatsapp btn-full">
+                <svg viewBox="0 0 16 16">
+                    <path
+                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                </svg>
+                Falar no WhatsApp
+            </a>
+        </div>
+    </aside>
+
+    <!-- ── 01. HERO DO PROJETO ── -->
+    <section class="section-padding-sm" style="padding-top: 130px;">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <!-- ÁREA CENTRALIZADA E EDITÁVEL DO NOME DO PROJETO -->
+                <span class="section-badge" id="project-tag-badge">Sprint Nutricional Estruturado</span>
+                <h1 id="project-main-title">Projeto 24 Dias</h1>
+                <p>Uma experiência com começo, meio e fim para quem deseja organizar a alimentação, quebrar a inércia e construir disciplina sem radicalismos.</p>
+            </div>
+
+            <!-- Box Destaque de Início Rápido -->
+            <div class="decision-card js-fade-up" style="max-width: 860px; margin: 0 auto 56px;">
+                <div style="display: flex; justify-content: space-between; align-items: flex-start; flex-wrap: wrap; gap: 20px;">
+                    <div>
+                        <span class="decision-card-tag">Metodologia Fechada</span>
+                        <h2 style="font-size: 1.5rem; margin-bottom: 8px;">Por que 24 dias?</h2>
+                        <p style="font-size: 0.96rem; color: var(--text-secondary); max-width: 580px;">24 dias é o tempo ideal para que o seu paladar se adapte, os picos de compulsão diminuam e você veja mudanças nítidas no espelho sem passar fome ou depender apenas de motivação passageira.</p>
+                    </div>
+                    <div>
+                        <button class="btn btn-primary" onclick="abrirFormulario('Projeto 24 Dias')">Quero Iniciar o Projeto &rarr;</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 02. AS 3 FASES DO PROJETO ── -->
+    <section class="section-padding comparison-section">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Etapas do Programa</span>
+                <h2>Como funcionam as 3 fases dos 24 dias</h2>
+                <p>Cada etapa tem uma meta fisiológica clara para que a sua evolução ocorra de forma consistente.</p>
+            </div>
+
+            <div class="timeline-phases-grid js-fade-up">
+                <!-- Fase 1 -->
+                <div class="phase-card">
+                    <span class="phase-badge">Dias 01 a 07</span>
+                    <h3>Fase 1: Adaptação & Desinflamação</h3>
+                    <p>Organização das primeiras refeições, controle do volume de água e redução de alimentos ultraprocessados para eliminar retenção e melhorar digestão.</p>
+                    <div class="phase-deliverables">
+                        <div class="phase-deliverable-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Desinflamação e redução de inchaço</span>
+                        </div>
+                        <div class="phase-deliverable-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Instalação de rotina de horários</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 2 -->
+                <div class="phase-card" style="border-color: var(--primary);">
+                    <span class="phase-badge" style="background: var(--primary); color: #ffffff;">Dias 08 a 16</span>
+                    <h3>Fase 2: Consolidação & Ritmo</h3>
+                    <p>O corpo entra em ritmo de queima de gordura com estabilização de glicemia. Fome controlada e energia renovada para treinos e trabalho.</p>
+                    <div class="phase-deliverables">
+                        <div class="phase-deliverable-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Perda consistente de medidas</span>
+                        </div>
+                        <div class="phase-deliverable-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Domínio do paladar e da saciedade</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Fase 3 -->
+                <div class="phase-card">
+                    <span class="phase-badge">Dias 17 a 24</span>
+                    <h3>Fase 3: Transição & Sustentabilidade</h3>
+                    <p>Ajuste de autonomia para que os resultados conquistados se sustentem além dos 24 dias, evitando o efeito rebote.</p>
+                    <div class="phase-deliverables">
+                        <div class="phase-deliverable-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Consolidação do hábito alimentar</span>
+                        </div>
+                        <div class="phase-deliverable-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Plano de manutenção contínua</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 03. O QUE ESTÁ INCLUÍDO ── -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Conteúdo e Entregáveis</span>
+                <h2>O que está incluído no seu projeto</h2>
+                <p>Tudo o que você precisa para seguir com segurança e sem dúvidas no seu dia a dia.</p>
+            </div>
+
+            <div class="atlas-pillars-grid js-fade-up">
+                <div class="pillar-card">
+                    <div>
+                        <div class="pillar-icon-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                        </div>
+                        <h3>Protocolo Individualizado</h3>
+                        <p>Distribuição de calorias e refeições calculadas com base nas suas preferências e rotina de horários.</p>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <div>
+                        <div class="pillar-icon-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M8 10h.01M12 10h.01M16 10h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                        </div>
+                        <h3>Suporte Direto no WhatsApp</h3>
+                        <p>Canal aberto para tirar dúvidas sobre substituições, refeições fora de casa e adaptação ao longo dos dias.</p>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <div>
+                        <div class="pillar-icon-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                        </div>
+                        <h3>Guia de Praticidade e Checklist</h3>
+                        <p>Checklist diário de metas (água, sono, porções) e lista de compras para facilitar seu planejamento semanal.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 04. PARA QUEM É INDICADO / NÃO É ── -->
+    <section class="section-padding comparison-section">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Alinhamento de Expectativas</span>
+                <h2>Para quem este projeto é indicado?</h2>
+                <p>Trabalhamos com honestidade e transparência sobre o perfil ideal do programa.</p>
+            </div>
+
+            <div class="target-audience-grid js-fade-up">
+                <div class="target-audience-card target-audience-card--positive">
+                    <h3>
+                        <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                        Indicado para quem:
+                    </h3>
+                    <div class="target-audience-list">
+                        <div class="target-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Precisa de um pontapé inicial com prazo fechado para parar de procrastinar.</span>
+                        </div>
+                        <div class="target-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Sente inchaço constante, cansaço pós-refeição e desorganização de horários.</span>
+                        </div>
+                        <div class="target-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Quer aprender a comer bem sem fórmulas malucas ou passar fome.</span>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="target-audience-card target-audience-card--negative">
+                    <h3>
+                        <svg viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
+                        Não indicado para quem:
+                    </h3>
+                    <div class="target-audience-list">
+                        <div class="target-item">
+                            <svg viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
+                            <span>Busca promessas milagrosas de emagrecimento sem nenhum comprometimento.</span>
+                        </div>
+                        <div class="target-item">
+                            <svg viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z"/></svg>
+                            <span>Não está disposto a seguir as orientações e registrar suas dúvidas no suporte.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 05. FAQ DO PROJETO ── -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Tire suas dúvidas</span>
+                <h2>Perguntas frequentes sobre o Projeto 24 Dias</h2>
+            </div>
+
+            <div class="faq-grid js-fade-up">
+                <div class="faq-card">
+                    <button class="faq-trigger" type="button">
+                        <span>Preciso cozinhar refeições complexas?</span>
+                        <div class="faq-icon-cross">
+                            <svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            Não. O protocolo é estruturado com base em alimentos reais e de fácil preparo (carnes, ovos, arroz, legumes, frutas comuns). Você receberá opções práticas de substituição.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-trigger" type="button">
+                        <span>O que acontece após os 24 dias?</span>
+                        <div class="faq-icon-cross">
+                            <svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            Ao finalizar o ciclo, você terá diretrizes claras para manter a rotina ou, se desejar, poderá migrar para o Acompanhamento Premium com condições especiais de continuidade.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-trigger" type="button">
+                        <span>Posso fazer se tiver restrição alimentar?</span>
+                        <div class="faq-icon-cross">
+                            <svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            Sim! Durante o preenchimento da sua ficha inicial, você informa intolerâncias (lactose, glúten, etc.) ou preferências e o protocolo é adaptado individualmente.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 06. CTA FINAL DO PROJETO ── -->
+    <section class="section-padding comparison-section">
+        <div class="container">
+            <div class="conversion-cta-banner js-fade-up">
+                <span class="section-badge">Inscrição</span>
+                <h2>Inicie sua nova fase com o Projeto 24 Dias</h2>
+                <p>Dê o primeiro passo com uma metodologia testada e acompanhamento profissional.</p>
+                <div class="conversion-cta-actions">
+                    <button class="btn btn-primary btn-lg" onclick="abrirFormulario('Projeto 24 Dias')">Inscrever-se no Projeto 24 Dias</button>
+                    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Gostaria%20de%20saber%20mais%20detalhes%20sobre%20como%20funciona%20o%20Projeto%2024%20Dias." target="_blank" class="btn btn-whatsapp btn-lg">
+                        <svg viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                        </svg>
+                        Falar com Kevin no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER GLOBAL ── -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="brand-logo">
+                        <img src="img/Prancheta 4@4x.png" alt="Logo" class="logo-mark">
+                        Nutri<span>.Kevin</span>
+                    </a>
+                    <span class="footer-crn">CRN: 83678P</span>
+                    <p>Nutrição baseada em evidência para emagrecimento, saúde metabólica e performance.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <nav class="footer-nav">
+                        <a href="index.html">Início</a>
+                        <a href="acompanhamentos.html">Acompanhamentos</a>
+                        <a href="projeto-24-dias.html">Projeto 24 Dias</a>
+                        <a href="acompanhamento-premium.html">Acompanhamento Premium</a>
+                        <a href="metodo-atlas.html">Método Atlas</a>
+                    </nav>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <nav class="footer-nav">
+                        <a href="resultados.html">Resultados</a>
+                        <a href="sobre.html">Sobre o Kevin</a>
+                        <a href="duvidas.html">Dúvidas Frequentes</a>
+                        <a href="contato.html">Avaliação & Contato</a>
+                    </nav>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Atendimento</h4>
+                    <div class="footer-contact-list">
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.06a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+                            <span>(17) 98111-4500</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.547z"/></svg>
+                            <span>Kevinlincoln09@icloud.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                            <span>São José do Rio Preto - SP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; <span id="ano-atual"></span> Kevin Lincoln. Todos os direitos reservados.</div>
+                <div>Desenvolvido com foco em alta conversão e experiência clínica.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ── FLOATING WHATSAPP BUTTON ── -->
+    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Gostaria%20de%20saber%20mais%20sobre%20o%20Projeto%2024%20Dias."
+        target="_blank" class="floating-wa" id="floatingWa" aria-label="Falar com Kevin no WhatsApp">
+        <svg viewBox="0 0 16 16">
+            <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+        </svg>
+        <span class="floating-wa-tooltip">Falar com Kevin</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

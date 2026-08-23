@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre o Kevin Lincoln | Nutricionista CRN 83678P — História & Missão</title>
+    <meta name="description"
+        content="Conheça a trajetória profissional e pessoal do nutricionista Kevin Lincoln (CRN 83678P): transformação física, vivência no fisiculturismo e a criação do Método Atlas.">
+    <meta name="keywords"
+        content="sobre kevin lincoln, nutricionista kevin lincoln historia, crn 83678p, nutricionista são josé do rio preto, fisiculturismo nutrição">
+    <meta name="author" content="Kevin Lincoln">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kevin-lincoln.vercel.app/sobre.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Sobre o Kevin Lincoln | Nutricionista — História & Missão">
+    <meta property="og:description"
+        content="Conheça a jornada de quem transformou o próprio corpo e hoje guia centenas de pessoas com nutrição de precisão.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://kevin-lincoln.vercel.app/sobre.html">
+    <meta property="og:image" content="img/kevin-logo.png">
+
+    <!-- Favicon & Fonts -->
+    <link rel="icon" href="img/Prancheta 4@4x.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- BARRA DE PROGRESSO DE LEITURA -->
+    <div id="read-progress" class="read-progress"></div>
+
+    <!-- HEADER / NAVEGAÇÃO -->
+    <header id="header">
+        <div class="container header-flex">
+            <a href="index.html" class="brand-logo" aria-label="Kevin Lincoln Nutricionista">
+                <img src="img/Prancheta 4@4x.png" alt="Logo Kevin Lincoln" class="logo-mark">
+                Nutri<span>.Kevin</span>
+            </a>
+
+            <nav class="nav-desk" aria-label="Menu Principal">
+                <ul>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="acompanhamentos.html" class="nav-link">
+                            Acompanhamentos
+                            <svg class="dropdown-caret" viewBox="0 0 10 6">
+                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
+                                    stroke-linejoin="round" fill="none" />
+                            </svg>
+                        </a>
+                        <div class="nav-dropdown">
+                            <a href="acompanhamentos.html" class="dropdown-link">
+                                <strong>Visão Geral</strong>
+                                <small>Compare os formatos disponíveis</small>
+                            </a>
+                            <a href="projeto-24-dias.html" class="dropdown-link">
+                                <strong>Projeto 24 Dias</strong>
+                                <small>Sprint focado em consistência</small>
+                            </a>
+                            <a href="acompanhamento-premium.html" class="dropdown-link">
+                                <strong>Acompanhamento Premium</strong>
+                                <small>Planos Mensal, Trimestral, Semestral e Anual</small>
+                            </a>
+                        </div>
+                    </li>
+                    <li class="nav-item">
+                        <a href="metodo-atlas.html" class="nav-link">Método Atlas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resultados.html" class="nav-link">Resultados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link active">Sobre o Kevin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="duvidas.html" class="nav-link">Dúvidas</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <a href="acompanhamentos.html" class="btn btn-primary btn-sm">Escolher Acompanhamento</a>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- DRAWER MOBILE -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menu Mobile">
+        <div>
+            <div class="mobile-drawer-header">
+                <a href="index.html" class="brand-logo">
+                    <img src="img/Prancheta 4@4x.png" alt="Logo" class="logo-mark">
+                    Nutri<span>.Kevin</span>
+                </a>
+                <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Fechar menu">✕</button>
+            </div>
+
+            <nav class="mobile-nav-list">
+                <a href="index.html" class="mobile-nav-link">Início</a>
+                <a href="acompanhamentos.html" class="mobile-nav-link">Acompanhamentos</a>
+                <div class="mobile-subnav">
+                    <a href="projeto-24-dias.html" class="mobile-sublink">· Projeto 24 Dias</a>
+                    <a href="acompanhamento-premium.html" class="mobile-sublink">· Acompanhamento Premium</a>
+                </div>
+                <a href="metodo-atlas.html" class="mobile-nav-link">Método Atlas</a>
+                <a href="resultados.html" class="mobile-nav-link">Resultados & Provas Sociais</a>
+                <a href="sobre.html" class="mobile-nav-link active">Sobre o Kevin</a>
+                <a href="duvidas.html" class="mobile-nav-link">Dúvidas Frequentes</a>
+                <a href="contato.html" class="mobile-nav-link">Contato & Avaliação</a>
+            </nav>
+        </div>
+
+        <div class="mobile-drawer-footer">
+            <button class="btn btn-primary btn-full" onclick="abrirFormulario()">Iniciar Avaliação</button>
+            <a href="https://wa.me/5517981114500" target="_blank" class="btn btn-whatsapp btn-full">
+                <svg viewBox="0 0 16 16">
+                    <path
+                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                </svg>
+                Falar no WhatsApp
+            </a>
+        </div>
+    </aside>
+
+    <!-- ── 01. HERO SOBRE O KEVIN ── -->
+    <section class="section-padding-sm" style="padding-top: 130px;">
+        <div class="container">
+            <div class="about-hero-grid js-fade-up">
+                <div class="about-img-frame">
+                    <img src="img/kevin_2.png" alt="Kevin Lincoln — Nutricionista">
+                </div>
+
+                <div>
+                    <span class="section-badge">Biografia & Trajetória</span>
+                    <h1>Mais do que prescrever dietas. Uma missão de transformação.</h1>
+                    <p style="margin-bottom: 16px;">Meu nome é Kevin Lincoln, sou nutricionista clínico e esportivo (CRN: 83678P). Acredito que a alimentação deve ser um pilar de liberdade, clareza e saúde, nunca de sofrimento ou culpa.</p>
+                    <p style="margin-bottom: 24px;">Antes de orientar centenas de pacientes, eu precisei passar pela minha própria transformação física e mental. Foi vivenciando na prática as dificuldades de construir constância, equilibrar rotina de trabalho e treinar pesado que entendi a importância de um plano realista e estruturado.</p>
+
+                    <div class="about-badges-row">
+                        <div class="about-badge-item">
+                            <svg viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                            <span>Nutricionista Graduado</span>
+                        </div>
+                        <div class="about-badge-item">
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                            <span>CRN: 83678P</span>
+                        </div>
+                        <div class="about-badge-item">
+                            <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                            <span>Atleta de Fisiculturismo</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 02. CAPÍTULO 1: A ORIGEM ── -->
+    <section class="section-padding comparison-section">
+        <div class="container">
+            <div class="section-header section-header--left js-fade-up">
+                <span class="section-badge">01 · A Origem</span>
+                <h2>Por que escolhi a nutrição como vocação?</h2>
+                <p>Eu não estava satisfeito com meu físico e me sentia desmotivado. Ao me aprofundar nos estudos da bioquímica e da nutrição esportiva, percebi que pequenas mudanças estratégicas nos macronutrientes geravam impactos gigantescos no meu humor, energia e composição corporal.</p>
+            </div>
+
+            <div class="photo-gallery-grid js-fade-up">
+                <div class="gallery-photo-card">
+                    <img src="img/img_hist/kevin_01.jpg" alt="Kevin Lincoln — Início da jornada">
+                    <span class="gallery-photo-label">Início dos Estudos</span>
+                </div>
+                <div class="gallery-photo-card">
+                    <img src="img/img_hist/IMG_6046.JPG.jpeg" alt="Kevin Lincoln — Evolução de treinos">
+                    <span class="gallery-photo-label">Disciplina Diária</span>
+                </div>
+                <div class="gallery-photo-card">
+                    <img src="img/img_hist/IMG_6063.jpg" alt="Kevin Lincoln — Constância">
+                    <span class="gallery-photo-label">Consistência</span>
+                </div>
+                <div class="gallery-photo-card">
+                    <img src="img/img_hist/IMG_6064.jpg" alt="Kevin Lincoln — Transformação">
+                    <span class="gallery-photo-label">Resultado Consolidado</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 03. CAPÍTULO 2: O FISICULTURISMO E A DISCIPLINA ── -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="about-hero-grid js-fade-up">
+                <div>
+                    <span class="section-badge">02 · Alta Performance</span>
+                    <h2>O que o fisiculturismo me ensinou sobre nutrição</h2>
+                    <p style="margin-bottom: 16px;">O esporte de alto rendimento exige precisão milimétrica. Não basta treinar com intensidade: é necessário dosar cada grama de proteína, ajustar a hidratação e respeitar o descanso fisiológico.</p>
+                    <p style="margin-bottom: 24px;">Essa experiência prática me deu a bagagem para saber exatamente como o corpo humano responde a cada estratégia. Esse rigor científico e prático é o que aplico no atendimento diário dos meus pacientes, adaptando o nível de exigência à realidade de cada pessoa.</p>
+                    <a href="metodo-atlas.html" class="btn btn-secondary">Conhecer o Método Atlas &rarr;</a>
+                </div>
+
+                <div class="about-img-frame">
+                    <img src="img/img_hist/kevin_03.jpg" alt="Kevin Lincoln — Atleta e Nutricionista">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 04. FILOSOFIA DE ATENDIMENTO ── -->
+    <section class="section-padding comparison-section">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Filosofia Clínica</span>
+                <h2>Como conduzo cada consulta e atendimento</h2>
+                <p>Princípios inegociáveis para uma relação de confiança e resultados duradouros.</p>
+            </div>
+
+            <div class="atlas-pillars-grid js-fade-up">
+                <div class="pillar-card">
+                    <div>
+                        <div class="pillar-icon-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                        </div>
+                        <h3>Atendimento Humanizado</h3>
+                        <p>Você é ouvido. Suas preferências de paladar, restrições e dificuldades de rotina são a base para construir o cardápio.</p>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <div>
+                        <div class="pillar-icon-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                        </div>
+                        <h3>Sem Terrorismo Nutricional</h3>
+                        <p>Alimentos não são proibidos de forma arbitrária. A estratégia foca no equilíbrio total e na criação de consistência.</p>
+                    </div>
+                </div>
+
+                <div class="pillar-card">
+                    <div>
+                        <div class="pillar-icon-wrap">
+                            <svg viewBox="0 0 24 24"><path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                        </div>
+                        <h3>Acompanhamento de Verdade</h3>
+                        <p>O trabalho não termina na entrega da dieta. Estar presente durante o processo é o segredo para ajustar desvios e garantir evolução.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 05. CTA FINAL ── -->
+    <section class="section-padding">
+        <div class="container">
+            <div class="conversion-cta-banner js-fade-up">
+                <span class="section-badge">Próximo Passo</span>
+                <h2>Vamos construir a sua melhor versão juntos?</h2>
+                <p>Escolha o seu acompanhamento e tenha meu suporte direto em cada etapa da sua jornada.</p>
+                <div class="conversion-cta-actions">
+                    <a href="acompanhamentos.html" class="btn btn-primary btn-lg">Conhecer os Acompanhamentos</a>
+                    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Li%20sua%20hist%C3%B3ria%20e%20gostaria%20de%20iniciar%20meu%20acompanhamento." target="_blank" class="btn btn-whatsapp btn-lg">
+                        <svg viewBox="0 0 16 16">
+                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                        </svg>
+                        Falar no WhatsApp
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── FOOTER GLOBAL ── -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="brand-logo">
+                        <img src="img/Prancheta 4@4x.png" alt="Logo" class="logo-mark">
+                        Nutri<span>.Kevin</span>
+                    </a>
+                    <span class="footer-crn">CRN: 83678P</span>
+                    <p>Nutrição baseada em evidência para emagrecimento, saúde metabólica e performance.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <nav class="footer-nav">
+                        <a href="index.html">Início</a>
+                        <a href="acompanhamentos.html">Acompanhamentos</a>
+                        <a href="projeto-24-dias.html">Projeto 24 Dias</a>
+                        <a href="acompanhamento-premium.html">Acompanhamento Premium</a>
+                        <a href="metodo-atlas.html">Método Atlas</a>
+                    </nav>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <nav class="footer-nav">
+                        <a href="resultados.html">Resultados</a>
+                        <a href="sobre.html">Sobre o Kevin</a>
+                        <a href="duvidas.html">Dúvidas Frequentes</a>
+                        <a href="contato.html">Avaliação & Contato</a>
+                    </nav>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Atendimento</h4>
+                    <div class="footer-contact-list">
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.06a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+                            <span>(17) 98111-4500</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.547z"/></svg>
+                            <span>Kevinlincoln09@icloud.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                            <span>São José do Rio Preto - SP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; <span id="ano-atual"></span> Kevin Lincoln. Todos os direitos reservados.</div>
+                <div>Desenvolvido com foco em alta conversão e experiência clínica.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ── FLOATING WHATSAPP BUTTON ── -->
+    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Gostaria%20de%20saber%20mais%20sobre%20sua%20hist%C3%B3ria%20e%20atendimento."
+        target="_blank" class="floating-wa" id="floatingWa" aria-label="Falar com Kevin no WhatsApp">
+        <svg viewBox="0 0 16 16">
+            <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+        </svg>
+        <span class="floating-wa-tooltip">Falar com Kevin</span>
+    </a>
+
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
