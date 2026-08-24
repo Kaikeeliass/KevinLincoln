@@ -304,8 +304,8 @@ document.addEventListener("keydown", (e) => {
 // Pré-seleciona opção de serviço nos formulários
 function preencherServicoFormulario(servico, prefix = "") {
   const cleanServico = servico.toLowerCase().trim();
-  
   let targetRadioId = "";
+  
   if (cleanServico.includes("24") || cleanServico.includes("projeto")) {
     targetRadioId = prefix + "servico-p24";
   } else if (cleanServico.includes("trimestral")) {
@@ -314,9 +314,7 @@ function preencherServicoFormulario(servico, prefix = "") {
     targetRadioId = prefix + "servico-semestral";
   } else if (cleanServico.includes("anual")) {
     targetRadioId = prefix + "servico-anual";
-  } else if (cleanServico.includes("mensal")) {
-    targetRadioId = prefix + "servico-mensal";
-  } else if (cleanServico.includes("premium")) {
+  } else if (cleanServico.includes("premium") || cleanServico.includes("mensal")) {
     targetRadioId = prefix + "servico-trimestral"; // Sugestão padrão
   }
 

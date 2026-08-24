@@ -47,7 +47,7 @@
             <nav class="nav-desk" aria-label="Menu Principal">
                 <ul>
                     <li class="nav-item">
-                        <a href="index.html" class="nav-link">Início</a>
+                        <a href="index.html" class="nav-link active">Início</a>
                     </li>
                     <li class="nav-item">
                         <a href="acompanhamentos.html" class="nav-link">
@@ -68,7 +68,7 @@
                             </a>
                             <a href="acompanhamento-premium.html" class="dropdown-link">
                                 <strong>Acompanhamento Premium</strong>
-                                <small>Planos Mensal, Trimestral, Semestral e Anual</small>
+                                <small>Planos Trimestral, Semestral e Anual</small>
                             </a>
                         </div>
                     </li>
@@ -88,7 +88,7 @@
             </nav>
 
             <div class="header-actions">
-                <a href="#acompanhamentos-escolha" class="btn btn-primary btn-sm">Escolher acompanhamento</a>
+                <a href="#acompanhamentos-escolha" class="btn btn-primary btn-header-cta">Quero iniciar minha avaliação</a>
                 <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação">
                     <svg viewBox="0 0 24 24">
                         <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -111,17 +111,16 @@
             </div>
 
             <nav class="mobile-nav-list">
-                <a href="index.html" class="mobile-nav-link">Início</a>
+                <a href="index.html" class="mobile-nav-link active">Início</a>
+                <a href="metodo-atlas.html" class="mobile-nav-link">Método Atlas</a>
                 <a href="acompanhamentos.html" class="mobile-nav-link">Acompanhamentos</a>
                 <div class="mobile-subnav">
                     <a href="projeto-24-dias.html" class="mobile-sublink">· Projeto 24 Dias</a>
                     <a href="acompanhamento-premium.html" class="mobile-sublink">· Acompanhamento Premium</a>
                 </div>
-                <a href="metodo-atlas.html" class="mobile-nav-link">Método Atlas</a>
-                <a href="resultados.html" class="mobile-nav-link">Resultados & Provas Sociais</a>
-                <a href="sobre.html" class="mobile-nav-link">Sobre o Kevin</a>
-                <a href="duvidas.html" class="mobile-nav-link">Dúvidas Frequentes</a>
-                <a href="contato.html" class="mobile-nav-link">Contato & Avaliação</a>
+                <a href="resultados.html" class="mobile-nav-link">Resultados</a>
+                <a href="sobre.html" class="mobile-nav-link">Sobre Kevin</a>
+                <a href="duvidas.html" class="mobile-nav-link">FAQ</a>
             </nav>
         </div>
 
@@ -137,7 +136,75 @@
         </div>
     </aside>
 
-    <!-- ── 01. HERO PRINCIPAL / HUB DE ESCOLHA ── -->
+    <!-- ── HERO PRINCIPAL — POSICIONAMENTO E CONVERSÃO ── -->
+    <section class="hero-main" id="inicio">
+        <div class="hero-main-bg-glow"></div>
+        <div class="container">
+            <div class="hero-main-grid">
+
+                <!-- Coluna de Texto -->
+                <div class="hero-main-content js-fade-up">
+                    <div class="hero-main-badge">
+                        <span class="hero-badge-dot"></span>
+                        Nutricionista · CRN 83678P · Online e Presencial
+                    </div>
+
+                    <h1 class="hero-main-headline">
+                        Nutrição estratégica para transformar seu corpo e sua rotina.
+                    </h1>
+
+                    <p class="hero-main-sub">
+                        Um acompanhamento personalizado para emagrecimento, saúde e performance, construído de acordo com sua realidade.
+                    </p>
+
+                    <div class="hero-main-ctas">
+                        <a href="#acompanhamentos-escolha" class="btn btn-primary btn-lg">
+                            Escolher meu acompanhamento
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </a>
+                        <a href="metodo-atlas.html" class="btn btn-secondary btn-lg">
+                            Conhecer o Método Atlas
+                        </a>
+                    </div>
+
+                    <div class="hero-main-trust">
+                        <div class="hero-trust-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14v7"/></svg>
+                            <span>Nutricionista Graduado</span>
+                        </div>
+                        <div class="hero-trust-sep"></div>
+                        <div class="hero-trust-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
+                            <span>Método Atlas</span>
+                        </div>
+                        <div class="hero-trust-sep"></div>
+                        <div class="hero-trust-item">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
+                            <span>Atendimento Personalizado</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Coluna da Foto -->
+                <div class="hero-main-visual js-fade-up">
+                    <div class="hero-photo-frame">
+                        <div class="hero-photo-glow"></div>
+                        <img src="img/kevin_2.png" alt="Kevin Lincoln — Nutricionista CRN 83678P" class="hero-photo-img">
+                        <div class="hero-photo-card">
+                            <div class="hero-photo-card-dot"></div>
+                            <div>
+                                <strong>Kevin Lincoln</strong>
+                                <span>Nutricionista · CRN 83678P</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── SEÇÃO DE ESCOLHA DO ACOMPANHAMENTO ── -->
     <section class="hero-hub" id="acompanhamentos-escolha">
         <div class="container">
             <div class="hero-hub-intro js-fade-up">
@@ -146,11 +213,10 @@
                         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
                     </svg>
-                    Nutrição Clínica & Esportiva de Alta Precisão
+                    Escolha o Formato Ideal
                 </span>
-                <h1>Escolha o acompanhamento ideal para o seu momento.</h1>
-                <p>Estratégias nutricionais personalizadas para emagrecimento, saúde e performance, sem radicalismos e
-                    com acompanhamento profissional contínuo.</p>
+                <h2 class="hero-hub-title">Escolha o acompanhamento ideal para o seu momento.</h2>
+                <p>Dois formatos desenvolvidos para objetivos distintos. Conheça cada um e escolha o que faz mais sentido para a sua realidade agora.</p>
             </div>
 
             <!-- CARDS PRINCIPAIS DE DECISÃO -->
@@ -158,10 +224,9 @@
                 <!-- Card 1: Projeto 24 Dias -->
                 <div class="decision-card">
                     <div>
-                        <span class="decision-card-tag">Fase Inicial / Sprint Estruturado</span>
-                        <h2 class="decision-card-title">Projeto 24 Dias</h2>
-                        <p class="decision-card-desc">Uma experiência com começo, meio e fim para quem deseja organizar a
-                            alimentação, criar consistência e iniciar uma nova fase com direção clara.</p>
+                        <span class="decision-card-tag">Para quem está começando</span>
+                        <h3 class="decision-card-title">Projeto 24 Dias</h3>
+                        <p class="decision-card-desc">Um sprint estruturado para quem precisa sair do zero, organizar a alimentação e criar consistência com começo, meio e fim definidos.</p>
 
                         <div class="decision-card-meta">
                             <div class="decision-card-meta-item">
@@ -177,7 +242,7 @@
                                     <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"
                                         stroke-linecap="round" stroke-linejoin="round" fill="none" />
                                 </svg>
-                                <span>Foco: Quebra de inércia</span>
+                                <span>Foco: Quebrar inércia</span>
                             </div>
                         </div>
 
@@ -204,24 +269,22 @@
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                <span>Suporte e orientações diretas pelo WhatsApp</span>
+                                <span>Suporte direto pelo WhatsApp durante os 24 dias</span>
                             </div>
                         </div>
                     </div>
 
                     <div>
-                        <a href="projeto-24-dias.html" class="btn btn-outline-primary btn-full">Conhecer o Projeto 24
-                            Dias &rarr;</a>
+                        <a href="projeto-24-dias.html" class="btn btn-outline-primary btn-full">Conhecer o Projeto 24 Dias &rarr;</a>
                     </div>
                 </div>
 
                 <!-- Card 2: Acompanhamento Premium -->
                 <div class="decision-card decision-card--featured">
                     <div>
-                        <span class="decision-card-tag" style="color: var(--secondary);">Consultoria Contínua</span>
-                        <h2 class="decision-card-title">Acompanhamento Premium</h2>
-                        <p class="decision-card-desc">Um acompanhamento nutricional contínuo, altamente individualizado e
-                            com ajustes periódicos para evolução sustentável do seu metabolismo.</p>
+                        <span class="decision-card-tag" style="color: var(--secondary);">Para quem busca evolução contínua</span>
+                        <h3 class="decision-card-title">Acompanhamento Premium</h3>
+                        <p class="decision-card-desc">Consultoria nutricional contínua, altamente individualizada, com reavaliações periódicas e ajustes constantes para evolução sustentável de longo prazo.</p>
 
                         <div class="decision-card-meta">
                             <div class="decision-card-meta-item">
@@ -230,7 +293,7 @@
                                         stroke-width="2" fill="none" />
                                     <path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" fill="none" />
                                 </svg>
-                                <span>Mensal · Trimestral · Semestral · Anual</span>
+                                <span>Trimestral · Semestral · Anual</span>
                             </div>
                         </div>
 
@@ -359,7 +422,7 @@
                         <tr>
                             <td><strong>Duração</strong></td>
                             <td>Período fixo de 24 dias consecutivos</td>
-                            <td>Planos Mensal, Trimestral, Semestral ou Anual</td>
+                            <td>Planos Trimestral, Semestral ou Anual</td>
                         </tr>
                         <tr>
                             <td><strong>Perfil Indicado</strong></td>
@@ -536,8 +599,8 @@
         <div class="container">
             <div class="section-header js-fade-up">
                 <span class="section-badge">Provas Sociais</span>
-                <h2>Resultados reais de pacientes</h2>
-                <p>Relatos de quem transformou a saúde e a composição corporal com estratégias personalizadas.</p>
+                <h2>Resultados de pessoas reais.</h2>
+                <p>Relatos de quem transformou a saúde e a composição corporal com acompanhamento nutricional personalizado.</p>
             </div>
 
             <div class="testimonials-grid js-fade-up">
@@ -603,7 +666,7 @@
             </div>
 
             <div style="text-align: center; margin-top: 40px;" class="js-fade-up">
-                <a href="resultados.html" class="btn btn-secondary">Ver todos os depoimentos &rarr;</a>
+                <a href="resultados.html" class="btn btn-secondary">Ver todos os resultados &rarr;</a>
             </div>
         </div>
     </section>
@@ -617,23 +680,23 @@
                 </div>
 
                 <div>
-                    <span class="section-badge">Quem Sou Eu</span>
-                    <h2>Mais do que prescrever dietas. Uma missão de impacto real.</h2>
-                    <p style="margin-bottom: 16px;">Meu nome é Kevin Lincoln. Acredito firmemente que emagrecimento não deve ser sinônimo de privação extrema ou sofrimento.</p>
-                    <p style="margin-bottom: 24px;">Ao longo da minha carreira e vivência no esporte, compreendi que a maioria das pessoas não falha por falta de força de vontade, mas por falta de um plano estruturado e adaptado à sua rotina real. O meu compromisso é fornecer a você clareza, estratégia e acompanhamento próximo em cada fase.</p>
+                    <span class="section-badge">Quem é Kevin Lincoln</span>
+                    <h2>Formado pela experiência, guiado pela ciência.</h2>
+                    <p style="margin-bottom: 16px;">Meu nome é Kevin Lincoln. Antes de orientar pacientes, fui atleta de fisiculturismo — e vivi na prática as dificuldades de construir consistência nutricional com rotina real. Essa vivência me ensinou o que funciona de verdade.</p>
+                    <p style="margin-bottom: 24px;">Acredito que a maioria das pessoas não falha por falta de vontade, mas por falta de um plano estruturado para a sua realidade. Foi a partir dessa compreensão que criei o Método Atlas: uma abordagem clínica com o rigor da alta performance e a humanidade necessária para qualquer pessoa conseguir seguir.</p>
 
                     <div class="about-badges-row">
                         <div class="about-badge-item">
                             <svg viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                            <span>Nutricionista Graduado</span>
+                            <span>Nutricionista Graduado — UNIP</span>
                         </div>
                         <div class="about-badge-item">
                             <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none"/></svg>
                             <span>CRN: 83678P</span>
                         </div>
                         <div class="about-badge-item">
-                            <svg viewBox="0 0 24 24"><path d="M12 2a10 10 0 100 20 10 10 0 000-20z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                            <span>São José do Rio Preto & Online</span>
+                            <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                            <span>Atleta de Fisiculturismo</span>
                         </div>
                     </div>
 
@@ -692,7 +755,7 @@
                     </button>
                     <div class="faq-content">
                         <div class="faq-content-inner">
-                            O Projeto 24 Dias é um sprint estruturado com começo, meio e fim para quem precisa destravar e criar ritmo. O Acompanhamento Premium é uma consultoria contínua (mensal, trimestral, semestral ou anual) com reavaliações e ajustes periódicos.
+                            O Projeto 24 Dias é um sprint estruturado com começo, meio e fim para quem precisa destravar e criar ritmo. O Acompanhamento Premium é uma consultoria contínua (trimestral, semestral ou anual) com reavaliações e ajustes periódicos.
                         </div>
                     </div>
                 </div>
@@ -704,16 +767,27 @@
         </div>
     </section>
 
-    <!-- ── 09. CTA BANNER FINAL DE CONVERSÃO ── -->
-    <section class="section-padding comparison-section">
+    <!-- ── CTA BANNER FINAL DE CONVERSÃO ── -->
+    <section class="section-padding cta-final-section">
         <div class="container">
             <div class="conversion-cta-banner js-fade-up">
-                <span class="section-badge">Próximo Passo</span>
-                <h2>Pronto para iniciar sua evolução de forma estratégica?</h2>
-                <p>Preencha sua avaliação inicial em menos de 2 minutos ou fale diretamente pelo WhatsApp para tirar dúvidas e escolher o acompanhamento ideal.</p>
+                <div class="cta-final-badge">
+                    <span></span>
+                    <span>Próximo passo</span>
+                </div>
+                <h2>Pronto para começar sua evolução?</h2>
+                <p>A transformação que você busca começa com uma decisão. Preencha a avaliação inicial ou fale diretamente pelo WhatsApp — sem compromisso, sem pressão.</p>
                 <div class="conversion-cta-actions">
-                    <button class="btn btn-primary btn-lg" onclick="abrirFormulario()">Iniciar Avaliação de Perfil</button>
-                    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Visitei%20o%20site%20e%20gostaria%20de%20tirar%20d%C3%BAvidas%20sobre%20os%20acompanhamentos." target="_blank" class="btn btn-whatsapp btn-lg">
+                    <button class="btn btn-primary btn-lg" onclick="abrirFormulario()" id="btn-cta-final-avaliacao">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;fill:none;">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
+                            <polyline points="14 2 14 8 20 8"/>
+                            <line x1="16" y1="13" x2="8" y2="13"/>
+                            <line x1="16" y1="17" x2="8" y2="17"/>
+                        </svg>
+                        Iniciar Avaliação de Perfil
+                    </button>
+                    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Visitei%20o%20site%20e%20gostaria%20de%20come%C3%A7ar%20minha%20evolu%C3%A7%C3%A3o." target="_blank" class="btn btn-whatsapp btn-lg" id="btn-cta-final-whatsapp">
                         <svg viewBox="0 0 16 16">
                             <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
                         </svg>
@@ -869,10 +943,6 @@
                         <div class="chip-option">
                             <input type="radio" name="m-servico" id="m-servico-p24">
                             <label for="m-servico-p24" class="chip-label">Projeto 24 Dias</label>
-                        </div>
-                        <div class="chip-option">
-                            <input type="radio" name="m-servico" id="m-servico-mensal">
-                            <label for="m-servico-mensal" class="chip-label">Plano Mensal</label>
                         </div>
                         <div class="chip-option">
                             <input type="radio" name="m-servico" id="m-servico-trimestral" checked>
