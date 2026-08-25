@@ -306,15 +306,15 @@ function preencherServicoFormulario(servico, prefix = "") {
   const cleanServico = servico.toLowerCase().trim();
   let targetRadioId = "";
   
-  if (cleanServico.includes("24") || cleanServico.includes("projeto")) {
-    targetRadioId = prefix + "servico-p24";
+  if (cleanServico.includes("start") || cleanServico.includes("24") || cleanServico.includes("projeto")) {
+    targetRadioId = prefix + "servico-start";
   } else if (cleanServico.includes("trimestral")) {
     targetRadioId = prefix + "servico-trimestral";
   } else if (cleanServico.includes("semestral")) {
     targetRadioId = prefix + "servico-semestral";
-  } else if (cleanServico.includes("anual")) {
+  } else if (cleanServico.includes("anual") || cleanServico.includes("jornada")) {
     targetRadioId = prefix + "servico-anual";
-  } else if (cleanServico.includes("premium") || cleanServico.includes("mensal")) {
+  } else if (cleanServico.includes("atlas") || cleanServico.includes("acompanhamento")) {
     targetRadioId = prefix + "servico-trimestral"; // Sugestão padrão
   }
 

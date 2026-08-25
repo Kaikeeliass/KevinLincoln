@@ -6,9 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dúvidas Frequentes | Kevin Lincoln — Nutricionista</title>
     <meta name="description"
-        content="Tire suas dúvidas sobre consultas nutricionais, Método Atlas, Projeto 24 Dias, Planos Premium e atendimento online com Kevin Lincoln (CRN 83678P).">
+        content="Tire suas dúvidas sobre consultas nutricionais, Método Atlas Start, Método Atlas e atendimento online com o nutricionista Kevin Lincoln (CRN 83678P).">
     <meta name="keywords"
-        content="faq nutricionista, duvidas frequentes consulta nutricional, metodo atlas duvidas, atendimento nutricional online perguntas">
+        content="faq nutricionista, duvidas frequentes consulta nutricional, metodo atlas duvidas, metodo atlas start, atendimento nutricional online perguntas">
     <meta name="author" content="Kevin Lincoln">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://kevin-lincoln.vercel.app/duvidas.html">
@@ -50,27 +50,7 @@
                         <a href="index.html" class="nav-link">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a href="acompanhamentos.html" class="nav-link">
-                            Acompanhamentos
-                            <svg class="dropdown-caret" viewBox="0 0 10 6">
-                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" fill="none" />
-                            </svg>
-                        </a>
-                        <div class="nav-dropdown">
-                            <a href="acompanhamentos.html" class="dropdown-link">
-                                <strong>Visão Geral</strong>
-                                <small>Compare os formatos disponíveis</small>
-                            </a>
-                            <a href="projeto-24-dias.html" class="dropdown-link">
-                                <strong>Projeto 24 Dias</strong>
-                                <small>Sprint focado em consistência</small>
-                            </a>
-                            <a href="acompanhamento-premium.html" class="dropdown-link">
-                                <strong>Acompanhamento Premium</strong>
-                                <small>Planos Trimestral, Semestral e Anual</small>
-                            </a>
-                        </div>
+                        <a href="metodo-atlas-start.html" class="nav-link">Método Atlas Start</a>
                     </li>
                     <li class="nav-item">
                         <a href="metodo-atlas.html" class="nav-link">Método Atlas</a>
@@ -79,7 +59,7 @@
                         <a href="resultados.html" class="nav-link">Resultados</a>
                     </li>
                     <li class="nav-item">
-                        <a href="sobre.html" class="nav-link">Sobre o Kevin</a>
+                        <a href="sobre.html" class="nav-link">Sobre Kevin</a>
                     </li>
                     <li class="nav-item">
                         <a href="duvidas.html" class="nav-link active">Dúvidas</a>
@@ -88,7 +68,7 @@
             </nav>
 
             <div class="header-actions">
-                <a href="index.html#acompanhamentos-escolha" class="btn btn-primary btn-header-cta">Quero iniciar minha avaliação</a>
+                <button type="button" class="btn btn-primary btn-header-cta" onclick="abrirFormulario()">Quero iniciar minha avaliação</button>
                 <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
                     <svg viewBox="0 0 24 24">
                         <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -112,16 +92,12 @@
 
             <nav class="mobile-nav-list">
                 <a href="index.html" class="mobile-nav-link">Início</a>
-                <a href="acompanhamentos.html" class="mobile-nav-link">Acompanhamentos</a>
-                <div class="mobile-subnav">
-                    <a href="projeto-24-dias.html" class="mobile-sublink">· Projeto 24 Dias</a>
-                    <a href="acompanhamento-premium.html" class="mobile-sublink">· Acompanhamento Premium</a>
-                </div>
+                <a href="metodo-atlas-start.html" class="mobile-nav-link">Método Atlas Start</a>
                 <a href="metodo-atlas.html" class="mobile-nav-link">Método Atlas</a>
-                <a href="resultados.html" class="mobile-nav-link">Resultados & Provas Sociais</a>
-                <a href="sobre.html" class="mobile-nav-link">Sobre o Kevin</a>
-                <a href="duvidas.html" class="mobile-nav-link active">Dúvidas Frequentes</a>
-                <a href="contato.html" class="mobile-nav-link">Contato & Avaliação</a>
+                <a href="resultados.html" class="mobile-nav-link">Resultados</a>
+                <a href="sobre.html" class="mobile-nav-link">Sobre Kevin</a>
+                <a href="duvidas.html" class="mobile-nav-link active">Dúvidas</a>
+                <a href="contato.html" class="mobile-nav-link">Contato</a>
             </nav>
         </div>
 
@@ -197,14 +173,14 @@
 
                     <div class="faq-card">
                         <button class="faq-trigger" type="button" id="faq-qual-escolher">
-                            <span>Qual acompanhamento devo escolher?</span>
+                            <span>Qual opção devo escolher: Método Atlas Start ou Método Atlas?</span>
                             <div class="faq-icon-cross">
                                 <svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                             </div>
                         </button>
                         <div class="faq-content">
                             <div class="faq-content-inner">
-                                Se você está começando ou precisa de um marco inicial para sair da inércia e organizar a alimentação com prazo definido, o <strong>Projeto 24 Dias</strong> é o mais indicado. Se o seu objetivo é uma evolução contínua e sustentável de médio ou longo prazo — emagrecimento duradouro, hipertrofia ou saúde metabólica —, o <strong>Acompanhamento Premium</strong> é a escolha certa.
+                                Se você quer organizar sua alimentação e ter uma estratégia sob medida para dar o primeiro passo com rapidez, o <strong>Método Atlas Start</strong> é o produto digital ideal. Se você busca um acompanhamento contínuo, com ajustes periódicos e evolução de médio a longo prazo, os planos do <strong>Método Atlas</strong> (Trimestral, Semestral ou Anual) são a escolha recomendada.
                             </div>
                         </div>
                     </div>
@@ -218,44 +194,30 @@
                         </button>
                         <div class="faq-content">
                             <div class="faq-content-inner">
-                                É simples. Clique em "Iniciar Avaliação" em qualquer página do site e preencha o formulário inicial (leva menos de 2 minutos). Você também pode falar diretamente pelo WhatsApp. Após receber suas informações, entro em contato para apresentar a proposta e alinhar os próximos passos.
+                                É simples. Clique em "Quero iniciar minha avaliação" em qualquer página do site e preencha o formulário inicial (leva menos de 2 minutos). Após receber suas informações, entro em contato pelo WhatsApp para apresentar a proposta e alinhar os próximos passos.
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- SEÇÃO 2: SOBRE OS ACOMPANHAMENTOS & PLANOS -->
+            <!-- SEÇÃO 2: SOBRE OS FORMATOS & METODOLOGIA -->
             <div style="max-width: 840px; margin: 0 auto 48px;" class="js-fade-up">
                 <h2 style="font-size: 1.35rem; margin-bottom: 20px; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
-                    <span style="color: var(--primary);">02.</span> Sobre os Acompanhamentos & Formatos
+                    <span style="color: var(--primary);">02.</span> Sobre os Planos & Suporte
                 </h2>
 
                 <div class="faq-grid">
                     <div class="faq-card">
                         <button class="faq-trigger" type="button">
-                            <span>Como escolher entre o Projeto 24 Dias e o Acompanhamento Premium?</span>
+                            <span>Qual a diferença entre os planos Trimestral, Semestral e Anual?</span>
                             <div class="faq-icon-cross">
                                 <svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                             </div>
                         </button>
                         <div class="faq-content">
                             <div class="faq-content-inner">
-                                Se você precisa de um marco de início para sair da inércia e organizar a alimentação com um prazo fechado, o Projeto 24 Dias é o ideal. Se o seu objetivo é uma reeducação contínua de médio ou longo prazo, hipertrofia ou acompanhamento de exames, os Planos Premium (Trimestral, Semestral ou Anual) oferecem a estrutura ideal.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-card">
-                        <button class="faq-trigger" type="button">
-                            <span>O plano trimestral é o mais recomendado? Por quê?</span>
-                            <div class="faq-icon-cross">
-                                <svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                            </div>
-                        </button>
-                        <div class="faq-content">
-                            <div class="faq-content-inner">
-                                Sim. Três meses (cerca de 90 dias) é a janela fisiológica onde ocorrem as primeiras grandes transformações na sensibilidade à insulina, oxidação de gordura e consolidação de hábitos alimentares sustentáveis, permitindo ajustes periódicos estratégicos.
+                                A diferença está no tempo de consultoria e na profundidade do acompanhamento. O Trimestral consolida a primeira grande fase de resultados. O Semestral e o Anual oferecem reavaliações clínicas completas, análise laboratorial de exames e ajustes constantes para transformação de estilo de vida.
                             </div>
                         </div>
                     </div>
@@ -269,95 +231,35 @@
                         </button>
                         <div class="faq-content">
                             <div class="faq-content-inner">
-                                Você tem um canal direto e pessoal com o Kevin Lincoln. Durante o seu período de acompanhamento, você pode enviar dúvidas sobre marcas de alimentos, substituições em restaurantes, ajustes de porções e relatar sua evolução semanal.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SEÇÃO 3: MÉTODO ATLAS & ALIMENTAÇÃO -->
-            <div style="max-width: 840px; margin: 0 auto 48px;" class="js-fade-up">
-                <h2 style="font-size: 1.35rem; margin-bottom: 20px; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
-                    <span style="color: var(--primary);">03.</span> Método Atlas & Rotina Alimentar
-                </h2>
-
-                <div class="faq-grid">
-                    <div class="faq-card">
-                        <button class="faq-trigger" type="button">
-                            <span>Vou precisar cortar carboidratos ou parar de comer fora?</span>
-                            <div class="faq-icon-cross">
-                                <svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                            </div>
-                        </button>
-                        <div class="faq-content">
-                            <div class="faq-content-inner">
-                                Não. O Método Atlas é baseado em consistência real. Trabalhamos com a dosagem certa de macronutrientes para o seu gasto diário. Você aprende a equilibrar momentos sociais, viagens e suas comidas preferidas sem comprometer o déficit calórico ou os resultados.
+                                Você tem um canal direto e pessoal com o nutricionista Kevin Lincoln. Durante o período contratado, você pode enviar dúvidas sobre escolhas no supermercado, substituições em refeições fora de casa e relatar sua evolução.
                             </div>
                         </div>
                     </div>
 
                     <div class="faq-card">
                         <button class="faq-trigger" type="button">
-                            <span>E se eu já tentei várias dietas e não consegui manter?</span>
+                            <span>Vou precisar cortar carboidratos ou parar de sair com amigos?</span>
                             <div class="faq-icon-cross">
                                 <svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                             </div>
                         </button>
                         <div class="faq-content">
                             <div class="faq-content-inner">
-                                A maioria das pessoas falha não por fraqueza, mas por falta de estrutura e excesso de restrição inicial. O Método Atlas organiza seu plano de forma progressiva, adaptando calorias e porções para que você sinta saciedade e energia ao longo de todo o processo.
+                                Não. O Método Atlas preza pela sustentabilidade. O protocolo é dimensionado de acordo com seu gasto energético diário, permitindo que você mantenha sua vida social sem comprometer o déficit calórico nem a saúde metabólica.
                             </div>
                         </div>
                     </div>
 
                     <div class="faq-card">
                         <button class="faq-trigger" type="button">
-                            <span>Preciso tomar suplementos caros?</span>
+                            <span>Preciso comprar suplementos caros?</span>
                             <div class="faq-icon-cross">
                                 <svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
                             </div>
                         </button>
                         <div class="faq-content">
                             <div class="faq-content-inner">
-                                A base é sempre a comida de verdade. Suplementos (como creatina, whey protein ou vitaminas) só são indicados quando trazem benefício clínico comprovado ou praticidade para sua rotina, sempre respeitando o seu orçamento.
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- SEÇÃO 3: ATENDIMENTO ONLINE & PRESENCIAL -->
-            <div style="max-width: 840px; margin: 0 auto 48px;" class="js-fade-up">
-                <h2 style="font-size: 1.35rem; margin-bottom: 20px; color: var(--text-primary); display: flex; align-items: center; gap: 8px;">
-                    <span style="color: var(--primary);">03.</span> Atendimento Online & Presencial
-                </h2>
-
-                <div class="faq-grid">
-                    <div class="faq-card">
-                        <button class="faq-trigger" type="button">
-                            <span>Como funciona a consulta para quem mora fora de São José do Rio Preto?</span>
-                            <div class="faq-icon-cross">
-                                <svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                            </div>
-                        </button>
-                        <div class="faq-content">
-                            <div class="faq-content-inner">
-                                O atendimento online é completo e individualizado. Todo o diagnóstico clínico, envio de exames, entrega do protocolo e acompanhamento diário via WhatsApp acontecem digitalmente com a mesma eficácia da consulta presencial.
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="faq-card">
-                        <button class="faq-trigger" type="button">
-                            <span>Como faço para iniciar meu acompanhamento hoje?</span>
-                            <div class="faq-icon-cross">
-                                <svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
-                            </div>
-                        </button>
-                        <div class="faq-content">
-                            <div class="faq-content-inner">
-                                Basta clicar em "Solicitar Avaliação" no site ou enviar uma mensagem no WhatsApp. Você preencherá um formulário detalhado de perfil para que o nutricionista Kevin Lincoln estruture sua proposta personalizada.
+                                A base é sempre comida de verdade. Suplementos (como creatina, whey protein ou micronutrientes específicos) só são indicados quando trazem benefício clínico comprovado ou facilitam a rotina prática, sempre dentro da sua preferência e orçamento.
                             </div>
                         </div>
                     </div>
@@ -380,7 +282,7 @@
                         </svg>
                         Tirar Dúvida no WhatsApp
                     </a>
-                    <button class="btn btn-secondary btn-lg" onclick="abrirFormulario()">Iniciar Avaliação</button>
+                    <button type="button" class="btn btn-secondary btn-lg" onclick="abrirFormulario()">Iniciar Avaliação</button>
                 </div>
             </div>
         </div>
@@ -403,10 +305,9 @@
                     <h4>Navegação</h4>
                     <nav class="footer-nav">
                         <a href="index.html">Início</a>
-                        <a href="acompanhamentos.html">Acompanhamentos</a>
-                        <a href="projeto-24-dias.html">Projeto 24 Dias</a>
-                        <a href="acompanhamento-premium.html">Acompanhamento Premium</a>
+                        <a href="metodo-atlas-start.html">Método Atlas Start</a>
                         <a href="metodo-atlas.html">Método Atlas</a>
+                        <a href="metodo-atlas.html#planos">Planos do Acompanhamento</a>
                     </nav>
                 </div>
 
@@ -441,7 +342,7 @@
 
             <div class="footer-bottom">
                 <div>&copy; <span id="ano-atual"></span> Kevin Lincoln. Todos os direitos reservados.</div>
-                <div>Desenvolvido com foco em alta conversão e experiência clínica.</div>
+                <div>Nutrição de precisão e alta performance clínica.</div>
             </div>
         </div>
     </footer>
@@ -456,6 +357,118 @@
         <span class="floating-wa-tooltip">Falar com Kevin</span>
     </a>
 
+    <!-- ── MODAL GLOBAL DE AVALIAÇÃO ── -->
+    <div id="modal-overlay" class="modal-overlay" onclick="fecharSeClicarFora(event)">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+            <button class="modal-close" onclick="fecharFormulario()" aria-label="Fechar formulário">✕</button>
+
+            <div id="modal-form-content">
+                <div style="margin-bottom: 24px;">
+                    <span class="section-badge" style="margin-bottom: 8px;">Avaliação Inicial</span>
+                    <h2 id="modalTitulo" style="font-size: 1.45rem;">Vamos entender seu objetivo?</h2>
+                    <p style="font-size: 0.9rem; margin-top: 4px;">Preencha seus dados para receber uma proposta personalizada.</p>
+                </div>
+
+                <div class="form-group-title">1. Dados Pessoais</div>
+                <div class="form-grid-2">
+                    <div class="form-control">
+                        <label for="m-nome">Nome completo *</label>
+                        <input type="text" id="m-nome" placeholder="Seu nome completo" maxlength="80" autocomplete="name">
+                    </div>
+                    <div class="form-control">
+                        <label for="m-idade">Idade *</label>
+                        <input type="number" id="m-idade" placeholder="Ex: 28" min="12" max="99">
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-control">
+                        <label for="m-email">E-mail *</label>
+                        <input type="email" id="m-email" placeholder="seu@email.com" autocomplete="email">
+                    </div>
+                    <div class="form-control">
+                        <label for="m-whats">WhatsApp com DDD *</label>
+                        <input type="tel" id="m-whats" placeholder="(17) 99999-9999" maxlength="15" autocomplete="tel">
+                    </div>
+                </div>
+
+                <div class="form-group-title">2. Perfil Físico & Objetivo</div>
+                <div class="form-grid-2">
+                    <div class="form-control">
+                        <label for="m-peso">Peso atual (kg) *</label>
+                        <input type="number" id="m-peso" placeholder="Ex: 75" step="0.1">
+                    </div>
+                    <div class="form-control">
+                        <label for="m-altura">Altura (cm) *</label>
+                        <input type="number" id="m-altura" placeholder="Ex: 175">
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label>Objetivo Principal *</label>
+                    <div class="chip-options-grid">
+                        <div class="chip-option">
+                            <input type="radio" name="m-obj" id="m-obj-emag" checked>
+                            <label for="m-obj-emag" class="chip-label">Emagrecimento</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-obj" id="m-obj-massa">
+                            <label for="m-obj-massa" class="chip-label">Ganho de Massa</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-obj" id="m-obj-saude">
+                            <label for="m-obj-saude" class="chip-label">Saúde Geral</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-obj" id="m-obj-perf">
+                            <label for="m-obj-perf" class="chip-label">Performance</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group-title">3. Acompanhamento Desejado</div>
+                <div class="form-control">
+                    <div class="chip-options-grid">
+                        <div class="chip-option">
+                            <input type="radio" name="m-servico" id="m-servico-start">
+                            <label for="m-servico-start" class="chip-label">Método Atlas Start</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-servico" id="m-servico-trimestral" checked>
+                            <label for="m-servico-trimestral" class="chip-label">Plano Trimestral</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-servico" id="m-servico-semestral">
+                            <label for="m-servico-semestral" class="chip-label">Plano Semestral</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-servico" id="m-servico-anual">
+                            <label for="m-servico-anual" class="chip-label">Plano Anual</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 24px;">
+                    <button type="button" class="btn btn-primary btn-full" id="m-btn-enviar" onclick="validarEEnviarFormulario('modal')">ENVIAR AVALIAÇÃO &rarr;</button>
+                </div>
+            </div>
+
+            <!-- TELA DE SUCESSO DO MODAL -->
+            <div id="modal-form-sucesso" class="form-success-message">
+                <div class="form-success-icon">
+                    <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </div>
+                <h3>Dados enviados com sucesso!</h3>
+                <p style="margin-bottom: 24px;">Recebi suas informações e entrarei em contato em breve com sua resposta.</p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="https://wa.me/5517981114500" target="_blank" class="btn btn-whatsapp btn-full btn-wa-confirmar">Confirmar no WhatsApp</a>
+                    <button type="button" class="btn btn-secondary btn-full" onclick="fecharFormulario()">Fechar Janela</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/main.js"></script>
 </body>

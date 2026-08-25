@@ -4,11 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Acompanhamentos Nutricionais | Kevin Lincoln — Projeto 24 Dias & Premium</title>
+    <title>Acompanhamentos Nutricionais | Kevin Lincoln — Método Atlas Start & Método Atlas</title>
     <meta name="description"
-        content="Conheça os acompanhamentos nutricionais do Kevin Lincoln: Projeto 24 Dias (sprint estruturado) e Acompanhamento Premium (consultoria contínua). Compare e escolha a melhor opção.">
+        content="Conheça as soluções nutricionais do nutricionista Kevin Lincoln (CRN 83678P): Método Atlas Start (produto digital de entrada) e Método Atlas (acompanhamento contínuo).">
     <meta name="keywords"
-        content="acompanhamento nutricional, projeto 24 dias, acompanhamento premium nutricionista, nutrição são josé do rio preto, kevin lincoln">
+        content="acompanhamento nutricional, metodo atlas start, metodo atlas planos, nutricionista são josé do rio preto, kevin lincoln">
     <meta name="author" content="Kevin Lincoln">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://kevin-lincoln.vercel.app/acompanhamentos.html">
@@ -16,7 +16,7 @@
     <!-- Open Graph -->
     <meta property="og:title" content="Acompanhamentos Nutricionais | Kevin Lincoln">
     <meta property="og:description"
-        content="Compare o Projeto 24 Dias e o Acompanhamento Premium para escolher o melhor formato para sua rotina.">
+        content="Compare o Método Atlas Start e o Método Atlas para escolher o caminho ideal para sua evolução.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kevin-lincoln.vercel.app/acompanhamentos.html">
     <meta property="og:image" content="img/kevin-logo.png">
@@ -50,27 +50,7 @@
                         <a href="index.html" class="nav-link">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a href="acompanhamentos.html" class="nav-link active">
-                            Acompanhamentos
-                            <svg class="dropdown-caret" viewBox="0 0 10 6">
-                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" fill="none" />
-                            </svg>
-                        </a>
-                        <div class="nav-dropdown">
-                            <a href="acompanhamentos.html" class="dropdown-link">
-                                <strong>Visão Geral</strong>
-                                <small>Compare os formatos disponíveis</small>
-                            </a>
-                            <a href="projeto-24-dias.html" class="dropdown-link">
-                                <strong>Projeto 24 Dias</strong>
-                                <small>Sprint focado em consistência</small>
-                            </a>
-                            <a href="acompanhamento-premium.html" class="dropdown-link">
-                                <strong>Acompanhamento Premium</strong>
-                                <small>Planos Trimestral, Semestral e Anual</small>
-                            </a>
-                        </div>
+                        <a href="metodo-atlas-start.html" class="nav-link">Método Atlas Start</a>
                     </li>
                     <li class="nav-item">
                         <a href="metodo-atlas.html" class="nav-link">Método Atlas</a>
@@ -79,7 +59,7 @@
                         <a href="resultados.html" class="nav-link">Resultados</a>
                     </li>
                     <li class="nav-item">
-                        <a href="sobre.html" class="nav-link">Sobre o Kevin</a>
+                        <a href="sobre.html" class="nav-link">Sobre Kevin</a>
                     </li>
                     <li class="nav-item">
                         <a href="duvidas.html" class="nav-link">Dúvidas</a>
@@ -88,7 +68,7 @@
             </nav>
 
             <div class="header-actions">
-                <a href="index.html#acompanhamentos-escolha" class="btn btn-primary btn-header-cta">Quero iniciar minha avaliação</a>
+                <button type="button" class="btn btn-primary btn-header-cta" onclick="abrirFormulario()">Quero iniciar minha avaliação</button>
                 <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
                     <svg viewBox="0 0 24 24">
                         <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -112,16 +92,12 @@
 
             <nav class="mobile-nav-list">
                 <a href="index.html" class="mobile-nav-link">Início</a>
-                <a href="acompanhamentos.html" class="mobile-nav-link active">Acompanhamentos</a>
-                <div class="mobile-subnav">
-                    <a href="projeto-24-dias.html" class="mobile-sublink">· Projeto 24 Dias</a>
-                    <a href="acompanhamento-premium.html" class="mobile-sublink">· Acompanhamento Premium</a>
-                </div>
+                <a href="metodo-atlas-start.html" class="mobile-nav-link">Método Atlas Start</a>
                 <a href="metodo-atlas.html" class="mobile-nav-link">Método Atlas</a>
-                <a href="resultados.html" class="mobile-nav-link">Resultados & Provas Sociais</a>
-                <a href="sobre.html" class="mobile-nav-link">Sobre o Kevin</a>
-                <a href="duvidas.html" class="mobile-nav-link">Dúvidas Frequentes</a>
-                <a href="contato.html" class="mobile-nav-link">Contato & Avaliação</a>
+                <a href="resultados.html" class="mobile-nav-link">Resultados</a>
+                <a href="sobre.html" class="mobile-nav-link">Sobre Kevin</a>
+                <a href="duvidas.html" class="mobile-nav-link">Dúvidas</a>
+                <a href="contato.html" class="mobile-nav-link">Contato</a>
             </nav>
         </div>
 
@@ -142,226 +118,72 @@
         <div class="container">
             <div class="section-header js-fade-up">
                 <span class="section-badge">Visão Geral das Soluções</span>
-                <h1>Acompanhamentos desenhados para a sua fase e objetivo.</h1>
-                <p>Seja para dar um pontapé inicial estruturado ou para construir uma transformação corporal definitiva, conheça as duas principais abordagens disponíveis.</p>
+                <h1>Escolha o caminho ideal para sua evolução</h1>
+                <p>Seja para dar o primeiro passo com uma estratégia inicial estruturada ou para construir uma transformação contínua e definitiva.</p>
             </div>
 
             <!-- OS DOIS BLOCOS DE ACOMPANHAMENTO -->
-            <div class="decision-grid js-fade-up">
-                <!-- Bloco 1: Projeto 24 Dias -->
+            <div class="decision-grid js-fade-up" style="margin-bottom: 64px;">
+                <!-- Card 1: Método Atlas Start -->
                 <div class="decision-card">
-                    <div>
-                        <span class="decision-card-tag">Foco em Quebra de Inércia</span>
-                        <h2 class="decision-card-title">Projeto 24 Dias</h2>
-                        <p class="decision-card-desc">Um programa intensivo de 24 dias consecutivos, com foco em destravar o metabolismo, organizar refeições diárias e instalar hábitos sem desculpas.</p>
+                    <div class="decision-badge">Produto Digital de Entrada</div>
+                    <h2 class="decision-title">Método Atlas Start</h2>
+                    <p class="decision-tagline">"Uma experiência inicial para organizar sua alimentação e iniciar sua transformação com estratégia."</p>
 
-                        <div class="decision-card-meta">
-                            <div class="decision-card-meta-item">
-                                <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
-                                <span>24 dias contínuos</span>
-                            </div>
-                            <div class="decision-card-meta-item">
-                                <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                                <span>3 etapas fechadas</span>
-                            </div>
-                        </div>
-
-                        <div class="decision-card-features">
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span>Ideal para quem vive adiando e precisa de um marco de início</span>
-                            </div>
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span>Checklist prático de refeições, água e sono</span>
-                            </div>
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span>Acompanhamento direto durante todo o período</span>
-                            </div>
-                        </div>
+                    <div class="decision-summary">
+                        Você responde um formulário completo, suas informações são analisadas clinicamente e você recebe sua estratégia inicial baseada no Método Atlas.
                     </div>
 
-                    <div style="display: flex; gap: 10px; flex-direction: column;">
-                        <a href="projeto-24-dias.html" class="btn btn-primary btn-full">Página Completa do Projeto 24 Dias &rarr;</a>
-                        <button class="btn btn-secondary btn-full" onclick="abrirFormulario('Projeto 24 Dias')">Quero me inscrever no Projeto</button>
-                    </div>
-                </div>
-
-                <!-- Bloco 2: Acompanhamento Premium -->
-                <div class="decision-card decision-card--featured">
-                    <div>
-                        <span class="decision-card-tag" style="color: var(--secondary);">Consultoria de Médio & Longo Prazo</span>
-                        <h2 class="decision-card-title">Acompanhamento Premium</h2>
-                        <p class="decision-card-desc">Consultoria contínua personalizada para consolidação metabólica, reeducação alimentar definitiva, hipertrofia ou melhora de exames clínicos.</p>
-
-                        <div class="decision-card-meta">
-                            <div class="decision-card-meta-item">
-                                <svg viewBox="0 0 24 24" style="fill: var(--secondary);"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                                <span>Trimestral · Semestral · Anual</span>
-                            </div>
-                        </div>
-
-                        <div class="decision-card-features">
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" style="fill: var(--secondary);"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span>Reavaliações periódicas com evolução de calorias e macros</span>
-                            </div>
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" style="fill: var(--secondary);"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span>Ajuste fino de suplementação baseada em bioquímica</span>
-                            </div>
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" style="fill: var(--secondary);"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
-                                <span>Suporte prioritário via WhatsApp com o nutricionista</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div style="display: flex; gap: 10px; flex-direction: column;">
-                        <a href="acompanhamento-premium.html" class="btn btn-primary btn-full">Página Completa dos Planos Premium &rarr;</a>
-                        <button class="btn btn-secondary btn-full" onclick="abrirFormulario('Acompanhamento Premium')">Escolher Período</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── 02. TABELA COMPARATIVA COMPLETA ── -->
-    <section class="section-padding comparison-section">
-        <div class="container">
-            <div class="section-header js-fade-up">
-                <span class="section-badge">Comparação de Recursos</span>
-                <h2>Quadro comparativo lado a lado</h2>
-                <p>Veja em detalhes o que está incluso em cada modalidade para tomar uma decisão segura.</p>
-            </div>
-
-            <div class="comparison-table-wrapper js-fade-up">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Recurso / Critério</th>
-                            <th class="col-p24">Projeto 24 Dias</th>
-                            <th class="col-premium">Acompanhamento Premium</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Objetivo Principal</strong></td>
-                            <td>Destravar o foco, criar disciplina alimentar e perder volume inicial</td>
-                            <td>Consolidação de hábitos, ganho de massa, recomposição corporal e saúde</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Tempo de Duração</strong></td>
-                            <td>24 dias corridos com cronograma estruturado</td>
-                            <td>Opções de 1 mês, 3 meses (mais escolhido), 6 meses ou 1 ano</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Plano Alimentar Individualizado</strong></td>
-                            <td>Sim, ajustado ao seu perfil metabólico inicial</td>
-                            <td>Sim, 100% individualizado com múltiplos ciclos e substituições</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Frequência de Ajustes</strong></td>
-                            <td>3 transições de fases durante o ciclo</td>
-                            <td>Ajustes periódicos e dinâmicos conforme sua evolução física</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Suporte via WhatsApp</strong></td>
-                            <td>Suporte para dúvidas durante os 24 dias</td>
-                            <td>Suporte contínuo e prioritário direto com Kevin Lincoln</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Análise de Exames Laboratoriais</strong></td>
-                            <td>Leitura do histórico de saúde</td>
-                            <td>Análise detalhada de marcadores metabólicos e hormonais</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Guia de Suplementação Estratégica</strong></td>
-                            <td>Básico / Opcional</td>
-                            <td>Completo e individualizado para sua meta esportiva/clínica</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Modalidade de Atendimento</strong></td>
-                            <td>Online para todo o Brasil e exterior</td>
-                            <td>Online e Presencial (São José do Rio Preto - SP)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── 03. QUAL É O IDEAL PARA VOCÊ? ── -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="section-header js-fade-up">
-                <span class="section-badge">Orientação de Escolha</span>
-                <h2>Qual é a melhor escolha para o seu momento?</h2>
-                <p>Identifique qual perfil mais se aproxima do seu estado atual:</p>
-            </div>
-
-            <div class="target-audience-grid js-fade-up">
-                <div class="target-audience-card target-audience-card--positive">
-                    <h3>
-                        <svg viewBox="0 0 24 24" style="width: 22px; height: 22px; fill: var(--primary);"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none"/><path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none"/></svg>
-                        Escolha o Projeto 24 Dias se você:
-                    </h3>
-                    <div class="target-audience-list">
-                        <div class="target-item">
+                    <div class="decision-points">
+                        <div class="decision-point-item">
                             <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
-                            <span>Está há muito tempo sem conseguir seguir uma rotina alimentar.</span>
+                            <span>Avaliação de perfil completa</span>
                         </div>
-                        <div class="target-item">
+                        <div class="decision-point-item">
                             <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
-                            <span>Precisa de um prazo fechado com começo, meio e fim para não desistir no caminho.</span>
+                            <span>Análise clínica individualizada</span>
                         </div>
-                        <div class="target-item">
+                        <div class="decision-point-item">
                             <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
-                            <span>Quer reduzir retenção de líquidos, desinflamar e ganhar ritmo para os próximos meses.</span>
+                            <span>Estratégia inicial estruturada</span>
                         </div>
+                    </div>
+
+                    <div class="decision-card-actions">
+                        <a href="metodo-atlas-start.html" class="btn btn-outline-primary btn-full">Conhecer o Start &rarr;</a>
+                        <button type="button" class="btn btn-primary btn-full" onclick="abrirFormulario('Método Atlas Start')">Iniciar Avaliação Start</button>
                     </div>
                 </div>
 
-                <div class="target-audience-card target-audience-card--positive" style="border-top-color: var(--secondary);">
-                    <h3>
-                        <svg viewBox="0 0 24 24" style="width: 22px; height: 22px; fill: var(--secondary);"><rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor" stroke-width="2" fill="none"/><path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                        Escolha o Acompanhamento Premium se você:
-                    </h3>
-                    <div class="target-audience-list">
-                        <div class="target-item">
-                            <svg viewBox="0 0 16 16" style="fill: var(--secondary);"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
-                            <span>Deseja um trabalho completo de reeducação metabólica e sustentação no longo prazo.</span>
+                <!-- Card 2: Método Atlas -->
+                <div class="decision-card">
+                    <div class="decision-badge">Acompanhamento Contínuo</div>
+                    <h2 class="decision-title">Método Atlas</h2>
+                    <p class="decision-tagline">"Um acompanhamento completo e personalizado para quem busca evolução contínua."</p>
+
+                    <div class="decision-summary">
+                        Consultoria individualizada de médio e longo prazo com suporte direto via WhatsApp, recálculos constantes e monitoramento de exames.
+                    </div>
+
+                    <div class="decision-points">
+                        <div class="decision-point-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Planos Trimestral, Semestral e Anual</span>
                         </div>
-                        <div class="target-item">
-                            <svg viewBox="0 0 16 16" style="fill: var(--secondary);"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
-                            <span>Pratica musculação/esporte e busca hipertrofia, definição muscular e rendimento.</span>
+                        <div class="decision-point-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Ajustes metabólicos periódicos</span>
                         </div>
-                        <div class="target-item">
-                            <svg viewBox="0 0 16 16" style="fill: var(--secondary);"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
-                            <span>Precisa de acompanhamento clínico minucioso com ajuste periódico e controle de exames.</span>
+                        <div class="decision-point-item">
+                            <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                            <span>Suporte direto com Kevin Lincoln</span>
                         </div>
                     </div>
-                </div>
-            </div>
-        </div>
-    </section>
 
-    <!-- ── 04. CTA FINAL ── -->
-    <section class="section-padding comparison-section">
-        <div class="container">
-            <div class="conversion-cta-banner js-fade-up">
-                <span class="section-badge">Primeiro Passo</span>
-                <h2>Ainda em dúvida sobre qual formato escolher?</h2>
-                <p>Preencha sua avaliação inicial e nós indicaremos o acompanhamento que mais se encaixa na sua meta.</p>
-                <div class="conversion-cta-actions">
-                    <a href="contato.html" class="btn btn-primary btn-lg">Preencher Avaliação de Perfil</a>
-                    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Gostaria%20de%20ajuda%20para%20escolher%20entre%20o%20Projeto%2024%20Dias%20e%20o%20Acompanhamento%20Premium." target="_blank" class="btn btn-whatsapp btn-lg">
-                        <svg viewBox="0 0 16 16">
-                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
-                        </svg>
-                        Falar no WhatsApp
-                    </a>
+                    <div class="decision-card-actions">
+                        <a href="metodo-atlas.html" class="btn btn-outline-primary btn-full">Conhecer o Método Atlas &rarr;</a>
+                        <button type="button" class="btn btn-primary btn-full" onclick="abrirFormulario('Método Atlas')">Iniciar Avaliação Completa</button>
+                    </div>
                 </div>
             </div>
         </div>
@@ -384,10 +206,9 @@
                     <h4>Navegação</h4>
                     <nav class="footer-nav">
                         <a href="index.html">Início</a>
-                        <a href="acompanhamentos.html">Acompanhamentos</a>
-                        <a href="projeto-24-dias.html">Projeto 24 Dias</a>
-                        <a href="acompanhamento-premium.html">Acompanhamento Premium</a>
+                        <a href="metodo-atlas-start.html">Método Atlas Start</a>
                         <a href="metodo-atlas.html">Método Atlas</a>
+                        <a href="metodo-atlas.html#planos">Planos do Acompanhamento</a>
                     </nav>
                 </div>
 
@@ -422,13 +243,13 @@
 
             <div class="footer-bottom">
                 <div>&copy; <span id="ano-atual"></span> Kevin Lincoln. Todos os direitos reservados.</div>
-                <div>Desenvolvido com foco em alta conversão e experiência clínica.</div>
+                <div>Nutrição de precisão e alta performance clínica.</div>
             </div>
         </div>
     </footer>
 
     <!-- ── FLOATING WHATSAPP BUTTON ── -->
-    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20acompanhamentos%20nutricionais."
+    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20os%20acompanhamentos."
         target="_blank" class="floating-wa" id="floatingWa" aria-label="Falar com Kevin no WhatsApp">
         <svg viewBox="0 0 16 16">
             <path
@@ -437,6 +258,118 @@
         <span class="floating-wa-tooltip">Falar com Kevin</span>
     </a>
 
+    <!-- ── MODAL GLOBAL DE AVALIAÇÃO ── -->
+    <div id="modal-overlay" class="modal-overlay" onclick="fecharSeClicarFora(event)">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+            <button class="modal-close" onclick="fecharFormulario()" aria-label="Fechar formulário">✕</button>
+
+            <div id="modal-form-content">
+                <div style="margin-bottom: 24px;">
+                    <span class="section-badge" style="margin-bottom: 8px;">Avaliação Inicial</span>
+                    <h2 id="modalTitulo" style="font-size: 1.45rem;">Vamos entender seu objetivo?</h2>
+                    <p style="font-size: 0.9rem; margin-top: 4px;">Preencha seus dados para receber uma proposta personalizada.</p>
+                </div>
+
+                <div class="form-group-title">1. Dados Pessoais</div>
+                <div class="form-grid-2">
+                    <div class="form-control">
+                        <label for="m-nome">Nome completo *</label>
+                        <input type="text" id="m-nome" placeholder="Seu nome completo" maxlength="80" autocomplete="name">
+                    </div>
+                    <div class="form-control">
+                        <label for="m-idade">Idade *</label>
+                        <input type="number" id="m-idade" placeholder="Ex: 28" min="12" max="99">
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-control">
+                        <label for="m-email">E-mail *</label>
+                        <input type="email" id="m-email" placeholder="seu@email.com" autocomplete="email">
+                    </div>
+                    <div class="form-control">
+                        <label for="m-whats">WhatsApp com DDD *</label>
+                        <input type="tel" id="m-whats" placeholder="(17) 99999-9999" maxlength="15" autocomplete="tel">
+                    </div>
+                </div>
+
+                <div class="form-group-title">2. Perfil Físico & Objetivo</div>
+                <div class="form-grid-2">
+                    <div class="form-control">
+                        <label for="m-peso">Peso atual (kg) *</label>
+                        <input type="number" id="m-peso" placeholder="Ex: 75" step="0.1">
+                    </div>
+                    <div class="form-control">
+                        <label for="m-altura">Altura (cm) *</label>
+                        <input type="number" id="m-altura" placeholder="Ex: 175">
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label>Objetivo Principal *</label>
+                    <div class="chip-options-grid">
+                        <div class="chip-option">
+                            <input type="radio" name="m-obj" id="m-obj-emag" checked>
+                            <label for="m-obj-emag" class="chip-label">Emagrecimento</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-obj" id="m-obj-massa">
+                            <label for="m-obj-massa" class="chip-label">Ganho de Massa</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-obj" id="m-obj-saude">
+                            <label for="m-obj-saude" class="chip-label">Saúde Geral</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-obj" id="m-obj-perf">
+                            <label for="m-obj-perf" class="chip-label">Performance</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group-title">3. Acompanhamento Desejado</div>
+                <div class="form-control">
+                    <div class="chip-options-grid">
+                        <div class="chip-option">
+                            <input type="radio" name="m-servico" id="m-servico-start">
+                            <label for="m-servico-start" class="chip-label">Método Atlas Start</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-servico" id="m-servico-trimestral" checked>
+                            <label for="m-servico-trimestral" class="chip-label">Plano Trimestral</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-servico" id="m-servico-semestral">
+                            <label for="m-servico-semestral" class="chip-label">Plano Semestral</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-servico" id="m-servico-anual">
+                            <label for="m-servico-anual" class="chip-label">Plano Anual</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 24px;">
+                    <button type="button" class="btn btn-primary btn-full" id="m-btn-enviar" onclick="validarEEnviarFormulario('modal')">ENVIAR AVALIAÇÃO &rarr;</button>
+                </div>
+            </div>
+
+            <!-- TELA DE SUCESSO DO MODAL -->
+            <div id="modal-form-sucesso" class="form-success-message">
+                <div class="form-success-icon">
+                    <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                </div>
+                <h3>Dados enviados com sucesso!</h3>
+                <p style="margin-bottom: 24px;">Recebi suas informações e entrarei em contato em breve com sua proposta.</p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="https://wa.me/5517981114500" target="_blank" class="btn btn-whatsapp btn-full btn-wa-confirmar">Confirmar no WhatsApp</a>
+                    <button type="button" class="btn btn-secondary btn-full" onclick="fecharFormulario()">Fechar Janela</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EmailJS SDK -->
     <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
     <script src="js/main.js"></script>
 </body>

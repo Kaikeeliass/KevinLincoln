@@ -4,19 +4,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kevin Lincoln | Nutricionista — Escolha seu Acompanhamento</title>
+    <title>Kevin Lincoln | Nutricionista — Método Atlas & Acompanhamento Personalizado</title>
     <meta name="description"
-        content="Nutricionista Kevin Lincoln (CRN 83678P). Escolha entre o Projeto 24 Dias e o Acompanhamento Premium. Estratégias nutricionais para emagrecimento, saúde e performance em São José do Rio Preto e Online.">
+        content="Nutricionista Kevin Lincoln (CRN 83678P). Conheça o Método Atlas Start e o Acompanhamento Método Atlas. Estratégias nutricionais personalizadas para emagrecimento, saúde e performance em São José do Rio Preto e Online.">
     <meta name="keywords"
-        content="nutricionista, Kevin Lincoln, emagrecimento, projeto 24 dias, acompanhamento nutricional, São José do Rio Preto, nutrição online, método atlas">
+        content="nutricionista, Kevin Lincoln, método atlas, método atlas start, emagrecimento estratégico, nutrição esportiva, São José do Rio Preto, nutrição online">
     <meta name="author" content="Kevin Lincoln">
     <meta name="robots" content="index, follow">
     <link rel="canonical" href="https://kevin-lincoln.vercel.app/">
 
     <!-- Open Graph / Meta Social -->
-    <meta property="og:title" content="Kevin Lincoln | Nutricionista — Escolha seu Acompanhamento">
+    <meta property="og:title" content="Kevin Lincoln | Nutricionista — Método Atlas">
     <meta property="og:description"
-        content="Estratégias nutricionais personalizadas para emagrecimento, saúde e performance sem radicalismos.">
+        content="Nutrição estratégica para transformar seu corpo e sua rotina com base científica e acompanhamento individualizado.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://kevin-lincoln.vercel.app/">
     <meta property="og:image" content="img/kevin-logo.png">
@@ -36,41 +36,23 @@
     <!-- BARRA DE PROGRESSO DE LEITURA -->
     <div id="read-progress" class="read-progress"></div>
 
-    <!-- HEADER / NAVEGAÇÃO -->
+    <!-- HEADER / NAVEGAÇÃO REESTRUTURADA -->
     <header id="header">
         <div class="container header-flex">
+            <!-- 1. Logo da Marca -->
             <a href="index.html" class="brand-logo" aria-label="Kevin Lincoln Nutricionista">
                 <img src="img/Prancheta 4@4x.png" alt="Logo Kevin Lincoln" class="logo-mark">
                 Nutri<span>.Kevin</span>
             </a>
 
+            <!-- 2. Menu Principal (Sem quebra de linha) -->
             <nav class="nav-desk" aria-label="Menu Principal">
                 <ul>
                     <li class="nav-item">
                         <a href="index.html" class="nav-link active">Início</a>
                     </li>
                     <li class="nav-item">
-                        <a href="acompanhamentos.html" class="nav-link">
-                            Acompanhamentos
-                            <svg class="dropdown-caret" viewBox="0 0 10 6">
-                                <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"
-                                    stroke-linejoin="round" fill="none" />
-                            </svg>
-                        </a>
-                        <div class="nav-dropdown">
-                            <a href="acompanhamentos.html" class="dropdown-link">
-                                <strong>Visão Geral</strong>
-                                <small>Compare os formatos disponíveis</small>
-                            </a>
-                            <a href="projeto-24-dias.html" class="dropdown-link">
-                                <strong>Projeto 24 Dias</strong>
-                                <small>Sprint focado em consistência</small>
-                            </a>
-                            <a href="acompanhamento-premium.html" class="dropdown-link">
-                                <strong>Acompanhamento Premium</strong>
-                                <small>Planos Trimestral, Semestral e Anual</small>
-                            </a>
-                        </div>
+                        <a href="metodo-atlas-start.html" class="nav-link">Método Atlas Start</a>
                     </li>
                     <li class="nav-item">
                         <a href="metodo-atlas.html" class="nav-link">Método Atlas</a>
@@ -79,7 +61,7 @@
                         <a href="resultados.html" class="nav-link">Resultados</a>
                     </li>
                     <li class="nav-item">
-                        <a href="sobre.html" class="nav-link">Sobre o Kevin</a>
+                        <a href="sobre.html" class="nav-link">Sobre Kevin</a>
                     </li>
                     <li class="nav-item">
                         <a href="duvidas.html" class="nav-link">Dúvidas</a>
@@ -87,11 +69,14 @@
                 </ul>
             </nav>
 
+            <!-- 3. Botão Principal CTA -->
             <div class="header-actions">
-                <a href="#acompanhamentos-escolha" class="btn btn-primary btn-header-cta">Quero iniciar minha avaliação</a>
+                <button type="button" class="btn btn-primary btn-header-cta" onclick="abrirFormulario()">Quero iniciar
+                    minha avaliação</button>
                 <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação">
                     <svg viewBox="0 0 24 24">
-                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" />
                     </svg>
                 </button>
             </div>
@@ -112,15 +97,12 @@
 
             <nav class="mobile-nav-list">
                 <a href="index.html" class="mobile-nav-link active">Início</a>
+                <a href="metodo-atlas-start.html" class="mobile-nav-link">Método Atlas Start</a>
                 <a href="metodo-atlas.html" class="mobile-nav-link">Método Atlas</a>
-                <a href="acompanhamentos.html" class="mobile-nav-link">Acompanhamentos</a>
-                <div class="mobile-subnav">
-                    <a href="projeto-24-dias.html" class="mobile-sublink">· Projeto 24 Dias</a>
-                    <a href="acompanhamento-premium.html" class="mobile-sublink">· Acompanhamento Premium</a>
-                </div>
                 <a href="resultados.html" class="mobile-nav-link">Resultados</a>
                 <a href="sobre.html" class="mobile-nav-link">Sobre Kevin</a>
-                <a href="duvidas.html" class="mobile-nav-link">FAQ</a>
+                <a href="duvidas.html" class="mobile-nav-link">Dúvidas</a>
+                <a href="contato.html" class="mobile-nav-link">Contato</a>
             </nav>
         </div>
 
@@ -136,65 +118,83 @@
         </div>
     </aside>
 
-    <!-- ── HERO PRINCIPAL — POSICIONAMENTO E CONVERSÃO ── -->
+    <!-- ── 01. HERO PRINCIPAL — CONVERSÃO & POSICIONAMENTO ── -->
     <section class="hero-main" id="inicio">
         <div class="hero-main-bg-glow"></div>
+        <div class="hero-main-line-grid" aria-hidden="true"></div>
         <div class="container">
             <div class="hero-main-grid">
 
-                <!-- Coluna de Texto -->
+                <!-- Coluna de Texto e CTAs -->
                 <div class="hero-main-content js-fade-up">
-                    <div class="hero-main-badge">
+
+                    <div class="hero-eyebrow">
                         <span class="hero-badge-dot"></span>
-                        Nutricionista · CRN 83678P · Online e Presencial
+                        <span>Nutricionista Clínico &amp; Esportivo</span>
+                        <span class="hero-eyebrow-sep">·</span>
+                        <span>CRN 83678P</span>
                     </div>
 
                     <h1 class="hero-main-headline">
-                        Nutrição estratégica para transformar seu corpo e sua rotina.
+                        Construa sua melhor versão através de uma estratégia nutricional personalizada.
                     </h1>
 
                     <p class="hero-main-sub">
-                        Um acompanhamento personalizado para emagrecimento, saúde e performance, construído de acordo com sua realidade.
+                        Acompanhamento individual baseado no <strong>Método Atlas</strong> — sem dietas restritivas, com resultados sustentáveis para emagrecimento, saúde e performance.
                     </p>
 
                     <div class="hero-main-ctas">
-                        <a href="#acompanhamentos-escolha" class="btn btn-primary btn-lg">
-                            Escolher meu acompanhamento
-                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
-                        </a>
-                        <a href="metodo-atlas.html" class="btn btn-secondary btn-lg">
+                        <button type="button" class="btn btn-primary btn-lg hero-cta-primary" onclick="abrirFormulario()">
+                            Quero iniciar minha avaliação
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                        <a href="#escolha-caminhos" class="btn btn-ghost btn-lg">
                             Conhecer o Método Atlas
                         </a>
                     </div>
 
-                    <div class="hero-main-trust">
-                        <div class="hero-trust-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 14l9-5-9-5-9 5 9 5z"/><path d="M12 14v7"/></svg>
-                            <span>Nutricionista Graduado</span>
+                    <div class="hero-credentials">
+                        <div class="hero-cred-item">
+                            <svg viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z" fill="currentColor"/>
+                            </svg>
+                            <span>Graduado em Nutrição</span>
                         </div>
-                        <div class="hero-trust-sep"></div>
-                        <div class="hero-trust-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/></svg>
-                            <span>Método Atlas</span>
+                        <div class="hero-cred-item">
+                            <svg viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z" fill="currentColor"/>
+                            </svg>
+                            <span>Método próprio e exclusivo</span>
                         </div>
-                        <div class="hero-trust-sep"></div>
-                        <div class="hero-trust-item">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg>
-                            <span>Atendimento Personalizado</span>
+                        <div class="hero-cred-item">
+                            <svg viewBox="0 0 16 16" aria-hidden="true">
+                                <path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z" fill="currentColor"/>
+                            </svg>
+                            <span>Atendimento individualizado</span>
                         </div>
                     </div>
+
                 </div>
 
-                <!-- Coluna da Foto -->
+                <!-- Coluna da Foto com Composição de Autoridade -->
                 <div class="hero-main-visual js-fade-up">
                     <div class="hero-photo-frame">
                         <div class="hero-photo-glow"></div>
-                        <img src="img/kevin_2.png" alt="Kevin Lincoln — Nutricionista CRN 83678P" class="hero-photo-img">
-                        <div class="hero-photo-card">
-                            <div class="hero-photo-card-dot"></div>
-                            <div>
-                                <strong>Kevin Lincoln</strong>
-                                <span>Nutricionista · CRN 83678P</span>
+                        <div class="hero-photo-corner hero-photo-corner--tl" aria-hidden="true"></div>
+                        <div class="hero-photo-corner hero-photo-corner--br" aria-hidden="true"></div>
+                        <img src="img/kevin_2.png" alt="Kevin Lincoln — Nutricionista CRN 83678P"
+                            class="hero-photo-img">
+                        <div class="hero-photo-identity">
+                            <div class="hero-photo-identity-inner">
+                                <div class="hero-photo-identity-status">
+                                    <span class="hero-badge-dot"></span>
+                                    <span>Disponível para novos pacientes</span>
+                                </div>
+                                <div class="hero-photo-identity-name">Kevin Lincoln</div>
+                                <div class="hero-photo-identity-role">Nutricionista Clínico &amp; Esportivo · CRN 83678P</div>
                             </div>
                         </div>
                     </div>
@@ -204,8 +204,8 @@
         </div>
     </section>
 
-    <!-- ── SEÇÃO DE ESCOLHA DO ACOMPANHAMENTO ── -->
-    <section class="hero-hub" id="acompanhamentos-escolha">
+    <!-- ── 02. ESCOLHA DOS CAMINHOS ── -->
+    <section class="hero-hub" id="escolha-caminhos">
         <div class="container">
             <div class="hero-hub-intro js-fade-up">
                 <span class="section-badge">
@@ -213,37 +213,35 @@
                         <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
                     </svg>
-                    Escolha o Formato Ideal
+                    Estratégia & Evolução
                 </span>
-                <h2 class="hero-hub-title">Escolha o acompanhamento ideal para o seu momento.</h2>
-                <p>Dois formatos desenvolvidos para objetivos distintos. Conheça cada um e escolha o que faz mais sentido para a sua realidade agora.</p>
+                <h2 class="hero-hub-title">Escolha o caminho ideal para sua evolução.</h2>
+                <p>Duas formas complementares de transformar seus hábitos e sua composição corporal com a metodologia do
+                    Kevin Lincoln.</p>
             </div>
 
-            <!-- CARDS PRINCIPAIS DE DECISÃO -->
+            <!-- CARDS DE DECISÃO -->
             <div class="decision-grid js-fade-up">
-                <!-- Card 1: Projeto 24 Dias -->
+
+                <!-- CARD 1: Método Atlas Start -->
                 <div class="decision-card">
                     <div>
-                        <span class="decision-card-tag">Para quem está começando</span>
-                        <h3 class="decision-card-title">Projeto 24 Dias</h3>
-                        <p class="decision-card-desc">Um sprint estruturado para quem precisa sair do zero, organizar a alimentação e criar consistência com começo, meio e fim definidos.</p>
+                        <span class="decision-card-tag">Produto Digital de Entrada</span>
+                        <h3 class="decision-card-title">Método Atlas Start</h3>
+                        <p class="decision-card-desc">Uma experiência inicial para organizar sua alimentação e iniciar
+                            sua transformação com estratégia.</p>
 
-                        <div class="decision-card-meta">
-                            <div class="decision-card-meta-item">
-                                <svg viewBox="0 0 24 24">
-                                    <circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="2" fill="none" />
-                                    <path d="M12 6v6l4 2" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" fill="none" />
-                                </svg>
-                                <span>Duração: 24 Dias</span>
-                            </div>
-                            <div class="decision-card-meta-item">
-                                <svg viewBox="0 0 24 24">
-                                    <path d="M20 6L9 17l-5-5" stroke="currentColor" stroke-width="2"
-                                        stroke-linecap="round" stroke-linejoin="round" fill="none" />
-                                </svg>
-                                <span>Foco: Quebrar inércia</span>
-                            </div>
+                        <div class="decision-card-section">
+                            <div class="decision-card-section-title">Para quem é:</div>
+                            <p style="font-size: 0.9rem; margin-bottom: 14px;">Quem precisa quebrar a inércia, sair do
+                                zero e ter um planejamento alimentar estruturado para começar sem complicação.</p>
+                        </div>
+
+                        <div class="decision-card-section">
+                            <div class="decision-card-section-title">Como funciona:</div>
+                            <p style="font-size: 0.9rem; margin-bottom: 16px;">Você responde a uma avaliação detalhada,
+                                suas informações são analisadas clinicamente e você recebe sua estratégia inicial
+                                baseada no Método Atlas.</p>
                         </div>
 
                         <div class="decision-card-features">
@@ -253,7 +251,7 @@
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                <span>Protocolo nutricional estruturado passo a passo</span>
+                                <span>Protocolo nutricional inicial sob medida</span>
                             </div>
                             <div class="decision-feature-item">
                                 <svg viewBox="0 0 20 20">
@@ -261,7 +259,7 @@
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                <span>3 etapas estratégicas de adaptação metabólica</span>
+                                <span>Cálculo preciso de distribuição calórica e macronutrientes</span>
                             </div>
                             <div class="decision-feature-item">
                                 <svg viewBox="0 0 20 20">
@@ -269,72 +267,85 @@
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                <span>Suporte direto pelo WhatsApp durante os 24 dias</span>
+                                <span>Guia prático para organização da rotina e consistência</span>
                             </div>
                         </div>
                     </div>
 
-                    <div>
-                        <a href="projeto-24-dias.html" class="btn btn-outline-primary btn-full">Conhecer o Projeto 24 Dias &rarr;</a>
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <button type="button" class="btn btn-outline-primary btn-full"
+                            onclick="abrirFormulario('Método Atlas Start')">Quero o Método Atlas Start &rarr;</button>
+                        <a href="metodo-atlas-start.html"
+                            style="text-align: center; font-size: 0.84rem; color: var(--text-muted); padding: 4px;">Saber
+                            mais sobre o Start</a>
                     </div>
                 </div>
 
-                <!-- Card 2: Acompanhamento Premium -->
-                <div class="decision-card decision-card--featured">
+                <!-- CARD 2: Método Atlas (Acompanhamento Principal) -->
+                <div class="decision-card">
                     <div>
-                        <span class="decision-card-tag" style="color: var(--secondary);">Para quem busca evolução contínua</span>
-                        <h3 class="decision-card-title">Acompanhamento Premium</h3>
-                        <p class="decision-card-desc">Consultoria nutricional contínua, altamente individualizada, com reavaliações periódicas e ajustes constantes para evolução sustentável de longo prazo.</p>
+                        <span class="decision-card-tag"
+                            style="background: rgba(214, 90, 90, 0.15); border-color: rgba(214, 90, 90, 0.35);">Acompanhamento
+                            Completo</span>
+                        <h3 class="decision-card-title">Método Atlas</h3>
+                        <p class="decision-card-desc">Um acompanhamento completo e personalizado para quem busca
+                            evolução contínua.</p>
 
-                        <div class="decision-card-meta">
-                            <div class="decision-card-meta-item">
-                                <svg viewBox="0 0 24 24" style="fill: var(--secondary);">
-                                    <rect x="3" y="4" width="18" height="18" rx="2" stroke="currentColor"
-                                        stroke-width="2" fill="none" />
-                                    <path d="M16 2v4M8 2v4M3 10h18" stroke="currentColor" stroke-width="2" fill="none" />
-                                </svg>
-                                <span>Trimestral · Semestral · Anual</span>
-                            </div>
+                        <div class="decision-card-section">
+                            <div class="decision-card-section-title">Para quem é:</div>
+                            <p style="font-size: 0.9rem; margin-bottom: 14px;">Quem busca emagrecimento sustentável,
+                                recomposição corporal, ganho de massa magra ou performance com suporte próximo e
+                                refinamento contínuo.</p>
+                        </div>
+
+                        <div class="decision-card-section">
+                            <div class="decision-card-section-title">Como funciona:</div>
+                            <p style="font-size: 0.9rem; margin-bottom: 16px;">Consulta clínica detalhada, análise
+                                minuciosa de exames laboratoriais, protocolo 100% individualizado e reavaliações
+                                periódicas com ajustes constantes.</p>
                         </div>
 
                         <div class="decision-card-features">
                             <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" style="fill: var(--secondary);">
+                                <svg viewBox="0 0 20 20">
                                     <path fill-rule="evenodd"
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                <span>Avaliação clínica completa e análise de exames</span>
+                                <span>Avaliação clínica completa e monitoramento de exames</span>
                             </div>
                             <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" style="fill: var(--secondary);">
+                                <svg viewBox="0 0 20 20">
                                     <path fill-rule="evenodd"
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                <span>Ajustes periódicos conforme a resposta do seu corpo</span>
+                                <span>Ajustes periódicos e recalibração metabólica constante</span>
                             </div>
                             <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" style="fill: var(--secondary);">
+                                <svg viewBox="0 0 20 20">
                                     <path fill-rule="evenodd"
                                         d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
                                         clip-rule="evenodd" />
                                 </svg>
-                                <span>Suporte prioritário via WhatsApp com o nutricionista</span>
+                                <span>Acesso direto ao nutricionista via WhatsApp</span>
                             </div>
                         </div>
                     </div>
 
-                    <div>
-                        <a href="acompanhamento-premium.html" class="btn btn-primary btn-full">Conhecer os Planos
-                            Premium &rarr;</a>
+                    <div style="display: flex; flex-direction: column; gap: 8px;">
+                        <a href="#planos-atlas" class="btn btn-primary btn-full">Ver Planos do Método Atlas &rarr;</a>
+                        <a href="metodo-atlas.html"
+                            style="text-align: center; font-size: 0.84rem; color: var(--text-muted); padding: 4px;">Entender
+                            a metodologia completa</a>
                     </div>
                 </div>
+
             </div>
         </div>
     </section>
 
-    <!-- ── 02. FAIXA DE CREDIBILIDADE ── -->
+    <!-- ── 03. FAIXA DE CREDIBILIDADE ── -->
     <section class="trust-bar">
         <div class="container">
             <div class="trust-grid js-fade-up">
@@ -388,115 +399,25 @@
                     </div>
                     <div class="trust-info">
                         <h4>CRN: 83678P</h4>
-                        <p>Nutricionista graduado e atuante em nutrição de precisão.</p>
+                        <p>Nutricionista graduado atuante em nutrição clínica e esportiva.</p>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- ── 03. COMPARATIVO RÁPIDO ENTRE OS FORMATOS ── -->
-    <section class="section-padding comparison-section">
+    <!-- ── 04. ÁREA DE AUTORIDADE — MÉTODO ATLAS (4 PILARES) ── -->
+    <section class="section-padding comparison-section" id="metodologia">
         <div class="container">
             <div class="section-header js-fade-up">
-                <span class="section-badge">Comparação Direta</span>
-                <h2>Qual formato faz mais sentido para o seu momento?</h2>
-                <p>Entenda as principais características de cada modalidade e selecione a ideal para sua meta.</p>
-            </div>
-
-            <div class="comparison-table-wrapper js-fade-up">
-                <table class="comparison-table">
-                    <thead>
-                        <tr>
-                            <th>Característica</th>
-                            <th class="col-p24">Projeto 24 Dias</th>
-                            <th class="col-premium">Acompanhamento Premium</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Proposta Principal</strong></td>
-                            <td>Sprint para destravar resultados e criar hábitos alimentares</td>
-                            <td>Consultoria estratégica contínua para evolução de longo prazo</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Duração</strong></td>
-                            <td>Período fixo de 24 dias consecutivos</td>
-                            <td>Planos Trimestral, Semestral ou Anual</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Perfil Indicado</strong></td>
-                            <td>Quem precisa de um início organizado e sem procrastinação</td>
-                            <td>Quem busca consolidação corporal, hipertrofia ou reeducação contínua</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Ajustes de Protocolo</strong></td>
-                            <td>3 etapas pré-estruturadas durante o ciclo</td>
-                            <td>Reavaliações periódicas e ajustes frequentes conforme resposta</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Análise de Exames</strong></td>
-                            <td>Orientação conforme histórico inicial</td>
-                            <td>Avaliação clínica completa e monitoramento de marcadores</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Ação Recomendada</strong></td>
-                            <td><a href="projeto-24-dias.html" class="btn btn-outline-primary btn-sm">Ver Detalhes do
-                                    Projeto</a></td>
-                            <td><a href="acompanhamento-premium.html" class="btn btn-primary btn-sm">Ver Planos
-                                    Premium</a></td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── 04. COMO FUNCIONA O PROCESSO EM 3 ETAPAS ── -->
-    <section class="section-padding">
-        <div class="container">
-            <div class="section-header js-fade-up">
-                <span class="section-badge">Metodologia</span>
-                <h2>Como funciona o seu acompanhamento</h2>
-                <p>Um processo simples, transparente e sem fórmulas mágicas, pensado para a sua realidade.</p>
-            </div>
-
-            <div class="process-grid js-fade-up">
-                <div class="process-step-card">
-                    <div class="process-step-num">01</div>
-                    <h3>Diagnóstico e Perfil Clínico</h3>
-                    <p>Mapeamento detalhado da sua rotina, horários, histórico de saúde, preferências alimentares e
-                        objetivo principal.</p>
-                </div>
-
-                <div class="process-step-card">
-                    <div class="process-step-num">02</div>
-                    <h3>Estratégia Sob Medida</h3>
-                    <p>Elaboração do protocolo alimentar individualizado com distribuição calculada de nutrientes, sem
-                        cortes desnecessários.</p>
-                </div>
-
-                <div class="process-step-card">
-                    <div class="process-step-num">03</div>
-                    <h3>Acompanhamento e Ajustes</h3>
-                    <p>Suporte contínuo via WhatsApp e refinamentos periódicos baseados na sua evolução e resposta
-                        metabólica.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ── 05. MÉTODO ATLAS (RESUMO) ── -->
-    <section class="section-padding comparison-section">
-        <div class="container">
-            <div class="section-header js-fade-up">
-                <span class="section-badge">Método Atlas</span>
-                <h2>Estrutura nutricional para resultado definitivo</h2>
-                <p>Sem dietas genéricas de gaveta. Um método focado na individualidade e no equilíbrio de 3 pilares
-                    essenciais.</p>
+                <span class="section-badge">Metodologia Exclusiva</span>
+                <h2>Mais do que uma dieta. Uma estratégia personalizada.</h2>
+                <p>Sem fórmulas prontas ou restrições insustentáveis. Uma abordagem com o rigor da performance e a
+                    flexibilidade necessária para manter o resultado para sempre.</p>
             </div>
 
             <div class="atlas-pillars-grid js-fade-up">
+                <!-- Pilar 1 -->
                 <div class="pillar-card">
                     <div>
                         <div class="pillar-icon-wrap">
@@ -505,9 +426,9 @@
                                     stroke-linecap="round" stroke-linejoin="round" fill="none" />
                             </svg>
                         </div>
-                        <h3>Emagrecimento Estratégico</h3>
-                        <p>Déficit calórico inteligente e planejado para preservar massa magra e manter energia estável,
-                            sem fome excessiva.</p>
+                        <h3>1. Estratégia Alimentar</h3>
+                        <p>Déficit calórico inteligente e planejado para oxidar gordura preservando massa muscular,
+                            mantendo energia estável e controle da saciedade.</p>
                     </div>
                     <div class="pillar-points">
                         <div class="pillar-point-item">
@@ -515,18 +436,19 @@
                                 <path
                                     d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z" />
                             </svg>
-                            <span>Perda consistente de gordura</span>
+                            <span>Perda consistente de gordura sem queda de rendimento</span>
                         </div>
                         <div class="pillar-point-item">
                             <svg viewBox="0 0 16 16">
                                 <path
                                     d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z" />
                             </svg>
-                            <span>Manutenção do metabolismo ativo</span>
+                            <span>Distribuição precisa de macronutrientes</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Pilar 2 -->
                 <div class="pillar-card">
                     <div>
                         <div class="pillar-icon-wrap">
@@ -535,9 +457,9 @@
                                     stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
                             </svg>
                         </div>
-                        <h3>Saúde & Longevidade</h3>
-                        <p>Alinhamento metabólico, melhora de exames laboratoriais (colesterol, glicemia, triglicérides) e
-                            vitalidade para o dia a dia.</p>
+                        <h3>2. Personalização Absoluta</h3>
+                        <p>O plano alimentar é construído sob medida para a sua rotina real de trabalho, preferências
+                            alimentares, horários de treino e vida social.</p>
                     </div>
                     <div class="pillar-points">
                         <div class="pillar-point-item">
@@ -545,29 +467,32 @@
                                 <path
                                     d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z" />
                             </svg>
-                            <span>Prevenção e controle clínico</span>
+                            <span>Alimentos que você gosta integrados com estratégia</span>
                         </div>
                         <div class="pillar-point-item">
                             <svg viewBox="0 0 16 16">
                                 <path
                                     d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z" />
                             </svg>
-                            <span>Disposição e melhora do sono</span>
+                            <span>Aderência real sem sofrimento ou isolamento</span>
                         </div>
                     </div>
                 </div>
 
+                <!-- Pilar 3 -->
                 <div class="pillar-card">
                     <div>
                         <div class="pillar-icon-wrap">
                             <svg viewBox="0 0 24 24">
-                                <path d="M6 18h12M6 6h12M9 12h6M4 21h16a1 1 0 001-1V4a1 1 0 00-1-1H4a1 1 0 00-1 1v16a1 1 0 001 1z"
-                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" />
+                                <path
+                                    d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                    stroke-linejoin="round" fill="none" />
                             </svg>
                         </div>
-                        <h3>Performance & Estética</h3>
-                        <p>Ajuste fino de macronutrientes, timing de refeições e suplementação estratégica para ganho de
-                            massa muscular e rendimento físico.</p>
+                        <h3>3. Ajustes Constantes</h3>
+                        <p>O organismo humano se adapta. Conforme sua resposta metabólica evolui, realizamos recálculos
+                            periódicos para que seus resultados nunca fiquem estagnados.</p>
                     </div>
                     <div class="pillar-points">
                         <div class="pillar-point-item">
@@ -575,14 +500,46 @@
                                 <path
                                     d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z" />
                             </svg>
-                            <span>Hipertrofia e definição muscular</span>
+                            <span>Quebra programada de platôs corporais</span>
                         </div>
                         <div class="pillar-point-item">
                             <svg viewBox="0 0 16 16">
                                 <path
                                     d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z" />
                             </svg>
-                            <span>Recuperação acelerada pós-treino</span>
+                            <span>Refinamento baseado em métricas reais</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pilar 4 -->
+                <div class="pillar-card">
+                    <div>
+                        <div class="pillar-icon-wrap">
+                            <svg viewBox="0 0 24 24">
+                                <path
+                                    d="M6 18h12M6 6h12M9 12h6M4 21h16a1 1 0 001-1V4a1 1 0 00-1-1H4a1 1 0 00-1 1v16a1 1 0 001 1z"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" />
+                            </svg>
+                        </div>
+                        <h3>4. Evolução Sustentável</h3>
+                        <p>Construção de hábitos alimentares sólidos, melhora de exames laboratoriais (colesterol,
+                            glicemia, triglicérides) e autonomia para manter os resultados.</p>
+                    </div>
+                    <div class="pillar-points">
+                        <div class="pillar-point-item">
+                            <svg viewBox="0 0 16 16">
+                                <path
+                                    d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z" />
+                            </svg>
+                            <span>Saúde metabólica e disposição diária</span>
+                        </div>
+                        <div class="pillar-point-item">
+                            <svg viewBox="0 0 16 16">
+                                <path
+                                    d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z" />
+                            </svg>
+                            <span>Fim do efeito sanfona com autonomia</span>
                         </div>
                     </div>
                 </div>
@@ -594,26 +551,163 @@
         </div>
     </section>
 
-    <!-- ── 06. DEPOIMENTOS EM DESTAQUE ── -->
-    <section class="section-padding">
+    <!-- ── 05. PLANOS DO MÉTODO ATLAS (3 CARDS PADRONIZADOS) ── -->
+    <section class="section-padding" id="planos-atlas">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Acompanhamento Contínuo</span>
+                <h2>Planos do Método Atlas</h2>
+                <p>Escolha o período ideal de consultoria individualizada para a sua meta.</p>
+            </div>
+
+            <div class="plans-grid js-fade-up">
+
+                <!-- 1. Trimestral -->
+                <div class="plan-card-pro">
+                    <div>
+                        <div class="plan-badge-holder"></div>
+                        <div class="plan-header">
+                            <span class="plan-duration">3 Meses</span>
+                            <h3 class="plan-title">Trimestral</h3>
+                            <p class="plan-recommendation">Consolidação da primeira grande fase de resultados.</p>
+                        </div>
+                        <div class="plan-features-list">
+                            <div class="plan-feature-item">
+                                <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                                <span>Protocolo individualizado</span>
+                            </div>
+                            <div class="plan-feature-item">
+                                <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                                <span>Ajustes estratégicos periódicos</span>
+                            </div>
+                            <div class="plan-feature-item">
+                                <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                                <span>Guia de suplementação prática</span>
+                            </div>
+                            <div class="plan-feature-item">
+                                <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                                <span>Suporte contínuo no WhatsApp</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plan-actions">
+                        <button type="button" class="btn btn-primary btn-full" onclick="abrirFormulario('Plano Trimestral')">Quero este acompanhamento</button>
+                    </div>
+                </div>
+
+                <!-- 2. Semestral -->
+                <div class="plan-card-pro">
+                    <div>
+                        <div class="plan-badge-holder"></div>
+                        <div class="plan-header">
+                            <span class="plan-duration">6 Meses</span>
+                            <h3 class="plan-title">Semestral</h3>
+                            <p class="plan-recommendation">Recomposição profunda e quebra de platôs.</p>
+                        </div>
+                        <div class="plan-features-list">
+                            <div class="plan-feature-item">
+                                <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                                <span>Tudo do Plano Trimestral</span>
+                            </div>
+                            <div class="plan-feature-item">
+                                <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                                <span>Análise e monitoramento de exames</span>
+                            </div>
+                            <div class="plan-feature-item">
+                                <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                                <span>Reavaliações periódicas inclusas</span>
+                            </div>
+                            <div class="plan-feature-item">
+                                <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                                <span>Suporte contínuo no WhatsApp</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plan-actions">
+                        <button type="button" class="btn btn-primary btn-full" onclick="abrirFormulario('Plano Semestral')">Quero este acompanhamento</button>
+                    </div>
+                </div>
+
+                <!-- 3. Anual -->
+                <div class="plan-card-pro">
+                    <div>
+                        <div class="plan-badge-holder">
+                            <span class="plan-badge-premium">JORNADA COMPLETA</span>
+                        </div>
+                        <div class="plan-header">
+                            <span class="plan-duration">12 Meses</span>
+                            <h3 class="plan-title">Anual</h3>
+                            <p class="plan-recommendation">Estilo de vida definitivo e proximidade contínua.</p>
+                        </div>
+                        <div class="plan-features-list">
+                            <div class="plan-feature-item">
+                                <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                                <span>Acompanhamento prioritário contínuo</span>
+                            </div>
+                            <div class="plan-feature-item">
+                                <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                                <span>Monitoramento laboratorial completo</span>
+                            </div>
+                            <div class="plan-feature-item">
+                                <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                                <span>Ajustes para cada fase e estação</span>
+                            </div>
+                            <div class="plan-feature-item">
+                                <svg viewBox="0 0 16 16"><path d="M12.736 3.97a.75.75 0 0 1 1.048 1.06l-7 7a.75.75 0 0 1-1.06 0l-3.5-3.5a.75.75 0 1 1 1.06-1.06l2.97 2.97 6.482-6.47z"/></svg>
+                                <span>Acesso direto ao nutricionista</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="plan-actions">
+                        <button type="button" class="btn btn-primary btn-full" onclick="abrirFormulario('Plano Anual')">Quero este acompanhamento</button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 06. RESULTADOS & PROVAS SOCIAIS ── -->
+    <section class="section-padding comparison-section" id="resultados">
         <div class="container">
             <div class="section-header js-fade-up">
                 <span class="section-badge">Provas Sociais</span>
                 <h2>Resultados de pessoas reais.</h2>
-                <p>Relatos de quem transformou a saúde e a composição corporal com acompanhamento nutricional personalizado.</p>
+                <p>Relatos autênticos de pacientes que transformaram a saúde e a composição corporal com acompanhamento
+                    individualizado.</p>
             </div>
 
             <div class="testimonials-grid js-fade-up">
                 <div class="testimonial-card-pro">
                     <div>
                         <div class="testimonial-stars-svg">
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
                         </div>
-                        <p class="testimonial-quote">"Pra mim está ótimo o atendimento Kevin, tudo o que preciso você sempre prepara prestativo, não vejo algo que esteja deixando a desejar, pra mim está tudo ok!!"</p>
+                        <p class="testimonial-quote">"Pra mim está ótimo o atendimento Kevin, tudo o que preciso você
+                            sempre prepara prestativo, não vejo algo que esteja deixando a desejar, pra mim está tudo
+                            ok!!"</p>
                     </div>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">RN</div>
@@ -627,19 +721,35 @@
                 <div class="testimonial-card-pro">
                     <div>
                         <div class="testimonial-stars-svg">
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
                         </div>
-                        <p class="testimonial-quote">"O que me ajuda é o fato de você ajustar de acordo com a minha necessidade. Obrigado por acreditar em mim até quando eu mesmo duvido."</p>
+                        <p class="testimonial-quote">"O que me ajuda é o fato de você ajustar de acordo com a minha
+                            necessidade. Obrigado por acreditar em mim até quando eu mesmo duvido."</p>
                     </div>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">AL</div>
                         <div class="testimonial-meta">
                             <strong>Ale</strong>
-                            <span>Adaptação personalizada</span>
+                            <span>Adaptação à rotina real</span>
                         </div>
                     </div>
                 </div>
@@ -647,13 +757,30 @@
                 <div class="testimonial-card-pro">
                     <div>
                         <div class="testimonial-stars-svg">
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
-                            <svg viewBox="0 0 20 20"><path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" /></svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
+                            <svg viewBox="0 0 20 20">
+                                <path
+                                    d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
+                            </svg>
                         </div>
-                        <p class="testimonial-quote">"Curti demais irmão. Muito profissional e sem rodeios. Entendeu demais meu real objetivo. 100% animado com o progresso até aqui e com o plano daqui pra frente."</p>
+                        <p class="testimonial-quote">"Curti demais irmão. Muito profissional e sem rodeios. Entendeu
+                            demais meu real objetivo. 100% animado com o progresso até aqui e com o plano daqui pra
+                            frente."</p>
                     </div>
                     <div class="testimonial-author">
                         <div class="testimonial-avatar">AF</div>
@@ -671,8 +798,8 @@
         </div>
     </section>
 
-    <!-- ── 07. SOBRE O KEVIN (RESUMO) ── -->
-    <section class="section-padding comparison-section">
+    <!-- ── 07. SOBRE O KEVIN (AUTORIDADE & CONEXÃO) ── -->
+    <section class="section-padding" id="sobre">
         <div class="container">
             <div class="about-hero-grid js-fade-up">
                 <div class="about-img-frame">
@@ -682,21 +809,33 @@
                 <div>
                     <span class="section-badge">Quem é Kevin Lincoln</span>
                     <h2>Formado pela experiência, guiado pela ciência.</h2>
-                    <p style="margin-bottom: 16px;">Meu nome é Kevin Lincoln. Antes de orientar pacientes, fui atleta de fisiculturismo — e vivi na prática as dificuldades de construir consistência nutricional com rotina real. Essa vivência me ensinou o que funciona de verdade.</p>
-                    <p style="margin-bottom: 24px;">Acredito que a maioria das pessoas não falha por falta de vontade, mas por falta de um plano estruturado para a sua realidade. Foi a partir dessa compreensão que criei o Método Atlas: uma abordagem clínica com o rigor da alta performance e a humanidade necessária para qualquer pessoa conseguir seguir.</p>
+                    <p style="margin-bottom: 16px;">Meu nome é Kevin Lincoln. Antes de orientar pacientes clinicamente,
+                        fui atleta de fisiculturismo — e vivi na pele os desafios de construir consistência nutricional
+                        com rotina exigente. Essa vivência me ensinou o que realmente funciona no dia a dia.</p>
+                    <p style="margin-bottom: 24px;">Acredito que as pessoas não falham por falta de força de vontade,
+                        mas por falta de um plano estruturado para a sua realidade. Foi a partir dessa visão que criei o
+                        <strong>Método Atlas</strong>: uma metodologia clínica com o rigor da performance esportiva e a
+                        humanidade indispensável para qualquer pessoa conseguir seguir.</p>
 
                     <div class="about-badges-row">
                         <div class="about-badge-item">
-                            <svg viewBox="0 0 24 24"><path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 14l9-5-9-5-9 5 9 5z" stroke="currentColor" stroke-width="2" fill="none" />
+                            </svg>
                             <span>Nutricionista Graduado — UNIP</span>
                         </div>
                         <div class="about-badge-item">
-                            <svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none"/></svg>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" fill="none" />
+                            </svg>
                             <span>CRN: 83678P</span>
                         </div>
                         <div class="about-badge-item">
-                            <svg viewBox="0 0 24 24"><path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" stroke="currentColor" stroke-width="2" fill="none"/></svg>
-                            <span>Atleta de Fisiculturismo</span>
+                            <svg viewBox="0 0 24 24">
+                                <path d="M19 21l-7-5-7 5V5a2 2 0 012-2h10a2 2 0 012 2z" stroke="currentColor"
+                                    stroke-width="2" fill="none" />
+                            </svg>
+                            <span>Atleta de Alto Rendimento</span>
                         </div>
                     </div>
 
@@ -708,26 +847,31 @@
         </div>
     </section>
 
-    <!-- ── 08. DÚVIDAS FREQUENTES (RESUMO) ── -->
-    <section class="section-padding">
+    <!-- ── 08. DÚVIDAS FREQUENTES ── -->
+    <section class="section-padding comparison-section" id="duvidas">
         <div class="container">
             <div class="section-header js-fade-up">
                 <span class="section-badge">Dúvidas Frequentes</span>
                 <h2>Perguntas frequentes sobre o acompanhamento</h2>
-                <p>Confira respostas diretas para as dúvidas mais comuns de novos pacientes.</p>
+                <p>Respostas diretas e transparentes para as principais questões de novos pacientes.</p>
             </div>
 
             <div class="faq-grid js-fade-up">
                 <div class="faq-card">
                     <button class="faq-trigger" type="button">
-                        <span>Preciso cortar alimentos que gosto para emagrecer?</span>
+                        <span>Preciso cortar os alimentos que gosto para ter resultados?</span>
                         <div class="faq-icon-cross">
-                            <svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            <svg viewBox="0 0 14 14">
+                                <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
                         </div>
                     </button>
                     <div class="faq-content">
                         <div class="faq-content-inner">
-                            Não trabalhamos com restrições extremas ou cortes desnecessários. O objetivo do Método Atlas é organizar a quantidade e o timing dos alimentos de forma que você consiga manter a consistência no longo prazo sem viver em restrição constante.
+                            Não trabalhamos com restrições extremas ou cortes desnecessários. O objetivo do Método Atlas
+                            é organizar a quantidade, a distribuição e o timing dos alimentos de modo que você mantenha
+                            a consistência sem abrir mão do seu convívio social.
                         </div>
                     </div>
                 </div>
@@ -736,26 +880,57 @@
                     <button class="faq-trigger" type="button">
                         <span>Como funciona o atendimento online?</span>
                         <div class="faq-icon-cross">
-                            <svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            <svg viewBox="0 0 14 14">
+                                <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
                         </div>
                     </button>
                     <div class="faq-content">
                         <div class="faq-content-inner">
-                            O atendimento online possui a mesma precisão e profundidade da consulta presencial. Todo o envio de informações, análise clínica, entrega do plano e suporte para dúvidas acontecem de forma prática pelo WhatsApp e plataformas digitais.
+                            O atendimento online possui a mesma precisão e profundidade da consulta presencial. O envio
+                            de dados, a análise clínica e de exames, a entrega do plano e o suporte para dúvidas
+                            acontecem com agilidade e proximidade via WhatsApp e plataforma digital.
                         </div>
                     </div>
                 </div>
 
                 <div class="faq-card">
                     <button class="faq-trigger" type="button">
-                        <span>Qual a diferença entre o Projeto 24 Dias e os Planos Premium?</span>
+                        <span>Qual a diferença entre o Método Atlas Start e o Método Atlas?</span>
                         <div class="faq-icon-cross">
-                            <svg viewBox="0 0 14 14"><path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+                            <svg viewBox="0 0 14 14">
+                                <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
                         </div>
                     </button>
                     <div class="faq-content">
                         <div class="faq-content-inner">
-                            O Projeto 24 Dias é um sprint estruturado com começo, meio e fim para quem precisa destravar e criar ritmo. O Acompanhamento Premium é uma consultoria contínua (trimestral, semestral ou anual) com reavaliações e ajustes periódicos.
+                            O <strong>Método Atlas Start</strong> é um produto digital de entrada: você responde a uma
+                            avaliação detalhada e recebe sua estratégia nutricional inicial sob medida. Já o
+                            <strong>Método Atlas</strong> é a consultoria contínua (Trimestral, Semestral ou
+                            Anual), com análise profunda de exames laboratoriais, reavaliações periódicas e ajustes
+                            constantes conforme a resposta do seu corpo.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-trigger" type="button">
+                        <span>Como são solicitados e analisados os exames de sangue?</span>
+                        <div class="faq-icon-cross">
+                            <svg viewBox="0 0 14 14">
+                                <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            Durante a avaliação inicial, se você possuir exames recentes, realizamos a leitura completa.
+                            Caso necessário, emitimos pedidos de exames laboratoriais para verificar marcadores
+                            lipídicos, glicêmicos, tireoidianos e hormonais, alinhando saúde e estética.
                         </div>
                     </div>
                 </div>
@@ -767,7 +942,7 @@
         </div>
     </section>
 
-    <!-- ── CTA BANNER FINAL DE CONVERSÃO ── -->
+    <!-- ── 09. CTA BANNER FINAL DE CONVERSÃO ── -->
     <section class="section-padding cta-final-section">
         <div class="container">
             <div class="conversion-cta-banner js-fade-up">
@@ -776,20 +951,25 @@
                     <span>Próximo passo</span>
                 </div>
                 <h2>Pronto para começar sua evolução?</h2>
-                <p>A transformação que você busca começa com uma decisão. Preencha a avaliação inicial ou fale diretamente pelo WhatsApp — sem compromisso, sem pressão.</p>
+                <p>A transformação que você busca começa com uma decisão estratégica. Preencha a avaliação inicial ou
+                    fale diretamente pelo WhatsApp — sem compromisso.</p>
                 <div class="conversion-cta-actions">
-                    <button class="btn btn-primary btn-lg" onclick="abrirFormulario()" id="btn-cta-final-avaliacao">
-                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;fill:none;">
-                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/>
-                            <polyline points="14 2 14 8 20 8"/>
-                            <line x1="16" y1="13" x2="8" y2="13"/>
-                            <line x1="16" y1="17" x2="8" y2="17"/>
+                    <button type="button" class="btn btn-primary btn-lg" onclick="abrirFormulario()"
+                        id="btn-cta-final-avaliacao">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round" style="width:18px;height:18px;fill:none;">
+                            <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                            <polyline points="14 2 14 8 20 8" />
+                            <line x1="16" y1="13" x2="8" y2="13" />
+                            <line x1="16" y1="17" x2="8" y2="17" />
                         </svg>
                         Iniciar Avaliação de Perfil
                     </button>
-                    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Visitei%20o%20site%20e%20gostaria%20de%20come%C3%A7ar%20minha%20evolu%C3%A7%C3%A3o." target="_blank" class="btn btn-whatsapp btn-lg" id="btn-cta-final-whatsapp">
+                    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Visitei%20o%20site%20e%20gostaria%20de%20come%C3%A7ar%20minha%20evolu%C3%A7%C3%A3o."
+                        target="_blank" class="btn btn-whatsapp btn-lg" id="btn-cta-final-whatsapp">
                         <svg viewBox="0 0 16 16">
-                            <path d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                            <path
+                                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
                         </svg>
                         Falar no WhatsApp
                     </a>
@@ -815,10 +995,9 @@
                     <h4>Navegação</h4>
                     <nav class="footer-nav">
                         <a href="index.html">Início</a>
-                        <a href="acompanhamentos.html">Acompanhamentos</a>
-                        <a href="projeto-24-dias.html">Projeto 24 Dias</a>
-                        <a href="acompanhamento-premium.html">Acompanhamento Premium</a>
+                        <a href="metodo-atlas-start.html">Método Atlas Start</a>
                         <a href="metodo-atlas.html">Método Atlas</a>
+                        <a href="#planos-atlas">Planos do Acompanhamento</a>
                     </nav>
                 </div>
 
@@ -836,15 +1015,24 @@
                     <h4>Atendimento</h4>
                     <div class="footer-contact-list">
                         <div class="footer-contact-item">
-                            <svg viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.06a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+                            <svg viewBox="0 0 16 16">
+                                <path
+                                    d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.06a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z" />
+                            </svg>
                             <span>(17) 98111-4500</span>
                         </div>
                         <div class="footer-contact-item">
-                            <svg viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.547z"/></svg>
+                            <svg viewBox="0 0 16 16">
+                                <path
+                                    d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.547z" />
+                            </svg>
                             <span>Kevinlincoln09@icloud.com</span>
                         </div>
                         <div class="footer-contact-item">
-                            <svg viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                            <svg viewBox="0 0 16 16">
+                                <path
+                                    d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z" />
+                            </svg>
                             <span>São José do Rio Preto - SP</span>
                         </div>
                     </div>
@@ -853,7 +1041,7 @@
 
             <div class="footer-bottom">
                 <div>&copy; <span id="ano-atual"></span> Kevin Lincoln. Todos os direitos reservados.</div>
-                <div>Desenvolvido com foco em alta conversão e experiência clínica.</div>
+                <div>Nutrição de precisão e alta performance clínica.</div>
             </div>
         </div>
     </footer>
@@ -877,14 +1065,16 @@
                 <div style="margin-bottom: 24px;">
                     <span class="section-badge" style="margin-bottom: 8px;">Avaliação Inicial</span>
                     <h2 id="modalTitulo" style="font-size: 1.45rem;">Vamos entender seu objetivo?</h2>
-                    <p style="font-size: 0.9rem; margin-top: 4px;">Preencha seus dados para receber uma proposta personalizada.</p>
+                    <p style="font-size: 0.9rem; margin-top: 4px;">Preencha seus dados para receber uma proposta
+                        personalizada do seu acompanhamento.</p>
                 </div>
 
                 <div class="form-group-title">1. Dados Pessoais</div>
                 <div class="form-grid-2">
                     <div class="form-control">
                         <label for="m-nome">Nome completo *</label>
-                        <input type="text" id="m-nome" placeholder="Seu nome" maxlength="80" autocomplete="name">
+                        <input type="text" id="m-nome" placeholder="Seu nome completo" maxlength="80"
+                            autocomplete="name">
                     </div>
                     <div class="form-control">
                         <label for="m-idade">Idade *</label>
@@ -941,8 +1131,8 @@
                 <div class="form-control">
                     <div class="chip-options-grid">
                         <div class="chip-option">
-                            <input type="radio" name="m-servico" id="m-servico-p24">
-                            <label for="m-servico-p24" class="chip-label">Projeto 24 Dias</label>
+                            <input type="radio" name="m-servico" id="m-servico-start">
+                            <label for="m-servico-start" class="chip-label">Método Atlas Start</label>
                         </div>
                         <div class="chip-option">
                             <input type="radio" name="m-servico" id="m-servico-trimestral" checked>
@@ -960,20 +1150,28 @@
                 </div>
 
                 <div style="margin-top: 24px;">
-                    <button class="btn btn-primary btn-full" id="m-btn-enviar" onclick="validarEEnviarFormulario('modal')">ENVIAR AVALIAÇÃO &rarr;</button>
+                    <button type="button" class="btn btn-primary btn-full" id="m-btn-enviar"
+                        onclick="validarEEnviarFormulario('modal')">ENVIAR AVALIAÇÃO &rarr;</button>
                 </div>
             </div>
 
             <!-- TELA DE SUCESSO DO MODAL -->
             <div id="modal-form-sucesso" class="form-success-message">
                 <div class="form-success-icon">
-                    <svg viewBox="0 0 20 20"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg>
+                    <svg viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
                 </div>
                 <h3>Dados enviados com sucesso!</h3>
-                <p style="margin-bottom: 24px;">Recebi suas informações e entrarei em contato em breve para apresentar a sua proposta.</p>
+                <p style="margin-bottom: 24px;">Recebi suas informações e entrarei em contato em breve para apresentar a
+                    sua proposta estratégica.</p>
                 <div style="display: flex; flex-direction: column; gap: 10px;">
-                    <a href="https://wa.me/5517981114500" target="_blank" class="btn btn-whatsapp btn-full btn-wa-confirmar">Confirmar no WhatsApp</a>
-                    <button class="btn btn-secondary btn-full" onclick="fecharFormulario()">Fechar Janela</button>
+                    <a href="https://wa.me/5517981114500" target="_blank"
+                        class="btn btn-whatsapp btn-full btn-wa-confirmar">Confirmar no WhatsApp</a>
+                    <button type="button" class="btn btn-secondary btn-full" onclick="fecharFormulario()">Fechar
+                        Janela</button>
                 </div>
             </div>
         </div>
