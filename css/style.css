@@ -309,8 +309,8 @@ strong {
 }
 
 .btn-lg {
-  padding: 16px 36px;
-  font-size: 1.02rem;
+  padding: clamp(13px, 1.8vw, 16px) clamp(22px, 2.8vw, 36px);
+  font-size: clamp(0.88rem, 1.1vw, 1.02rem);
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -370,12 +370,7 @@ header.scrolled {
 .brand-logo {
   display: inline-flex;
   align-items: center;
-  font-family: var(--font-heading);
-  font-size: 1.24rem;
-  font-weight: 700;
-  color: #ffffff;
-  letter-spacing: -0.025em;
-  line-height: 1;
+  gap: 12px;
   text-decoration: none;
   flex-shrink: 0;
   user-select: none;
@@ -405,6 +400,21 @@ header.scrolled {
   filter: drop-shadow(0 2px 14px rgba(214, 90, 90, 0.4));
 }
 
+.brand-logo .brand-logo-text,
+.brand-logo-text {
+  font-family: var(--font-heading);
+  font-size: 1.24rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.025em;
+  line-height: 1;
+  display: inline-flex;
+  align-items: baseline;
+  white-space: nowrap;
+}
+
+.brand-logo .brand-logo-text span,
+.brand-logo-text span,
 .brand-logo span {
   color: var(--primary);
   font-weight: 700;
@@ -2486,8 +2496,11 @@ footer {
   }
 
   .brand-logo {
+    gap: 10px;
+  }
+
+  .brand-logo .brand-logo-text {
     font-size: 1.18rem;
-    gap: 11px;
   }
 
   .brand-logo .logo-mark {
@@ -2550,12 +2563,12 @@ footer {
   /* Hero Principal — Mobile */
   .hero-main {
     min-height: auto;
-    padding: 110px 0 60px;
+    padding: 100px 0 44px;
   }
 
   .hero-main-grid {
     grid-template-columns: 1fr;
-    gap: 36px;
+    gap: 32px;
   }
 
   /* Mobile: foto depois do texto para garantir CTA visível sem scroll */
@@ -2564,7 +2577,7 @@ footer {
   }
 
   .hero-photo-img {
-    height: 340px;
+    height: clamp(280px, 48vw, 340px);
   }
 
   .hero-photo-frame {
@@ -2572,20 +2585,26 @@ footer {
   }
 
   .hero-main-headline {
-    font-size: clamp(1.75rem, 6.5vw, 2.4rem);
+    font-size: clamp(1.65rem, 5.8vw, 2.25rem);
+    line-height: 1.18;
     max-width: 100%;
+    margin-bottom: 12px;
+    text-wrap: balance;
   }
 
   .hero-main-sub {
     max-width: 100%;
-    font-size: 0.98rem;
-    margin-bottom: 32px;
+    font-size: clamp(0.88rem, 3.2vw, 0.98rem);
+    line-height: 1.55;
+    margin-bottom: 22px;
   }
 
   .hero-main-ctas {
+    display: flex;
     flex-direction: column;
     align-items: stretch;
-    gap: 12px;
+    width: 100%;
+    gap: 10px;
   }
 
   .hero-main-ctas .btn,
@@ -2593,21 +2612,31 @@ footer {
     text-align: center;
     justify-content: center;
     width: 100%;
+    max-width: 100%;
+    padding: 13px 16px;
+    font-size: clamp(0.82rem, 3.6vw, 0.92rem);
+    white-space: normal;
+    line-height: 1.25;
   }
 
   .hero-credentials {
-    gap: 14px;
+    gap: 12px;
     flex-wrap: wrap;
   }
 
   .hero-eyebrow {
-    font-size: 0.72rem;
+    font-size: clamp(0.66rem, 2.5vw, 0.76rem);
+    letter-spacing: 0.04em;
+    white-space: normal;
+    text-align: center;
+    line-height: 1.4;
+    margin-bottom: 12px;
+    max-width: 100%;
   }
 
   .hero-photo-identity-name {
     font-size: 0.98rem;
   }
-
 
   .decision-grid {
     grid-template-columns: 1fr;
@@ -2668,16 +2697,26 @@ footer {
   }
 
   .conversion-cta-banner {
-    padding: 40px 24px;
+    padding: clamp(28px, 5vw, 36px) clamp(14px, 4vw, 22px);
   }
 
   .conversion-cta-actions {
+    display: flex;
     flex-direction: column;
+    width: 100%;
+    gap: 10px;
+    align-items: stretch;
   }
 
   .conversion-cta-actions .btn {
     width: 100%;
+    max-width: 100%;
+    padding: 13px 16px;
+    font-size: clamp(0.82rem, 3.8vw, 0.92rem);
     justify-content: center;
+    white-space: normal;
+    line-height: 1.25;
+    text-align: center;
   }
 }
 
@@ -2687,8 +2726,11 @@ footer {
   }
 
   .brand-logo {
+    gap: 9px;
+  }
+
+  .brand-logo .brand-logo-text {
     font-size: 1.12rem;
-    gap: 10px;
   }
 
   .brand-logo .logo-mark {
@@ -2709,8 +2751,11 @@ footer {
 
 @media (max-width: 380px) {
   .brand-logo {
-    font-size: 1.04rem;
     gap: 8px;
+  }
+
+  .brand-logo .brand-logo-text {
+    font-size: 1.04rem;
   }
 
   .brand-logo .logo-mark {
