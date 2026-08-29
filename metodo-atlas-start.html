@@ -1,0 +1,922 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Método Atlas Start | Kevin Lincoln — Ponto de Partida Nutricional</title>
+    <meta name="description"
+        content="Conheça o Método Atlas Start com o nutricionista Kevin Lincoln (CRN 83678P): uma avaliação individualizada para transformar seu contexto real em um direcionamento nutricional inicial sob medida.">
+    <meta name="keywords"
+        content="método atlas start, nutricionista kevin lincoln, ponto de partida nutricional, estratégia alimentar, são josé do rio preto, nutrição online, plano alimentar">
+    <meta name="author" content="Kevin Lincoln">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://www.kevinlincoln.com.br/metodo-atlas-start.html">
+
+    <!-- Open Graph -->
+    <meta property="og:title" content="Método Atlas Start | Kevin Lincoln — Nutricionista">
+    <meta property="og:description"
+        content="Antes de mudar sua alimentação, entenda o seu ponto de partida. Estratégia nutricional individualizada com base clínica.">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://www.kevinlincoln.com.br/metodo-atlas-start.html">
+    <meta property="og:image" content="https://www.kevinlincoln.com.br/img/kevin-logo.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:locale" content="pt_BR">
+
+    <!-- Twitter Cards -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Método Atlas Start | Kevin Lincoln — Ponto de Partida Nutricional">
+    <meta name="twitter:description" content="Antes de mudar sua alimentação, entenda o seu ponto de partida. Estratégia nutricional individualizada com base clínica.">
+    <meta name="twitter:image" content="https://www.kevinlincoln.com.br/img/kevin-logo.png">
+
+    <!-- Favicon & Fonts -->
+    <link rel="icon" href="img/Prancheta 4@4x.png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <!-- BARRA DE PROGRESSO DE LEITURA -->
+    <div id="read-progress" class="read-progress"></div>
+
+    <!-- HEADER / NAVEGAÇÃO -->
+    <header id="header">
+        <div class="container header-flex">
+            <a href="index.html" class="brand-logo" aria-label="Kevin Lincoln Nutricionista">
+                <img src="img/Prancheta 4@4x.png" alt="Logo Kevin Lincoln" class="logo-mark"><span class="brand-logo-text">Nutri<span>.Kevin</span></span>
+            </a>
+
+            <nav class="nav-desk" aria-label="Menu Principal">
+                <ul>
+                    <li class="nav-item">
+                        <a href="index.html" class="nav-link">Início</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="metodo-atlas-start.html" class="nav-link active">Método Atlas Start</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="metodo-atlas.html" class="nav-link">Método Atlas</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="resultados.html" class="nav-link">Resultados</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="sobre.html" class="nav-link">Sobre Kevin</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="duvidas.html" class="nav-link">Dúvidas</a>
+                    </li>
+                </ul>
+            </nav>
+
+            <div class="header-actions">
+                <button type="button" class="btn btn-primary btn-header-cta" onclick="abrirFormulario('Método Atlas Start')">Iniciar Avaliação</button>
+                <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+                    <svg viewBox="0 0 24 24">
+                        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- DRAWER MOBILE -->
+    <div class="mobile-drawer-overlay" id="mobileDrawerOverlay"></div>
+    <aside class="mobile-drawer" id="mobileDrawer" aria-label="Menu Mobile">
+        <div>
+            <div class="mobile-drawer-header">
+                <a href="index.html" class="brand-logo">
+                    <img src="img/Prancheta 4@4x.png" alt="Logo" class="logo-mark"><span class="brand-logo-text">Nutri<span>.Kevin</span></span>
+                </a>
+                <button class="mobile-drawer-close" id="mobileDrawerClose" aria-label="Fechar menu">✕</button>
+            </div>
+
+            <nav class="mobile-nav-list">
+                <a href="index.html" class="mobile-nav-link">Início</a>
+                <a href="metodo-atlas-start.html" class="mobile-nav-link active">Método Atlas Start</a>
+                <a href="metodo-atlas.html" class="mobile-nav-link">Método Atlas</a>
+                <a href="resultados.html" class="mobile-nav-link">Resultados</a>
+                <a href="sobre.html" class="mobile-nav-link">Sobre Kevin</a>
+                <a href="duvidas.html" class="mobile-nav-link">Dúvidas</a>
+                <a href="contato.html" class="mobile-nav-link">Contato</a>
+            </nav>
+        </div>
+
+        <div class="mobile-drawer-footer">
+            <button class="btn btn-primary btn-full" onclick="abrirFormulario('Método Atlas Start')">Iniciar Avaliação</button>
+            <a href="https://wa.me/5517981114500" target="_blank" class="btn btn-whatsapp btn-full">
+                <svg viewBox="0 0 16 16">
+                    <path
+                        d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                </svg>
+                Falar no WhatsApp
+            </a>
+        </div>
+    </aside>
+
+    <!-- ── 01. HERO DO MÉTODO ATLAS START ── -->
+    <section class="hero-main hero-start" id="inicio">
+        <div class="hero-main-bg-glow"></div>
+        <div class="hero-main-line-grid" aria-hidden="true"></div>
+        <div class="container">
+            <div class="hero-main-grid">
+
+                <div class="hero-main-content js-fade-up">
+                    <div class="hero-eyebrow">
+                        <span class="hero-badge-dot"></span>
+                        <span>MÉTODO ATLAS START</span>
+                        <span class="hero-eyebrow-sep">·</span>
+                        <span>Ponto de Partida</span>
+                    </div>
+
+                    <h1 class="hero-main-headline">
+                        Antes de mudar sua alimentação, entenda o seu ponto de partida.
+                    </h1>
+
+                    <p class="hero-main-sub">
+                        Você responde uma avaliação detalhada da sua rotina e recebe um direcionamento nutricional inicial construído a partir das suas informações.
+                    </p>
+
+                    <div class="hero-main-ctas">
+                        <button type="button" class="btn btn-primary btn-lg hero-cta-primary"
+                            onclick="abrirFormulario('Método Atlas Start')">
+                            Iniciar avaliação do Atlas Start
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+                        <a href="#o-que-voce-recebe" class="hero-cta-secondary">
+                            Ver o que eu vou receber
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                                <path d="M19 9l-7 7-7-7" />
+                            </svg>
+                        </a>
+                    </div>
+
+                    <div class="hero-trust-line">
+                        <span>Avaliação individual</span>
+                        <span class="hero-trust-sep" aria-hidden="true">·</span>
+                        <span>Sem fórmulas prontas</span>
+                        <span class="hero-trust-sep" aria-hidden="true">·</span>
+                        <span>Direcionamento para sua rotina</span>
+                    </div>
+                </div>
+
+                <div class="hero-main-visual js-fade-up">
+                    <div class="hero-photo-frame">
+                        <div class="hero-photo-glow"></div>
+                        <div class="hero-photo-corner hero-photo-corner--tl" aria-hidden="true"></div>
+                        <div class="hero-photo-corner hero-photo-corner--br" aria-hidden="true"></div>
+                        <img src="img/kevin_3.png" alt="Kevin Lincoln — Nutricionista CRN 83678P" class="hero-photo-img">
+                        <div class="hero-photo-identity">
+                            <div class="hero-photo-identity-inner">
+                                <div class="hero-photo-identity-name">Kevin Lincoln</div>
+                                <div class="hero-photo-identity-role">Nutricionista Clínico &amp; Esportivo · CRN 83678P</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 02. EXPERIÊNCIA INTERATIVA: "EM QUAL MOMENTO VOCÊ ESTÁ?" ── -->
+    <section class="section-padding atlas-moment-section" id="encontre-seu-momento">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Autoidentificação</span>
+                <h2>Em qual momento você está?</h2>
+                <p>Escolha a situação que mais se aproxima da sua rotina hoje.</p>
+            </div>
+
+            <div class="moment-interactive-box js-fade-up">
+                <div class="moment-options-grid" role="radiogroup" aria-label="Escolha seu momento atual">
+
+                    <button type="button" class="moment-card active" data-moment="1" role="radio" aria-checked="true"
+                        tabindex="0">
+                        <div class="moment-card-indicator">
+                            <span class="moment-card-dot"></span>
+                        </div>
+                        <div class="moment-card-title">“Não sei por onde começar.”</div>
+                    </button>
+
+                    <button type="button" class="moment-card" data-moment="2" role="radio" aria-checked="false"
+                        tabindex="0">
+                        <div class="moment-card-indicator">
+                            <span class="moment-card-dot"></span>
+                        </div>
+                        <div class="moment-card-title">“Começo, mas não consigo manter.”</div>
+                    </button>
+
+                    <button type="button" class="moment-card" data-moment="3" role="radio" aria-checked="false"
+                        tabindex="0">
+                        <div class="moment-card-indicator">
+                            <span class="moment-card-dot"></span>
+                        </div>
+                        <div class="moment-card-title">“Quero organizar minha alimentação.”</div>
+                    </button>
+
+                    <button type="button" class="moment-card" data-moment="4" role="radio" aria-checked="false"
+                        tabindex="0">
+                        <div class="moment-card-indicator">
+                            <span class="moment-card-dot"></span>
+                        </div>
+                        <div class="moment-card-title">“Quero uma estratégia mais clara para minha rotina.”</div>
+                    </button>
+
+                </div>
+
+                <!-- Painel de Revelação Contextual -->
+                <div class="moment-feedback-panel">
+                    <div class="moment-feedback-tag">Por que o Atlas Start faz sentido para você:</div>
+                    <p class="moment-feedback-text" id="momentFeedbackText">
+                        O Start organiza suas prioridades e entrega um plano alimentar inicial sob medida para quebrar a inércia e começar com clareza imediata, sem adivinhações.
+                    </p>
+                    <div class="moment-feedback-action">
+                        <button type="button" class="btn btn-primary" onclick="abrirFormulario('Método Atlas Start')">
+                            Iniciar avaliação do Atlas Start &rarr;
+                        </button>
+                        <a href="#fluxo-estrategia" class="btn btn-secondary">
+                            Ver como funciona o fluxo
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 03. FLUXO VISUAL: "DA SUA ROTINA À SUA ESTRATÉGIA" ── -->
+    <section class="section-padding comparison-section" id="fluxo-estrategia">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">O Processo</span>
+                <h2>Da sua rotina à sua estratégia.</h2>
+                <p>Um fluxo direto para transformar suas informações em um ponto de partida concreto.</p>
+            </div>
+
+            <div class="flow-journey-wrap js-fade-up">
+
+                <!-- Passo 1: Você Conta -->
+                <div class="flow-step-item">
+                    <div class="flow-step-header">
+                        <span class="flow-step-tag">01 · Primeiro Passo</span>
+                        <div class="flow-step-dot"></div>
+                    </div>
+                    <h3 class="flow-step-title">Você conta</h3>
+                    <p class="flow-step-desc">Rotina de trabalho, horários de treino, preferências de alimentos, histórico e contexto real.</p>
+                </div>
+
+                <!-- Passo 2: Kevin Interpreta -->
+                <div class="flow-step-item">
+                    <div class="flow-step-header">
+                        <span class="flow-step-tag">02 · Rigor Clínico</span>
+                        <div class="flow-step-dot"></div>
+                    </div>
+                    <h3 class="flow-step-title">Kevin interpreta</h3>
+                    <p class="flow-step-desc">Suas informações são analisadas individualmente com base em bioquímica e nutrição esportiva.</p>
+                </div>
+
+                <!-- Passo 3: Você Começa com Direção -->
+                <div class="flow-step-item">
+                    <div class="flow-step-header">
+                        <span class="flow-step-tag">03 · Direcionamento</span>
+                        <div class="flow-step-dot"></div>
+                    </div>
+                    <h3 class="flow-step-title">Você começa com direção</h3>
+                    <p class="flow-step-desc">Um direcionamento nutricional inicial estruturado e pronto para você aplicar com autonomia.</p>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 04. SEÇÃO DIFERENCIADORA: "O QUE CHEGA ATÉ VOCÊ" (PRODUTO TANGÍVEL) ── -->
+    <section class="section-padding" id="o-que-voce-recebe">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Produto Tangível</span>
+                <h2>Seu ponto de partida, transformado em estratégia.</h2>
+                <p>Veja exatamente o que compõe o seu direcionamento inicial do Método Atlas Start.</p>
+            </div>
+
+            <div class="product-tangible-grid js-fade-up">
+
+                <!-- Mockup Visual do Dossiê Estratégico -->
+                <div class="dossier-preview-card">
+                    <div class="dossier-header">
+                        <div class="dossier-header-brand">
+                            <span class="dossier-pill">Protocolo Inicial</span>
+                            <span class="dossier-doc-id">Atlas Start · Direcionamento Clínico</span>
+                        </div>
+                        <div class="dossier-status">● Estratégia Individual</div>
+                    </div>
+
+                    <div class="dossier-body">
+                        <!-- Bloco 1 -->
+                        <div class="dossier-section-block">
+                            <div class="dossier-block-label">1. Diagnóstico do Ponto de Partida</div>
+                            <div class="dossier-block-summary">
+                                Contexto metabólico identificado, horários da sua rotina e organização de prioridades alimentares.
+                            </div>
+                        </div>
+
+                        <!-- Bloco 2 -->
+                        <div class="dossier-section-block">
+                            <div class="dossier-block-label">2. Metas Calóricas &amp; Macronutrientes</div>
+                            <div class="dossier-macro-pills">
+                                <span class="dossier-macro-item">Proteínas Calculadas</span>
+                                <span class="dossier-macro-item">Carboidratos Estratégicos</span>
+                                <span class="dossier-macro-item">Gorduras Essenciais</span>
+                                <span class="dossier-macro-item">Meta de Hidratação</span>
+                            </div>
+                        </div>
+
+                        <!-- Bloco 3 -->
+                        <div class="dossier-section-block">
+                            <div class="dossier-block-label">3. Estrutura de Refeições &amp; Opções Flexíveis</div>
+                            <div class="dossier-block-summary">
+                                Distribuição equilibrada ao longo do dia, com alimentos práticos e lista de substituições inteligentes.
+                            </div>
+                        </div>
+
+                        <!-- Bloco 4 -->
+                        <div class="dossier-section-block">
+                            <div class="dossier-block-label">4. Guia Prático de Execução (Primeiros 30 Dias)</div>
+                            <div class="dossier-block-summary">
+                                Recomendações pontuais para compras, organização de horários e estratégias para manter a constância.
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="dossier-footer">
+                        <span>Responsável Técnico: Kevin Lincoln · CRN 83678P</span>
+                        <span>Entrega Digital Direta</span>
+                    </div>
+                </div>
+
+                <!-- 4 Entregáveis em Síntese -->
+                <div class="deliverables-column">
+                    <div class="deliverable-card">
+                        <div class="deliverable-icon-box">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2"
+                                    stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" />
+                            </svg>
+                        </div>
+                        <div class="deliverable-text">
+                            <h4>Avaliação do Contexto</h4>
+                            <p>Análise aprofundada dos seus hábitos, rotina e preferências alimentares.</p>
+                        </div>
+                    </div>
+
+                    <div class="deliverable-card">
+                        <div class="deliverable-icon-box">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                            </svg>
+                        </div>
+                        <div class="deliverable-text">
+                            <h4>Estratégia Alimentar</h4>
+                            <p>Plano calculado e adaptado para seu objetivo sem restrições radicais.</p>
+                        </div>
+                    </div>
+
+                    <div class="deliverable-card">
+                        <div class="deliverable-icon-box">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                            </svg>
+                        </div>
+                        <div class="deliverable-text">
+                            <h4>Tabela de Substituições</h4>
+                            <p>Flexibilidade para variar o cardápio sem sair da estratégia.</p>
+                        </div>
+                    </div>
+
+                    <div class="deliverable-card">
+                        <div class="deliverable-icon-box">
+                            <svg viewBox="0 0 24 24">
+                                <path d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z" stroke="currentColor"
+                                    stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
+                            </svg>
+                        </div>
+                        <div class="deliverable-text">
+                            <h4>Guia de Aplicação</h4>
+                            <p>Instruções diretas para você aplicar o protocolo com total autonomia.</p>
+                        </div>
+                    </div>
+
+                    <div class="deliverables-cta-wrap">
+                        <button type="button" class="btn btn-primary btn-full"
+                            onclick="abrirFormulario('Método Atlas Start')">
+                            Iniciar avaliação do Atlas Start &rarr;
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 05. CONTRASTES ESTRATÉGICOS (SEM ATACAR CONCORRENTES) ── -->
+    <section class="section-padding comparison-section" id="contrastes">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Visão Estratégica</span>
+                <h2>O Start não começa pela prescrição. Começa entendendo sua realidade.</h2>
+                <p>A diferença entre tentar dietas aleatórias e seguir um ponto de partida construído para você.</p>
+            </div>
+
+            <div class="contrast-grid js-fade-up">
+
+                <div class="contrast-card">
+                    <div class="contrast-from">
+                        <span class="contrast-tag contrast-tag--from">Antes</span>
+                        <h4>Improviso</h4>
+                        <p>Comer sem saber se as quantidades e escolhas estão certas para o seu objetivo.</p>
+                    </div>
+                    <div class="contrast-arrow" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" fill="none" />
+                        </svg>
+                    </div>
+                    <div class="contrast-to">
+                        <span class="contrast-tag contrast-tag--to">Com o Start</span>
+                        <h4>Direção</h4>
+                        <p>Saber exatamente o que comer em cada refeição com clareza e segurança.</p>
+                    </div>
+                </div>
+
+                <div class="contrast-card">
+                    <div class="contrast-from">
+                        <span class="contrast-tag contrast-tag--from">Antes</span>
+                        <h4>Informação Solta</h4>
+                        <p>Dicas da internet que não consideram sua rotina de trabalho, treinos e preferências.</p>
+                    </div>
+                    <div class="contrast-arrow" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" fill="none" />
+                        </svg>
+                    </div>
+                    <div class="contrast-to">
+                        <span class="contrast-tag contrast-tag--to">Com o Start</span>
+                        <h4>Estratégia Organizada</h4>
+                        <p>Um plano estruturado individualmente pelo nutricionista Kevin Lincoln.</p>
+                    </div>
+                </div>
+
+                <div class="contrast-card">
+                    <div class="contrast-from">
+                        <span class="contrast-tag contrast-tag--from">Antes</span>
+                        <h4>Começar de Qualquer Jeito</h4>
+                        <p>Restrições agressivas que geram desmotivação e abandono em poucos dias.</p>
+                    </div>
+                    <div class="contrast-arrow" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" width="20" height="20">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke="currentColor" stroke-width="2.5"
+                                stroke-linecap="round" fill="none" />
+                        </svg>
+                    </div>
+                    <div class="contrast-to">
+                        <span class="contrast-tag contrast-tag--to">Com o Start</span>
+                        <h4>Ter um Ponto de Partida</h4>
+                        <p>Um alicerce sustentável para você construir consistência no seu próprio ritmo.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 06. QUALIFICAÇÃO & CROSS-SELL: "START FAZ SENTIDO SE..." ── -->
+    <section class="section-padding" id="qualificacao">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Qualificação</span>
+                <h2>O Start resolve uma coisa muito bem: dar direção para começar.</h2>
+                <p>Descubra se este é o formato ideal para as suas necessidades agora.</p>
+            </div>
+
+            <div class="qualification-dual-grid js-fade-up">
+
+                <!-- Box Start -->
+                <div class="qualify-box qualify-box--start">
+                    <div>
+                        <div class="qualify-box-header">
+                            <span class="qualify-pill qualify-pill--start">Ponto de Partida</span>
+                            <h3>O Atlas Start faz sentido se:</h3>
+                        </div>
+                        <div class="qualify-list">
+                            <div class="qualify-item">
+                                <svg viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Você quer organizar sua alimentação e saber exatamente o que comer.</span>
+                            </div>
+                            <div class="qualify-item">
+                                <svg viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Você busca uma estratégia inicial personalizada para seguir com autonomia.</span>
+                            </div>
+                            <div class="qualify-item">
+                                <svg viewBox="0 0 20 20">
+                                    <path fill-rule="evenodd"
+                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                                        clip-rule="evenodd" />
+                                </svg>
+                                <span>Você prefere conhecer a metodologia antes de um acompanhamento longo.</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="qualify-action">
+                        <button type="button" class="btn btn-outline-primary btn-full"
+                            onclick="abrirFormulario('Método Atlas Start')">
+                            Iniciar avaliação do Atlas Start &rarr;
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Box Cross-sell Método Atlas -->
+                <div class="qualify-box qualify-box--atlas">
+                    <div>
+                        <div class="qualify-box-header">
+                            <span class="qualify-pill qualify-pill--atlas">Acompanhamento Contínuo</span>
+                            <h3>Precisa de suporte e evolução contínua?</h3>
+                        </div>
+                        <p class="qualify-atlas-desc">
+                            O <strong>Método Atlas completo</strong> foi desenvolvido para quem busca contato próximo via WhatsApp, análise de exames e reavaliações com ajustes periódicos ao longo dos meses.
+                        </p>
+                        <div class="qualify-atlas-features">
+                            <div class="qualify-atlas-item">● Contato direto e suporte com o nutricionista</div>
+                            <div class="qualify-atlas-item">● Ajustes estratégicos periódicos na dieta</div>
+                            <div class="qualify-atlas-item">● Opções de Planos Trimestral, Semestral e Anual</div>
+                        </div>
+                    </div>
+                    <div class="qualify-action">
+                        <a href="metodo-atlas.html" class="btn btn-secondary btn-full">
+                            Conhecer o Método Atlas &rarr;
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 07. AUTORIDADE COMPACTA (SÍNTESE DO KEVIN) ── -->
+    <section class="section-padding comparison-section" id="autoridade">
+        <div class="container">
+            <div class="compact-author-card js-fade-up">
+                <div class="compact-author-photo">
+                    <img src="img/kevin.png" alt="Kevin Lincoln — Nutricionista" loading="lazy">
+                </div>
+                <div class="compact-author-info">
+                    <h3>Kevin Lincoln</h3>
+                    <div class="compact-author-role">Nutricionista Clínico &amp; Esportivo · CRN 83678P</div>
+                    <p>Nutricionista dedicado a construir estratégias alimentares individualizadas que combinam rigor científico à rotina real de cada paciente, eliminando dietas restritivas e gerando consistência desde o primeiro passo.</p>
+                    <div class="compact-author-link">
+                        <a href="sobre.html">Conheça minha história &rarr;</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 08. DÚVIDAS FREQUENTES (FAQ COMERCIAL FOCADO) ── -->
+    <section class="section-padding" id="duvidas">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Dúvidas Frequentes</span>
+                <h2>Perguntas frequentes sobre o Start</h2>
+                <p>Respostas diretas e transparentes antes de iniciar sua avaliação.</p>
+            </div>
+
+            <div class="faq-grid js-fade-up">
+
+                <div class="faq-card">
+                    <button class="faq-trigger" type="button">
+                        <span>O Atlas Start é um acompanhamento contínuo?</span>
+                        <div class="faq-icon-cross">
+                            <svg viewBox="0 0 14 14">
+                                <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            Não. O Atlas Start é um direcionamento nutricional inicial personalizado entregue sob medida para você começar com clareza e autonomia. Caso você busque suporte contínuo via WhatsApp, reavaliações e ajustes periódicos, indicamos o <strong>Método Atlas</strong> (planos Trimestral, Semestral ou Anual).
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-trigger" type="button">
+                        <span>O que acontece depois que eu respondo a avaliação?</span>
+                        <div class="faq-icon-cross">
+                            <svg viewBox="0 0 14 14">
+                                <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            O nutricionista Kevin Lincoln analisa clinicamente cada resposta da sua ficha (rotina, preferências, horários e objetivos) e estrutura seu planejamento alimentar individualizado com metas calóricas, opções de refeições e orientações práticas de aplicação.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-trigger" type="button">
+                        <span>Como recebo o meu direcionamento?</span>
+                        <div class="faq-icon-cross">
+                            <svg viewBox="0 0 14 14">
+                                <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            Você recebe seu direcionamento digital completo diretamente no seu WhatsApp e e-mail cadastrados, pronto para leitura e fácil consulta no celular ou computador.
+                        </div>
+                    </div>
+                </div>
+
+                <div class="faq-card">
+                    <button class="faq-trigger" type="button">
+                        <span>O Start é indicado para qualquer objetivo?</span>
+                        <div class="faq-icon-cross">
+                            <svg viewBox="0 0 14 14">
+                                <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2"
+                                    stroke-linecap="round" />
+                            </svg>
+                        </div>
+                    </button>
+                    <div class="faq-content">
+                        <div class="faq-content-inner">
+                            Sim. Como cada protocolo é calculado individualmente a partir das suas respostas, o direcionamento atende com precisão objetivos como emagrecimento, ganho de massa, organização da rotina alimentar ou melhora da saúde.
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ── 09. CTA FINAL DE CONVERSÃO ── -->
+    <section class="section-padding comparison-section cta-final-section" id="cta-final">
+        <div class="container">
+            <div class="conversion-cta-banner js-fade-up">
+                <div class="cta-final-badge">
+                    <span></span>
+                    <span>Seu Ponto de Partida</span>
+                </div>
+                <h2>Seu ponto de partida começa pelas informações certas.</h2>
+                <p>Responda sua avaliação e dê ao Kevin o contexto necessário para construir seu direcionamento inicial.</p>
+                <div class="conversion-cta-actions">
+                    <button type="button" class="btn btn-primary btn-lg"
+                        onclick="abrirFormulario('Método Atlas Start')">
+                        Iniciar avaliação do Atlas Start
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                            stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+                            <path d="M5 12h14M12 5l7 7-7 7" />
+                        </svg>
+                    </button>
+                    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20M%C3%A9todo%20Atlas%20Start."
+                        target="_blank" class="btn btn-whatsapp btn-lg">
+                        <svg viewBox="0 0 16 16">
+                            <path
+                                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+                        </svg>
+                        Falar com Kevin
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ── MOBILE STICKY CTA BAR ── -->
+    <div class="mobile-sticky-cta" id="mobileStickyCta" aria-hidden="true">
+        <div class="mobile-sticky-inner">
+            <div class="mobile-sticky-text">
+                <strong>Método Atlas Start</strong>
+                <span>Ponto de partida sob medida</span>
+            </div>
+            <button type="button" class="btn btn-primary btn-sm" onclick="abrirFormulario('Método Atlas Start')">
+                Iniciar avaliação
+            </button>
+        </div>
+    </div>
+
+    <!-- ── FOOTER GLOBAL ── -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-about">
+                    <a href="index.html" class="brand-logo">
+                        <img src="img/Prancheta 4@4x.png" alt="Logo" class="logo-mark"><span class="brand-logo-text">Nutri<span>.Kevin</span></span>
+                    </a>
+                    <br>
+                    <span class="footer-crn">CRN: 83678P</span>
+                    <p>Nutrição baseada em evidência para emagrecimento, saúde metabólica e performance.</p>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Navegação</h4>
+                    <nav class="footer-nav">
+                        <a href="index.html">Início</a>
+                        <a href="metodo-atlas-start.html">Método Atlas Start</a>
+                        <a href="metodo-atlas.html">Método Atlas</a>
+                        <a href="metodo-atlas.html#planos">Planos do Acompanhamento</a>
+                    </nav>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Institucional</h4>
+                    <nav class="footer-nav">
+                        <a href="resultados.html">Resultados</a>
+                        <a href="sobre.html">Sobre o Kevin</a>
+                        <a href="duvidas.html">Dúvidas Frequentes</a>
+                        <a href="contato.html">Avaliação & Contato</a>
+                    </nav>
+                </div>
+
+                <div class="footer-col">
+                    <h4>Atendimento</h4>
+                    <div class="footer-contact-list">
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M3.654 1.328a.678.678 0 0 0-1.015-.063L1.605 2.3c-.483.484-.661 1.169-.45 1.77a17.568 17.568 0 0 0 4.168 6.608 17.569 17.569 0 0 0 6.608 4.168c.601.211 1.286.033 1.77-.45l1.034-1.034a.678.678 0 0 0-.063-1.015l-2.307-1.794a.678.678 0 0 0-.58-.122l-2.19.547a1.745 1.745 0 0 1-1.657-.459L5.482 8.06a1.745 1.745 0 0 1-.46-1.657l.548-2.19a.678.678 0 0 0-.122-.58L3.654 1.328zM1.884.511a1.745 1.745 0 0 1 2.612.163L6.29 2.98c.329.423.445.974.315 1.494l-.547 2.19a.678.678 0 0 0 .178.643l2.457 2.457a.678.678 0 0 0 .644.178l2.189-.547a1.745 1.745 0 0 1 1.494.315l2.306 1.794c.829.645.905 1.87.163 2.611l-1.034 1.034c-.74.74-1.846 1.065-2.877.702a18.634 18.634 0 0 1-7.01-4.42 18.634 18.634 0 0 1-4.42-7.009c-.362-1.03-.037-2.137.703-2.877L1.885.511z"/></svg>
+                            <span>(17) 98111-4500</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M.05 3.555A2 2 0 0 1 2 2h12a2 2 0 0 1 1.95 1.555L8 8.414.05 3.555zM0 4.697v7.104l5.803-3.558L0 4.697zM6.761 8.83l-6.57 4.027A2 2 0 0 0 2 14h12a2 2 0 0 0 1.808-1.144l-6.57-4.027L8 9.586l-1.239-.757zm3.436-.586L16 11.801V4.697l-5.803 3.547z"/></svg>
+                            <span>Kevinlincoln09@icloud.com</span>
+                        </div>
+                        <div class="footer-contact-item">
+                            <svg viewBox="0 0 16 16"><path d="M8 16s6-5.686 6-10A6 6 0 0 0 2 6c0 4.314 6 10 6 10zm0-7a3 3 0 1 1 0-6 3 3 0 0 1 0 6z"/></svg>
+                            <span>São José do Rio Preto - SP</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <div>&copy; <span id="ano-atual"></span> Kevin Lincoln. Todos os direitos reservados.</div>
+                <div>Nutrição de precisão e alta performance clínica.</div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ── FLOATING WHATSAPP BUTTON ── -->
+    <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20M%C3%A9todo%20Atlas%20Start."
+        target="_blank" class="floating-wa" id="floatingWa" aria-label="Falar com Kevin no WhatsApp">
+        <svg viewBox="0 0 16 16">
+            <path
+                d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232" />
+        </svg>
+        <span class="floating-wa-tooltip">Falar com Kevin</span>
+    </a>
+
+    <!-- ── MODAL GLOBAL DE AVALIAÇÃO ── -->
+    <div id="modal-overlay" class="modal-overlay" onclick="fecharSeClicarFora(event)">
+        <div class="modal-box" role="dialog" aria-modal="true" aria-labelledby="modalTitulo">
+            <button class="modal-close" onclick="fecharFormulario()" aria-label="Fechar formulário">✕</button>
+
+            <div id="modal-form-content">
+                <div style="margin-bottom: 24px;">
+                    <span class="section-badge" style="margin-bottom: 8px;">Avaliação Inicial</span>
+                    <h2 id="modalTitulo" style="font-size: 1.45rem;">Vamos entender seu objetivo?</h2>
+                    <p style="font-size: 0.9rem; margin-top: 4px;">Preencha seus dados para receber o direcionamento estratégico do Método Atlas Start.</p>
+                </div>
+
+                <div class="form-group-title">1. Dados Pessoais</div>
+                <div class="form-grid-2">
+                    <div class="form-control">
+                        <label for="m-nome">Nome completo *</label>
+                        <input type="text" id="m-nome" placeholder="Seu nome completo" maxlength="80" autocomplete="name">
+                    </div>
+                    <div class="form-control">
+                        <label for="m-idade">Idade *</label>
+                        <input type="number" id="m-idade" placeholder="Ex: 28" min="12" max="99">
+                    </div>
+                </div>
+
+                <div class="form-grid-2">
+                    <div class="form-control">
+                        <label for="m-email">E-mail *</label>
+                        <input type="email" id="m-email" placeholder="seu@email.com" autocomplete="email">
+                    </div>
+                    <div class="form-control">
+                        <label for="m-whats">WhatsApp com DDD *</label>
+                        <input type="tel" id="m-whats" placeholder="(17) 99999-9999" maxlength="15" autocomplete="tel">
+                    </div>
+                </div>
+
+                <div class="form-group-title">2. Perfil Físico &amp; Objetivo</div>
+                <div class="form-grid-2">
+                    <div class="form-control">
+                        <label for="m-peso">Peso atual (kg) *</label>
+                        <input type="number" id="m-peso" placeholder="Ex: 75" step="0.1">
+                    </div>
+                    <div class="form-control">
+                        <label for="m-altura">Altura (cm) *</label>
+                        <input type="number" id="m-altura" placeholder="Ex: 175">
+                    </div>
+                </div>
+
+                <div class="form-control">
+                    <label>Objetivo Principal *</label>
+                    <div class="chip-options-grid">
+                        <div class="chip-option">
+                            <input type="radio" name="m-obj" id="m-obj-emag" checked>
+                            <label for="m-obj-emag" class="chip-label">Emagrecimento</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-obj" id="m-obj-massa">
+                            <label for="m-obj-massa" class="chip-label">Ganho de Massa</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-obj" id="m-obj-saude">
+                            <label for="m-obj-saude" class="chip-label">Saúde Geral</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-obj" id="m-obj-perf">
+                            <label for="m-obj-perf" class="chip-label">Performance</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="form-group-title">3. Acompanhamento Selecionado</div>
+                <div class="form-control">
+                    <div class="chip-options-grid">
+                        <div class="chip-option">
+                            <input type="radio" name="m-servico" id="m-servico-start" checked>
+                            <label for="m-servico-start" class="chip-label">Método Atlas Start</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-servico" id="m-servico-trimestral">
+                            <label for="m-servico-trimestral" class="chip-label">Plano Trimestral</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-servico" id="m-servico-semestral">
+                            <label for="m-servico-semestral" class="chip-label">Plano Semestral</label>
+                        </div>
+                        <div class="chip-option">
+                            <input type="radio" name="m-servico" id="m-servico-anual">
+                            <label for="m-servico-anual" class="chip-label">Plano Anual</label>
+                        </div>
+                    </div>
+                </div>
+
+                <div style="margin-top: 24px;">
+                    <button type="button" class="btn btn-primary btn-full" id="m-btn-enviar"
+                        onclick="validarEEnviarFormulario('modal')">ENVIAR AVALIAÇÃO &rarr;</button>
+                </div>
+            </div>
+
+            <!-- TELA DE SUCESSO DO MODAL -->
+            <div id="modal-form-sucesso" class="form-success-message">
+                <div class="form-success-icon">
+                    <svg viewBox="0 0 20 20">
+                        <path fill-rule="evenodd"
+                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
+                            clip-rule="evenodd" />
+                    </svg>
+                </div>
+                <h3>Dados enviados com sucesso!</h3>
+                <p style="margin-bottom: 24px;">Recebi suas informações e entrarei em contato em breve para estruturar o seu ponto de partida.</p>
+                <div style="display: flex; flex-direction: column; gap: 10px;">
+                    <a href="https://wa.me/5517981114500" target="_blank"
+                        class="btn btn-whatsapp btn-full btn-wa-confirmar">Confirmar no WhatsApp</a>
+                    <button type="button" class="btn btn-secondary btn-full" onclick="fecharFormulario()">Fechar Janela</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- EmailJS SDK -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>

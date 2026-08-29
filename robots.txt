@@ -1,0 +1,16 @@
+# Robots.txt — Kevin Lincoln Nutricionista
+# https://www.kevinlincoln.com.br/
+
+# Permitir rastreamento de todos os robôs nas páginas públicas
+User-agent: *
+Allow: /
+
+# Bloquear páginas internas sem valor para indexação
+Disallow: /acompanhamento-premium.html
+Disallow: /projeto-24-dias.html
+Disallow: /historia.html
+Disallow: /metodo-atlas-start - Reserva.html
+Disallow: /google264a2ca6165652c3.html
+
+# Localização do Sitemap
+Sitemap: https://www.kevinlincoln.com.br/sitemap.xml
