@@ -1,0 +1,12 @@
+{
+  "rewrites": [
+    {
+      "source": "/desafio-atlas-start",
+      "destination": "https://desafio-atlas-start.vercel.app"
+    },
+    {
+      "source": "/desafio-atlas-start/:path*",
+      "destination": "https://desafio-atlas-start.vercel.app/:path*"
+    }
+  ]
+}
