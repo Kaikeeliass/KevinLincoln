@@ -1,42 +1,42 @@
-/* ==========================================================================
+﻿/* ==========================================================================
    KEVIN LINCOLN — NUTRICIONISTA | DESIGN SYSTEM & STYLESHEET GLOBAL
    ========================================================================== */
 
 /* ── 01. VARIÁVEIS GLOBAIS & DESIGN TOKENS ── */
 :root {
   /* Cores Principais */
-  --primary: #d65a5a;
-  --primary-hover: #b84343;
-  --primary-dark: #8b2424;
-  --primary-glow: rgba(214, 90, 90, 0.28);
-  --primary-subtle: rgba(214, 90, 90, 0.08);
-  --primary-border: rgba(214, 90, 90, 0.22);
+  --primary: #D95757;
+  --primary-hover: #C04848;
+  --primary-dark: #8E3038;
+  --primary-glow: rgba(217, 87, 87, 0.28);
+  --primary-subtle: rgba(217, 87, 87, 0.08);
+  --primary-border: rgba(217, 87, 87, 0.22);
   
-  --secondary: #0eb55c;
-  --secondary-hover: #0b974c;
-  --secondary-glow: rgba(14, 181, 92, 0.25);
-  --secondary-subtle: rgba(14, 181, 92, 0.08);
+  --secondary: #19B46B;
+  --secondary-hover: #148F55;
+  --secondary-glow: rgba(25, 180, 107, 0.25);
+  --secondary-subtle: rgba(25, 180, 107, 0.08);
   
   /* Fundos Escuros Profissionais */
-  --bg-body: #0b0d11;
-  --bg-surface: #11141b;
-  --bg-card: #161b24;
-  --bg-card-hover: #1c222e;
-  --bg-alt: #0e1117;
+  --bg-body: #08090C;
+  --bg-surface: #12151B;
+  --bg-card: #12151B;
+  --bg-card-hover: #181D25;
+  --bg-alt: #0D1014;
   
   /* Textos */
-  --text-primary: #f2f5f9;
-  --text-secondary: #9aa5b5;
+  --text-primary: #F5F5F2;
+  --text-secondary: #8D96A8;
   --text-muted: #647082;
   --text-highlight: #ffffff;
   
   /* Bordas e Linhas */
   --border-subtle: rgba(255, 255, 255, 0.06);
   --border-medium: rgba(255, 255, 255, 0.12);
-  --border-active: rgba(214, 90, 90, 0.4);
+  --border-active: rgba(217, 87, 87, 0.4);
   
   /* Glassmorphism */
-  --glass-bg: rgba(14, 17, 23, 0.78);
+  --glass-bg: rgba(8, 9, 12, 0.82);
   --glass-border: rgba(255, 255, 255, 0.07);
   --glass-blur: blur(16px);
   
@@ -48,7 +48,7 @@
   --shadow-sm: 0 4px 12px rgba(0, 0, 0, 0.25);
   --shadow-md: 0 12px 32px rgba(0, 0, 0, 0.35);
   --shadow-lg: 0 24px 48px rgba(0, 0, 0, 0.5);
-  --shadow-glow: 0 0 30px rgba(214, 90, 90, 0.2);
+  --shadow-glow: 0 0 30px rgba(217, 87, 87, 0.2);
   
   /* Raios */
   --radius-sm: 8px;
@@ -252,17 +252,17 @@ strong {
 }
 
 .btn-primary {
-  background: var(--primary);
+  background: linear-gradient(135deg, #D95757, #8E3038);
   color: #ffffff;
   border: 1px solid var(--primary);
-  box-shadow: 0 4px 18px rgba(214, 90, 90, 0.35);
+  box-shadow: 0 4px 18px rgba(217, 87, 87, 0.15);
 }
 
 .btn-primary:hover {
-  background: var(--primary-hover);
+  background: linear-gradient(135deg, #E26666, #9C3842);
   border-color: var(--primary-hover);
   transform: translateY(-2px);
-  box-shadow: 0 8px 26px rgba(214, 90, 90, 0.48);
+  box-shadow: 0 8px 26px rgba(217, 87, 87, 0.15);
 }
 
 .btn-secondary {
@@ -294,13 +294,13 @@ strong {
   background: #128c46;
   color: #ffffff;
   border: 1px solid #149c4f;
-  box-shadow: 0 4px 16px rgba(14, 181, 92, 0.28);
+  box-shadow: 0 4px 16px rgba(25, 180, 107, 0.15);
 }
 
 .btn-whatsapp:hover {
   background: #0ea14f;
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(14, 181, 92, 0.42);
+  box-shadow: 0 8px 24px rgba(25, 180, 107, 0.15);
 }
 
 .btn-sm {
@@ -391,13 +391,13 @@ header.scrolled {
   background: rgba(255, 255, 255, 0.035);
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 3px;
-  filter: drop-shadow(0 2px 10px rgba(214, 90, 90, 0.25));
+  filter: drop-shadow(0 2px 10px rgba(217, 87, 87, 0.15));
   transition: border-color var(--transition-fast), filter var(--transition-fast), transform var(--transition-fast);
 }
 
 .brand-logo:hover .logo-mark {
-  border-color: rgba(214, 90, 90, 0.35);
-  filter: drop-shadow(0 2px 14px rgba(214, 90, 90, 0.4));
+  border-color: rgba(217, 87, 87, 0.15);
+  filter: drop-shadow(0 2px 14px rgba(217, 87, 87, 0.4));
 }
 
 .brand-logo .brand-logo-text,
@@ -473,10 +473,10 @@ header.scrolled {
 
 .nav-link.active {
   color: #ffffff;
-  background: rgba(214, 90, 90, 0.14);
-  border-color: rgba(214, 90, 90, 0.35);
+  background: rgba(217, 87, 87, 0.15);
+  border-color: rgba(217, 87, 87, 0.15);
   font-weight: 600;
-  box-shadow: 0 2px 10px rgba(214, 90, 90, 0.15);
+  box-shadow: 0 2px 10px rgba(217, 87, 87, 0.15);
 }
 
 .nav-link .dropdown-caret {
@@ -545,7 +545,7 @@ header.scrolled {
 
 .dropdown-link:hover,
 .dropdown-link.active {
-  background: rgba(214, 90, 90, 0.14);
+  background: rgba(217, 87, 87, 0.15);
   color: #ffffff;
 }
 
@@ -574,10 +574,10 @@ header.scrolled {
   letter-spacing: 0.01em;
   white-space: nowrap !important;
   color: #ffffff;
-  background: linear-gradient(135deg, #d65a5a 0%, #be4343 100%);
+  background: linear-gradient(135deg, #D95757 0%, #be4343 100%);
   border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: var(--radius-pill);
-  box-shadow: 0 4px 16px rgba(214, 90, 90, 0.32);
+  box-shadow: 0 4px 16px rgba(217, 87, 87, 0.15);
   transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
   text-decoration: none;
   line-height: 1.2;
@@ -587,7 +587,7 @@ header.scrolled {
 .btn-header-cta:hover {
   background: linear-gradient(135deg, #e36666 0%, #cb4848 100%);
   transform: translateY(-2px);
-  box-shadow: 0 8px 24px rgba(214, 90, 90, 0.45);
+  box-shadow: 0 8px 24px rgba(217, 87, 87, 0.15);
   border-color: rgba(255, 255, 255, 0.35);
   color: #ffffff;
 }
@@ -774,7 +774,7 @@ header.scrolled {
   right: -5%;
   width: 800px;
   height: 800px;
-  background: radial-gradient(ellipse at center, rgba(214, 90, 90, 0.10) 0%, transparent 62%);
+  background: radial-gradient(ellipse at center, rgba(217, 87, 87, 0.15) 0%, transparent 62%);
   pointer-events: none;
   z-index: 0;
 }
@@ -834,7 +834,7 @@ header.scrolled {
   background: var(--secondary);
   display: inline-block;
   flex-shrink: 0;
-  box-shadow: 0 0 8px rgba(14, 181, 92, 0.7);
+  box-shadow: 0 0 8px rgba(25, 180, 107, 0.15);
   animation: pulse-dot 2.2s ease-in-out infinite;
 }
 
@@ -901,10 +901,10 @@ header.scrolled {
 .hero-cta-secondary:hover,
 .hero-cta-secondary-link:hover {
   border-color: var(--primary);
-  background: rgba(214, 90, 90, 0.08);
+  background: rgba(217, 87, 87, 0.08);
   color: var(--primary);
   transform: translateY(-2px);
-  box-shadow: 0 4px 16px rgba(214, 90, 90, 0.15);
+  box-shadow: 0 4px 16px rgba(217, 87, 87, 0.15);
 }
 
 .hero-cta-secondary svg,
@@ -984,7 +984,7 @@ header.scrolled {
 .hero-photo-glow {
   position: absolute;
   inset: -12%;
-  background: radial-gradient(ellipse at 60% 40%, rgba(214, 90, 90, 0.14) 0%, transparent 65%);
+  background: radial-gradient(ellipse at 60% 40%, rgba(217, 87, 87, 0.15) 0%, transparent 65%);
   pointer-events: none;
   z-index: 0;
 }
@@ -1034,7 +1034,7 @@ header.scrolled {
 }
 
 .hero-photo-identity-status .hero-badge-dot {
-  box-shadow: 0 0 6px rgba(14, 181, 92, 0.8);
+  box-shadow: 0 0 6px rgba(25, 180, 107, 0.15);
 }
 
 .hero-photo-identity-name {
@@ -1056,7 +1056,7 @@ header.scrolled {
 .hero-photo-identity-avail {
   font-size: 0.7rem;
   font-weight: 500;
-  color: rgba(14, 181, 92, 0.75);
+  color: rgba(25, 180, 107, 0.15);
   letter-spacing: 0.02em;
 }
 /* ── SEÇÃO DE ESCOLHA (hero-hub adaptado) ── */
@@ -1128,7 +1128,7 @@ header.scrolled {
 .decision-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary-border);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(214, 90, 90, 0.15);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.4), 0 0 24px rgba(217, 87, 87, 0.15);
 }
 
 .decision-card:hover::before {
@@ -1159,8 +1159,8 @@ header.scrolled {
 
 .decision-card-tag--premium {
   color: #ff8a8a;
-  background: rgba(214, 90, 90, 0.15);
-  border-color: rgba(214, 90, 90, 0.35);
+  background: rgba(217, 87, 87, 0.15);
+  border-color: rgba(217, 87, 87, 0.15);
 }
 
 .decision-card-title {
@@ -1413,7 +1413,7 @@ header.scrolled {
 .diff-card:hover {
   transform: translateY(-5px);
   border-color: var(--primary-border);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(214, 90, 90, 0.12);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(217, 87, 87, 0.15);
 }
 
 .diff-icon-wrap {
@@ -1481,7 +1481,7 @@ header.scrolled {
 .pillar-card:hover {
   transform: translateY(-6px);
   border-color: var(--primary-border);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(214, 90, 90, 0.12);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(217, 87, 87, 0.15);
 }
 
 .pillar-card:hover::after {
@@ -1567,7 +1567,7 @@ header.scrolled {
 .plan-card-pro:hover {
   transform: translateY(-8px);
   border-color: var(--primary);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 24px rgba(214, 90, 90, 0.2);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.5), 0 0 24px rgba(217, 87, 87, 0.2);
 }
 
 .plan-badge-holder {
@@ -1585,8 +1585,8 @@ header.scrolled {
   text-transform: uppercase;
   letter-spacing: 0.08em;
   color: #ff8a8a;
-  background: rgba(214, 90, 90, 0.12);
-  border: 1px solid rgba(214, 90, 90, 0.3);
+  background: rgba(217, 87, 87, 0.15);
+  border: 1px solid rgba(217, 87, 87, 0.15);
   padding: 3px 10px;
   border-radius: var(--radius-pill);
 }
@@ -1866,7 +1866,7 @@ header.scrolled {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  background: linear-gradient(135deg, rgba(214, 90, 90, 0.3) 0%, rgba(214, 90, 90, 0.12) 100%);
+  background: linear-gradient(135deg, rgba(217, 87, 87, 0.15) 0%, rgba(217, 87, 87, 0.15) 100%);
   border: 1.5px solid var(--primary-border);
   color: var(--primary);
   font-family: var(--font-heading);
@@ -2316,7 +2316,7 @@ header.scrolled {
 
 /* ── 22. CTA BANNER FINAL DE CONVERSÃO ── */
 .conversion-cta-banner {
-  background: radial-gradient(circle at center, rgba(214, 90, 90, 0.18) 0%, var(--bg-surface) 70%);
+  background: radial-gradient(circle at center, rgba(217, 87, 87, 0.15) 0%, var(--bg-surface) 70%);
   border: 1px solid var(--border-medium);
   border-radius: var(--radius-lg);
   padding: clamp(36px, 5vw, 56px) clamp(20px, 4vw, 40px);
@@ -2825,7 +2825,7 @@ footer {
 }
 
 .cta-final-section {
-  background: linear-gradient(180deg, var(--bg-body) 0%, var(--bg-alt) 100%);
+  background: linear-gradient(135deg, #08090C, #12151B);
 }
 
 .conversion-cta-banner h2 {
@@ -2871,17 +2871,17 @@ footer {
 }
 
 .moment-card:hover {
-  background: rgba(214, 90, 90, 0.04);
-  border-color: rgba(214, 90, 90, 0.35);
+  background: rgba(217, 87, 87, 0.15);
+  border-color: rgba(217, 87, 87, 0.15);
   color: var(--text-primary);
   transform: translateY(-2px);
 }
 
 .moment-card.active {
-  background: rgba(214, 90, 90, 0.08);
+  background: rgba(217, 87, 87, 0.08);
   border-color: var(--primary);
   color: var(--text-highlight);
-  box-shadow: 0 0 20px rgba(214, 90, 90, 0.15);
+  box-shadow: 0 0 20px rgba(217, 87, 87, 0.15);
 }
 
 .moment-card-indicator {
@@ -2924,7 +2924,7 @@ footer {
 
 .moment-feedback-panel {
   background: rgba(11, 13, 17, 0.7);
-  border: 1px solid rgba(214, 90, 90, 0.2);
+  border: 1px solid rgba(217, 87, 87, 0.2);
   border-radius: var(--radius-md);
   padding: 28px;
   border-left: 4px solid var(--primary);
@@ -2975,7 +2975,7 @@ footer {
 }
 
 .flow-step-item:hover {
-  border-color: rgba(214, 90, 90, 0.4);
+  border-color: rgba(217, 87, 87, 0.4);
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
@@ -3034,7 +3034,7 @@ footer {
   border: 1px solid rgba(255, 255, 255, 0.08);
   border-radius: var(--radius-lg);
   padding: 30px;
-  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(214, 90, 90, 0.12);
+  box-shadow: 0 20px 48px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(217, 87, 87, 0.15);
   position: relative;
 }
 
@@ -3150,7 +3150,7 @@ footer {
 }
 
 .deliverable-card:hover {
-  border-color: rgba(214, 90, 90, 0.35);
+  border-color: rgba(217, 87, 87, 0.15);
   transform: translateX(4px);
 }
 
@@ -3288,8 +3288,8 @@ footer {
 
 .qualify-box--start {
   background: var(--bg-surface);
-  border: 1px solid rgba(214, 90, 90, 0.35);
-  box-shadow: 0 0 24px rgba(214, 90, 90, 0.08);
+  border: 1px solid rgba(217, 87, 87, 0.15);
+  box-shadow: 0 0 24px rgba(217, 87, 87, 0.08);
 }
 
 .qualify-box--atlas {
@@ -3568,7 +3568,7 @@ footer {
 }
 
 .atlas-motion-card:hover {
-  border-color: rgba(214, 90, 90, 0.4);
+  border-color: rgba(217, 87, 87, 0.4);
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
@@ -3630,7 +3630,7 @@ footer {
 }
 
 .evolution-flow-card:hover {
-  border-color: rgba(214, 90, 90, 0.35);
+  border-color: rgba(217, 87, 87, 0.15);
   transform: translateY(-3px);
 }
 
@@ -3702,7 +3702,7 @@ footer {
 
 .identify-fragment-card:hover {
   background: rgba(255, 255, 255, 0.03);
-  border-color: rgba(214, 90, 90, 0.35);
+  border-color: rgba(217, 87, 87, 0.15);
   transform: translateY(-2px);
 }
 
@@ -3710,7 +3710,7 @@ footer {
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  background: rgba(214, 90, 90, 0.08);
+  background: rgba(217, 87, 87, 0.08);
   border: 1px solid var(--primary-border);
   color: var(--primary);
   display: flex;
@@ -3754,8 +3754,8 @@ footer {
 
 .why-followup-card--atlas {
   background: var(--bg-surface);
-  border: 1px solid rgba(214, 90, 90, 0.35);
-  box-shadow: 0 0 24px rgba(214, 90, 90, 0.08);
+  border: 1px solid rgba(217, 87, 87, 0.15);
+  box-shadow: 0 0 24px rgba(217, 87, 87, 0.08);
 }
 
 .why-followup-header {
@@ -3844,8 +3844,8 @@ footer {
 
 .plan-card-pro:hover {
   transform: translateY(-4px);
-  border-color: rgba(214, 90, 90, 0.45);
-  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(214, 90, 90, 0.12);
+  border-color: rgba(217, 87, 87, 0.15);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.4), 0 0 20px rgba(217, 87, 87, 0.15);
 }
 
 /* ── 17.6 RESPONSIVIDADE DO MÉTODO ATLAS ── */
@@ -3962,7 +3962,7 @@ footer {
 }
 
 .review-compact-card:hover {
-  border-color: rgba(214, 90, 90, 0.4);
+  border-color: rgba(217, 87, 87, 0.4);
   transform: translateY(-3px);
   background: rgba(255, 255, 255, 0.03);
   box-shadow: var(--shadow-md);
@@ -4023,7 +4023,7 @@ footer {
   width: 32px;
   height: 32px;
   border-radius: 50%;
-  background: rgba(214, 90, 90, 0.15);
+  background: rgba(217, 87, 87, 0.15);
   border: 1px solid var(--primary-border);
   color: var(--primary);
   font-size: 0.75rem;
@@ -4067,8 +4067,8 @@ footer {
 
 /* ── 18.2 RELATO EM DESTAQUE (PROTAGONISTA) ── */
 .spotlight-case-card {
-  background: linear-gradient(135deg, rgba(214, 90, 90, 0.07) 0%, rgba(20, 20, 24, 0.95) 100%);
-  border: 1px solid rgba(214, 90, 90, 0.3);
+  background: linear-gradient(135deg, rgba(217, 87, 87, 0.15) 0%, rgba(20, 20, 24, 0.95) 100%);
+  border: 1px solid rgba(217, 87, 87, 0.15);
   border-radius: var(--radius-lg);
   padding: 44px 40px;
   position: relative;
@@ -4190,7 +4190,7 @@ footer {
 }
 
 .pattern-collective-card:hover {
-  border-color: rgba(214, 90, 90, 0.35);
+  border-color: rgba(217, 87, 87, 0.15);
   transform: translateY(-2px);
 }
 
@@ -4521,7 +4521,7 @@ footer {
 }
 
 .scrolly-journey-item:hover {
-  border-color: rgba(214, 90, 90, 0.4);
+  border-color: rgba(217, 87, 87, 0.4);
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
@@ -4602,7 +4602,7 @@ footer {
 }
 
 .dimension-card-box:hover {
-  border-color: rgba(214, 90, 90, 0.45);
+  border-color: rgba(217, 87, 87, 0.15);
   transform: translateY(-4px);
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.35);
 }
@@ -4650,8 +4650,8 @@ footer {
 
 /* ── 19.3 CONVERGÊNCIA — O NASCIMENTO DO MÉTODO ATLAS ── */
 .convergence-wrapper {
-  background: linear-gradient(180deg, rgba(214, 90, 90, 0.06) 0%, rgba(14, 14, 18, 0.95) 100%);
-  border: 1px solid rgba(214, 90, 90, 0.25);
+  background: linear-gradient(180deg, rgba(217, 87, 87, 0.15) 0%, rgba(14, 14, 18, 0.95) 100%);
+  border: 1px solid rgba(217, 87, 87, 0.15);
   border-radius: var(--radius-lg);
   padding: 48px 40px;
   text-align: center;
@@ -4745,7 +4745,7 @@ footer {
 }
 
 .manifesto-card-item:hover {
-  border-color: rgba(214, 90, 90, 0.35);
+  border-color: rgba(217, 87, 87, 0.15);
   transform: translateY(-3px);
 }
 
@@ -4843,7 +4843,7 @@ footer {
 }
 
 .next-step-box:hover {
-  border-color: rgba(214, 90, 90, 0.4);
+  border-color: rgba(217, 87, 87, 0.4);
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
 }
@@ -4960,7 +4960,7 @@ footer {
 .faq-search-input:focus {
   border-color: var(--primary);
   background: #14141a;
-  box-shadow: 0 0 0 3px rgba(214, 90, 90, 0.15);
+  box-shadow: 0 0 0 3px rgba(217, 87, 87, 0.15);
 }
 
 .faq-search-clear-btn {
@@ -5073,7 +5073,7 @@ footer {
 }
 
 .faq-item-box.active {
-  border-color: rgba(214, 90, 90, 0.45);
+  border-color: rgba(217, 87, 87, 0.15);
   background: #14141a;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
 }
@@ -5085,10 +5085,10 @@ footer {
 
 @keyframes pulseTarget {
   0%, 100% {
-    box-shadow: 0 0 0 0 rgba(214, 90, 90, 0);
+    box-shadow: 0 0 0 0 rgba(217, 87, 87, 0.15);
   }
   50% {
-    box-shadow: 0 0 0 6px rgba(214, 90, 90, 0.3);
+    box-shadow: 0 0 0 6px rgba(217, 87, 87, 0.15);
   }
 }
 
@@ -5228,7 +5228,7 @@ footer {
 }
 
 .faq-term-highlight {
-  background: rgba(214, 90, 90, 0.22);
+  background: rgba(217, 87, 87, 0.22);
   color: #fff;
   padding: 1px 4px;
   border-radius: 3px;
@@ -5313,6 +5313,8 @@ footer {
     animation: none !important;
   }
 }
+
+
 
 
 

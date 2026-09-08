@@ -1,4 +1,4 @@
-/**
+﻿/**
  * KEVIN LINCOLN — NUTRICIONISTA
  * JavaScript Principal e Modular Multipáginas
  */
