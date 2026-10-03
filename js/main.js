@@ -1,4 +1,4 @@
-﻿/**
+/**
  * KEVIN LINCOLN — NUTRICIONISTA
  * JavaScript Principal e Modular Multipáginas
  */
@@ -16,6 +16,8 @@ document.addEventListener("DOMContentLoaded", () => {
   initCurrentYear();
   checkUrlParamsForService();
   initAtlasStartExperience();
+  initCardImageHandler();
+  initTestimonialsCarousel();
 });
 
 /* ==========================================================================
@@ -965,3 +967,290 @@ document.addEventListener("DOMContentLoaded", () => {
   initTrajectoryCarousel();
   initFaqSystem();
 });
+
+/* ==========================================================================
+   SMART CARD IMAGE HANDLER — Enquadramento inteligente de imagens em cards
+   Detecta proporção (retrato/paisagem) e define object-position via CSS var.
+   Imagens retrato: foco no topo (rosto/cabeça visível).
+   Imagens paisagem: foco no centro horizontal, 20% do topo.
+   ========================================================================== */
+function initCardImageHandler() {
+  // Seleciona todas as imagens dentro dos frames de card conhecidos
+  const cardImages = document.querySelectorAll(
+    ".scrolly-item-img-frame img, " +
+    ".trajectory-slide-img-frame img, " +
+    ".hero-photo-img"
+  );
+
+  if (!cardImages.length) return;
+
+  cardImages.forEach((img) => {
+    // Se a imagem já carregou (cache), aplica imediatamente
+    if (img.complete && img.naturalWidth > 0) {
+      applySmartPosition(img);
+    } else {
+      // Aguarda o carregamento
+      img.addEventListener("load", () => applySmartPosition(img), { once: true });
+      // Em caso de erro, mostra a imagem mesmo assim (sem fade)
+      img.addEventListener("error", () => img.classList.add("img-loaded"), { once: true });
+    }
+  });
+
+  /**
+   * Calcula o melhor object-position baseado na proporção da imagem.
+  /**
+   * Calcula o melhor object-position baseado na proporção real da imagem.
+   *
+   * LÓGICA DE POSICIONAMENTO:
+   * Em object-fit:cover, object-position Y define de onde a imagem é "ancorada".
+   *   0%   = ancora no topo  → mostra a parte SUPERIOR da imagem
+   *   50%  = ancora no centro → mostra a parte CENTRAL
+   *   100% = ancora na base  → mostra a parte INFERIOR
+   *
+   * Para selfies de corpo inteiro (retrato alto), o rosto está no TOPO.
+   * Logo: valores baixos (0%–10%) mantêm o rosto visível.
+   *
+   * Retrato muito alto (h/w ≥ 1.8): selfie em pé com corpo → foco absoluto no topo
+   * Retrato alto     (h/w ≥ 1.4): retrato padrão          → foco bem próximo do topo
+   * Retrato suave    (h/w ≥ 1.0): levemente quadrado       → levemente acima do centro
+   * Paisagem suave   (h/w ≥ 0.7): quase quadrado           → centro com leve inclinação
+   * Paisagem ampla   (h/w < 0.7): banner/wide              → centro puro
+   */
+  function applySmartPosition(img) {
+    const w = img.naturalWidth;
+    const h = img.naturalHeight;
+    if (!w || !h) {
+      img.classList.add("img-loaded");
+      return;
+    }
+
+    const ratio = h / w; // > 1 = retrato, < 1 = paisagem, = 1 = quadrado
+    let positionX = "50%";
+    let positionY;
+
+    if (ratio >= 1.8) {
+      // Selfie de corpo inteiro (muito alto) → rosto no topo absoluto
+      positionY = "0%";
+    } else if (ratio >= 1.4) {
+      // Retrato alto — foco bem próximo do topo (cabeça/rosto visível)
+      positionY = "5%";
+    } else if (ratio >= 1.0) {
+      // Retrato suave ou quadrado — levemente acima do centro
+      positionY = "15%";
+    } else if (ratio >= 0.7) {
+      // Paisagem suave — centro com leve foco superior
+      positionY = "30%";
+    } else {
+      // Paisagem ampla (banner) — centro puro
+      positionY = "40%";
+    }
+
+    const frame = img.closest(
+      ".scrolly-item-img-frame, .trajectory-slide-img-frame"
+    );
+
+    if (frame) {
+      frame.style.setProperty("--img-focus", `${positionX} ${positionY}`);
+    } else if (img.classList.contains("hero-photo-img")) {
+      // Para o hero, o custom property é lido diretamente pelo CSS do img
+      img.style.objectPosition = `${positionX} ${positionY}`;
+    }
+
+    // Dispara o fade-in suave
+    img.classList.add("img-loaded");
+  }
+}
+
+/* ==========================================================================
+   CARROSSEL DE DEPOIMENTOS (MÉTODO ATLAS & HOME)
+   ========================================================================== */
+function initTestimonialsCarousel() {
+  const carousels = document.querySelectorAll(".testimonials-carousel-wrap");
+  if (!carousels.length) return;
+
+  carousels.forEach((carousel) => {
+    const viewport = carousel.querySelector(".testimonials-carousel-viewport");
+    const track = carousel.querySelector(".testimonials-carousel-track");
+    const slides = Array.from(carousel.querySelectorAll(".testimonials-carousel-slide"));
+    const prevBtn = carousel.querySelector(".testimonials-carousel-btn.prev");
+    const nextBtn = carousel.querySelector(".testimonials-carousel-btn.next");
+    const dotsWrap = carousel.querySelector(".testimonials-carousel-dots");
+
+    if (!track || !slides.length) return;
+
+    let currentIndex = 0;
+    let autoplayTimer = null;
+
+    function getVisibleCount() {
+      if (window.innerWidth <= 768) return 1;
+      if (window.innerWidth <= 1199) return 2;
+      return 3;
+    }
+
+    function getMaxIndex() {
+      return Math.max(0, slides.length - getVisibleCount());
+    }
+
+    function getSlideStep() {
+      const slide = slides[0];
+      const gap = 24;
+      return slide.getBoundingClientRect().width + gap;
+    }
+
+    function updateCarousel(instant = false) {
+      const step = getSlideStep();
+      track.style.transition = instant ? "none" : "transform 0.45s cubic-bezier(0.2, 0.9, 0.3, 1)";
+      track.style.transform = `translateX(-${currentIndex * step}px)`;
+
+      if (dotsWrap) {
+        const dots = dotsWrap.querySelectorAll(".testimonials-carousel-dot");
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle("active", idx === currentIndex);
+          dot.setAttribute("aria-selected", idx === currentIndex ? "true" : "false");
+        });
+      }
+    }
+
+    function buildDots() {
+      if (!dotsWrap) return;
+      dotsWrap.innerHTML = "";
+      const maxIdx = getMaxIndex();
+      for (let i = 0; i <= maxIdx; i++) {
+        const dot = document.createElement("button");
+        dot.type = "button";
+        dot.className = "testimonials-carousel-dot" + (i === currentIndex ? " active" : "");
+        dot.setAttribute("aria-label", `Ir para depoimento ${i + 1}`);
+        dot.addEventListener("click", () => {
+          currentIndex = i;
+          updateCarousel();
+          resetAutoplay();
+        });
+        dotsWrap.appendChild(dot);
+      }
+    }
+
+    function next() {
+      const maxIdx = getMaxIndex();
+      if (currentIndex >= maxIdx) {
+        currentIndex = 0;
+      } else {
+        currentIndex++;
+      }
+      updateCarousel();
+    }
+
+    function prev() {
+      const maxIdx = getMaxIndex();
+      if (currentIndex <= 0) {
+        currentIndex = maxIdx;
+      } else {
+        currentIndex--;
+      }
+      updateCarousel();
+    }
+
+    if (nextBtn) {
+      nextBtn.addEventListener("click", () => {
+        next();
+        resetAutoplay();
+      });
+    }
+
+    if (prevBtn) {
+      prevBtn.addEventListener("click", () => {
+        prev();
+        resetAutoplay();
+      });
+    }
+
+    function startAutoplay() {
+      stopAutoplay();
+      autoplayTimer = setInterval(next, 5000);
+    }
+
+    function stopAutoplay() {
+      if (autoplayTimer) {
+        clearInterval(autoplayTimer);
+        autoplayTimer = null;
+      }
+    }
+
+    function resetAutoplay() {
+      stopAutoplay();
+      startAutoplay();
+    }
+
+    carousel.addEventListener("mouseenter", stopAutoplay);
+    carousel.addEventListener("mouseleave", startAutoplay);
+
+    // Touch & Swipe
+    let touchStartX = 0;
+    let touchDist = 0;
+
+    viewport.addEventListener("touchstart", (e) => {
+      stopAutoplay();
+      touchStartX = e.touches[0].clientX;
+      touchDist = 0;
+    }, { passive: true });
+
+    viewport.addEventListener("touchmove", (e) => {
+      touchDist = e.touches[0].clientX - touchStartX;
+    }, { passive: true });
+
+    viewport.addEventListener("touchend", () => {
+      if (Math.abs(touchDist) > 40) {
+        if (touchDist < 0) {
+          next();
+        } else {
+          prev();
+        }
+      }
+      startAutoplay();
+    });
+
+    // Mouse Drag
+    let isMouseDown = false;
+    let mouseStartX = 0;
+    let mouseDist = 0;
+
+    viewport.addEventListener("mousedown", (e) => {
+      isMouseDown = true;
+      mouseStartX = e.clientX;
+      mouseDist = 0;
+      viewport.style.cursor = "grabbing";
+      stopAutoplay();
+    });
+
+    window.addEventListener("mousemove", (e) => {
+      if (!isMouseDown) return;
+      mouseDist = e.clientX - mouseStartX;
+    });
+
+    window.addEventListener("mouseup", () => {
+      if (!isMouseDown) return;
+      isMouseDown = false;
+      viewport.style.cursor = "grab";
+      if (Math.abs(mouseDist) > 40) {
+        if (mouseDist < 0) {
+          next();
+        } else {
+          prev();
+        }
+      }
+      resetAutoplay();
+    });
+
+    window.addEventListener("resize", () => {
+      const maxIdx = getMaxIndex();
+      if (currentIndex > maxIdx) currentIndex = maxIdx;
+      buildDots();
+      updateCarousel(true);
+    });
+
+    buildDots();
+    updateCarousel(true);
+    startAutoplay();
+  });
+}
+
+

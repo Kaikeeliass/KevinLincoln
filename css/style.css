@@ -1,4 +1,4 @@
-﻿/* ==========================================================================
+/* ==========================================================================
    KEVIN LINCOLN — NUTRICIONISTA | DESIGN SYSTEM & STYLESHEET GLOBAL
    ========================================================================== */
 
@@ -994,12 +994,19 @@ header.scrolled {
   width: 100%;
   height: 540px;
   object-fit: cover;
-  object-position: top center;
+  /* Foco no rosto/parte superior para fotos de perfil */
+  object-position: var(--hero-img-focus, 50% 12%);
   border-radius: var(--radius-lg);
   border: 1px solid var(--border-subtle);
   z-index: 1;
   box-shadow: var(--shadow-lg), 0 0 0 1px rgba(255,255,255,0.04);
   display: block;
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.6s ease;
+}
+
+.hero-photo-img.img-loaded {
+  opacity: 1;
 }
 
 /* Cartão de identidade ancorado na base da foto */
@@ -1054,10 +1061,24 @@ header.scrolled {
 }
 
 .hero-photo-identity-avail {
-  font-size: 0.7rem;
-  font-weight: 500;
-  color: rgba(25, 180, 107, 0.15);
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: #2ee58b;
   letter-spacing: 0.02em;
+}
+
+.hero-photo-identity-avail .hero-badge-dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #2ee58b;
+  display: inline-block;
+  flex-shrink: 0;
+  box-shadow: 0 0 8px rgba(46, 229, 139, 0.7);
+  animation: pulse-dot 2.2s ease-in-out infinite;
 }
 /* ── SEÇÃO DE ESCOLHA (hero-hub adaptado) ── */
 .hero-hub-title {
@@ -1890,6 +1911,132 @@ header.scrolled {
   color: var(--text-muted);
 }
 
+/* ── 16.1 CARROSSEL DE DEPOIMENTOS (TESTIMONIALS CAROUSEL) ── */
+.testimonials-carousel-wrap {
+  position: relative;
+  width: 100%;
+  margin-top: 16px;
+}
+
+.testimonials-carousel-viewport {
+  overflow: hidden;
+  width: 100%;
+  padding: 12px 4px 18px;
+  cursor: grab;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: pan-y;
+}
+
+.testimonials-carousel-viewport:active {
+  cursor: grabbing;
+}
+
+.testimonials-carousel-track {
+  display: flex;
+  gap: 24px;
+  transition: transform 0.45s cubic-bezier(0.2, 0.9, 0.3, 1);
+  will-change: transform;
+}
+
+.testimonials-carousel-slide {
+  flex: 0 0 calc((100% - 24px) / 2);
+  max-width: calc((100% - 24px) / 2);
+  display: flex;
+  box-sizing: border-box;
+}
+
+.testimonials-carousel-slide .testimonial-card-pro {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+@media (min-width: 1200px) {
+  .testimonials-carousel-slide {
+    flex: 0 0 calc((100% - 48px) / 3);
+    max-width: calc((100% - 48px) / 3);
+  }
+}
+
+@media (max-width: 768px) {
+  .testimonials-carousel-slide {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+}
+
+.testimonials-carousel-controls {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 32px;
+}
+
+.testimonials-carousel-btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--bg-surface);
+  border: 1px solid var(--border-medium);
+  color: var(--text-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all var(--transition-fast);
+  box-shadow: var(--shadow-sm);
+}
+
+.testimonials-carousel-btn svg {
+  width: 20px;
+  height: 20px;
+  transition: transform var(--transition-fast);
+}
+
+.testimonials-carousel-btn:hover {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px var(--primary-glow);
+}
+
+.testimonials-carousel-btn:active {
+  transform: translateY(0);
+}
+
+.testimonials-carousel-dots {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.testimonials-carousel-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: var(--radius-pill);
+  background: rgba(255, 255, 255, 0.15);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s cubic-bezier(0.2, 0.9, 0.3, 1);
+}
+
+.testimonials-carousel-dot:hover {
+  background: rgba(255, 255, 255, 0.35);
+}
+
+.testimonials-carousel-dot.active {
+  width: 28px;
+  background: var(--primary);
+  box-shadow: 0 0 12px var(--primary-glow);
+}
+
 /* ── 17. SOBRE O KEVIN & AUTORIDADE ── */
 .about-hero-grid {
   display: grid;
@@ -1902,14 +2049,52 @@ header.scrolled {
   position: relative;
   border-radius: var(--radius-lg);
   overflow: hidden;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+}
+
+/* Brilho atmosférico carmesim ao fundo da silhueta */
+.about-img-frame::before {
+  content: '';
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translate(-50%, -25%);
+  width: 85%;
+  height: 70%;
+  background: radial-gradient(ellipse at center, rgba(217, 87, 87, 0.22) 0%, rgba(142, 48, 56, 0.10) 45%, transparent 72%);
+  filter: blur(32px);
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Transição suave na base da foto com o fundo da seção */
+.about-img-frame::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent 65%,
+    rgba(8, 9, 12, 0.4) 85%,
+    var(--bg-body) 100%
+  );
+  pointer-events: none;
+  z-index: 2;
 }
 
 .about-img-frame img {
+  position: relative;
+  z-index: 1;
   width: 100%;
   height: 540px;
   object-fit: cover;
   object-position: top center;
   border-radius: var(--radius-lg);
+  /* Color grading via CSS: contraste, saturação, leve aquecimento e rim light carmesim */
+  filter: contrast(1.08) brightness(0.97) saturate(1.08) sepia(0.05) drop-shadow(0 10px 32px rgba(217, 87, 87, 0.25));
+  transition: filter var(--transition-normal);
 }
 
 .about-badges-row {
@@ -4526,23 +4711,62 @@ footer {
   box-shadow: var(--shadow-md);
 }
 
+/* ── CARD IMAGE FRAME — Sistema inteligente de enquadramento ── */
 .scrolly-item-img-frame {
-  height: 280px;
   position: relative;
+  /* Aspect ratio 3:4 — ideal para fotos de corpo inteiro/retratos */
+  aspect-ratio: 3 / 4;
   overflow: hidden;
-  background: #000;
+  background: var(--bg-alt);
+  border-radius: var(--radius-lg) var(--radius-lg) 0 0;
 }
 
 .scrolly-item-img-frame img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  object-position: center top;
-  transition: transform 0.6s ease;
+  /* JS define --img-focus dinamicamente baseado na proporção real da imagem.
+     Fallback: topo da imagem (rosto/cabeça sempre visível) */
+  object-position: var(--img-focus, 50% 5%);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.scrolly-item-img-frame img.img-loaded {
+  opacity: 1;
 }
 
 .scrolly-journey-item:hover .scrolly-item-img-frame img {
-  transform: scale(1.04);
+  transform: scale(1.05);
+}
+
+/* ── TRAJECTORY SLIDE — Carrossel de fotos em resultados.html ── */
+.trajectory-slide-img-frame {
+  position: relative;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  background: var(--bg-alt);
+  border-radius: var(--radius-lg);
+  flex-shrink: 0;
+}
+
+.trajectory-slide-img-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: var(--img-focus, 50% 5%);
+  opacity: 0;
+  transition: opacity 0.5s ease, transform 0.65s cubic-bezier(0.4, 0, 0.2, 1);
+  will-change: transform, opacity;
+}
+
+.trajectory-slide-img-frame img.img-loaded {
+  opacity: 1;
+}
+
+.trajectory-slide.active .trajectory-slide-img-frame img {
+  transform: scale(1.0);
 }
 
 .scrolly-item-tag {
@@ -4883,6 +5107,20 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  /*
+   * IMPORTANTE: Mantemos aspect-ratio retrato (portrait) mesmo em mobile 1 coluna.
+   * As imagens são selfies de corpo inteiro — um container paisagem cortaria o rosto.
+   * Em 1 coluna o card é mais largo, mas a proporção 3:4 garante altura suficiente.
+   * NÃO alterar para 4:3 ou 3:2 aqui.
+   */
+  .scrolly-item-img-frame {
+    aspect-ratio: 3 / 4;
+  }
+
+  .trajectory-slide-img-frame {
+    aspect-ratio: 4 / 5;
+  }
+
   .three-dimensions-grid {
     grid-template-columns: 1fr;
   }
@@ -4908,6 +5146,93 @@ footer {
 
   .next-step-dual-grid {
     grid-template-columns: 1fr;
+  }
+}
+
+/* ── CARD IMAGE — AJUSTES RESPONSIVOS POR BREAKPOINT ── */
+
+/*
+ * REGRA GERAL:
+ * As imagens são fotos de perfil/corpo (selfies retrato).
+ * Mantém sempre proporção retrato para não cortar rosto.
+ * Apenas ajustamos a altura máxima e o gap entre cards.
+ */
+
+/* 320px — celular muito pequeno: retrato levemente mais curto */
+@media (max-width: 320px) {
+  .scrolly-item-img-frame {
+    aspect-ratio: 3 / 4;
+    max-height: 340px;
+  }
+  .trajectory-slide-img-frame {
+    aspect-ratio: 4 / 5;
+    max-height: 320px;
+  }
+  .hero-photo-img {
+    height: clamp(200px, 58vw, 260px);
+  }
+}
+
+/* 321px–425px — celular pequeno */
+@media (min-width: 321px) and (max-width: 425px) {
+  .scrolly-item-img-frame {
+    aspect-ratio: 3 / 4;
+    max-height: 380px;
+  }
+  .trajectory-slide-img-frame {
+    aspect-ratio: 4 / 5;
+    max-height: 360px;
+  }
+  .hero-photo-img {
+    height: clamp(220px, 60vw, 300px);
+  }
+}
+
+/* 426px–767px — celular médio / grande */
+@media (min-width: 426px) and (max-width: 767px) {
+  .scrolly-item-img-frame {
+    aspect-ratio: 3 / 4;
+    max-height: 440px;
+  }
+  .trajectory-slide-img-frame {
+    aspect-ratio: 4 / 5;
+    max-height: 420px;
+  }
+  .hero-photo-img {
+    height: clamp(280px, 55vw, 380px);
+  }
+}
+
+/* 768px–1024px — tablet: grid 2 colunas, cards mais estreitos → retrato mais curto */
+@media (min-width: 768px) and (max-width: 1024px) {
+  .scrolly-item-img-frame {
+    aspect-ratio: 2 / 3;
+  }
+  .trajectory-slide-img-frame {
+    aspect-ratio: 3 / 4;
+  }
+  .hero-photo-img {
+    height: clamp(380px, 45vw, 480px);
+  }
+}
+
+/* 1025px–1439px — desktop padrão: proporção ótima para cards 2 colunas */
+@media (min-width: 1025px) and (max-width: 1439px) {
+  .scrolly-item-img-frame {
+    aspect-ratio: 3 / 4;
+  }
+  .trajectory-slide-img-frame {
+    aspect-ratio: 4 / 5;
+  }
+}
+
+/* 1440px+ — desktop grande: pode ser um pouco mais alto */
+@media (min-width: 1440px) {
+  .scrolly-item-img-frame {
+    aspect-ratio: 2 / 3;
+  }
+  .trajectory-slide-img-frame {
+    aspect-ratio: 3 / 4;
   }
 }
 
