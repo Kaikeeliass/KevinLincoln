@@ -134,7 +134,7 @@
             </nav>
 
             <div class="header-actions">
-                <button type="button" class="btn btn-primary btn-header-cta" onclick="abrirFormulario()">Iniciar Avaliação</button>
+                <button type="button" class="btn btn-primary btn-header-cta" onclick="abrirFormulario()">Solicitar acompanhamento</button>
                 <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
                     <svg viewBox="0 0 24 24">
                         <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round" />
@@ -167,7 +167,7 @@
         </div>
 
         <div class="mobile-drawer-footer">
-            <button class="btn btn-primary btn-full" onclick="abrirFormulario()">Iniciar Avaliação</button>
+            <button class="btn btn-primary btn-full" onclick="abrirFormulario()">Solicitar acompanhamento</button>
             <a href="https://wa.me/5517981114500" target="_blank" class="btn btn-whatsapp btn-full">
                 <svg viewBox="0 0 16 16">
                     <path
@@ -506,7 +506,7 @@
                         <a href="index.html">Início</a>
                         <a href="desafio-atlas-start.html">Desafio Atlas Start</a>
                         <a href="metodo-atlas.html">Método Atlas</a>
-                        <a href="metodo-atlas.html#planos">Planos do Acompanhamento</a>
+                        <a href="metodo-atlas.html#planos">Plano Trimestral</a>
                     </nav>
                 </div>
 
@@ -564,8 +564,8 @@
 
             <div id="modal-form-content">
                 <div style="margin-bottom: 24px;">
-                    <span class="section-badge" style="margin-bottom: 8px;">Avaliação Inicial</span>
-                    <h2 id="modalTitulo" style="font-size: 1.45rem;">Vamos entender seu objetivo?</h2>
+                    <span class="section-badge" style="margin-bottom: 8px;">Primeiro contato</span>
+                    <h2 id="modalTitulo" style="font-size: 1.45rem;">Conte seu objetivo para começarmos</h2>
                     <p style="font-size: 0.9rem; margin-top: 4px;">Preencha seus dados para receber uma proposta personalizada do nutricionista Kevin Lincoln.</p>
                 </div>
 
@@ -574,10 +574,6 @@
                     <div class="form-control">
                         <label for="m-nome">Nome completo *</label>
                         <input type="text" id="m-nome" placeholder="Seu nome completo" maxlength="80" autocomplete="name">
-                    </div>
-                    <div class="form-control">
-                        <label for="m-idade">Idade *</label>
-                        <input type="number" id="m-idade" placeholder="Ex: 28" min="12" max="99">
                     </div>
                 </div>
 
@@ -593,16 +589,6 @@
                 </div>
 
                 <div class="form-group-title">2. Perfil Físico &amp; Objetivo</div>
-                <div class="form-grid-2">
-                    <div class="form-control">
-                        <label for="m-peso">Peso atual (kg) *</label>
-                        <input type="number" id="m-peso" placeholder="Ex: 75" step="0.1">
-                    </div>
-                    <div class="form-control">
-                        <label for="m-altura">Altura (cm) *</label>
-                        <input type="number" id="m-altura" placeholder="Ex: 175">
-                    </div>
-                </div>
 
                 <div class="form-control">
                     <label>Objetivo Principal *</label>
@@ -626,7 +612,7 @@
                     </div>
                 </div>
 
-                <div class="form-group-title">3. Acompanhamento Desejado</div>
+                <div class="form-group-title">3. Serviço de interesse</div>
                 <div class="form-control">
                     <div class="chip-options-grid">
                         <div class="chip-option">
@@ -635,22 +621,14 @@
                         </div>
                         <div class="chip-option">
                             <input type="radio" name="m-servico" id="m-servico-trimestral" checked>
-                            <label for="m-servico-trimestral" class="chip-label">Plano Trimestral</label>
-                        </div>
-                        <div class="chip-option">
-                            <input type="radio" name="m-servico" id="m-servico-semestral">
-                            <label for="m-servico-semestral" class="chip-label">Plano Semestral</label>
-                        </div>
-                        <div class="chip-option">
-                            <input type="radio" name="m-servico" id="m-servico-anual">
-                            <label for="m-servico-anual" class="chip-label">Plano Anual</label>
+                            <label for="m-servico-trimestral" class="chip-label">Plano Trimestral (3 meses)</label>
                         </div>
                     </div>
                 </div>
 
                 <div style="margin-top: 24px;">
                     <button type="button" class="btn btn-primary btn-full" id="m-btn-enviar"
-                        onclick="validarEEnviarFormulario('modal')">ENVIAR AVALIAÇÃO &rarr;</button>
+                        onclick="validarEEnviarFormulario('modal')">ENVIAR SOLICITAÇÃO &rarr;</button>
                 </div>
             </div>
 

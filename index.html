@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kevin Lincoln | Nutricionista — Método Atlas & Acompanhamento Personalizado</title>
     <meta name="description"
-        content="Nutricionista Kevin Lincoln (CRN 83678). Conheça o Desafio Atlas Start e o Acompanhamento Método Atlas. Estratégias nutricionais personalizadas para emagrecimento, saúde e performance em São José do Rio Preto e Online.">
+        content="Nutricionista Kevin Lincoln (CRN 83678). Conheça o plano trimestral do Método Atlas. Acompanhamento nutricional individualizado para emagrecimento, saúde e performance em São José do Rio Preto e Online.">
     <meta name="keywords"
         content="nutricionista, Kevin Lincoln, método atlas, Desafio Atlas Start, emagrecimento estratégico, nutrição esportiva, São José do Rio Preto, nutrição online">
     <meta name="author" content="Kevin Lincoln">
@@ -145,8 +145,7 @@
 
             <!-- 3. Botão Principal CTA -->
             <div class="header-actions">
-                <button type="button" class="btn btn-primary btn-header-cta" onclick="abrirFormulario()">Quero iniciar
-                    minha avaliação</button>
+                <button type="button" class="btn btn-primary btn-header-cta" onclick="abrirFormulario()">Solicitar acompanhamento</button>
                 <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu de navegação">
                     <svg viewBox="0 0 24 24">
                         <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2"
@@ -180,7 +179,7 @@
         </div>
 
         <div class="mobile-drawer-footer">
-            <button class="btn btn-primary btn-full" onclick="abrirFormulario()">Iniciar Avaliação</button>
+            <button class="btn btn-primary btn-full" onclick="abrirFormulario()">Solicitar acompanhamento</button>
             <a href="https://wa.me/5517981114500" target="_blank" class="btn btn-whatsapp btn-full">
                 <svg viewBox="0 0 16 16">
                     <path
@@ -192,7 +191,7 @@
     </aside>
 
     <!-- ── 01. HERO PRINCIPAL — CONVERSÃO & POSICIONAMENTO ── -->
-    <section class="hero-main" id="inicio">
+    <section class="hero-main hero-home" id="inicio">
         <div class="hero-main-bg-glow"></div>
         <div class="hero-main-line-grid" aria-hidden="true"></div>
         <div class="container">
@@ -209,35 +208,34 @@
                     </div>
 
                     <h1 class="hero-main-headline">
-                        Estratégia nutricional<br>
-                        construída para o seu corpo,<br>
-                        sua rotina e seus objetivos.
+                        Alimentação planejada para sua rotina,<br>
+                        com acompanhamento de verdade.
                     </h1>
 
                     <p class="hero-main-sub">
-                        Emagrecimento, saúde e performance com uma estratégia individual baseada no <strong>Método Atlas</strong>.
+                        Kevin Lincoln une nutrição clínica e esportiva em um <strong>acompanhamento individual de três meses</strong>, online ou presencial.
                     </p>
 
                     <div class="hero-main-ctas">
-                        <a href="#escolha-caminhos" class="btn btn-primary btn-lg hero-cta-primary">
-                            Encontrar meu acompanhamento
+                        <button type="button" class="btn btn-primary btn-lg hero-cta-primary" onclick="abrirFormulario('Plano Trimestral')">
+                            Solicitar acompanhamento
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                                 <path d="M5 12h14M12 5l7 7-7 7" />
                             </svg>
-                        </a>
-                        <a href="metodo-atlas.html" class="hero-cta-secondary">
-                            Conhecer o Método Atlas
+                        </button>
+                        <a href="#plano-trimestral" class="hero-cta-secondary">
+                            Ver o plano de 3 meses
                             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
                         </a>
                     </div>
 
                     <div class="hero-trust-line">
-                        <span>Nutrição individualizada</span>
+                        <span>Plano trimestral</span>
                         <span class="hero-trust-sep" aria-hidden="true">·</span>
-                        <span>Método próprio</span>
+                        <span>Online ou presencial</span>
                         <span class="hero-trust-sep" aria-hidden="true">·</span>
-                        <span>Estratégia adaptada à sua rotina</span>
+                        <span>CRN 83678</span>
                     </div>
 
                 </div>
@@ -254,7 +252,7 @@
                             <div class="hero-photo-identity-inner">
                                 <div class="hero-photo-identity-name">Kevin Lincoln</div>
                                 <div class="hero-photo-identity-role">Nutricionista · CRN 83678</div>
-                                <div class="hero-photo-identity-avail"><span class="hero-badge-dot"></span> Novas vagas disponíveis</div>
+
                             </div>
                         </div>
                     </div>
@@ -264,149 +262,29 @@
         </div>
     </section>
 
-    <!-- ── 02. ESCOLHA DOS CAMINHOS (ÁREA DE DECISÃO) ── -->
-    <section class="hero-hub" id="escolha-caminhos">
-        <div class="container">
-            <div class="hero-hub-intro js-fade-up">
-                <span class="section-badge">
-                    <svg viewBox="0 0 24 24">
-                        <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke="currentColor"
-                            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
-                    </svg>
-                    Estratégia & Decisão
-                </span>
-                <h2 class="hero-hub-title">Qual é o seu ponto de partida?</h2>
-                <p>Dê o primeiro passo com o Desafio de 21 dias ou inicie o acompanhamento nutricional completo.</p>
+    <section class="offer-overview section-padding" id="escolha-caminhos" aria-labelledby="offer-title">
+        <div class="container offer-overview-grid">
+            <div class="offer-overview-intro js-fade-up">
+                <span class="section-badge">O acompanhamento</span>
+                <h2 id="offer-title">Um plano de três meses, feito para sua vida real.</h2>
+                <p>O <strong>Método Atlas</strong> é a abordagem do Kevin: entender sua rotina, construir uma estratégia alimentar individual e ajustá-la com você. O <strong>plano trimestral</strong> é o acompanhamento que você pode contratar.</p>
+                <a href="#plano-trimestral" class="hero-cta-secondary">Ver o que está incluído &rarr;</a>
             </div>
-
-            <!-- CARDS DE DECISÃO -->
-            <div class="decision-grid js-fade-up">
-
-                <!-- CARD 1: Desafio Atlas Start -->
-                <div class="decision-card">
-                    <div class="decision-card-top">
-                        <span class="decision-card-tag">Porta de entrada &mdash; 21 dias</span>
-                        <h3 class="decision-card-title">Desafio Atlas Start</h3>
-                        <p class="decision-card-tagline">21 dias para transformar sua rotina, organizar sua alimentação e iniciar uma nova fase.</p>
-                        <p class="decision-card-desc">O Desafio Atlas Start foi criado para quem deseja dar o primeiro passo em direção a uma rotina mais saudável através de uma estratégia personalizada e um processo estruturado de 21 dias.</p>
-
-                        <div class="decision-card-features">
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span>Consultoria Nutricional online</span>
-                            </div>
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span>Construção de hábitos</span>
-                            </div>
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span>Plano Individualizado</span>
-                            </div>
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span>Organização da rotina</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="decision-card-actions">
-                        <a href="desafio-atlas-start.html" class="btn btn-outline-primary btn-full" id="btn-desafio-atlas-start">Conhecer o Desafio Atlas Start &rarr;</a>
-                        <a href="desafio-atlas-start.html" class="decision-card-link">Saiba mais sobre o Desafio</a>
-                    </div>
-                </div>
-
-                <!-- CARD 2: Método Atlas (Acompanhamento Principal) -->
-                <div class="decision-card">
-                    <div class="decision-card-top">
-                        <span class="decision-card-tag decision-card-tag--premium">Acompanhamento Nutricional Completo</span>
-                        <h3 class="decision-card-title">Método Atlas</h3>
-                        <p class="decision-card-tagline">Acompanhamento contínuo com estratégia individual e evolução monitorada.</p>
-                        <p class="decision-card-desc">Estratégia individual com acompanhamento próximo, ajustes periódicos e suporte constante ao longo da sua jornada de transformação.</p>
-
-                        <div class="decision-card-features">
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span>Direcionamento estratégico</span>
-                            </div>
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span>Consulta presencial ou online</span>
-                            </div>
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span>Acompanhamento semanal</span>
-                            </div>
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span>Suporte direto comigo (sem IA)</span>
-                            </div>
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span>Avaliação individualizada</span>
-                            </div>
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span>Mentoria de suplementação</span>
-                            </div>
-                            <div class="decision-feature-item">
-                                <svg viewBox="0 0 20 20" aria-hidden="true">
-                                    <path fill-rule="evenodd"
-                                        d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                                        clip-rule="evenodd" />
-                                </svg>
-                                <span>Dieta flexível com direcionamento</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="decision-card-actions">
-                        <a href="metodo-atlas.html#planos" class="btn btn-outline-primary btn-full">Ver planos do Método Atlas &rarr;</a>
-                        <a href="metodo-atlas.html" class="decision-card-link">Conhecer o Método Atlas</a>
-                    </div>
-                </div>
-
+            <div class="offer-overview-panel js-fade-up">
+                <span class="offer-duration">03 meses de acompanhamento</span>
+                <h3>Plano Trimestral</h3>
+                <ul class="offer-checklist">
+                    <li>Protocolo alimentar individualizado</li>
+                    <li>Ajustes estratégicos periódicos</li>
+                    <li>Orientação prática sobre suplementação</li>
+                    <li>Suporte direto pelo WhatsApp durante o acompanhamento</li>
+                </ul>
+                <button type="button" class="btn btn-primary btn-full" onclick="abrirFormulario('Plano Trimestral')">Solicitar acompanhamento &rarr;</button>
+                <p class="offer-small-note">Atendimento online ou presencial em São José do Rio Preto. Investimento informado no contato.</p>
             </div>
+        </div>
+        <div class="container offer-alternative">
+            <p>Busca um primeiro passo mais curto? <a href="desafio-atlas-start.html">Conheça o Desafio Atlas Start de 21 dias &rarr;</a></p>
         </div>
     </section>
 
@@ -450,7 +328,7 @@
                     </div>
                     <div class="trust-info">
                         <h4>Ciência & Evidências</h4>
-                        <p>Resultados consistentes sem restrições radicais.</p>
+                        <p>Orientações baseadas em evidências, sem regras radicais.</p>
                     </div>
                 </div>
 
@@ -476,8 +354,8 @@
         <div class="container">
             <div class="section-header js-fade-up">
                 <span class="section-badge">Diferenciais</span>
-                <h2>Estratégia antes de restrição.</h2>
-                <p>Uma abordagem clínica estruturada para gerar resultados consistentes sem comprometer sua rotina.</p>
+                <h2>Orientação que considera a sua rotina</h2>
+                <p>O objetivo é tornar as decisões alimentares mais claras e possíveis de manter no dia a dia.</p>
             </div>
 
             <div class="diff-grid js-fade-up">
@@ -489,8 +367,8 @@
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round" fill="none" />
                         </svg>
                     </div>
-                    <h3>Personalização</h3>
-                    <p>Estratégia construída de acordo com sua rotina real, preferências, objetivos e individualidade metabólica.</p>
+                    <h3>Comer com mais clareza</h3>
+                    <p>O plano considera seus horários, preferências e objetivos para orientar escolhas possíveis na sua rotina.</p>
                 </div>
 
                 <!-- 2. Acompanhamento -->
@@ -503,8 +381,8 @@
                                 stroke-linejoin="round" fill="none" />
                         </svg>
                     </div>
-                    <h3>Acompanhamento</h3>
-                    <p>Decisões e ajustes estratégicos periódicos baseados na resposta e evolução contínua do seu corpo.</p>
+                    <h3>Ajustar quando a vida muda</h3>
+                    <p>Os ajustes periódicos ajudam a revisar a orientação conforme sua evolução e suas dificuldades.</p>
                 </div>
 
                 <!-- 3. Consistência -->
@@ -516,8 +394,8 @@
                                 stroke="currentColor" stroke-width="2" stroke-linecap="round" fill="none" />
                         </svg>
                     </div>
-                    <h3>Consistência</h3>
-                    <p>Uma metodologia desenvolvida para funcionar na vida real e sustentar resultados no longo prazo.</p>
+                    <h3>Menos regras sem contexto</h3>
+                    <p>Você entende o motivo das orientações e aprende a aplicá-las fora de uma rotina perfeita.</p>
                 </div>
             </div>
 
@@ -527,13 +405,58 @@
         </div>
     </section>
 
+    <section class="section-padding plan-feature-section" id="plano-trimestral" aria-labelledby="plan-home-title">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Plano Trimestral</span>
+                <h2 id="plan-home-title">O que você recebe nos três meses</h2>
+                <p>Para quem quer melhorar a alimentação com orientação individual e ajustes ao longo do caminho.</p>
+            </div>
+            <div class="plan-feature-layout js-fade-up">
+                <div>
+                    <h3>Um plano construído com você</h3>
+                    <p>Kevin considera seus objetivos, preferências e rotina para montar o protocolo alimentar. Durante o acompanhamento, revê a evolução e faz ajustes periódicos.</p>
+                    <ul class="offer-checklist">
+                        <li>Protocolo alimentar individualizado</li>
+                        <li>Ajustes estratégicos periódicos</li>
+                        <li>Guia prático de suplementação</li>
+                        <li>Contato direto pelo WhatsApp para dúvidas durante o plano</li>
+                    </ul>
+                </div>
+                <aside class="plan-feature-aside">
+                    <span class="offer-duration">Plano de 3 meses</span>
+                    <h3>Como começar</h3>
+                    <p>Envie seus dados iniciais. Kevin entra em contato para entender seu momento, informar o investimento e orientar os próximos passos.</p>
+                    <p><strong>Modalidades:</strong> online ou presencial em São José do Rio Preto, SP.</p>
+                    <p><strong>Investimento:</strong> informado após o contato. Pagamento por PIX ou cartão.</p>
+                    <button type="button" class="btn btn-primary btn-full" onclick="abrirFormulario('Plano Trimestral')">Solicitar acompanhamento &rarr;</button>
+                    <a href="metodo-atlas.html#planos" class="plan-details-link">Ler todos os detalhes do plano &rarr;</a>
+                </aside>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-padding process-section" id="como-funciona" aria-labelledby="process-title">
+        <div class="container">
+            <div class="section-header js-fade-up">
+                <span class="section-badge">Do primeiro contato ao acompanhamento</span>
+                <h2 id="process-title">Como funciona na prática</h2>
+            </div>
+            <ol class="process-grid js-fade-up">
+                <li><span>01</span><h3>Você entra em contato</h3><p>Conte seu objetivo e deixe um meio de contato no formulário inicial.</p></li>
+                <li><span>02</span><h3>Kevin conhece seu contexto</h3><p>Vocês alinham sua rotina, o atendimento e as condições para iniciar.</p></li>
+                <li><span>03</span><h3>O plano acompanha sua evolução</h3><p>Você recebe uma orientação alimentar individual e ajustes periódicos durante os três meses.</p></li>
+            </ol>
+        </div>
+    </section>
+
     <!-- ── 05. RESULTADOS & PROVAS SOCIAIS ── -->
     <section class="section-padding" id="resultados">
         <div class="container">
             <div class="section-header js-fade-up">
                 <span class="section-badge">Resultados Reais</span>
-                <h2>O que muda quando existe estratégia.</h2>
-                <p>Relatos autênticos de pacientes que transformaram a saúde e a composição corporal com acompanhamento individualizado.</p>
+                <h2>O que pacientes dizem sobre o atendimento</h2>
+                <p>Relatos de pacientes sobre a orientação e o contato com Kevin.</p>
             </div>
 
             <div class="testimonials-carousel-wrap js-fade-up">
@@ -735,7 +658,7 @@
                 <!-- Pergunta 1 -->
                 <div class="faq-card">
                     <button class="faq-trigger" type="button">
-                        <span>Qual a diferença entre o Desafio Atlas Start e o Método Atlas?</span>
+                        <span>O que está incluído no plano trimestral?</span>
                         <div class="faq-icon-cross">
                             <svg viewBox="0 0 14 14">
                                 <path d="M7 1v12M1 7h12" stroke="currentColor" stroke-width="2"
@@ -745,7 +668,7 @@
                     </button>
                     <div class="faq-content">
                         <div class="faq-content-inner">
-                            O <strong>Desafio Atlas Start</strong> é um programa inicial de 21 dias com estratégia personalizada para quem quer criar hábitos, organizar a alimentação e dar o primeiro passo com direção. Já o <strong>Método Atlas</strong> é o acompanhamento nutricional completo (Trimestral, Semestral ou Anual) com suporte próximo via WhatsApp, análise de exames e ajustes periódicos conforme a evolução do seu corpo.
+                            O plano inclui protocolo alimentar individualizado, ajustes periódicos, guia prático de suplementação e contato direto pelo WhatsApp durante os três meses. <a href="#plano-trimestral">Veja os detalhes do plano.</a>
                         </div>
                     </div>
                 </div>
@@ -781,7 +704,7 @@
                     </button>
                     <div class="faq-content">
                         <div class="faq-content-inner">
-                            Não. O Método Atlas não trabalha com dietas radicais ou cortes desnecessários. O plano é ajustado para equilibrar alimentos estratégicos com suas preferências e rotina, garantindo consistência sem sofrimento.
+                            Não. O plano considera suas preferências e sua rotina para tornar as orientações alimentares mais viáveis no dia a dia.
                         </div>
                     </div>
                 </div>
@@ -819,16 +742,16 @@
                     <span></span>
                     <span>Próximo passo</span>
                 </div>
-                <h2>A mudança começa com a <br> estratégia certa.</h2>
-                <p>Escolha o acompanhamento que faz sentido para o seu momento e comece sua evolução.</p>
+                <h2>Comece com um plano que considera sua rotina.</h2>
+                <p>Envie suas informações iniciais para conversar sobre o plano trimestral e o investimento.</p>
                 <div class="conversion-cta-actions">
-                    <a href="#escolha-caminhos" class="btn btn-primary btn-lg" id="btn-cta-final-escolha">
-                        Encontrar meu acompanhamento
+                    <button type="button" class="btn btn-primary btn-lg" id="btn-cta-final-escolha" onclick="abrirFormulario('Plano Trimestral')">
+                        Solicitar acompanhamento
                         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
                             <path d="M5 12h14M12 5l7 7-7 7" />
                         </svg>
-                    </a>
+                    </button>
                     <a href="https://wa.me/5517981114500?text=Ol%C3%A1%20Kevin!%20Visitei%20o%20site%20e%20gostaria%20de%20informa%C3%A7%C3%B5es%20sobre%20o%20acompanhamento."
                         target="_blank" class="btn btn-whatsapp btn-lg" id="btn-cta-final-whatsapp">
                         <svg viewBox="0 0 16 16">
@@ -861,7 +784,7 @@
                         <a href="index.html">Início</a>
                         <a href="desafio-atlas-start.html">Desafio Atlas Start</a>
                         <a href="metodo-atlas.html">Método Atlas</a>
-                        <a href="metodo-atlas.html#planos">Planos do Acompanhamento</a>
+                        <a href="metodo-atlas.html#planos">Plano Trimestral</a>
                     </nav>
                 </div>
 
@@ -928,10 +851,9 @@
 
             <div id="modal-form-content">
                 <div style="margin-bottom: 24px;">
-                    <span class="section-badge" style="margin-bottom: 8px;">Avaliação Inicial</span>
-                    <h2 id="modalTitulo" style="font-size: 1.45rem;">Vamos entender seu objetivo?</h2>
-                    <p style="font-size: 0.9rem; margin-top: 4px;">Preencha seus dados para receber uma proposta
-                        personalizada do seu acompanhamento.</p>
+                    <span class="section-badge" style="margin-bottom: 8px;">Primeiro contato</span>
+                    <h2 id="modalTitulo" style="font-size: 1.45rem;">Conte seu objetivo para começarmos</h2>
+                    <p style="font-size: 0.9rem; margin-top: 4px;">Deixe seus dados de contato para conversar sobre o acompanhamento.</p>
                 </div>
 
                 <div class="form-group-title">1. Dados Pessoais</div>
@@ -940,10 +862,6 @@
                         <label for="m-nome">Nome completo *</label>
                         <input type="text" id="m-nome" placeholder="Seu nome completo" maxlength="80"
                             autocomplete="name">
-                    </div>
-                    <div class="form-control">
-                        <label for="m-idade">Idade *</label>
-                        <input type="number" id="m-idade" placeholder="Ex: 28" min="12" max="99">
                     </div>
                 </div>
 
@@ -958,17 +876,7 @@
                     </div>
                 </div>
 
-                <div class="form-group-title">2. Perfil Físico & Objetivo</div>
-                <div class="form-grid-2">
-                    <div class="form-control">
-                        <label for="m-peso">Peso atual (kg) *</label>
-                        <input type="number" id="m-peso" placeholder="Ex: 75" step="0.1">
-                    </div>
-                    <div class="form-control">
-                        <label for="m-altura">Altura (cm) *</label>
-                        <input type="number" id="m-altura" placeholder="Ex: 175">
-                    </div>
-                </div>
+                <div class="form-group-title">2. Seu objetivo</div>
 
                 <div class="form-control">
                     <label>Objetivo Principal *</label>
@@ -992,31 +900,11 @@
                     </div>
                 </div>
 
-                <div class="form-group-title">3. Acompanhamento Desejado</div>
-                <div class="form-control">
-                    <div class="chip-options-grid">
-                        <div class="chip-option">
-                            <input type="radio" name="m-servico" id="m-servico-start">
-                            <label for="m-servico-start" class="chip-label">Desafio Atlas Start</label>
-                        </div>
-                        <div class="chip-option">
-                            <input type="radio" name="m-servico" id="m-servico-trimestral" checked>
-                            <label for="m-servico-trimestral" class="chip-label">Plano Trimestral</label>
-                        </div>
-                        <div class="chip-option">
-                            <input type="radio" name="m-servico" id="m-servico-semestral">
-                            <label for="m-servico-semestral" class="chip-label">Plano Semestral</label>
-                        </div>
-                        <div class="chip-option">
-                            <input type="radio" name="m-servico" id="m-servico-anual">
-                            <label for="m-servico-anual" class="chip-label">Plano Anual</label>
-                        </div>
-                    </div>
-                </div>
+                <p class="form-plan-context">Solicitação referente ao Plano Trimestral de 3 meses.</p>
 
                 <div style="margin-top: 24px;">
                     <button type="button" class="btn btn-primary btn-full" id="m-btn-enviar"
-                        onclick="validarEEnviarFormulario('modal')">ENVIAR AVALIAÇÃO &rarr;</button>
+                        onclick="validarEEnviarFormulario('modal')">ENVIAR SOLICITAÇÃO &rarr;</button>
                 </div>
             </div>
 

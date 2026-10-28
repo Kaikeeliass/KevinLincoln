@@ -272,6 +272,7 @@ function initFormAndModal() {
 }
 
 // Abre o modal de avaliação e pré-seleciona serviço se informado
+let modalReturnFocus = null;
 window.abrirFormulario = function (servico = "") {
   const modal = document.getElementById("modal-overlay");
   if (!modal) {
@@ -279,8 +280,11 @@ window.abrirFormulario = function (servico = "") {
     return;
   }
 
+  modalReturnFocus = document.activeElement;
   modal.classList.add("active");
+  document.body.classList.add("modal-open");
   document.body.style.overflow = "hidden";
+  requestAnimationFrame(() => modal.querySelector("#m-nome, .modal-close")?.focus());
 
   if (servico) {
     preencherServicoFormulario(servico, "m-");
@@ -291,7 +295,9 @@ window.fecharFormulario = function () {
   const modal = document.getElementById("modal-overlay");
   if (!modal) return;
   modal.classList.remove("active");
+  document.body.classList.remove("modal-open");
   document.body.style.overflow = "";
+  modalReturnFocus?.focus?.();
 };
 
 window.fecharSeClicarFora = function (e) {
@@ -308,6 +314,21 @@ document.addEventListener("keydown", (e) => {
     fecharFormulario();
     fecharRelatoCompleto();
   }
+  const modal = document.getElementById("modal-overlay");
+  if (e.key === "Tab" && modal?.classList.contains("active")) {
+    const focusable = Array.from(modal.querySelectorAll('button:not([disabled]), a[href], input:not([disabled]), textarea:not([disabled])'))
+      .filter(el => el.getClientRects().length > 0);
+    if (!focusable.length) return;
+    const first = focusable[0];
+    const last = focusable[focusable.length - 1];
+    if (e.shiftKey && document.activeElement === first) {
+      e.preventDefault();
+      last.focus();
+    } else if (!e.shiftKey && document.activeElement === last) {
+      e.preventDefault();
+      first.focus();
+    }
+  }
 });
 
 // Pré-seleciona opção de serviço nos formulários
@@ -317,14 +338,8 @@ function preencherServicoFormulario(servico, prefix = "") {
   
   if (cleanServico.includes("start") || cleanServico.includes("24") || cleanServico.includes("projeto")) {
     targetRadioId = prefix + "servico-start";
-  } else if (cleanServico.includes("trimestral")) {
+  } else {
     targetRadioId = prefix + "servico-trimestral";
-  } else if (cleanServico.includes("semestral")) {
-    targetRadioId = prefix + "servico-semestral";
-  } else if (cleanServico.includes("anual") || cleanServico.includes("jornada")) {
-    targetRadioId = prefix + "servico-anual";
-  } else if (cleanServico.includes("atlas") || cleanServico.includes("acompanhamento")) {
-    targetRadioId = prefix + "servico-trimestral"; // Sugestão padrão
   }
 
   if (targetRadioId) {
@@ -349,6 +364,7 @@ window.validarEEnviarFormulario = async function (formType = "page") {
   const btnId = formType === "modal" ? "m-btn-enviar" : "f-btn-enviar";
   const formBoxId = formType === "modal" ? "modal-form-content" : "page-form-content";
   const successBoxId = formType === "modal" ? "modal-form-sucesso" : "page-form-sucesso";
+  document.querySelectorAll(".submit-error").forEach(el => el.remove());
 
   const nomeEl = document.getElementById(prefix + "nome");
   const idadeEl = document.getElementById(prefix + "idade");
@@ -378,10 +394,7 @@ window.validarEEnviarFormulario = async function (formType = "page") {
     setErro(nomeEl, "Informe seu nome e sobrenome.");
   }
 
-  const idade = parseInt(idadeEl?.value || "0", 10);
-  if (isNaN(idade) || idade < 12 || idade > 99) {
-    setErro(idadeEl, "Informe uma idade válida (12 a 99).");
-  }
+  const idade = idadeEl?.value || "Não informado no primeiro contato";
 
   const email = (emailEl?.value || "").trim();
   if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
@@ -394,15 +407,8 @@ window.validarEEnviarFormulario = async function (formType = "page") {
     setErro(whatsEl, "Informe seu WhatsApp completo: (XX) 9XXXX-XXXX.");
   }
 
-  const peso = parseFloat(pesoEl?.value || "0");
-  if (isNaN(peso) || peso < 30 || peso > 280) {
-    setErro(pesoEl, "Informe um peso válido em kg.");
-  }
-
-  const altura = parseInt(alturaEl?.value || "0", 10);
-  if (isNaN(altura) || altura < 110 || altura > 240) {
-    setErro(alturaEl, "Informe sua altura em cm.");
-  }
+  const peso = pesoEl?.value || "Não informado no primeiro contato";
+  const altura = alturaEl?.value || "Não informado no primeiro contato";
 
   function getRadioChecked(name) {
     const el = document.querySelector(`input[name="${name}"]:checked`);
@@ -410,7 +416,7 @@ window.validarEEnviarFormulario = async function (formType = "page") {
   }
 
   const objetivo = getRadioChecked(prefix + "obj") || "Emagrecimento";
-  const servico = getRadioChecked(prefix + "servico") || "A definir na avaliação";
+  const servico = getRadioChecked(prefix + "servico") || "Plano Trimestral (3 meses)";
   const treino = getRadioChecked(prefix + "treino") || "Não informado";
   const alimentacao = getRadioChecked(prefix + "alim") || "Não informado";
   const restricoes = (document.getElementById(prefix + "restr")?.value || "").trim() || "Nenhuma";
@@ -444,9 +450,8 @@ window.validarEEnviarFormulario = async function (formType = "page") {
   };
 
   try {
-    if (typeof emailjs !== "undefined") {
-      await emailjs.send("service_6w1t7v2", "template_doox4c8", params);
-    }
+    if (typeof emailjs === "undefined") throw new Error("EmailJS indisponível");
+    await emailjs.send("service_6w1t7v2", "template_doox4c8", params);
     
     // Atualiza interface para Sucesso
     const formBox = document.getElementById(formBoxId);
@@ -458,7 +463,7 @@ window.validarEEnviarFormulario = async function (formType = "page") {
     const btnWaSucesso = successBox?.querySelector(".btn-wa-confirmar");
     if (btnWaSucesso) {
       const msgEncoded = encodeURIComponent(
-        `Olá Kevin! Acabei de enviar meu formulário de avaliação pelo site.\n\n` +
+        `Olá Kevin! Acabei de enviar minha solicitação de acompanhamento pelo site.\n\n` +
         `*Nome:* ${nome}\n` +
         `*Objetivo:* ${objetivo}\n` +
         `*Acompanhamento:* ${servico}\n\n` +
@@ -470,9 +475,19 @@ window.validarEEnviarFormulario = async function (formType = "page") {
     console.error("Erro no envio:", err);
     if (btn) {
       btn.disabled = false;
-      btn.textContent = "ENVIAR AVALIAÇÃO →";
+      btn.textContent = "ENVIAR SOLICITAÇÃO →";
+      const error = document.createElement("p");
+      error.className = "submit-error";
+      error.setAttribute("role", "alert");
+      error.append("Não foi possível enviar agora. Você pode ");
+      const link = document.createElement("a");
+      link.href = `https://wa.me/5517981114500?text=${encodeURIComponent(`Olá Kevin! Gostaria de conversar sobre ${servico}. Meu nome é ${nome}.`)}`;
+      link.target = "_blank";
+      link.rel = "noopener noreferrer";
+      link.textContent = "falar com Kevin pelo WhatsApp";
+      error.append(link, ".");
+      btn.parentNode.appendChild(error);
     }
-    alert("Ocorreu um erro temporário ao enviar. Você também pode falar diretamente no WhatsApp (17) 98111-4500.");
   }
 };
 
@@ -1252,5 +1267,3 @@ function initTestimonialsCarousel() {
     startAutoplay();
   });
 }
-
-
