@@ -1,4 +1,36 @@
 {
+  "redirects": [
+    {
+      "source": "/index.html",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/historia.html",
+      "destination": "/sobre.html",
+      "permanent": true
+    },
+    {
+      "source": "/historia",
+      "destination": "/sobre.html",
+      "permanent": true
+    },
+    {
+      "source": "/projeto-24-dias.html",
+      "destination": "/desafio-atlas-start.html",
+      "permanent": true
+    },
+    {
+      "source": "/metodo-atlas-start.html",
+      "destination": "/desafio-atlas-start.html",
+      "permanent": true
+    },
+    {
+      "source": "/acompanhamento-premium.html",
+      "destination": "/metodo-atlas.html",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/desafio-atlas-start",
@@ -7,6 +39,47 @@
     {
       "source": "/desafio-atlas-start/:path*",
       "destination": "https://desafio-atlas-start.vercel.app/:path*"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/img/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=2592000, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(css|js)/(.*)",
+      "headers": [
+        {
+          "key": "Cache-Control",
+          "value": "public, max-age=3600, stale-while-revalidate=86400"
+        }
+      ]
+    },
+    {
+      "source": "/(.*)",
+      "headers": [
+        {
+          "key": "X-Content-Type-Options",
+          "value": "nosniff"
+        },
+        {
+          "key": "Referrer-Policy",
+          "value": "strict-origin-when-cross-origin"
+        },
+        {
+          "key": "X-Frame-Options",
+          "value": "SAMEORIGIN"
+        },
+        {
+          "key": "Permissions-Policy",
+          "value": "camera=(), microphone=(), geolocation=()"
+        }
+      ]
     }
   ]
 }
