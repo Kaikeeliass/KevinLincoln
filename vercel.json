@@ -16,29 +16,44 @@
       "permanent": true
     },
     {
+      "source": "/desafio-atlas-start.html",
+      "destination": "/metodo-atlas.html",
+      "permanent": true
+    },
+    {
+      "source": "/desafio-atlas-start",
+      "destination": "/metodo-atlas.html",
+      "permanent": true
+    },
+    {
+      "source": "/desafio-atlas-start/:path*",
+      "destination": "/metodo-atlas.html",
+      "permanent": true
+    },
+    {
+      "source": "/acompanhamentos.html",
+      "destination": "/metodo-atlas.html",
+      "permanent": true
+    },
+    {
+      "source": "/acompanhamentos",
+      "destination": "/metodo-atlas.html",
+      "permanent": true
+    },
+    {
       "source": "/projeto-24-dias.html",
-      "destination": "/desafio-atlas-start.html",
+      "destination": "/metodo-atlas.html",
       "permanent": true
     },
     {
       "source": "/metodo-atlas-start.html",
-      "destination": "/desafio-atlas-start.html",
+      "destination": "/metodo-atlas.html",
       "permanent": true
     },
     {
       "source": "/acompanhamento-premium.html",
       "destination": "/metodo-atlas.html",
       "permanent": true
-    }
-  ],
-  "rewrites": [
-    {
-      "source": "/desafio-atlas-start",
-      "destination": "https://desafio-atlas-start.vercel.app"
-    },
-    {
-      "source": "/desafio-atlas-start/:path*",
-      "destination": "https://desafio-atlas-start.vercel.app/:path*"
     }
   ],
   "headers": [

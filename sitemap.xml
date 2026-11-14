@@ -27,16 +27,6 @@
     </image:image>
   </url>
   <url>
-    <loc>https://www.kevinlincoln.com.br/desafio-atlas-start.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.kevinlincoln.com.br/desafio-atlas-start.html"/>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.9</priority>
-    <image:image>
-      <image:loc>https://www.kevinlincoln.com.br/img/site/kevin-notebook-1200.jpg</image:loc>
-    </image:image>
-  </url>
-  <url>
     <loc>https://www.kevinlincoln.com.br/sobre.html</loc>
     <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.kevinlincoln.com.br/sobre.html"/>
     <lastmod>2026-11-14</lastmod>
@@ -64,13 +54,6 @@
     <image:image>
       <image:loc>https://www.kevinlincoln.com.br/img/site/kevin-notebook-1200.jpg</image:loc>
     </image:image>
-  </url>
-  <url>
-    <loc>https://www.kevinlincoln.com.br/acompanhamentos.html</loc>
-    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://www.kevinlincoln.com.br/acompanhamentos.html"/>
-    <lastmod>2026-11-14</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>0.7</priority>
   </url>
   <url>
     <loc>https://www.kevinlincoln.com.br/duvidas.html</loc>

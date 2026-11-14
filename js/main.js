@@ -10,7 +10,6 @@ document.addEventListener("DOMContentLoaded", () => {
   initMobileMenu();
   initReveal();
   initFormAndModal();
-  checkUrlParamsForService();
   initFloatingUI();
   initCurrentYear();
   initTestimonialFilter();
@@ -131,7 +130,7 @@ function initFormAndModal() {
   document.querySelectorAll("[data-open-form]").forEach((btn) => {
     btn.addEventListener("click", (e) => {
       e.preventDefault();
-      window.abrirFormulario(btn.getAttribute("data-open-form") || "");
+      window.abrirFormulario();
     });
   });
 
@@ -150,10 +149,10 @@ function initFormAndModal() {
 
 let modalReturnFocus = null;
 
-window.abrirFormulario = function (servico = "") {
+window.abrirFormulario = function () {
   const modal = document.getElementById("modal-overlay");
   if (!modal) {
-    window.location.href = "contato.html" + (servico ? `?servico=${encodeURIComponent(servico)}` : "");
+    window.location.href = "contato.html";
     return;
   }
   modalReturnFocus = document.activeElement;
@@ -161,7 +160,6 @@ window.abrirFormulario = function (servico = "") {
   modal.setAttribute("aria-hidden", "false");
   document.body.classList.add("modal-open");
   requestAnimationFrame(() => modal.querySelector("#m-nome")?.focus());
-  if (servico) preencherServicoFormulario(servico, "m-");
 };
 
 window.fecharFormulario = function () {
@@ -191,22 +189,6 @@ document.addEventListener("keydown", (e) => {
     else if (!e.shiftKey && document.activeElement === last) { e.preventDefault(); first.focus(); }
   }
 });
-
-function preencherServicoFormulario(servico, prefix = "") {
-  const s = servico.toLowerCase();
-  const id = (s.includes("start") || s.includes("desafio") || s.includes("21")) ? prefix + "servico-start" : prefix + "servico-trimestral";
-  const radio = document.getElementById(id);
-  if (radio) radio.checked = true;
-}
-
-function checkUrlParamsForService() {
-  const params = new URLSearchParams(window.location.search);
-  const servico = params.get("servico") || params.get("plano");
-  if (servico) {
-    preencherServicoFormulario(servico, "f-");
-    preencherServicoFormulario(servico, "m-");
-  }
-}
 
 window.validarEEnviarFormulario = async function (formType = "page") {
   const prefix = formType === "modal" ? "m-" : "f-";
@@ -253,7 +235,7 @@ window.validarEEnviarFormulario = async function (formType = "page") {
   }
 
   const objetivo = radio(prefix + "obj") || "Emagrecimento";
-  const servico = radio(prefix + "servico") || "Plano Trimestral (3 meses)";
+  const servico = "Plano Trimestral (3 meses)";
 
   const params = {
     nome,
