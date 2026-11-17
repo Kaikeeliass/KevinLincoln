@@ -776,13 +776,6 @@ body.modal-open { overflow: hidden; }
 .footer-col a:hover { color: var(--text); }
 .footer-col li { display: flex; gap: 10px; align-items: flex-start; }
 .footer-col li svg { width: 16px; height: 16px; flex: none; margin-top: 4px; color: var(--gold); }
-.footer-word {
-  font-family: var(--f-display); font-stretch: 75%; font-weight: 800; text-transform: uppercase;
-  font-size: clamp(3rem, 13.4vw, 12.6rem); line-height: 0.8; letter-spacing: -0.01em;
-  color: transparent; -webkit-text-stroke: 1px rgba(245, 245, 242, 0.14);
-  white-space: nowrap; overflow: hidden; user-select: none; text-align: center;
-  padding-top: 8px;
-}
 .footer-bottom { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 12px 24px; padding-block: 24px calc(24px + env(safe-area-inset-bottom)); border-top: 1px solid var(--line); font-size: 0.82rem; color: var(--text-3); }
 .footer-bottom a { text-decoration: underline; text-underline-offset: 3px; }
 .footer-bottom a:hover { color: var(--text); }
