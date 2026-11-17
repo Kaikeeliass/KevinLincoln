@@ -1,15 +1,16 @@
 # Kevin Lincoln — Nutricionista
 
 Site institucional + página de vendas do nutricionista Kevin Lincoln (CRN 83678).
-Serviço oferecido: **Plano Trimestral do Método Atlas** (3 meses, com direcionamento individual do Kevin).
+Serviço oferecido: **Acompanhamento nutricional do Método Atlas** (sem duração fixa, com direcionamento
+individual do Kevin). Público prioritário: quem usa canetas emagrecedoras (GLP-1).
 HTML/CSS/JS estático, publicado na Vercel. Sem build: cada página é um arquivo `.html` na raiz.
 
 ## Páginas
 
 | Arquivo | Papel |
 | --- | --- |
-| `index.html` | Home / landing page: venda do Plano Trimestral |
-| `metodo-atlas.html` | Página do Método Atlas e do Plano Trimestral (`#planos`) |
+| `index.html` | Home / landing page: venda do acompanhamento, focada em quem usa canetas |
+| `metodo-atlas.html` | Página do Método Atlas e do que está incluso (`#planos`) |
 | `sobre.html` | História, princípios e credenciais do Kevin |
 | `resultados.html` | Depoimentos (com filtro) e trajetória |
 | `duvidas.html` | Central de dúvidas com busca, categorias e link direto por pergunta |
@@ -30,9 +31,15 @@ URLs antigas têm redirect 301 no `vercel.json`: `historia.html` → `sobre.html
 ## Como editar
 
 - **Botão que abre o formulário:** qualquer elemento com `data-open-form` abre o modal.
-  O lead chega no EmailJS com `servico_desejado = "Plano Trimestral (3 meses)"`.
+  O lead chega no EmailJS com `servico_desejado = "Acompanhamento nutricional"`.
 - **Nova foto:** gere versões `nome-480/800/1200.webp` (+ `.jpg`) em `img/site/` e use `<picture>`
   com `srcset`, `width`/`height` e `loading="lazy"` (só a foto do topo usa `fetchpriority="high"`).
 - **SEO:** cada página tem title, description, canonical, Open Graph e JSON-LD (`@graph` com
   WebSite, MedicalBusiness, Person, WebPage, BreadcrumbList e, quando faz sentido, Service e FAQPage).
   Ao criar uma página nova, adicione-a ao `sitemap.xml`.
+
+## Regras de conteúdo
+
+- Não informar duração fixa do acompanhamento.
+- Canetas emagrecedoras: não citar marcas comerciais nem orientar dose/uso; o Kevin não prescreve
+  medicamentos (ver aviso em `metodo-atlas.html#planos` e nas dúvidas).

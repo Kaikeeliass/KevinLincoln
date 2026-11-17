@@ -235,7 +235,7 @@ window.validarEEnviarFormulario = async function (formType = "page") {
   }
 
   const objetivo = radio(prefix + "obj") || "Emagrecimento";
-  const servico = "Plano Trimestral (3 meses)";
+  const servico = "Acompanhamento nutricional";
 
   const params = {
     nome,

@@ -547,7 +547,7 @@ h1, h2, h3, h4 { color: var(--text); font-weight: 700; line-height: 1.15; }
   border: 1px solid var(--line-2);
 }
 .ticket__main { padding: clamp(24px, 3vw, 36px); }
-.ticket__label { display: flex; justify-content: space-between; align-items: center; gap: 12px; font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-3); margin-bottom: 18px; }
+.ticket__label { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 6px 12px; font-size: 0.74rem; letter-spacing: 0.16em; text-transform: uppercase; color: var(--text-3); margin-bottom: 18px; }
 .ticket__label b { color: var(--gold); font-weight: 600; }
 .ticket__title { font-family: var(--f-display); font-stretch: 75%; font-weight: 800; text-transform: uppercase; font-size: clamp(3.2rem, 5vw, 4.4rem); line-height: 0.88; color: var(--text); }
 .ticket__title .accent { font-size: 0.6em; display: block; margin-top: 6px; }
